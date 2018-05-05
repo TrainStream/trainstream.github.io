@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Streaming</title>
+<link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.ico">
+</head>
+<body background="/pictures/background.png">
+<body>
+<p><a href="/">Back to the Main Page</a>
+<br /><a href="/watching">Back to the Video Player Page</a></p>
+
+  <p><center><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>How to Setup MPV:</strong></font></center></p>
+<br /><p>
+<br />Some people use mpc-hc for the Yunokami stream, but for me personally it runs in low fps, so I am using mpv instead, which runs at smooth 30fps.
+<br />
+<br />Download mpv from here: https://mpv.srsfckn.biz/
+<br />I don't remember if you need ffmpeg installed or not. I think not, but if it doesn't run for some reason, download ffmpeg from here: https://ffmpeg.zeranoe.com/builds/
+<br />(Please report the ffmpeg needed or not results in the thread)
+<br />
+<br />Now let's set up a small config file (not compulsory). We will set up the screenshots settings in it.
+<br />You can download my config file from here: https://pomf.pyonpyon.moe/mgfhdc.zip (extract from zip)
+<br />You can see two commands already written there:
+<br />--screenshot-template=\My Videos\Pictures\train\1New\train-%n
+<br />--screenshot-jpeg-quality=96
+<br />The first command is where to save the screenshots. Change it to the path you want for yourself. If it is in the same local disk as mpv, you don't need to write "E:\" for example.
+<br />The "train-%n" part is how to name the screenshots. In this case it will name it as "train-number of picture in the folder"
+<br />The second command is the quality of picture. I have found 96 to be a satisfactory balance between quality and filesize for me.
+<br />While watching the stream press "S" to make a screenshot.
+<br />
+<br />How to run a stream:
+<br />Make a shortcut to the mpv.exe file. (right click -> send to -> desktop (create shortcut))
+<br />On the shortcut press right click -> properties.
+<br />In the "Target:" field at the end of the path after mpv.exe put "rtmp://114.160.7.45/livepkgr/live-cam003" (no quotations marks, also leave a space between mpv.exe and the stream link)
+<br />Press Okay and you are done. You can Rename the shortcut to "Yunokami" or whatever if you want to.
+</p>
+<br /><br /><br /><br />
+<p><a href="/watching">Back to the Video Player Page</a>
+<br /><a href="/">Back to the Main Page</a></p>
+</body>
+</html>
