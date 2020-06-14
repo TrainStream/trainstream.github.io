@@ -8,30 +8,29 @@
 <body>
 <p><a href="/"><img src=/pictures/mainpage.png></a></p>
 
-<noscript>Sorry, your browser does not support JavaScript. Please visit the no java stream page.</noscript>
-
-<p id="Selection"></p>
-#<p id="Time"></p>
-#<script>
-#        let d = new Date();
-#        document.getElementById("Time").innerHTML = "<h1>Today's date is " + d + "</h1>"
-#</script>
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  document.getElementById("Selection").innerHTML = (<p> = customTag=Train);
-}
-</script>
-
 <center>
     <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>List of Cameras:</strong></font></span><br /><br />
     <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
     <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span></p>
 
 
-  <p id="YunoKami" customTag ="Train" customTag ="Inaka"><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
+<noscript>Sorry, your browser does not support JavaScript. Please visit the no java stream page.</noscript>
+
+<button type="button" onclick="myFunction()">Train</button>
+<p id="Select">Choose a tag.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("Select").innerHTML = display(customTag=Train) ;
+}
+</script>
+
+  </center>
+  <br /><br /><br /><br />
+  <p><a href="/"><img src=/pictures/mainpage.png></a></p>
+</body>
+
+  <p id="YunoKami" customTag ="Train"><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
   <img src="/pictures/1.jpg" title="YunoKami-Onsen" width="267" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site often goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
     <br />rtmp://114.160.7.45/livepkgr/live-cam003
@@ -160,12 +159,5 @@ function myFunction() {
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="/streams/insecam">Recommended from the thread (click)</a></p>
 <p>&nbsp;</p>
 
-</center>
 
-<br /><br /><br /><br />
-<p><a href="/"><img src=/pictures/mainpage.png></a></p>
-
-
-
-</body>
 </html>
