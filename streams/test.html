@@ -11,10 +11,18 @@
 <noscript>Sorry, your browser does not support JavaScript. Please visit the no java stream page.</noscript>
 
 <p id="Selection"></p>
+#<p id="Time"></p>
+#<script>
+#        let d = new Date();
+#        document.getElementById("Time").innerHTML = "<h1>Today's date is " + d + "</h1>"
+#</script>
+
+<button type="button" onclick="myFunction()">Try it</button>
 
 <script>
-        let d = new Date();
-        document.getElementById("Selection").innerHTML = "<h1>Today's date is " + d + "</h1>"
+function myFunction() {
+  document.getElementById("Selection").innerHTML = (<p> = customTag=Train);
+}
 </script>
 
 <center>
@@ -22,16 +30,18 @@
     <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
     <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span></p>
 
-<code>
-  <tr><td id="Yunokami" customTag ="Train">
-  <p><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
+
+  <p id="YunoKami" customTag ="Train" customTag ="Inaka"><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
   <img src="/pictures/1.jpg" title="YunoKami-Onsen" width="267" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site often goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
     <br />rtmp://114.160.7.45/livepkgr/live-cam003
     <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span></p>
-  </tr>
-</code>
   <p>&nbsp;</p>
+
+<code>
+<tr><td id="a" customTag ="a">
+</tr>
+</code>
 
   <p><font size="4"><span style="color: #000d8a;"><strong>別所温泉駅 Bessho-Onsen Station:</strong></span></font><br />
   <img src="/pictures/2.jpg" title="Bessho-Onsen" width="356" height="200" />
