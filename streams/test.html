@@ -317,12 +317,9 @@ function filterSelection(className)
             continue;
 
         if (!className || classList.contains(className))
-            classList.add("show");
-        else
-        if (classList.contains("dead"))
-        classList.add("show");
-        else
             classList.remove("show");
+        else
+            classList.add("show");
     }
 }
 
