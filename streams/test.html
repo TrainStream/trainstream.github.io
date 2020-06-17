@@ -6,11 +6,11 @@
 </head>
 <style>
 .filterDiv {
-  display: none;
+  display: block;
 }
 
 .show {
-  display: block;
+  display: none;
 }
 
 /* Style the buttons */
@@ -318,6 +318,9 @@ function filterSelection(className)
 
         if (!className || classList.contains(className))
             classList.add("show");
+        else
+        if (classList.contains("dead"))
+        classList.add("show");
         else
             classList.remove("show");
     }
