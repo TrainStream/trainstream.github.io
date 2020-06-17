@@ -54,6 +54,7 @@
   <button class="btn" onclick="filterSelection('street')">Street View</button>
   <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
   <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
   <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
   <br />
   <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
@@ -63,6 +64,7 @@
   <button class="btn" onclick="filterSelection('shore')">Shore</button>
   <button class="btn" onclick="filterSelection('shop')">Shop</button>
   <button class="btn" onclick="filterSelection('sound')">Sound</button>
+  <button class="btn" onclick="filterSelection('other')">Other</button>
   <button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
 
 </div>
@@ -70,15 +72,22 @@
 <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 <div class="container">
 
-  <div class="filterDiv trainstation scenary">
+  <div class="filterDiv trainstation scenary bridge other">
   <p><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
-  <img src="/pictures/1.jpg" title="YunoKami-Onsen" width="267" height="200" />
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site often goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
-    <br />rtmp://114.160.7.45/livepkgr/live-cam003
+  <img src="/pictures/1.jpg" title="Yunokami-Onsen, live-cam003" width="267" height="200" />
+  <img src="/pictures/28.jpg" title="live-cam004" width="267" height="200" />
+  <img src="/pictures/29.jpg" title="live-cam002" width="267" height="200" />
+  <img src="/pictures/30.jpg" title="live-cam005" width="267" height="200" />
+  <img src="/pictures/31.jpg" title="live-cam001" width="267" height="200" />
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site sometimes goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
+    <br />rtmp://114.160.7.45/livepkgr/live-cam003 (Train Station)
+    <br />For the others hover image to see live-cam00x number. 001 and 005 move.
     <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span>
     <br />
     <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
+    <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
     <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+    <button class="btn" onclick="filterSelection('other')">Other</button>
   </p>
   <p>&nbsp;</p></div>
 
@@ -302,6 +311,9 @@ function filterSelection(className)
 
         if (!className || classList.contains(className))
             classList.add("show");
+        else
+        if (classList.contains("dead"))
+        classList.add("show");
         else
             classList.remove("show");
     }

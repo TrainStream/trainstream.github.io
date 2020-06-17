@@ -52,11 +52,13 @@
 <!-- Control buttons -->
 <div id="myBtnContainer">
 <button class="btn active" onclick="filterSelection('all')">Show all</button>
+<br />
 <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
 <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
 <button class="btn" onclick="filterSelection('street')">Street View</button>
 <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
 <button class="btn" onclick="filterSelection('city')">City View</button>
+<button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
 <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
 <br />
 <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
@@ -219,14 +221,14 @@ function filterSelection(className)
     if (!className || className === "all")
         className = "";
 
-    for (const {classList}  of document.getElementsByClassName("filterDiv")) {
-        if (classList.contains("dead"))
+    for (const elm of document.getElementsByClassName("filterDiv")) {
+        if (elm.classList.contains("dead"))
             continue;
 
-        if (!className || classList.contains(className))
-            classList.add("show");
+        if (!className || elm.classList.contains(className))
+            elm.classList.add("show");
         else
-            classList.remove("show");
+            elm.classList.remove("show");
     }
 }
 
