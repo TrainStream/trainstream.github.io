@@ -4,6 +4,11 @@
 <title>Streams</title>
 <link rel="shortcut icon" type="image/x-icon" href="/Pictures/favicon.ico">
 </head>
+<style>
+.filterDiv {
+  display: none;
+}
+</style>
 <body background="/pictures/background.png">
 <body>
 <p><a href="/"><img src=/pictures/mainpage.png></a></p>
@@ -17,7 +22,7 @@
 
 <!-- Control buttons -->
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn active" onclick="filterSelection('all')">Show all</button>
   <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
   <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
   <button class="btn" onclick="filterSelection('street')">Street</button>
