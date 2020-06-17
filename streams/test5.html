@@ -13,102 +13,59 @@
     <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
     <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span></p>
 
+
 <noscript>Sorry, your browser does not support JavaScript. Please visit the no java stream page.</noscript>
 
-<!-- Control buttons -->
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
-  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
-  <button class="btn" onclick="filterSelection('street')">Street</button>
-  <button class="btn" onclick="filterSelection('bussytraffic')">Busy Traffic</button>
-  <button class="btn" onclick="filterSelection('othrs')">Others</button>
-</div>
+<button type="button" onclick="myFunction()">Train</button>
+<p id="Select">Choose a tag.</p>
 
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+function myFunction() {
+   if <div>=(Class="Train") then document.getElementById("Select").innerHTML = display(<p class="Train">))
 }
 </script>
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-<div class="container">
+  </center>
+  <br /><br /><br /><br />
+  <p><a href="/"><img src=/pictures/mainpage.png></a></p>
+</body>
 
-  <p><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
+<div class="Train">
+  <p id="YunoKami" class="Train"><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
   <img src="/pictures/1.jpg" title="YunoKami-Onsen" width="267" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site often goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
     <br />rtmp://114.160.7.45/livepkgr/live-cam003
-    <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span>
-    <div class="filterDiv trainstation">Train Station</div>
-  </p>
+    <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span></p>
   <p>&nbsp;</p>
+</div>
+<code>
+<tr><td id="a" customTag ="a">
+</tr>
+</code>
 
   <p><font size="4"><span style="color: #000d8a;"><strong>別所温泉駅 Bessho-Onsen Station:</strong></span></font><br />
   <img src="/pictures/2.jpg" title="Bessho-Onsen" width="356" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://live.ueda.ne.jp/">http://live.ueda.ne.jp/</a>
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=vYzRrH78JkQ"; title="The youtube link can change from time to time.">https://www.youtube.com/watch?v=vYzRrH78JkQ&nbsp;</a>
     <br /><span style="color: #FFFFFF">And many others at the Ueda site.</span></p>
-    <div class="filterDiv trainstation">Train Station</div><div class="filterDiv others">Others</div>
 <p>&nbsp;</p>
 
 <p><font size="4"><span style="color: #000d8a;"><strong>東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway:</strong></span></font><br />
 <img src="/pictures/4.jpg" title="Shiodome Railway" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw/videos?view=2&flow=grid">https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw</a>
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=_LQPG97-zqw">https://www.youtube.com/watch?v=_LQPG97-zqw</a></p>
-  <div class="filterDiv trainlines">Train Lines</div>
 <p>&nbsp;</p>
 
 <p><font size="4"><span style="color: #000d8a;"><strong>Tokyo Roppongi Sky View:</strong></span></font><br />
 <img src="/pictures/7.jpg" title="Roppongi Sky View" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw">https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw</a>
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=IXr6INJs0TA">It has been down for a while now.</a>
-  <div class="filterDiv Steet">Street</div><div class="filterDiv bussytraffic">Busy traffic</div>
 <p>&nbsp;</p>
 
 <p><font size="4"><span style="color: #000d8a;"><strong>渋谷スクランブル交差点 ライブ映像 Tokyo Shibuya Scramble Crossing:</strong></span></font><br />
 <img src="/pictures/5.jpg" title="Shibuya Scramble Crossing" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/sibchtv/videos?flow=grid&view=2">https://www.youtube.com/channel/UCgdHxnHSXvcAi4PaMIY1Ltg</a>
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=nKMuBisZsZI">https://www.youtube.com/watch?v=nKMuBisZsZI</a></p>
-  <div class="filterDiv street">Street</div><div class="filterDiv bussytraffic">Busy Traffic</div>
 <p>&nbsp;</p>
 
 <p><font size="4"><span style="color: #000d8a;"><strong>北海道ｏｎ天気ライブカメラ HTB's Weather Live Cameras in Hokkaido:</strong></span></font><br />
@@ -203,12 +160,5 @@ for (var i = 0; i < btns.length; i++) {
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="/streams/insecam">Recommended from the thread (click)</a></p>
 <p>&nbsp;</p>
 
-</center>
 
-<br /><br /><br /><br />
-<p><a href="/"><img src=/pictures/mainpage.png></a></p>
-
-
-
-</body>
 </html>
