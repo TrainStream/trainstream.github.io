@@ -6,11 +6,11 @@
 </head>
 <style>
 .filterDiv {
-  display: none;
+  display: block;
 }
 
-.show {
-  display: block;
+.noshow {
+  display: none;
 }
 
 /* Style the buttons */
@@ -43,9 +43,10 @@
     <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
     <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span>
     <br /><span style="color: #FFFFFF">You can hover images for info and open them for bigger size.</span>
+    <br /><a href="/streams/dead">Dead streams page (click)</a>
   </p>
 
-<noscript>Please enable JavaScript or visit the no java stream page.</noscript>
+<noscript>Enable JavaScript to use the filters.</noscript>
 
 <!-- Control buttons -->
 <div id="myBtnContainer">
@@ -57,7 +58,6 @@
   <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
   <button class="btn" onclick="filterSelection('city')">City View</button>
   <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
-  <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
   <br />
   <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
   <button class="btn" onclick="filterSelection('airport')">AirPort</button>
@@ -65,7 +65,7 @@
   <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
   <button class="btn" onclick="filterSelection('shore')">Shore</button>
   <button class="btn" onclick="filterSelection('shop')">Shop</button>
-  <button class="btn" onclick="filterSelection('sound')">Sound</button>
+  <button class="btn btn2" onclick="filterSelection('sound')">Sound</button>
   <button class="btn" onclick="filterSelection('other')">Other</button>
   <button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
 
@@ -115,21 +115,8 @@
   <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
   <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
   <button class="btn" onclick="filterSelection('city')">City View</button>
-  <button class="btn" onclick="filterSelection('sound')">Sound</button>
+  <button class="btn btn2" onclick="filterSelection('sound')">Sound</button>
   </p>
-<p>&nbsp;</p></div>
-
-<div class="filterDiv street traffic city dead">
-<p><font size="4"><span style="color: #000d8a;"><strong>Tokyo Roppongi Sky View:</strong></span></font><br />
-<img src="/pictures/7.jpg" title="Roppongi Sky View" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw">https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=IXr6INJs0TA">It has been down for a while now.</a>
-<br />
-<button class="btn" onclick="filterSelection('street')">Street View</button>
-<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
-<button class="btn" onclick="filterSelection('city')">City View</button>
-<button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
-</p>
 <p>&nbsp;</p></div>
 
 <div class="filterDiv steet traffic">
@@ -266,16 +253,6 @@
 </p>
 <p>&nbsp;</p></div>
 
-<div class="filterDiv street dead">
-<p><font size="4"><span style="color: #000d8a;"><strong>MOBOTIX Q24  mx10-11-240-143 Live:</strong></span></font><br />
-<img src="/pictures/6.jpg" title="MOBOTIX" width="265" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://180.3.172.145/control/userimage.html"; title="You can increase fps to 25.">http://180.3.172.145/control/userimage.html</a>
-  <br />
-  <button class="btn" onclick="filterSelection('street')">Street View</button>
-  <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
-</p>
-<p>&nbsp;</p></div>
-
 <div class="filterDiv street traffic city">
 <p><font size="4"><span style="color: #000d8a;"><strong>Okinawa Times:</strong></span></font><br />
 <img src="/pictures/26.jpg" title="Okinawa Times 1" width="267" height="200" />
@@ -313,13 +290,10 @@ function filterSelection(className)
         className = "";
 
     for (const {classList}  of document.getElementsByClassName("filterDiv")) {
-        if (classList.contains("dead"))
-            continue;
-
         if (!className || classList.contains(className))
-            classList.add("show");
+            classList.remove("noshow");
         else
-            classList.remove("show");
+            classList.add("noshow");
     }
 }
 

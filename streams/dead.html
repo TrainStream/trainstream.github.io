@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<title>Streams</title>
+<link rel="shortcut icon" type="image/x-icon" href="/Pictures/favicon.ico">
+</head>
+<style>
+.filterDiv {
+  display: block;
+}
+
+.noshow {
+  display: none;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn2 {background-color: #800000; color: white;}
+
+.btn:hover {background-color: #ddd;}
+
+.btn2:hover {background-color: #B22222;}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+<body background="/pictures/background.png">
+<body>
+<p><a href="/"><img src=/pictures/mainpage.png></a></p>
+
+<center>
+    <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>List of Cameras:</strong></font></span><br /><br />
+    <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
+    <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span>
+    <br /><span style="color: #FFFFFF">You can hover images for info and open them for bigger size.</span>
+  </p>
+
+<noscript>Please enable JavaScript or visit the no java stream page.</noscript>
+
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')">Show All</button>
+  <br />
+  <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('street')">Street View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
+  <br />
+  <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+  <button class="btn" onclick="filterSelection('airport')">AirPort</button>
+  <button class="btn" onclick="filterSelection('seaport')">SeaPort</button>
+  <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+  <button class="btn" onclick="filterSelection('shore')">Shore</button>
+  <button class="btn" onclick="filterSelection('shop')">Shop</button>
+  <button class="btn btn2" onclick="filterSelection('sound')">Sound</button>
+  <button class="btn" onclick="filterSelection('other')">Other</button>
+  <button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
+
+</div>
+
+<!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+<div class="container">
+
+  <div class="filterDiv street traffic city">
+  <p><font size="4"><span style="color: #000d8a;"><strong>Tokyo Roppongi Sky View:</strong></span></font><br />
+  <img src="/pictures/7.jpg" title="Roppongi Sky View" width="356" height="200" />
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw">https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw</a>
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=IXr6INJs0TA">It has been down for a while now.</a>
+  <br />
+  <button class="btn" onclick="filterSelection('street')">Street View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  </p>
+  <p>&nbsp;</p></div>
+
+  <div class="filterDiv street">
+  <p><font size="4"><span style="color: #000d8a;"><strong>MOBOTIX Q24  mx10-11-240-143 Live:</strong></span></font><br />
+  <img src="/pictures/6.jpg" title="MOBOTIX" width="265" height="200" />
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://180.3.172.145/control/userimage.html"; title="You can increase fps to 25.">http://180.3.172.145/control/userimage.html</a>
+    <br />
+    <button class="btn" onclick="filterSelection('street')">Street View</button>
+  </p>
+  <p>&nbsp;</p></div>
+
+</div></center>
+
+<br /><br /><br /><br />
+<p><a href="/"><img src=/pictures/mainpage.png></a></p>
+
+
+
+<script>
+function filterSelection(className)
+{
+    if (!className || className === "all")
+        className = "";
+
+    for (const {classList}  of document.getElementsByClassName("filterDiv")) {
+        if (!className || classList.contains(className))
+            classList.remove("noshow");
+        else
+            classList.add("noshow");
+    }
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
