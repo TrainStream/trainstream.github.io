@@ -81,8 +81,7 @@
   <img src="/pictures/30.jpg" title="live-cam005" width="267" height="200" /><img src="/pictures/31.jpg" title="live-cam001" width="267" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site sometimes goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
     <br />rtmp://114.160.7.45/livepkgr/live-cam003 (Train Station)
-    <br />For the others hover image to see live-cam00x number. 001 and 005 move.
-    <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span>
+    <br /><span style="color: #FFFFFF">For the others hover image to see live-cam00x number. 001 and 005 move.</span>
     <br />
     <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
     <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
@@ -303,39 +302,5 @@
 
 <br /><br /><br /><br />
 <p><a href="/"><img src=/pictures/mainpage.png></a></p>
-
-
-
-<script>
-function filterSelection(className)
-{
-    if (!className || className === "all")
-        className = "";
-
-    for (const {classList}  of document.getElementsByClassName("filterDiv")) {
-        if (classList.contains("dead"))
-            continue;
-
-        if (!className || classList.contains(className))
-            classList.add("show");
-        else
-        if (classList.contains("dead"))
-        classList.add("show");
-        else
-            classList.remove("show");
-    }
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
 </body>
 </html>

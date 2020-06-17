@@ -4,144 +4,337 @@
 <title>Streams</title>
 <link rel="shortcut icon" type="image/x-icon" href="/Pictures/favicon.ico">
 </head>
+<style>
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn2 {background-color: #800000; color: white;}
+
+.btn:hover {background-color: #ddd;}
+
+.btn2:hover {background-color: #B22222;}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
 <body background="/pictures/background.png">
 <body>
 <p><a href="/"><img src=/pictures/mainpage.png></a></p>
 
 <center>
-  <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>List of Cameras:</strong></font></span><br /><br />
-    
-    <br /><span style="color: #FFFFFF">If camera link is down, check the youtube channel.</span></p>
+    <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>List of Cameras:</strong></font></span><br /><br />
+    <br /><span style="color: #FFFFFF">For Youtube only links to the channels' streams only page are included, except if the stream is hidden.</span>
+    <br /><span style="color: #FFFFFF">Other videos might exist on the Youtube channel outside of that stream page, including past recordings.</span>
+    <br /><span style="color: #FFFFFF">You can hover images for info and open them for bigger size.</span>
+  </p>
+
+<noscript>Please enable JavaScript or visit the no java stream page.</noscript>
+
+<!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('all')">Show All</button>
+  <br />
+  <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('street')">Street View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
+  <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
+  <br />
+  <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+  <button class="btn" onclick="filterSelection('airport')">AirPort</button>
+  <button class="btn" onclick="filterSelection('seaport')">SeaPort</button>
+  <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+  <button class="btn" onclick="filterSelection('shore')">Shore</button>
+  <button class="btn" onclick="filterSelection('shop')">Shop</button>
+  <button class="btn" onclick="filterSelection('sound')">Sound</button>
+  <button class="btn" onclick="filterSelection('other')">Other</button>
+  <button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
+
+</div>
+
+<!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+<div class="container">
+
+  <div class="filterDiv trainstation scenery bridge other">
   <p><font size="4"><span style="color: #000d8a;"><strong>湯野上温泉駅 Yunokami-Onsen Station:</strong></span></font><br />
-  <img src="/pictures/1.jpg" title="YunoKami-Onsen" width="267" height="200" />
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site often goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
-    <br />rtmp://114.160.7.45/livepkgr/live-cam003
-    <br /><span style="color: #FFFFFF">And four others at the Shimogo site.</span></p>
-  <p>&nbsp;</p>
+  <img src="/pictures/1.jpg" title="Yunokami-Onsen, live-cam003" width="267" height="200" /><img src="/pictures/28.jpg" title="live-cam004" width="267" height="200" />
+  <br /><img src="/pictures/29.jpg" title="live-cam002" width="267" height="200" />
+  <img src="/pictures/30.jpg" title="live-cam005" width="267" height="200" /><img src="/pictures/31.jpg" title="live-cam001" width="267" height="200" />
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://www.shimogo-live.jp/"; title="The site sometimes goes down, but the streams don't.">http://www.shimogo-live.jp/</a>
+    <br />rtmp://114.160.7.45/livepkgr/live-cam003 (Train Station)
+    <br /><span style="color: #FFFFFF">For the others hover image to see live-cam00x number. 001 and 005 move.</span>
+    <br />
+    <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
+    <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+    <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+    <button class="btn" onclick="filterSelection('other')">Other</button>
+  </p>
+  <p>&nbsp;</p></div>
 
-  <p><font size="4"><span style="color: #000d8a;"><strong>別所温泉駅 Bessho-Onsen Station:</strong></span></font><br />
-  <img src="/pictures/2.jpg" title="Bessho-Onsen" width="356" height="200" />
+  <div class="filterDiv trainstation shrine bridge scenery shop others">
+  <p><font size="4"><span style="color: #000d8a;"><strong>別所温泉駅 Bessho-Onsen Station/Ueda Cable Vision Cameras:</strong></span></font><br />
+  <img src="/pictures/2.jpg" title="bessyo.html" width="356" height="200" /><img src="/pictures/32.jpg" title="bousai.html" width="356" height="200" />
+  <img src="/pictures/33.jpg" title="uedaeki.html" width="356" height="200" /><br /><img src="/pictures/34.jpg" title="ueda1.html" width="356" height="200" />
+  <img src="/pictures/35.jpg" title="kitamuki.html" width="356" height="200" /><img src="/pictures/36.jpg" title="ikushima.html" width="356" height="200" />
     <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://live.ueda.ne.jp/">http://live.ueda.ne.jp/</a>
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=vYzRrH78JkQ"; title="The youtube link can change from time to time.">https://www.youtube.com/watch?v=vYzRrH78JkQ&nbsp;</a>
-    <br /><span style="color: #FFFFFF">And many others at the Ueda site.</span></p>
-<p>&nbsp;</p>
+    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://live.ueda.ne.jp/bessyo.html">http://live.ueda.ne.jp/bessyo.html (Train station)</a>
+    <br /><span style="color: #FFFFFF">On the Ueda site there are also other shop, mountain and scenery cameras.</span>
+    <br />
+    <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
+    <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
+    <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+    <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+    <button class="btn" onclick="filterSelection('others')">Others</button>
+  </p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines traffic city sound">
 <p><font size="4"><span style="color: #000d8a;"><strong>東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway:</strong></span></font><br />
 <img src="/pictures/4.jpg" title="Shiodome Railway" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw/videos?view=2&flow=grid">https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=_LQPG97-zqw">https://www.youtube.com/watch?v=_LQPG97-zqw</a></p>
-<p>&nbsp;</p>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('sound')">Sound</button>
+  </p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv street traffic city dead">
 <p><font size="4"><span style="color: #000d8a;"><strong>Tokyo Roppongi Sky View:</strong></span></font><br />
 <img src="/pictures/7.jpg" title="Roppongi Sky View" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw">https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw</a>
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=IXr6INJs0TA">It has been down for a while now.</a>
-<p>&nbsp;</p>
+<br />
+<button class="btn" onclick="filterSelection('street')">Street View</button>
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+<button class="btn" onclick="filterSelection('city')">City View</button>
+<button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv steet traffic">
 <p><font size="4"><span style="color: #000d8a;"><strong>渋谷スクランブル交差点 ライブ映像 Tokyo Shibuya Scramble Crossing:</strong></span></font><br />
 <img src="/pictures/5.jpg" title="Shibuya Scramble Crossing" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/sibchtv/videos?flow=grid&view=2">https://www.youtube.com/channel/UCgdHxnHSXvcAi4PaMIY1Ltg</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=nKMuBisZsZI">https://www.youtube.com/watch?v=nKMuBisZsZI</a></p>
-<p>&nbsp;</p>
+<br />
+<button class="btn" onclick="filterSelection('street')">Street View</button>
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv traffic city bridge">
 <p><font size="4"><span style="color: #000d8a;"><strong>北海道ｏｎ天気ライブカメラ HTB's Weather Live Cameras in Hokkaido:</strong></span></font><br />
 <img src="/pictures/3.jpg" title="Weather Cameras in Hokkaido" width="712" height="400" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/HTBlive">https://www.youtube.com/user/HTBlive</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=Ys1trnKN52A">https://www.youtube.com/watch?v=Ys1trnKN52A</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/HTBNEWS/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/user/HTBNEWS/</a>
+<br />
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+<button class="btn" onclick="filterSelection('city')">City View</button>
+<button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv traffic airport seaport">
 <p><font size="4"><span style="color: #000d8a;"><strong>長崎港 Nagasaki Harbor | 佐世保港 Sasebo Port | 本社屋上 HQ Rooftop | 長崎空港 Nagasaki Airport:</strong></span></font><br />
 <img src="/pictures/9.jpg" title="Nagasaki Harbor" width="356" height="200" /><img src="/pictures/10.jpg" title="Sasebo Port" width="356" height="200" /><br />
 <img src="/pictures/11.jpg" title="HQ Rooftop" width="356" height="200" /><img src="/pictures/12.jpg" title="Nagasaki Airport" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCWkqxFZQSdkR_q8kGz6p9mw/videos?flow=grid&view=2">https://www.youtube.com/channel/UCWkqxFZQSdkR_q8kGz6p9mw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=GQi5fe-h8b0">https://www.youtube.com/watch?v=GQi5fe-h8b0</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=gEMePfkMD4A">https://www.youtube.com/watch?v=gEMePfkMD4A</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=BFRNI6MrQ6w">Down?</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=_PWRB07s2Ac">https://www.youtube.com/watch?v=_PWRB07s2Ac</a></p>
-<p>&nbsp;</p>
+  <br /><span style="color: #FFFFFF">'HQ Rooftop', the bridge, camera is down</span>
+<br />
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+<button class="btn" onclick="filterSelection('airport')">AirPort</button>
+<button class="btn" onclick="filterSelection('seaport')">SeaPort</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv traffic bridge airport">
 <p><font size="4"><span style="color: #000d8a;"><strong>JR帯広駅ライブカメラ JR Obihiro Station, Hokkaido (and 3 others):</strong></span></font><br />
   <img src="/pictures/16.jpg" title="Obihiro Station" width="356" height="200" /><img src="/pictures/17.jpg" title="Tokachi-Obihiro Airport" width="356" height="200" /><br />
   <img src="/pictures/18.jpg" title="The Hakutyo Bridge of Tokachi River" width="356" height="200" /><img src="/pictures/19.jpg" title="Tokachi Big Bridge over the Tokachi River" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/kachimai/videos?live_view=501&sort=dd&view=2&shelf_id=2">https://www.youtube.com/user/kachimai/</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=hsucxy4TXgg">https://www.youtube.com/watch?v=hsucxy4TXgg</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=83gVaZ0DACE">https://www.youtube.com/watch?v=83gVaZ0DACE</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=0CDWnO9NQ9I">https://www.youtube.com/watch?v=0CDWnO9NQ9I</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=LcQWNavvN2Y">https://www.youtube.com/watch?v=LcQWNavvN2Y</a></p>
-<p>&nbsp;</p>
+<br />
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+<button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+<button class="btn" onclick="filterSelection('airport')">AirPort</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines">
 <p><font size="4"><span style="color: #000d8a;"><strong>【中書島】京阪電車を生ライブ【淀】 Keihan Raliway, Kyoto:</strong></span></font><br />
 <img src="/pictures/8.jpg" title="Keihan Raliway" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw">https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=9H-n-fteqH0">https://www.youtube.com/watch?v=9H-n-fteqH0</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw</a>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines traffic city bridge">
 <p><font size="4"><span style="color: #000d8a;"><strong>部屋の窓から(大岡川＆ランドマーク方面＋京急 Keikyu Line & Ooka River, Yokohama:</strong></span></font><br />
 <img src="/pictures/20.jpg" title=" Keikyu Line & Ooka River" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg">https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=_B9h_q0Zji0">https://www.youtube.com/watch?v=_B9h_q0Zji0</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg</a>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines">
 <p><font size="4"><span style="color: #000d8a;"><strong>JR中央線　豊田駅～日野駅間 JR Chuo Line Toyoda~Hino Station, Tokyo:</strong></span></font><br />
 <img src="/pictures/21.jpg" title="Chuo Line Toyoda~Hino Station" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/kakitubata19781011/feed?activity_view=6">https://www.youtube.com/user/kakitubata19781011</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=EkUW-nxRvco">https://www.youtube.com/watch?v=EkUW-nxRvco</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/kakitubata19781011/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/user/kakitubata19781011</a>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines city traffic">
 <p><font size="4"><span style="color: #000d8a;"><strong>新大阪ライブカメラ Sin-Osaka Station:</strong></span></font><br />
 <img src="/pictures/22.jpg" title="Sin-Osaka" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos">https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=H8LY9oqqzXM">https://www.youtube.com/watch?v=H8LY9oqqzXM</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos</a>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines city traffic bridge seaport">
 <p><font size="4"><span style="color: #000d8a;"><strong>北陸新幹線　金沢駅ライブカメラ　Kanazawa Station, Ishikawa | 金沢港ライブカメラ Kanazawa Port:</strong></span></font><br />
 <img src="/pictures/23.jpg" title="Kanazawa Station" width="356" height="200" /><img src="/pictures/24.jpg" title="Kanazawa Port" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/habmigochannel/videos?flow=grid&view=2">https://www.youtube.com/channel/UCt6LB-BvEmDm-oWbe_TO7mw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=k-OtLnknOpQ">https://www.youtube.com/watch?v=k-OtLnknOpQ</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=BFCIT2YFpHo">https://www.youtube.com/watch?v=BFCIT2YFpHo</a></p>
-<p>&nbsp;</p>
+<br /><img src="/pictures/37.jpg" title="HAB HQ" width="356" height="200" />
+<img src="/pictures/38.jpg" title="Noto-Wajima" width="356" height="200" /><img src="/pictures/39.jpg" title="From the Prefectural Office, maybe" width="356" height="200" />
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/user/habmigochannel/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/channel/UCt6LB-BvEmDm-oWbe_TO7mw</a>
+  <br />
+  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+  <button class="btn" onclick="filterSelection('city')">City View</button>
+  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+  <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+  <button class="btn" onclick="filterSelection('seaport')">SeaPort</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv street">
 <p><font size="4"><span style="color: #000d8a;"><strong>Kabukicho, Tokyo:</strong></span></font><br />
 <img src="/pictures/25.jpg" title="Kabukicho" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw">https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=GNyW9j9MsQI">https://www.youtube.com/watch?v=GNyW9j9MsQI</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw/videos?view=2&flow=grid&disable_polymer=1">https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw</a>
+  <br />
+  <button class="btn" onclick="filterSelection('street')">Street View</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv trainlines bridge scenery shore">
 <p><font size="4"><span style="color: #000d8a;"><strong>Amarube Railway in Kami-Cho (Mikata, Hyogo):</strong></span></font><br />
 <img src="/pictures/13.jpg" title="Amarube Railway" width="356" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://amarube-cam.town.mikata-kami.lg.jp/viewer/live/index.html">http://amarube-cam.town.mikata-kami.lg.jp/viewer/live/index.html</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://amarube-cam.town.mikata-kami.lg.jp/viewer/live/index.html">http://amarube-cam.town.mikata-kami.lg.jp/viewer/live/index.html</a>
+<br />
+<button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
+<button class="btn" onclick="filterSelection('bridge')">Bridge</button>
+<button class="btn" onclick="filterSelection('scenery')">Scenery</button>
+<button class="btn" onclick="filterSelection('shore')">Shore</button>
+</p>
+<p>&nbsp;</p></div>
 
-<p><font size="4"><span style="color: #000d8a;"><strong>Soemon-cho, Osaka:</strong></span></font><br />
+<div class="filterDiv street">
+<p><font size="4"><span style="color: #000d8a;"><strong>Soemon-cho, Osaka (oposite of Dotonbori):</strong></span></font><br />
 <img src="/pictures/15.jpg" title="Soemon-cho" width="356" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://soemon-cho.com/active/camera/camera9.html" title="Right click -> View Image">http://soemon-cho.com/active/camera/camera9.html</a>
-  <span style="color: #FFFFFF"> (9 Cameras)</span></p>
-<p>&nbsp;</p>
+  <span style="color: #FFFFFF"> (9 Cameras)</span>
+<br />
+<button class="btn" onclick="filterSelection('street')">Street View</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv street dead">
 <p><font size="4"><span style="color: #000d8a;"><strong>MOBOTIX Q24  mx10-11-240-143 Live:</strong></span></font><br />
 <img src="/pictures/6.jpg" title="MOBOTIX" width="265" height="200" />
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://180.3.172.145/control/userimage.html"; title="You can increase fps to 25.">http://180.3.172.145/control/userimage.html</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://180.3.172.145/control/userimage.html"; title="You can increase fps to 25.">http://180.3.172.145/control/userimage.html</a>
+  <br />
+  <button class="btn" onclick="filterSelection('street')">Street View</button>
+  <button class="btn btn2" onclick="filterSelection('dead')">Dead</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv street traffic city">
 <p><font size="4"><span style="color: #000d8a;"><strong>Okinawa Times:</strong></span></font><br />
 <img src="/pictures/26.jpg" title="Okinawa Times 1" width="267" height="200" />
 <img src="/pictures/27.jpg" title="Okinawa Times 2" width="267" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://livecamera1.okinawatimes.co.jp/viewer/live/en/live.html ">http://livecamera1.okinawatimes.co.jp/viewer/live/en/live.html </a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://livecamera2.okinawatimes.co.jp/viewer/live/en/live.html ">http://livecamera2.okinawatimes.co.jp/viewer/live/en/live.html </a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://livecamera2.okinawatimes.co.jp/viewer/live/en/live.html ">http://livecamera2.okinawatimes.co.jp/viewer/live/en/live.html </a>
+<br />
+<button class="btn" onclick="filterSelection('street')">Street View</button>
+<button class="btn" onclick="filterSelection('city')">City View</button>
+<button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
+</p>
+<p>&nbsp;</p></div>
 
+<div class="filterDiv ipcamera">
 <p><font size="4"><span style="color: #000d8a;"><strong>A Big List of Security Cameras in Japan:</strong></span></font><br />
 <img src="/pictures/14.jpg" title="Security Cameras" width="313" height="200" />
   <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.insecam.org/en/bycountry/JP/">https://www.insecam.org/en/bycountry/JP/</a>
-  <br /><a style="text-decoration:none; color:#2a00ee;"; href="/streams/insecam">Recommended from the thread (click)</a></p>
-<p>&nbsp;</p>
+  <br /><a style="text-decoration:none; color:#2a00ee;"; href="/streams/insecam">Recommended from the thread (click)</a>
+<br />
+<button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
+</p>
+<p>&nbsp;</p></div>
 
-</center>
+</div></center>
 
 <br /><br /><br /><br />
 <p><a href="/"><img src=/pictures/mainpage.png></a></p>
 
 
 
+<script>
+function filterSelection(className)
+{
+    if (!className || className === "all")
+        className = "";
+
+    for (const {classList}  of document.getElementsByClassName("filterDiv")) {
+        if (classList.contains("dead"))
+            continue;
+
+        if (!className || classList.contains(className))
+            classList.add("show");
+        else
+        if (classList.contains("dead"))
+        classList.add("show");
+        else
+            classList.remove("show");
+    }
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </body>
 </html>
