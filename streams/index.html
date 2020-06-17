@@ -9,7 +9,7 @@
   display: block;
 }
 
-.noshow {
+.hide {
   display: none;
 }
 
@@ -301,9 +301,9 @@ function filterSelection(className)
 
     for (const {classList}  of document.getElementsByClassName("filterDiv")) {
         if (!className || classList.contains(className))
-            classList.remove("noshow");
+            classList.remove("hide");
         else
-            classList.add("noshow");
+            classList.add("hide");
     }
 }
 
