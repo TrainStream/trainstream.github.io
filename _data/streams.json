@@ -1,0 +1,533 @@
+{
+    "$schema": "./stream_definitions.json",
+    "data": [
+        {
+            "name": "Tokyo Roppongi Sky View",
+            "isAlive": false,
+            "tags": "traffic, city",
+            "images": [
+                {
+                    "src": "/pictures/7.jpg",
+                    "title": "Roppongi Sky View",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=IXr6INJs0TA",
+                    "text": "It has been down for a while now."
+                }
+            ]
+        },
+        {
+            "name": "MOBOTIX Q24  mx10-11-240-143 Live",
+            "isAlive": false,
+            "tags": "street",
+            "images": [
+                {
+                    "src": "/pictures/6.jpg",
+                    "title": "MOBOTIX",
+                    "width": 265,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://180.3.172.145/control/userimage.html",
+                    "linkTitle": "You can increase fps to 25."
+                }
+            ]
+        },
+        {
+            "name": "湯野上温泉駅 Yunokami-Onsen Station",
+            "isAlive": true,
+            "tags": "trainstation, bridge, scenery, other",
+            "images": [
+                {
+                    "src": "/pictures/1.jpg",
+                    "title": "Station, live-cam003",
+                    "width": 267,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/28.jpg",
+                    "title": "live-cam004",
+                    "width": 267,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/29.jpg",
+                    "title": "live-cam002",
+                    "width": 267,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/30.jpg",
+                    "title": "live-cam005",
+                    "width": 267,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/31.jpg",
+                    "title": "live-cam001",
+                    "width": 267,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://www.shimogo-live.jp/",
+                    "linkTitle": "The site sometimes goes down, but the streams don't."
+                },
+                {
+                    "link": "rtmp://114.160.7.45/livepkgr/live-cam003",
+                    "text": "rtmp://114.160.7.45/livepkgr/live-cam003 (Train Station)"
+                },
+                {
+                    "text": "For the others hover their images to see live-cam00x number. 001 and 005 move."
+                }
+            ]
+        },
+        {
+            "name": "別所温泉駅 Bessho-Onsen Station/Ueda Cable Vision Cameras",
+            "isAlive": true,
+            "tags": "trainstation, shrine, bridge, scenery, shop, other",
+            "images": [
+                {
+                    "src": "/pictures/2.jpg",
+                    "title": "bessyo.html",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/32.jpg",
+                    "title": "bousai.html",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/33.jpg",
+                    "title": "uedaeki.html",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/34.jpg",
+                    "title": "ueda1.html",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/35.jpg",
+                    "title": "kitamuki.html",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/36.jpg",
+                    "title": "ikushima.html",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://live.ueda.ne.jp/"
+                },
+                {
+                    "link": "http://live.ueda.ne.jp/bessyo.html",
+                    "text": "http://live.ueda.ne.jp/bessyo.html (Train station)"
+                },
+                {
+                    "text": "On the Ueda site there are also other shop, mountain and scenery cameras."
+                }
+            ]
+        },
+        {
+            "name": "東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway",
+            "isAlive": true,
+            "tags": "trainlines, traffic, city, sound",
+            "images": [
+                {
+                    "src": "/pictures/4.jpg",
+                    "title": "Shiodome Railway",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw/videos?view=2&flow=grid",
+                    "text": "https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw"
+                }
+            ]
+        },
+        {
+            "name": "渋谷スクランブル交差点 ライブ映像 Tokyo Shibuya Scramble Crossing",
+            "isAlive": true,
+            "tags": "street, traffic",
+            "images": [
+                {
+                    "src": "/pictures/5.jpg",
+                    "title": "Shibuya Scramble Crossing",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/sibchtv/videos?flow=grid&view=2",
+                    "text": "https://www.youtube.com/channel/UCgdHxnHSXvcAi4PaMIY1Ltg"
+                }
+            ]
+        },
+        {
+            "name": "北海道ｏｎ天気ライブカメラ HTB's Weather Live Cameras in Hokkaido",
+            "isAlive": true,
+            "tags": "traffic, city, bridge",
+            "images": [
+                {
+                    "src": "/pictures/3.jpg",
+                    "title": "Weather Cameras in Hokkaido",
+                    "width": 712,
+                    "height": 400
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/HTBNEWS/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/user/HTBNEWS/"
+                }
+            ]
+        },
+        {
+            "name": "長崎港 Nagasaki Harbor | 佐世保港 Sasebo Port | 本社屋上 HQ Rooftop | 長崎空港 Nagasaki Airport",
+            "isAlive": true,
+            "tags": "traffic, city, airport, seaport, sound",
+            "images": [
+                {
+                    "src": "/pictures/9.jpg",
+                    "title": "Nagasaki Harbor",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/10.jpg",
+                    "title": "Sasebo Port",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/11.jpg",
+                    "title": "HQ Rooftop",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/12.jpg",
+                    "title": "Nagasaki Airport",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCWkqxFZQSdkR_q8kGz6p9mw/videos?flow=grid&view=2",
+                    "text": "https://www.youtube.com/channel/UCWkqxFZQSdkR_q8kGz6p9mw"
+                },
+                {
+                    "text": "'HQ Rooftop', the bridge, camera is down"
+                },
+                {
+                    "text": "Nagasaki Harbor and Nagasaki Airport have sound."
+                }
+            ]
+        },
+        {
+            "name": "JR帯広駅ライブカメラ JR Obihiro Station, Hokkaido (and 3 others)",
+            "isAlive": true,
+            "tags": "trainstation, traffic, bridge, airport",
+            "images": [
+                {
+                    "src": "/pictures/16.jpg",
+                    "title": "Obihiro Station",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/17.jpg",
+                    "title": "Tokachi-Obihiro Airport",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/18.jpg",
+                    "title": "The Hakutyo Bridge of Tokachi River",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/19.jpg",
+                    "title": "Tokachi Big Bridge over the Tokachi River",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/kachimai/videos?live_view=501&sort=dd&view=2&shelf_id=2",
+                    "text": "https://www.youtube.com/user/kachimai/"
+                }
+            ]
+        },
+        {
+            "name": "【中書島】京阪電車を生ライブ【淀】 Keihan Raliway, Kyoto",
+            "isAlive": true,
+            "tags": "trainlines, sound",
+            "images": [
+                {
+                    "src": "/pictures/8.jpg",
+                    "title": "Keihan Raliway",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw"
+                }
+            ]
+        },
+        {
+            "name": "部屋の窓から(大岡川＆ランドマーク方面＋京急 Keikyu Line & Ooka River, Yokohama",
+            "isAlive": true,
+            "tags": "trainlines, traffic, city, bridge",
+            "images": [
+                {
+                    "src": "/pictures/20.jpg",
+                    "title": "Keikyu Line & Ooka River",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg"
+                }
+            ]
+        },
+        {
+            "name": "JR中央線　豊田駅～日野駅間 JR Chuo Line Toyoda~Hino Station, Tokyo",
+            "isAlive": true,
+            "tags": "trainlines, sound",
+            "images": [
+                {
+                    "src": "/pictures/21.jpg",
+                    "title": "Chuo Line Toyoda~Hino Station",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/41.jpg",
+                    "title": "Sin-Osaka",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/kakitubata19781011/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/user/kakitubata19781011"
+                },
+                {
+                    "text": "The one on the left has sound."
+                }
+            ]
+        },
+        {
+            "name": "新大阪ライブカメラ Sin-Osaka Station",
+            "isAlive": true,
+            "tags": "trainlines, city, traffic, sound",
+            "images": [
+                {
+                    "src": "/pictures/22.jpg",
+                    "title": "Sin-Osaka",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos"
+                }
+            ]
+        },
+        {
+            "name": "北陸新幹線　金沢駅ライブカメラ　Kanazawa Station, Ishikawa | 金沢港ライブカメラ Kanazawa Port",
+            "isAlive": true,
+            "tags": "trainlines, city, traffic, bridge, seaport, shore",
+            "images": [
+                {
+                    "src": "/pictures/23.jpg",
+                    "title": "Kanazawa Station",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/24.jpg",
+                    "title": "Kanazawa Port",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/37.jpg",
+                    "title": "HAB HQ",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/38.jpg",
+                    "title": "Noto-Wajima",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/39.jpg",
+                    "title": "From the Prefectural Office, maybe",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/habmigochannel/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/channel/UCt6LB-BvEmDm-oWbe_TO7mw"
+                }
+            ]
+        },
+        {
+            "name": "Kabukicho, Tokyo",
+            "isAlive": true,
+            "tags": "street",
+            "images": [
+                {
+                    "src": "/pictures/25.jpg",
+                    "title": "Kabukicho",
+                    "width": 356,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/40.jpg",
+                    "title": "Kabukicho",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw/videos?view=2&flow=grid&disable_polymer=1",
+                    "text": "https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw"
+                },
+                {
+                    "text": "Left picture is old view, right picture is new view."
+                }
+            ]
+        },
+        {
+            "name": "Amarube Railway in Kami-Cho (Mikata, Hyogo)",
+            "isAlive": true,
+            "tags": "trainlines, bridge, scenery, shore",
+            "images": [
+                {
+                    "src": "/pictures/13.jpg",
+                    "title": "Amarube Railway",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://amarube-cam.town.mikata-kami.lg.jp/viewer/live/index.html"
+                }
+            ]
+        },
+        {
+            "name": "Soemon-cho, Osaka (oposite side of Dotonbori)",
+            "isAlive": true,
+            "tags": "street",
+            "images": [
+                {
+                    "src": "/pictures/15.jpg",
+                    "title": "Soemon-cho",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://soemon-cho.com/active/camera/camera9.html",
+                    "linkTitle": "Right click -> View Image"
+                },
+                {
+                    "text": "(9 Cameras)"
+                }
+            ]
+        },
+        {
+            "name": "Okinawa Times",
+            "isAlive": true,
+            "tags": "street, traffic, city",
+            "images": [
+                {
+                    "src": "/pictures/26.jpg",
+                    "title": "Okinawa Times 1",
+                    "width": 267,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/27.jpg",
+                    "title": "Okinawa Times 2",
+                    "width": 267,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://livecamera1.okinawatimes.co.jp/viewer/live/en/live.html"
+                },
+                {
+                    "link": "http://livecamera2.okinawatimes.co.jp/viewer/live/en/live.html"
+                }
+            ]
+        },
+        {
+            "name": "A Big List of Variety of Security Cameras in Japan",
+            "isAlive": true,
+            "tags": "ipcamera, other",
+            "images": [
+                {
+                    "src": "/pictures/14.jpg",
+                    "title": "Security Cameras",
+                    "width": 313,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.insecam.org/en/bycountry/JP/"
+                },
+                {
+                    "link": "/streams/insecam",
+                    "text": "Recommended from the thread (click)"
+                }
+            ]
+        }
+    ]
+}

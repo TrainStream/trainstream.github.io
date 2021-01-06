@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <html>
 <head>
@@ -11,21 +14,16 @@
 <center>
   <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>Insecam Recommended:</strong></font><br /><br />
 
-<p><font size="4"><span style="color: #000d8a;"><strong>Somewhere in Kyushu:</strong></span></font><br />
-  <a style="text-decoration:none; color:#2a00ee;"; href="http://www.insecam.org/en/view/691031/">http://www.insecam.org/en/view/691031/</a></p>
-<p>&nbsp;</p>
-
-<p><font size="4"><span style="color: #000d8a;"><strong>A monorail & airport:</strong></span></font><br />
-  <a style="text-decoration:none; color:#2a00ee;"; href="http://www.insecam.org/en/view/689951//">http://www.insecam.org/en/view/689951/</a></p>
-<p>&nbsp;</p>
-
-<p><font size="4"><span style="color: #000d8a;"><strong>Shinagawa Station, maybe:</strong></span></font><br />
-  <a style="text-decoration:none; color:#2a00ee;"; href="http://www.insecam.org/en/view/689292/">http://www.insecam.org/en/view/689292/</a></p>
-<p>&nbsp;</p>
-
-<p><font size="4"><span style="color: #000d8a;"><strong>Amarube Station in Hyogo:</strong></span></font><br />
-  <a style="text-decoration:none; color:#2a00ee;"; href="http://www.insecam.org/en/view/688963//">http://www.insecam.org/en/view/688963/</a></p>
-<p>&nbsp;</p>
+{% for data in site.data.insecure_cams %}
+  <p>
+    <font size="4">
+      <span style="color: #000d8a"><strong>{{ data.name }}:</strong></span>
+    </font>
+    <br />
+    <a style="text-decoration: none; color: #2a00ee" href="{{ data.url }}">{{ data.url }}</a>
+  </p>
+  <p>&nbsp;</p>
+{% endfor %}
 
 </center></span>
 
