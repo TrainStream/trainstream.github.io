@@ -1,0 +1,12 @@
+{% for tag in site.data.tags %}
+    <button
+        class="btn {% if forloop.index0 == 0 %}active{% endif %} {% if tag.slug == 'sound' %}btn2{% endif %}"
+        onclick="filterSelection('{{ tag.slug }}')"
+    >
+        {{ tag.name }}
+    </button>
+
+    {% if tag.slug == 'all' or tag.slug == 'shrine' %}
+        <br />
+    {% endif %}
+{% endfor %}

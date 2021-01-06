@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "data": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/streamObject"
+            }
+        }
+    },
+    "definitions": {
+        "streamObject": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "description": "The name of the stream",
+                    "type": "string"
+                },
+                "tags": {
+                    "description": "The tags for the stream, comma separated",
+                    "type": "string"
+                },
+                "images": {
+                    "description": "Images for the stream",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/streamImage"
+                    }
+                },
+                "extras": {
+                    "description": "Extra stuff, usually text or links",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/streamExtras"
+                    }
+                },
+                "isAlive": {
+                    "description": "Is the stream alive?",
+                    "type": "boolean"
+                }
+            }
+        },
+        "streamImage": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "src": {
+                    "description": "The source of the image",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The title for the image",
+                    "type": "string"
+                },
+                "width": {
+                    "description": "The width for the image",
+                    "type": "number"
+                },
+                "height": {
+                    "description": "The height for the image",
+                    "type": "number"
+                }
+            }
+        },
+        "streamExtras": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "link": {
+                    "description": "The URL to open when clicking on text",
+                    "type": "string"
+                },
+                "linkTitle": {
+                    "description": "The title for link, appears when hovering",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The text to display, will override URL",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,6 @@
+---
+---
+
 <!doctype html>
 <html>
 <head>
@@ -50,50 +53,16 @@
 
 <!-- Control buttons -->
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">Show All</button>
-  <br />
-  <button class="btn" onclick="filterSelection('trainstation')">Train Station</button>
-  <button class="btn" onclick="filterSelection('trainlines')">Train Lines</button>
-  <button class="btn" onclick="filterSelection('street')">Street View</button>
-  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
-  <button class="btn" onclick="filterSelection('city')">City View</button>
-  <button class="btn" onclick="filterSelection('shrine')">Shrine/Temple</button>
-  <br />
-  <button class="btn" onclick="filterSelection('bridge')">Bridge</button>
-  <button class="btn" onclick="filterSelection('airport')">AirPort</button>
-  <button class="btn" onclick="filterSelection('seaport')">SeaPort</button>
-  <button class="btn" onclick="filterSelection('scenery')">Scenery</button>
-  <button class="btn" onclick="filterSelection('shore')">Shore</button>
-  <button class="btn" onclick="filterSelection('shop')">Shop</button>
-  <button class="btn btn2" onclick="filterSelection('sound')">Sound</button>
-  <button class="btn" onclick="filterSelection('other')">Other</button>
-  <button class="btn" onclick="filterSelection('ipcamera')">IP Cameras</button>
-
+  {% include all_button_tags.html %}
 </div>
 
 <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 <div class="container">
-
-  <div class="filterDiv traffic city">
-  <p><font size="4"><span style="color: #000d8a;"><strong>Tokyo Roppongi Sky View:</strong></span></font><br />
-  <img src="/pictures/7.jpg" title="Roppongi Sky View" width="356" height="200" />
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw">https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw</a>
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="https://www.youtube.com/watch?v=IXr6INJs0TA">It has been down for a while now.</a>
-  <br />
-  <button class="btn" onclick="filterSelection('traffic')">Traffic View</button>
-  <button class="btn" onclick="filterSelection('city')">City View</button>
-  </p>
-  <p>&nbsp;</p></div>
-
-  <div class="filterDiv street">
-  <p><font size="4"><span style="color: #000d8a;"><strong>MOBOTIX Q24  mx10-11-240-143 Live:</strong></span></font><br />
-  <img src="/pictures/6.jpg" title="MOBOTIX" width="265" height="200" />
-    <br /><a style="text-decoration:none; color:#2a00ee;"; href="http://180.3.172.145/control/userimage.html"; title="You can increase fps to 25.">http://180.3.172.145/control/userimage.html</a>
-    <br />
-    <button class="btn" onclick="filterSelection('street')">Street View</button>
-  </p>
-  <p>&nbsp;</p></div>
-
+  {% for data in site.data.streams.data %}
+    {% unless data.isAlive %}
+      {% include stream.html stream=data %}
+    {% endunless %}
+  {% endfor %}
 </div></center>
 
 <br /><br /><br /><br />

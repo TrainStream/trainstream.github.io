@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Show All",
+        "slug": "all"
+    },
+    {
+        "name": "Train Station",
+        "slug": "trainstation"
+    },
+    {
+        "name": "Train Lines",
+        "slug": "trainlines"
+    },
+    {
+        "name": "Street View",
+        "slug": "street"
+    },
+    {
+        "name": "Traffic View",
+        "slug": "traffic"
+    },
+    {
+        "name": "City View",
+        "slug": "city"
+    },
+    {
+        "name": "Shrine/Temple",
+        "slug": "shrine"
+    },
+    {
+        "name": "Bridge",
+        "slug": "bridge"
+    },
+    {
+        "name": "AirPort",
+        "slug": "airport"
+    },
+    {
+        "name": "SeaPort",
+        "slug": "seaport"
+    },
+    {
+        "name": "Scenery",
+        "slug": "scenery"
+    },
+    {
+        "name": "Shore",
+        "slug": "shore"
+    },
+    {
+        "name": "Shop",
+        "slug": "shop"
+    },
+    {
+        "name": "Sound",
+        "slug": "sound"
+    },
+    {
+        "name": "Other",
+        "slug": "other"
+    },
+    {
+        "name": "IP Cameras",
+        "slug": "ipcamera"
+    }
+]

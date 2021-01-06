@@ -1,0 +1,60 @@
+<div class="filterDiv {{ include.stream.tags | split: ',' | join: ' ' }}">
+    <p>
+        <font size="4">
+            <span style="color: #000d8a">
+                <strong>{{ include.stream.name }}:</strong>
+            </span>
+        </font>
+        <br />
+
+        {% assign images_count = include.stream.images | size %}
+        {% for img in include.stream.images %}
+            <img
+                src="{{ img.src }}"
+                title="{{ img.title }}"
+                width="{{ img.width }}"
+                height="{{ img.height }}"
+            />
+
+            {% if images_count == 4 and forloop.index == 2 %}
+                <br />
+            {% elsif images_count == 5 and forloop.index == 2 %}
+                <br />
+            {% elsif images_count == 6 and forloop.index == 3 %}
+                <br />
+            {% endif %}
+        {% endfor %}
+
+        <br />
+        {% for extra in include.stream.extras %}
+            {% if extra.link %}
+                <a
+                    style="text-decoration: none; color: #2a00ee"
+                    href="{{ extra.link }}"
+                    {% if extra.linkTitle %}title="{{ extra.linkTitle }}"{% endif %}
+                >
+                    {{ extra.text | default: extra.link }}
+                </a>
+            {% else %}
+                <span style="color: #fff">{{ extra.text }}</span>
+            {% endif %}
+            <br />
+        {% endfor %}
+
+        {% assign tags = include.stream.tags | split: ',' %}
+        {% for tag in tags %}
+            {% assign stripped_tag_slug = tag | strip %}
+            <button
+                class="btn {% if stripped_tag_slug == 'sound' %}btn2{% endif %}"
+                onclick="filterSelection('{{ stripped_tag_slug }}')"
+            >
+                {% for source_tag in site.data.tags %}
+                    {% if source_tag.slug == stripped_tag_slug %}
+                        {{ source_tag.name }}
+                    {% endif %}
+                {% endfor %}
+            </button>
+        {% endfor %}
+    </p>
+    <p>&nbsp;</p>
+</div>
