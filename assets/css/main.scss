@@ -1,0 +1,51 @@
+---
+---
+
+body {
+    background-image: url("/pictures/background.png");
+}
+
+.filterDiv {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
+.btn2 {
+    background-color: #800000;
+    color: white;
+
+    &:hover {
+        background-color: #b22222;
+    }
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.custom-link a {
+    &:link,
+    &:visited {
+        color: #000d8a;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
