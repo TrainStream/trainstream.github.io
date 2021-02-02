@@ -2,13 +2,6 @@
     "$schema": "./stream_definitions.json",
     "data": [
         {
-            "isAlive": true,
-            "images": [],
-            "extras": [],
-            "name": "Test",
-            "tags": "test"
-        },
-        {
             "name": "Tokyo Roppongi Sky View",
             "isAlive": false,
             "tags": "traffic, city",
