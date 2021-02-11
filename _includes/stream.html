@@ -10,7 +10,7 @@
         {% assign images_count = include.stream.images | size %}
         {% for img in include.stream.images %}
             <img
-                src="{{ img.src }}"
+                src="//images.weserv.nl/?h={{ img.height }}&url=https://trainstream.github.io{{ img.src }}"
                 title="{{ img.title }}"
                 width="{{ img.width }}"
                 height="{{ img.height }}"
