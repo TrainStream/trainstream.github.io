@@ -534,9 +534,9 @@
             "images": [
                 {
                     "src": "/pictures/Osaka Skyline.jpg",
-                    "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "alt": "Osaka Skyline",
+                    "width": 267,
+                    "height": 200
                 }
             ],
             "extras": [
