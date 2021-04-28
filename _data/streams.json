@@ -531,7 +531,14 @@
         },
         {
             "isAlive": false,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Osaka Skyline.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UC7lHIZbQzHILorlX4R0izsw",
@@ -539,7 +546,7 @@
                     "text": "Osaka skyline scenery, recommended viewing during sunrise and sunset."
                 }
             ],
-            "tags": "city, scenery",
+            "tags": "city, scenery, traffic",
             "name": "Osaka Sky Livecam"
         }
     ]
