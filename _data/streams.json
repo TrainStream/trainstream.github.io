@@ -528,6 +528,19 @@
                     "text": "Recommended from the thread (click)"
                 }
             ]
+        },
+        {
+            "isAlive": false,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC7lHIZbQzHILorlX4R0izsw",
+                    "linkTitle": "Osaka Sky Livecam",
+                    "text": "Osaka skyline scenery, recommended viewing during sunrise and sunset."
+                }
+            ],
+            "tags": "city, scenery",
+            "name": "Osaka Sky Livecam"
         }
     ]
 }
