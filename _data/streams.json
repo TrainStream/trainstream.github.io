@@ -530,7 +530,7 @@
             ]
         },
         {
-            "isAlive": false,
+            "isAlive": true,
             "images": [
                 {
                     "src": "/pictures/Osaka Skyline.jpg",
