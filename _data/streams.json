@@ -731,6 +731,26 @@
             ],
             "tags": "trainlines, street, traffic, sound",
             "name": "神田駅北口ライブカメラ Tokyo Kanda Live Camera"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Sakurajima1.jpg",
+                    "alt": "Sakurajima",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA",
+                    "linkTitle": "Sakurajima (active volcano) @ Satsuma Meiji Village observatory in Tarumizu city, Kagoshima, Japan",
+                    "text": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA"
+                }
+            ],
+            "tags": "scenery, shore",
+            "name": "桜島 ライブカメラ 鹿児島県 垂水市 Sakurajima Live Camera Tarumizu City, Kagoshima Prefecture"
         }
     ]
 }
