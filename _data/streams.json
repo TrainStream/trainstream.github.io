@@ -654,7 +654,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Hakodate1.jpg",
+                    "alt": "Hakodate Main Line",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A",
