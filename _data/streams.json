@@ -619,6 +619,38 @@
             ],
             "tags": "other",
             "name": "Dogo Onsen"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Hamamatsu1.jpg",
+                    "alt": "City of Hamamatsu",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Hamamatsu2.jpg",
+                    "alt": "City of Hamamatsu",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Hamamatsu3.jpg",
+                    "alt": "City of Hamamatsu",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/c/ZAZAマガジンチャンネル/",
+                    "linkTitle": "",
+                    "text": "https://www.youtube.com/c/ZAZAマガジンチャンネル/"
+                }
+            ],
+            "tags": "city, street, sound, other",
+            "name": "Various views of the City of Hamamatsu"
         }
     ]
 }
