@@ -556,11 +556,18 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Bento1.jpg",
+                    "alt": "Bento shop a 5-minute walk from JR Kameido Station in Koto-ku, Tokyo",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w",
-                    "linkTitle": "Bento Shop a 5-minute walk from JR Kameido Station in Koto-ku, Tokyo",
+                    "linkTitle": "Bento shop a 5-minute walk from JR Kameido Station in Koto-ku, Tokyo",
                     "text": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w"
                 }
             ],
