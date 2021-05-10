@@ -711,6 +711,26 @@
             ],
             "tags": "shrine",
             "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Kanda1.jpg",
+                    "alt": "Tokyo Kanda Live Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCu76uqpelv-VALL5d6zsljg",
+                    "linkTitle": "Tokyo Kanda Live Camera",
+                    "text": "https://www.youtube.com/channel/UCu76uqpelv-VALL5d6zsljg"
+                }
+            ],
+            "tags": "trainlines, street, traffic, sound",
+            "name": "神田駅北口ライブカメラ Tokyo Kanda Live Camera"
         }
     ]
 }
