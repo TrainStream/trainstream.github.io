@@ -771,6 +771,19 @@
             ],
             "tags": "city, scenery, sound",
             "name": "上野城ライブカメラ 桜島と鹿児島市内 / Sakurajima and Kagoshima city in Japan"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw",
+                    "linkTitle": "Kumakumakuma Channel",
+                    "text": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw"
+                }
+            ],
+            "tags": "trainlines, airport, sound",
+            "name": "くまくまくま Kumakumakuma Channel Trainlines and Airport"
         }
     ]
 }
