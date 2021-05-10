@@ -553,6 +553,19 @@
             ],
             "tags": "city, scenery, traffic",
             "name": "Osaka Sky Livecam"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w",
+                    "linkTitle": "Bento Shop a 5-minute walk from JR Kameido Station in Koto-ku, Tokyo",
+                    "text": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w"
+                }
+            ],
+            "tags": "shop",
+            "name": "弁当屋さんのライブカメラ キッチンDIVE Live Camera from a Bento shop in Koto-Bu, Tokyo"
         }
     ]
 }
