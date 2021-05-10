@@ -691,6 +691,26 @@
             ],
             "tags": "trainlines, sound",
             "name": "阪急電車 阪急今津線 小林駅 Japan Train Hankyu Imazu Line Obayashi Station"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Asakusa1.jpg",
+                    "alt": "Senso-ji Temple",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCh1UcGFBIuFo5I-I1WMyclA",
+                    "linkTitle": "Views of the famous Senso-ji temple in Asakusa",
+                    "text": "https://www.youtube.com/channel/UCh1UcGFBIuFo5I-I1WMyclA"
+                }
+            ],
+            "tags": "shrine",
+            "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
         }
     ]
 }
