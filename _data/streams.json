@@ -751,6 +751,26 @@
             ],
             "tags": "scenery, shore",
             "name": "桜島 ライブカメラ 鹿児島県 垂水市 Sakurajima Live Camera Tarumizu City, Kagoshima Prefecture"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Sakurajima2.jpg",
+                    "alt": "Sakurajima",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg/featured",
+                    "linkTitle": "Sakurajima and Kagoshima city in Japan",
+                    "text": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg/featured"
+                }
+            ],
+            "tags": "city, scenery, sound",
+            "name": "上野城ライブカメラ 桜島と鹿児島市内 / Sakurajima and Kagoshima city in Japan"
         }
     ]
 }
