@@ -602,7 +602,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/DogoOnsen1.jpg",
+                    "alt": "Dogo Onsen",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ",
