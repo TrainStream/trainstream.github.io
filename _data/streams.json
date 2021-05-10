@@ -774,7 +774,32 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Kuma1.jpg",
+                    "alt": "くまくまくま",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kuma2.jpg",
+                    "alt": "くまくまくま",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/kuma3.jpg",
+                    "alt": "くまくまくま",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kuma4.jpg",
+                    "alt": "くまくまくま",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw",
