@@ -599,6 +599,19 @@
             ],
             "tags": "trainlines, sound",
             "name": "JR Chuo Main Line Live Camera (Kasugai-cho ⇔ Isiwa Onsen)"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ",
+                    "linkTitle": "Famous onsen in the city of Matsuyama, Ehime Prefecture. Inspiration for the bathhouse in Spirited Away.",
+                    "text": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ"
+                }
+            ],
+            "tags": "other",
+            "name": "Dogo Onsen"
         }
     ]
 }
