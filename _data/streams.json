@@ -651,6 +651,19 @@
             ],
             "tags": "city, street, sound, other",
             "name": "Various views of the City of Hamamatsu"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A",
+                    "linkTitle": "Hakodate Main Line",
+                    "text": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A"
+                }
+            ],
+            "tags": "trainlines, sound",
+            "name": "Hakodate Main Line"
         }
     ]
 }
