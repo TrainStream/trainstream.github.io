@@ -674,7 +674,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Obayashi1.jpg",
+                    "alt": "Obayashi Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCIQmoWaeozFXv0W9vAlY-8g",
