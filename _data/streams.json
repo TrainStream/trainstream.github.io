@@ -414,7 +414,7 @@
         },
         {
             "name": "Kabukicho, Tokyo",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "street",
             "images": [
                 {
@@ -770,9 +770,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg/featured",
+                    "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg",
                     "linkTitle": "Sakurajima and Kagoshima city in Japan",
-                    "text": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg/featured"
+                    "text": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg"
                 }
             ],
             "tags": "city, scenery, sound",
