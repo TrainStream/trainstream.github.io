@@ -818,7 +818,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Tokyo Shinjuku JR 1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UC1kDVgEX2DsE295Bkum_K9Q",
