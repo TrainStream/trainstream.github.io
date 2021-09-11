@@ -855,6 +855,38 @@
             ],
             "tags": "street, city",
             "name": "大阪 道頓堀 ライブカメラ Osaka Dotonbori live camera"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Osaka_Loop1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Osaka_Loop2.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Osaka_Loop3.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ",
+                    "linkTitle": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ",
+                    "text": "Osaka West Loop train track and skyline"
+                }
+            ],
+            "tags": "trainlines, city, sound",
+            "name": "Osaka Loop Line Live Camera"
         }
     ]
 }
