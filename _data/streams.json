@@ -838,7 +838,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Osaka_Dotonbori1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA",
