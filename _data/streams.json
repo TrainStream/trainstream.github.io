@@ -699,7 +699,7 @@
             "name": "阪急電車 阪急今津線 小林駅 Japan Train Hankyu Imazu Line Obayashi Station"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Asakusa1.jpg",
