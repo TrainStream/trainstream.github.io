@@ -352,7 +352,7 @@
         },
         {
             "name": "新大阪ライブカメラ Sin-Osaka Station",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "trainlines, city, traffic, sound",
             "images": [
                 {
