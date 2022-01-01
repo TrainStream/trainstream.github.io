@@ -899,14 +899,14 @@
                 {
                     "src": "/pictures/kobe1.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 },
                 {
                     "src": "/pictures/kobe2.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 }
             ],
             "extras": [
@@ -925,8 +925,8 @@
                 {
                     "src": "/pictures/Hachioji_Train1.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 }
             ],
             "extras": [
@@ -945,20 +945,20 @@
                 {
                     "src": "/pictures/fuji-city1.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 },
                 {
                     "src": "/pictures/fuji-navi1.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 },
                 {
                     "src": "/pictures/fuji-net1.jpg",
                     "alt": "",
-                    "width": 0,
-                    "height": 0
+                    "width": 267,
+                    "height": 200
                 }
             ],
             "extras": [
