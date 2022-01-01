@@ -938,6 +938,48 @@
             ],
             "tags": "trainlines, city, sound",
             "name": "あおば交通ch. / Aoba traffics"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/fuji-city1.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                },
+                {
+                    "src": "/pictures/fuji-navi1.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                },
+                {
+                    "src": "/pictures/fuji-net1.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCxDRF0u5dTFZQgUu3-2aj6A",
+                    "linkTitle": "Mt. Fuji from Tagoura Port, Fuji City, Shizuoka Prefecture",
+                    "text": "https://www.youtube.com/channel/UCxDRF0u5dTFZQgUu3-2aj6A"
+                },
+                {
+                    "link": "https://www.youtube.com/channel/UCwzJctz6m-0wG_evkheecZA",
+                    "linkTitle": "フジヤマNAVI",
+                    "text": "https://www.youtube.com/channel/UCwzJctz6m-0wG_evkheecZA"
+                },
+                {
+                    "link": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw",
+                    "linkTitle": "fuji-net",
+                    "text": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw"
+                }
+            ],
+            "tags": "scenery, other",
+            "name": "Views of Mount Fuji"
         }
     ]
 }
