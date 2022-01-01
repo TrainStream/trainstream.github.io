@@ -980,6 +980,32 @@
             ],
             "tags": "scenery, other",
             "name": "Views of Mount Fuji"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Tokyo-news1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Tokyo-news2.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ",
+                    "linkTitle": "日テレNEWS",
+                    "text": "https://www.youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ"
+                }
+            ],
+            "tags": "trainstation, trainlines, airport, traffic",
+            "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
         }
     ]
 }
