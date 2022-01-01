@@ -1006,6 +1006,26 @@
             ],
             "tags": "trainstation, trainlines, airport, traffic",
             "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Seibu_crossing1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCAPMlxH-TQVQNzKgD9V_JEw",
+                    "linkTitle": "Level crossing near Hoya Station on the Seibu Ikebukuro Line",
+                    "text": "https://www.youtube.com/channel/UCAPMlxH-TQVQNzKgD9V_JEw"
+                }
+            ],
+            "tags": "trainstation, trainlines, sound",
+            "name": "うめたくん"
         }
     ]
 }
