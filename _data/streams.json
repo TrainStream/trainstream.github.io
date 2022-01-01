@@ -168,7 +168,7 @@
         },
         {
             "name": "渋谷スクランブル交差点 ライブ映像 Tokyo Shibuya Scramble Crossing",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "street, traffic",
             "images": [
                 {
