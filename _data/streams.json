@@ -895,7 +895,20 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/kobe1.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                },
+                {
+                    "src": "/pictures/kobe2.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
