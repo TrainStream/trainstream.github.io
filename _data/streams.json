@@ -912,8 +912,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
-                    "linkTitle": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
-                    "text": "LIVECAM KOBE JAPAN"
+                    "linkTitle": "LIVECAM KOBE JAPAN",
+                    "text": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w"
                 }
             ],
             "tags": "city, traffic, sound",
@@ -932,8 +932,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA",
-                    "linkTitle": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA",
-                    "text": "Hachioji Tokyo Train Live Camera"
+                    "linkTitle": "Hachioji Tokyo Train Live Camera",
+                    "text": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA"
                 }
             ],
             "tags": "trainlines, city, sound",
