@@ -892,6 +892,19 @@
             ],
             "tags": "trainlines, city, sound",
             "name": "Osaka Loop Line Live Camera"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
+                    "linkTitle": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
+                    "text": "LIVECAM KOBE JAPAN"
+                }
+            ],
+            "tags": "city, traffic, sound",
+            "name": "LIVECAM KOBE JAPAN"
         }
     ]
 }
