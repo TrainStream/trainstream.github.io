@@ -959,6 +959,12 @@
                     "alt": "",
                     "width": 357,
                     "height": 200
+                },
+                {
+                    "src": "/pictures/fuji-shizuoka1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
                 }
             ],
             "extras": [
@@ -976,6 +982,11 @@
                     "link": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw",
                     "linkTitle": "fuji-net",
                     "text": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw"
+                },
+                {
+                    "link": "https://www.youtube.com/channel/UCkUdb6wh-TE9MK7Q2VTE5-A",
+                    "linkTitle": "静岡市さった峠 ライブカメラ - Mt. Fuji from Shizuoka City",
+                    "text": "https://www.youtube.com/channel/UCkUdb6wh-TE9MK7Q2VTE5-A"
                 }
             ],
             "tags": "scenery, other",
