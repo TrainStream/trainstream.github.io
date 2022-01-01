@@ -1026,6 +1026,26 @@
             ],
             "tags": "trainstation, trainlines, sound",
             "name": "うめたくん"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Shinjuku_kabukicho1.jpg",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw",
+                    "linkTitle": "Shinjuku Kabukicho red-light district",
+                    "text": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw"
+                }
+            ],
+            "tags": "street, city",
+            "name": "歌舞伎町ライブカメラ Shinjuku Kabukicho Live Camera"
         }
     ]
 }
