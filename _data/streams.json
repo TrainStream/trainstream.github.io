@@ -918,6 +918,26 @@
             ],
             "tags": "city, traffic, sound",
             "name": "LIVECAM KOBE JAPAN"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Hachioji_Train1.jpg",
+                    "alt": "",
+                    "width": 0,
+                    "height": 0
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA",
+                    "linkTitle": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA",
+                    "text": "Hachioji Tokyo Train Live Camera"
+                }
+            ],
+            "tags": "trainlines, city, sound",
+            "name": "あおば交通ch. / Aoba traffics"
         }
     ]
 }
