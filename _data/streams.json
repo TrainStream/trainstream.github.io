@@ -894,7 +894,7 @@
             "name": "Osaka Loop Line Live Camera"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/kobe1.jpg",
