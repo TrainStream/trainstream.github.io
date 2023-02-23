@@ -751,37 +751,28 @@
                     "alt": "Sakurajima",
                     "width": 357,
                     "height": 200
-                }
-            ],
-            "extras": [
-                {
-                    "link": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA",
-                    "linkTitle": "Sakurajima (active volcano) @ Satsuma Meiji Village observatory in Tarumizu city, Kagoshima, Japan",
-                    "text": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA"
-                }
-            ],
-            "tags": "scenery, shore",
-            "name": "桜島 ライブカメラ 鹿児島県 垂水市 Sakurajima Live Camera Tarumizu City, Kagoshima Prefecture"
-        },
-        {
-            "isAlive": true,
-            "images": [
+                },
                 {
                     "src": "/pictures/Sakurajima2.jpg",
-                    "alt": "Sakurajima",
+                    "alt": "",
                     "width": 357,
                     "height": 200
                 }
             ],
             "extras": [
                 {
+                    "link": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA",
+                    "linkTitle": "桜島 ライブカメラ 鹿児島県 垂水市 Sakurajima Live Camera Tarumizu City, Kagoshima Prefecture",
+                    "text": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA"
+                },
+                {
                     "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg",
-                    "linkTitle": "Sakurajima and Kagoshima city in Japan",
+                    "linkTitle": "上野城ライブカメラ 桜島と鹿児島市内 / Sakurajima and Kagoshima city in Japan",
                     "text": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg"
                 }
             ],
-            "tags": "city, scenery, sound",
-            "name": "上野城ライブカメラ 桜島と鹿児島市内 / Sakurajima and Kagoshima city in Japan"
+            "tags": "scenery, shore, city, sound",
+            "name": "Active volcano Sakurajima and Kagoshima city, Kagoshima Prefecture"
         },
         {
             "isAlive": true,
@@ -1107,7 +1098,7 @@
                 }
             ],
             "tags": "trainstation, trainlines, street, traffic, city, sound",
-            "name": "Asakusabashi Akihabara Livecam"
+            "name": "東京 総武線 浅草橋駅 秋葉原方面ライブカメラ 4K / Japan Tokyo Asakusabashi Akihabara Livecam"
         }
     ]
 }
