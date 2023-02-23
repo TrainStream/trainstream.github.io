@@ -1077,6 +1077,26 @@
             ],
             "tags": "trainlines, street, traffic, city, sound",
             "name": "Tokyo Shinjuku Live Camera"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Asakusabashi01.png",
+                    "alt": "Asakusabashi Akihabara Livecam",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@livecameratokyo7377",
+                    "linkTitle": "TokyoLiveCamera",
+                    "text": "https://www.youtube.com/@livecameratokyo7377"
+                }
+            ],
+            "tags": "trainstation, trainlines, street, traffic, city, sound",
+            "name": "Asakusabashi Akihabara Livecam"
         }
     ]
 }
