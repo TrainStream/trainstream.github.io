@@ -699,7 +699,7 @@
             "name": "阪急電車 阪急今津線 小林駅 Japan Train Hankyu Imazu Line Obayashi Station"
         },
         {
-            "isAlive": false,
+            "isAlive": true,
             "images": [
                 {
                     "src": "/pictures/Asakusa1.jpg",
@@ -715,9 +715,9 @@
                     "text": "https://www.youtube.com/channel/UCh1UcGFBIuFo5I-I1WMyclA"
                 },
                 {
-                    "link": "",
-                    "linkTitle": "",
-                    "text": "Mainly live during major holidays"
+                    "link": "https://www.youtube.com/@-asakusanakayachannel-6285",
+                    "linkTitle": "浅草ライブカメラ／浅草中屋 屋上より浅草寺 宝蔵門の様子を生中継／(SENSOJI／HOZOMONO／ASAKUSA NAKAYA）",
+                    "text": "https://www.youtube.com/@-asakusanakayachannel-6285"
                 }
             ],
             "tags": "shrine",
