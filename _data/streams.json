@@ -1043,7 +1043,13 @@
             "images": [
                 {
                     "src": "/pictures/Shinjuku_kabukicho1.jpg",
-                    "alt": "",
+                    "alt": "Shinjuku_kabukicho",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kabukicho02.png",
+                    "alt": "Kabukicho",
                     "width": 357,
                     "height": 200
                 }
@@ -1051,12 +1057,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw",
-                    "linkTitle": "Shinjuku Kabukicho red-light district, Tokyo",
+                    "linkTitle": "歌舞伎町ライブカメラ Shinjuku Kabukicho Live Camera",
                     "text": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw"
+                },
+                {
+                    "link": "https://www.youtube.com/@kabukicho-2",
+                    "linkTitle": "歌舞伎町 ライブ ちゃんねる 2『 Kabukicho Live Channel II 』",
+                    "text": "https://www.youtube.com/@kabukicho-2"
                 }
             ],
             "tags": "street",
-            "name": "歌舞伎町ライブカメラ Shinjuku Kabukicho Live Camera"
+            "name": "Kabukicho red-light district, Tokyo"
         },
         {
             "isAlive": true,
