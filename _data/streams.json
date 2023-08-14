@@ -994,7 +994,7 @@
             "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
         },
         {
-            "isAlive": false,
+            "isAlive": true,
             "images": [
                 {
                     "src": "/pictures/Seibu_crossing1.jpg",
