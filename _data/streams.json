@@ -934,12 +934,6 @@
             "isAlive": true,
             "images": [
                 {
-                    "src": "/pictures/fuji-city1.jpg",
-                    "alt": "",
-                    "width": 357,
-                    "height": 200
-                },
-                {
                     "src": "/pictures/fuji-navi1.jpg",
                     "alt": "",
                     "width": 357,
@@ -959,11 +953,6 @@
                 }
             ],
             "extras": [
-                {
-                    "link": "https://www.youtube.com/channel/UCxDRF0u5dTFZQgUu3-2aj6A",
-                    "linkTitle": "アース電設株式会社 - Mt. Fuji from Tagoura Port, Fuji City, Shizuoka Prefecture",
-                    "text": "https://www.youtube.com/channel/UCxDRF0u5dTFZQgUu3-2aj6A"
-                },
                 {
                     "link": "https://www.youtube.com/channel/UCwzJctz6m-0wG_evkheecZA",
                     "linkTitle": "フジヤマNAVI -  Mt. Fuji from Mt. Fuji Panoramic Ropeway",
@@ -1010,7 +999,7 @@
             "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Seibu_crossing1.jpg",
