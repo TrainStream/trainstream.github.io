@@ -1191,6 +1191,26 @@
             ],
             "tags": "trainlines, street, traffic, city, shore, sound",
             "name": "Live Camera Shonan Kamakura Japan"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Akihabara01.jpg",
+                    "alt": "Akihabara",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@ch-rz3bx/featured",
+                    "linkTitle": "Live camera from otaku Mecca",
+                    "text": "https://www.youtube.com/@ch-rz3bx/featured"
+                }
+            ],
+            "tags": "street",
+            "name": "オノデンch - Akihabara Live Camera"
         }
     ]
 }
