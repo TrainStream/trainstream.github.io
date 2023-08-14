@@ -1115,6 +1115,19 @@
             ],
             "tags": "trainlines, street, traffic, city, shore",
             "name": "FBC 福井放送公式チャンネル - Various Views Around Fukui Prefecture:"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@LIVE-hr9eo/featured",
+                    "linkTitle": "Asahi Shimbun LIVE",
+                    "text": "https://www.youtube.com/@LIVE-hr9eo/featured"
+                }
+            ],
+            "tags": "trainstation, street, city, airport, scenery",
+            "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan:"
         }
     ]
 }
