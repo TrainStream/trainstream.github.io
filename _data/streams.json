@@ -1118,7 +1118,32 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/AsahiChiba.png",
+                    "alt": "Asahi Chiba",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/AsahiFukuoka.png",
+                    "alt": "Asahi Fukuoka",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/AsahiNarita.png",
+                    "alt": "Asahi Narita",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/AsahiOkinawa.png",
+                    "alt": "Asahi Okinawa",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@LIVE-hr9eo/featured",
