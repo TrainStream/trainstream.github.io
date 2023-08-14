@@ -352,7 +352,7 @@
         },
         {
             "name": "新大阪ライブカメラ Sin-Osaka Station",
-            "isAlive": false,
+            "isAlive": true,
             "tags": "trainlines, city, traffic, sound",
             "images": [
                 {
@@ -364,8 +364,8 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos?view=2&flow=grid&disable_polymer=1",
-                    "text": "https://www.youtube.com/channel/UC34eMne6xBmBqsAfA8q8ZAg/videos"
+                    "link": "https://www.youtube.com/@bgvcam9668",
+                    "text": "https://www.youtube.com/@bgvcam9668"
                 }
             ]
         },
@@ -442,7 +442,7 @@
         },
         {
             "name": "Amarube Railway in Kami-Cho (Mikata, Hyogo)",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "trainlines, bridge, scenery, shore",
             "images": [
                 {
@@ -460,7 +460,7 @@
         },
         {
             "name": "Soemon-cho, Osaka (oposite side of Dotonbori)",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "street",
             "images": [
                 {
