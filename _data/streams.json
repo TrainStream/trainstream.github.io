@@ -1083,6 +1083,38 @@
             ],
             "tags": "trainstation, trainlines, street, traffic, city, sound",
             "name": "東京 総武線 浅草橋駅 秋葉原方面ライブカメラ 4K / Japan Tokyo Asakusabashi Akihabara Livecam"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/FBCFukui01.png",
+                    "alt": "FBCFukui01",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/FBCFukui02.png",
+                    "alt": "FBCFukui02",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/FBCFukui03.png",
+                    "alt": "FBCFukui03",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@FBC",
+                    "linkTitle": "FBC 福井放送公式チャンネル Fukui Broadcasting Corp.",
+                    "text": "https://www.youtube.com/@FBC"
+                }
+            ],
+            "tags": "trainlines, street, traffic, city, shore",
+            "name": "FBC - Various Views Around Fukui Prefecture."
         }
     ]
 }
