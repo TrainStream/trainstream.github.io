@@ -149,7 +149,7 @@
         },
         {
             "name": "東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "trainlines, traffic, city, sound",
             "images": [
                 {
@@ -719,7 +719,7 @@
             "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Kanda1.jpg",
