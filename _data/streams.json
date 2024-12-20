@@ -1211,6 +1211,19 @@
             ],
             "tags": "street",
             "name": "オノデンch - Akihabara Live Camera"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@nakajosta/streams",
+                    "linkTitle": "",
+                    "text": "https://www.youtube.com/@nakajosta/streams"
+                }
+            ],
+            "tags": "trainstation, trainlines",
+            "name": "Nakajo Station Live Camera"
         }
     ]
 }
