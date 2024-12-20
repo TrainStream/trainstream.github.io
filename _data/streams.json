@@ -1214,7 +1214,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Nakajo01.png",
+                    "alt": "",
+                    "width": 360,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@nakajosta/streams",
@@ -1223,7 +1230,7 @@
                 }
             ],
             "tags": "trainstation, trainlines",
-            "name": "Nakajo Station Live Camera"
+            "name": "中条駅観光交流室 - Nakajo Station Live Camera"
         }
     ]
 }
