@@ -298,14 +298,14 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw/videos?view=2&flow=grid&disable_polymer=1",
-                    "text": "https://www.youtube.com/channel/UC-FJEUgsKaHi5ep0wihlNEw"
+                    "link": "https://www.youtube.com/@manamix95/streams",
+                    "text": "https://www.youtube.com/@manamix95/streams"
                 }
             ]
         },
         {
             "name": "部屋の窓から(大岡川＆ランドマーク方面＋京急 Keikyu Line & Ooka River, Yokohama",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "trainlines, traffic, city, bridge",
             "images": [
                 {
