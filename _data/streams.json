@@ -1056,16 +1056,16 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/c/%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E6%96%B0%E5%AE%BFchannel/featured",
+                    "link": "https://www.youtube.com/@info-shinjuku/featured",
                     "linkTitle": "Live camera near Shinjuku crossing",
-                    "text": "https://www.youtube.com/c/%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E6%96%B0%E5%AE%BFchannel/featured"
+                    "text": "https://www.youtube.com/@info-shinjuku/featured"
                 }
             ],
             "tags": "trainlines, street, traffic, city, sound",
             "name": "Tokyo Shinjuku Live Camera"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Asakusabashi01.png",
@@ -1184,9 +1184,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@shonan-live",
+                    "link": "https://www.youtube.com/@japan-livecam/streams",
                     "linkTitle": "Views from Tokyo, Yokohama and Kamakura, Japan",
-                    "text": "https://www.youtube.com/@shonan-live"
+                    "text": "https://www.youtube.com/@japan-livecam/streams"
                 }
             ],
             "tags": "trainlines, street, traffic, city, shore, sound",
