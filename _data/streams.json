@@ -945,6 +945,12 @@
                     "alt": "",
                     "width": 357,
                     "height": 200
+                },
+                {
+                    "src": "/pictures/Omaezaki01.png",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
                 }
             ],
             "extras": [
@@ -1029,6 +1035,12 @@
                 },
                 {
                     "src": "/pictures/Kabukicho02.png",
+                    "alt": "Kabukicho",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kabukicho01.png",
                     "alt": "Kabukicho",
                     "width": 357,
                     "height": 200
