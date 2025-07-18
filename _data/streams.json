@@ -43,7 +43,7 @@
             ]
         },
         {
-            "name": "湯野上温泉駅 Yunokami-Onsen Station",
+            "name": "湯野上温泉駅 Yunokami-Onsen Station - Down for refurbishment, back \"soon\"",
             "isAlive": true,
             "tags": "trainstation, bridge, scenery, other",
             "images": [
@@ -136,11 +136,11 @@
             ],
             "extras": [
                 {
-                    "link": "http://live.ueda.ne.jp/"
+                    "link": "https://live.ucv.co.jp/index.html"
                 },
                 {
-                    "link": "http://live.ueda.ne.jp/bessyo.html",
-                    "text": "http://live.ueda.ne.jp/bessyo.html (Train station)"
+                    "link": "https://live.ucv.co.jp/index.htmlsyo.html",
+                    "text": "https://live.ucv.co.jp/index.html"
                 },
                 {
                     "text": "On the Ueda site there are also other shop, mountain and scenery cameras."
