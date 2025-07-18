@@ -1273,6 +1273,26 @@
             ],
             "tags": "trainstation",
             "name": "飯田ケーブルテレビ飯田駅ホームライブカメラ のライブ配信 (Iida Station, Nagano Pref.)"
+        },
+        {
+            "isAlive": true,
+            "images": [
+                {
+                    "src": "/pictures/Hakushima01.png",
+                    "alt": "Hakushima Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E4%B8%8A%E9%87%8E%E5%AD%A6%E5%9C%92%E3%83%9B%E3%83%BC%E3%83%AB%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B/streams",
+                    "linkTitle": "上野学園ホール情報カメラ【白島駅側】(Hakushima Station, Hiroshima)",
+                    "text": "https://www.youtube.com/@%E4%B8%8A%E9%87%8E%E5%AD%A6%E5%9C%92%E3%83%9B%E3%83%BC%E3%83%AB%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B/streams"
+                }
+            ],
+            "tags": "trainstation, traffic, city",
+            "name": "上野学園ホール (Hakushima Station, Hiroshima)"
         }
     ]
 }
