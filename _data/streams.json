@@ -1256,7 +1256,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Iida01.png",
+                    "alt": "",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E9%A3%AF%E7%94%B0%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%86%E3%83%AC%E3%83%93%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0",
@@ -1265,7 +1272,7 @@
                 }
             ],
             "tags": "trainstation",
-            "name": "飯田ケーブルテレビ飯田駅ホームライブカメラ のライブ配信 (Iida Station)"
+            "name": "飯田ケーブルテレビ飯田駅ホームライブカメラ のライブ配信 (Iida Station, Nagano Pref.)"
         }
     ]
 }
