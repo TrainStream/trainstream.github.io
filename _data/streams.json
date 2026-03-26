@@ -1296,7 +1296,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Aizu Higashiyama onsen MUKAITAKI inn.png",
+                    "alt": "Aizu Higashiyama onsen MUKAITAKI Inn",
+                    "width": 360,
+                    "height": 360
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@mukaitaki/streams",
@@ -1306,6 +1313,19 @@
             ],
             "tags": "scenery",
             "name": "会津 東山温泉 向瀧 中庭 ライブカメラ/Aizu Higashiyama Spa MUKAITAKI"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@uminekoshouten/streams",
+                    "linkTitle": "https://www.youtube.com/@uminekoshouten/streams",
+                    "text": "https://www.youtube.com/@uminekoshouten/streams"
+                }
+            ],
+            "tags": "shop, traffic",
+            "name": "ウミネコ商店"
         }
     ]
 }
