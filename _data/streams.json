@@ -710,7 +710,7 @@
             "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
         },
         {
-            "isAlive": false,
+            "isAlive": true,
             "images": [
                 {
                     "src": "/pictures/Kanda1.jpg",
@@ -1402,6 +1402,19 @@
             ],
             "tags": "trainstation, trainlines, scenery, shore",
             "name": "穴水町公式チャンネル - Anamizu Town Official Channel"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@RailwayLiveCamera/streams",
+                    "linkTitle": "Tokyo Akabane Live Camera",
+                    "text": "https://www.youtube.com/@RailwayLiveCamera/streams"
+                }
+            ],
+            "tags": "trainlines, sound",
+            "name": "Tokyo Akabane Live Camera"
         }
     ]
 }
