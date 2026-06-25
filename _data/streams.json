@@ -1405,7 +1405,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Tokyo Akabane.jpg",
+                    "alt": "Tokyo Akabane Live Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@RailwayLiveCamera/streams",
