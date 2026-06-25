@@ -1327,7 +1327,14 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Hankyu Kobe01.jpg",
+                    "alt": "Hankyu Kobe Line Live Camera Mukonosho Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@mukoekilive/streams",
@@ -1335,12 +1342,31 @@
                     "text": "https://www.youtube.com/@mukoekilive/streams"
                 }
             ],
-            "tags": "trainlines, traffic",
+            "tags": "trainstation, trainlines, street",
             "name": "鉄道ライブカメラ 阪急神戸線 武庫之荘駅 Hankyu Kobe Line Live Camera Mukonosho Station"
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Kyodo News01.jpg",
+                    "alt": "Kyodo News Live Camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kyodo News02.jpg",
+                    "alt": "Kyodo News Live Camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Kyodo News03.jpg",
+                    "alt": "Kyodo News Live Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@fl5vf9kr5b/streams",
@@ -1353,7 +1379,20 @@
         },
         {
             "isAlive": true,
-            "images": [],
+            "images": [
+                {
+                    "src": "/pictures/Anamizu01.jpg",
+                    "alt": "Anamizu Town Official Channel",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/Anamizu02.jpg",
+                    "alt": "Anamizu Town Official Channel",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
             "extras": [
                 {
                     "link": "https://www.youtube.com/@fl5vf9kr5b/streams",
