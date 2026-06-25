@@ -1324,6 +1324,45 @@
             ],
             "tags": "shop, traffic",
             "name": "ウミネコ商店 - Umineko Shouten cafe"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@mukoekilive/streams",
+                    "linkTitle": "Hankyu Kobe Line Live Camera Mukonosho Station",
+                    "text": "https://www.youtube.com/@mukoekilive/streams"
+                }
+            ],
+            "tags": "trainlines, traffic",
+            "name": "鉄道ライブカメラ 阪急神戸線 武庫之荘駅 Hankyu Kobe Line Live Camera Mukonosho Station"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@fl5vf9kr5b/streams",
+                    "linkTitle": "Kyodo News, various views across Japan, mostly Toyko",
+                    "text": "https://www.youtube.com/@fl5vf9kr5b/streams"
+                }
+            ],
+            "tags": "trainlines, city, scenery",
+            "name": "共同通信LiveCamera - Kyodo News Live Camera"
+        },
+        {
+            "isAlive": true,
+            "images": [],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@fl5vf9kr5b/streams",
+                    "linkTitle": "Various views around Anamizu Town, Ishikawa Prefecture",
+                    "text": "https://www.youtube.com/@fl5vf9kr5b/streams"
+                }
+            ],
+            "tags": "trainstation, trainlines, scenery, shore",
+            "name": "穴水町公式チャンネル - Anamizu Town Official Channel"
         }
     ]
 }
