@@ -43,7 +43,7 @@
             ]
         },
         {
-            "name": "湯野上温泉駅 Yunokami-Onsen Station - Down for refurbishment, back \"soon\"",
+            "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
             "tags": "trainstation, bridge, scenery, other",
             "images": [
@@ -80,11 +80,11 @@
             ],
             "extras": [
                 {
-                    "link": "http://www.shimogo-live.jp/",
+                    "link": "https://shimogo-livecamera.jp/",
                     "linkTitle": "The site sometimes goes down, but the streams don't."
                 },
                 {
-                    "link": "rtmp://114.160.7.45/livepkgr/live-cam003",
+                    "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E4%B8%8B%E9%83%B7%E7%94%BA/streamspkgr/live-cam003",
                     "text": "rtmp://114.160.7.45/livepkgr/live-cam003 (Train Station)"
                 },
                 {
@@ -222,12 +222,6 @@
                     "height": 200
                 },
                 {
-                    "src": "/pictures/11.jpg",
-                    "title": "HQ Rooftop",
-                    "width": 356,
-                    "height": 200
-                },
-                {
                     "src": "/pictures/12.jpg",
                     "title": "Nagasaki Airport",
                     "width": 356,
@@ -238,9 +232,6 @@
                 {
                     "link": "https://www.youtube.com/@ncctvnagasaki/streams",
                     "text": "https://www.youtube.com/@ncctvnagasaki/streams"
-                },
-                {
-                    "text": "'HQ Rooftop', the bridge, camera is down"
                 },
                 {
                     "text": "Nagasaki Harbor and Nagasaki Airport have sound."
@@ -770,7 +761,7 @@
             "name": "Active volcano Sakurajima and Kagoshima City, Kagoshima Prefecture"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Kuma1.jpg",
@@ -906,7 +897,7 @@
             "name": "LIVECAM KOBE JAPAN"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Hachioji_Train1.jpg",
@@ -1206,9 +1197,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@japan-livecam/streams",
+                    "link": "https://www.youtube.com/@shonan-livecam/streams",
                     "linkTitle": "Views from Tokyo, Yokohama and Kamakura, Japan",
-                    "text": "https://www.youtube.com/@japan-livecam/streams"
+                    "text": "https://www.youtube.com/@shonan-livecam/streams"
                 }
             ],
             "tags": "trainlines, street, traffic, city, shore, sound",
@@ -1266,9 +1257,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E9%A3%AF%E7%94%B0%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%86%E3%83%AC%E3%83%93%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0",
+                    "link": "https://www.youtube.com/@cvn%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0",
                     "linkTitle": "Iida Station",
-                    "text": "https://www.youtube.com/@%E9%A3%AF%E7%94%B0%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%86%E3%83%AC%E3%83%93%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0"
+                    "text": "https://www.youtube.com/@cvn%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0"
                 }
             ],
             "tags": "trainstation",
