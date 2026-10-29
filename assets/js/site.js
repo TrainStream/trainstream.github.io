@@ -67,6 +67,8 @@
         var pixelsPerSecond = 90;
         var distance = led.scrollWidth;
         led.style.animationDuration = Math.max(20, Math.round(distance / pixelsPerSecond)) + 's';
+        // whole-pixel steps keep the text sharp while it moves, like a real LED board
+        led.style.animationTimingFunction = 'steps(' + Math.max(1, Math.round(distance)) + ')';
     }
     window.TSTicker = {
         add: function (text, first) {

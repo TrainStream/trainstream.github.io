@@ -796,6 +796,7 @@ textarea {
 }
 
 .notes {
+    flex-basis: 100%;
     margin: 8px 0 0;
     font-size: 0.85rem;
     color: var(--ink-soft);
