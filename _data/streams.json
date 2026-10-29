@@ -3866,9 +3866,19 @@
             ],
             "extras": [
                 {
+                    "link": "https://fujiyama.tv/live/?n=16&b=0&t=19&e=1&l=1",
+                    "text": "Fujigoko TV Fuji cams",
+                    "kind": "home",
+                    "linkTitle": "The site with all their Fuji cameras"
+                },
+                {
                     "link": "https://www.youtube.com/user/FujigokoTV/streams",
                     "text": "YouTube channel",
                     "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=PxzwnWh1dKk",
+                    "text": "Oshino Hakkai, Mt. Fuji (4K)"
                 }
             ]
         },
@@ -4067,6 +4077,315 @@
                     "link": "https://yoshinoya.whitesnow.jp/cam/live.jpg",
                     "text": "Camera image",
                     "linkTitle": "A still picture that refreshes every few minutes"
+                }
+            ]
+        },
+        {
+            "name": "日本ネットワークサービス - Kofu Road Cameras (NNS)",
+            "isAlive": true,
+            "tags": "traffic, bridge, street, multicam",
+            "region": "Yamanashi",
+            "lat": 35.6642,
+            "lng": 138.5684,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/nns-kofu-01.jpg",
+                    "title": "Yamanote-dori, Atago Tunnel west",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-02.jpg",
+                    "title": "Shin-Arakawa Bridge, west",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-03.jpg",
+                    "title": "Alps-dori, Kugawa police box intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-04.jpg",
+                    "title": "Heiwa-dori, Onkoji intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-05.jpg",
+                    "title": "Route 20, Kose Sports Park entrance",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-06.jpg",
+                    "title": "Route 20, Hirose intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-07.jpg",
+                    "title": "Route 20, Ryuo Station entrance",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-08.jpg",
+                    "title": "Alps-dori, Kaikoku Bridge east",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-09.jpg",
+                    "title": "Chuo Expressway, Futaba JCT south",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-10.jpg",
+                    "title": "Route 20, Funayama Bridge north",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/nns-kofu-11.jpg",
+                    "title": "Karisaka-michi, Juro Bridge west",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.nns-catv.co.jp/traffic/",
+                    "text": "NNS road camera page",
+                    "kind": "home",
+                    "linkTitle": "Click a camera picture to open its YouTube stream"
+                },
+                {
+                    "link": "https://youtu.be/ZKR-IpcW0-I",
+                    "text": "Yamanote-dori, Atago Tunnel west"
+                },
+                {
+                    "link": "https://youtu.be/v9EDE_Hk3jk",
+                    "text": "Shin-Arakawa Bridge, west"
+                },
+                {
+                    "link": "https://youtu.be/qjIJqwkqsDo",
+                    "text": "Alps-dori, Kugawa police box intersection"
+                },
+                {
+                    "link": "https://youtu.be/5xUs642rpyo",
+                    "text": "Heiwa-dori, Onkoji intersection"
+                },
+                {
+                    "link": "https://youtu.be/vzQV9YE6Z_M",
+                    "text": "Route 20, Kose Sports Park entrance"
+                },
+                {
+                    "link": "https://youtu.be/oW1GXwLw9uY",
+                    "text": "Route 20, Hirose intersection"
+                },
+                {
+                    "link": "https://youtu.be/6kNklbke8Ts",
+                    "text": "Route 20, Ryuo Station entrance"
+                },
+                {
+                    "link": "https://youtu.be/6y-esk2rjB4",
+                    "text": "Alps-dori, Kaikoku Bridge east"
+                },
+                {
+                    "link": "https://youtu.be/7XPWUbem-9Q",
+                    "text": "Chuo Expressway, Futaba JCT south"
+                },
+                {
+                    "link": "https://youtu.be/FOYc4GjrRFY",
+                    "text": "Route 20, Funayama Bridge north"
+                },
+                {
+                    "link": "https://youtu.be/D5sOQf1bEoE",
+                    "text": "Karisaka-michi, Juro Bridge west"
+                }
+            ]
+        },
+        {
+            "name": "メタテクノ - JR Musashi-Kosugi Station North Exit",
+            "isAlive": true,
+            "tags": "trainstation, trainlines",
+            "region": "Kanagawa",
+            "lat": 35.5766,
+            "lng": 139.6596,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-6gf0hGo1sNA.jpg",
+                    "title": "Musashi-Kosugi Station north exit",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCjx0xW1_iYhQVsOkvQCGaOg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams about 2 times a day, about 9 h each."
+                }
+            ]
+        },
+        {
+            "name": "ambient2step2 - Kamiyacho Crossing, Hiroshima",
+            "isAlive": true,
+            "tags": "street, city, traffic",
+            "region": "Hiroshima",
+            "lat": 34.3935,
+            "lng": 132.4553,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-O4-NLE5Mvlk.jpg",
+                    "title": "Kamiyacho crossing",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@ambient2step2/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams roughly daily, about 12 h each."
+                }
+            ]
+        },
+        {
+            "name": "山口鉄道 Yamaguchi Rail Ways - Odakyu Odawara Line & Tokaido Shinkansen",
+            "isAlive": true,
+            "tags": "trainlines, shinkansen, multicam",
+            "region": "Kanagawa",
+            "lat": 35.2564,
+            "lng": 139.1551,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-lNTJIx_-gU4.jpg",
+                    "title": "Odakyu Odawara Line, Ashigara-Odawara",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-g7yOnaat7lc.jpg",
+                    "title": "Tokaido Shinkansen, Shin-Fuji to Shizuoka",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%8F%A3%E9%89%84%E9%81%93YamguchiRailWays/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams roughly daily, about 5 h each."
+                }
+            ]
+        },
+        {
+            "name": "JAPAN travel KYOTO - Jojakko-ji & Ogura-chaya",
+            "isAlive": true,
+            "tags": "shrine, scenery",
+            "region": "Kyoto",
+            "lat": 35.0225,
+            "lng": 135.6747,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-n8htZhWf-iY.jpg",
+                    "title": "Jojakko-ji gate and Ogura-chaya",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@myfavoritekyotoogura-chaya5175/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams about 3 times a week, about 9 h each."
+                }
+            ]
+        },
+        {
+            "name": "Live Jet - Haneda Airport",
+            "isAlive": true,
+            "tags": "airport, multicam",
+            "region": "Tokyo",
+            "lat": 35.5494,
+            "lng": 139.7798,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-ccnQ45Wpcao.jpg",
+                    "title": "Haneda Airport",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-iheLCnfLhd8.jpg",
+                    "title": "Haneda Terminal 1",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-GxQA82Jy_9o.jpg",
+                    "title": "Haneda Terminal 2",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@LiveJet/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams roughly daily, about 5 h each."
+                }
+            ]
+        },
+        {
+            "name": "Re-Color - Rental Model Railway Layouts (Tokyo & Osaka)",
+            "isAlive": true,
+            "tags": "other, shop, multicam",
+            "region": "Tokyo / Osaka",
+            "lat": 35.7105,
+            "lng": 139.684,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-0pefwp-0KPE.jpg",
+                    "title": "Annex, Tokyo",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-zk1_3Nu-aNc.jpg",
+                    "title": "Osaka shop",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-Z1V-Gd1c9X4.jpg",
+                    "title": "Main shop, Tokyo",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@re-color3216/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Not 24/7: streams about 3 times a day, about 5 h each."
                 }
             ]
         },
