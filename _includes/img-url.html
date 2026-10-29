@@ -15,5 +15,5 @@
   {%- assign _full = _src -%}
 {%- endif -%}
 {%- if _full != '' -%}
-//images.weserv.nl/?{% if include.h %}h={{ include.h }}&amp;{% endif %}url={{ _full | url_encode }}
+//images.weserv.nl/?{% if include.h %}h={{ include.h }}&amp;{% endif %}url={{ _full | replace: ' ', '%20' | url_encode }}
 {%- endif -%}
