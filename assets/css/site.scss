@@ -1926,6 +1926,102 @@ textarea {
     background: #aad3df;
 }
 
+/* ⤢ expanded: the map covers the whole browser window */
+.map-wrap.is-expanded {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    margin: 0;
+    padding: 8px;
+    background: var(--paper);
+
+    .map {
+        height: 100%;
+    }
+}
+
+html.map-expanded {
+    overflow: hidden;
+}
+
+/* ⛶ full screen */
+.map-wrap:fullscreen {
+    margin: 0;
+    background: var(--paper);
+
+    .map {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+}
+
+.map-size-btn {
+    display: block;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    font-size: 1.15rem;
+    line-height: 1;
+    color: #1b1f3b;
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+
+    & + & {
+        border-top: 1px solid #ccc;
+    }
+
+    &:hover,
+    &[aria-pressed='true'] {
+        background: #f4f4f4;
+    }
+}
+
+/* just an icon, under Leaflet's + / − buttons (34px wide at 10px, 10px) */
+.map-hint {
+    position: absolute;
+    left: 10px;
+    top: 82px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 30px;
+    font-size: 1rem;
+    line-height: 1;
+    background: rgba(27, 31, 59, 0.75);
+    border-radius: 4px;
+    transition: opacity 0.6s;
+
+    &.is-gone {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.map-hint-icon {
+    display: inline-block;
+    animation: map-hint-wiggle 1.6s ease-in-out infinite;
+}
+
+@keyframes map-hint-wiggle {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .map-hint-icon {
+        animation: none;
+    }
+}
+
 .map-unknown-title {
     display: none;
 }
@@ -1951,6 +2047,18 @@ textarea {
 
 .map-popup {
     font-family: var(--font-body);
+
+    .map-popup-photo {
+        display: block;
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 6px;
+        background: var(--paper-2);
+        border: 2px solid var(--line);
+        border-radius: 4px;
+        object-fit: cover;
+    }
 
     strong {
         display: block;

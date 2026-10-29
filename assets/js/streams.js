@@ -633,6 +633,72 @@
         });
         return leafletLoading;
     }
+    /* ⤢ fills the browser window, ⛶ goes real full screen (where the browser allows it, so not on iPhone) */
+    function fullscreenElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement || null;
+    }
+    function addMapSizeButtons() {
+        var canFullscreen = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+        var expandBtn = el('button', { type: 'button', className: 'map-size-btn', 'aria-pressed': 'false', title: 'Expand to the window', 'aria-label': 'Expand map to the window', text: '⤢' });
+        var fullBtn = canFullscreen ? el('button', { type: 'button', className: 'map-size-btn', 'aria-pressed': 'false', title: 'Full screen', 'aria-label': 'Full screen map', text: '⛶' }) : null;
+
+        function refresh() {
+            var full = fullscreenElement() === mapWrap;
+            var expanded = mapWrap.classList.contains('is-expanded');
+            expandBtn.setAttribute('aria-pressed', String(expanded));
+            expandBtn.textContent = expanded ? '⤡' : '⤢';
+            expandBtn.title = expanded ? 'Back to normal size' : 'Expand to the window';
+            if (fullBtn) {
+                fullBtn.setAttribute('aria-pressed', String(full));
+                fullBtn.title = full ? 'Exit full screen' : 'Full screen';
+            }
+            document.documentElement.classList.toggle('map-expanded', expanded);
+            map.invalidateSize();
+        }
+        function setExpanded(on) {
+            mapWrap.classList.toggle('is-expanded', on);
+            refresh();
+        }
+
+        expandBtn.addEventListener('click', function () {
+            if (fullscreenElement()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+            setExpanded(!mapWrap.classList.contains('is-expanded'));
+        });
+        if (fullBtn) {
+            fullBtn.addEventListener('click', function () {
+                if (fullscreenElement() === mapWrap) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+                else (mapWrap.requestFullscreen || mapWrap.webkitRequestFullscreen).call(mapWrap);
+            });
+            document.addEventListener('fullscreenchange', refresh);
+            document.addEventListener('webkitfullscreenchange', refresh);
+        }
+        /* Esc leaves the expanded map (full screen handles Esc itself; an open dialog gets it first) */
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && mapWrap.classList.contains('is-expanded') && !document.querySelector('dialog[open]')) setExpanded(false);
+        });
+
+        var Control = window.L.Control.extend({
+            options: { position: 'topright' },
+            onAdd: function () {
+                var bar = el('div', { className: 'leaflet-bar map-size' }, [expandBtn, fullBtn]);
+                window.L.DomEvent.disableClickPropagation(bar);
+                return bar;
+            },
+        });
+        map.addControl(new Control());
+    }
+    /* a mouse (or pinch) icon under the + / − buttons, saying you can zoom; fades away once someone has zoomed */
+    function addZoomHint() {
+        var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
+        var label = touch ? 'Pinch to zoom' : 'Scroll to zoom';
+        var hint = el('div', { className: 'map-hint', title: label, role: 'img', 'aria-label': label }, [
+            el('span', { className: 'map-hint-icon', text: touch ? '🤏' : '🖱️' }),
+        ]);
+        map.getContainer().appendChild(hint);
+        map.once('zoomstart', function () {
+            hint.classList.add('is-gone');
+        });
+    }
     function updateMap() {
         loadLeaflet()
             .then(function () {
@@ -650,12 +716,25 @@
                         var button = event.target.closest('[data-map-open]');
                         if (button) openDetail(button.getAttribute('data-map-open'));
                     });
+                    addMapSizeButtons();
+                    addZoomHint();
                 }
                 map.invalidateSize();
                 markerLayer.clearLayers();
                 visible.forEach(function (s) {
                     if (!s.geo) return;
+                    /* the main photo; its src is only set when the pin is opened, so 100+ pins don't load at once */
+                    var first = s.images[0];
+                    var photo = first
+                        ? el('img', {
+                              className: 'map-popup-photo',
+                              alt: first.title || s.name,
+                              width: 200,
+                              height: first.width && first.height ? Math.round((200 * first.height) / first.width) : 150,
+                          })
+                        : null;
                     var popup = el('div', { className: 'map-popup' }, [
+                        photo,
                         el('strong', { text: s.name }),
                         s.cameras ? el('span', { style: 'display:block;margin-bottom:4px', text: TS.camLabel(s.cameras) }) : null,
                         el('button', { type: 'button', className: 'btn btn--small', 'data-map-open': s.id, text: '詳細 Details' }),
@@ -669,6 +748,9 @@
                     })
                         .bindTooltip(s.name)
                         .bindPopup(popup)
+                        .on('popupopen', function () {
+                            if (photo && !photo.src) photo.src = TS.imgUrl(first.src, 240);
+                        })
                         .addTo(markerLayer);
                 });
             })
