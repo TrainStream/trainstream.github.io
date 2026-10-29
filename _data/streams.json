@@ -166,7 +166,10 @@
                 {
                     "text": "MOBOTIX Q24  mx10-11-240-143 Live"
                 }
-            ]
+            ],
+            "lat": 35.695,
+            "lng": 139.7027,
+            "region": "Tokyo"
         },
         {
             "name": "東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway",
@@ -781,7 +784,9 @@
             "tags": "trainlines, sound, snow",
             "region": "Hokkaido",
             "cameras": 1,
-            "name": "Hakodate Main Line"
+            "name": "Hakodate Main Line",
+            "lat": 41.8011,
+            "lng": 140.719
         },
         {
             "isAlive": true,
@@ -1068,7 +1073,10 @@
                 }
             ],
             "tags": "trainlines, city, sound",
-            "name": "あおば交通ch. / Aoba traffics"
+            "name": "あおば交通ch. / Aoba traffics",
+            "lat": 35.6558,
+            "lng": 139.3387,
+            "region": "Tokyo"
         },
         {
             "isAlive": true,
@@ -1355,7 +1363,9 @@
             "tags": "trainstation, street, city, airport, scenery, multicam",
             "region": "Various",
             "cameras": 11,
-            "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan"
+            "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan",
+            "lat": 35.6645,
+            "lng": 139.7672
         },
         {
             "isAlive": true,
@@ -1606,7 +1616,9 @@
             "tags": "trainlines, city, scenery, multicam",
             "region": "Various",
             "cameras": 5,
-            "name": "共同通信LiveCamera - Kyodo News Live Camera"
+            "name": "共同通信LiveCamera - Kyodo News Live Camera",
+            "lat": 35.6632,
+            "lng": 139.7596
         },
         {
             "isAlive": true,
@@ -2725,10 +2737,10 @@
             "lng": 139.7691
         },
         {
-            "name": "白山通り交差点 - Hakusan-dori Intersection",
+            "name": "白山通り交差点 - Hakusan-dori Intersection, Kumamoto",
             "isAlive": true,
             "tags": "street, traffic",
-            "region": "Tokyo",
+            "region": "Kumamoto",
             "addedAt": "2026-10-29",
             "cameras": 1,
             "images": [
@@ -2750,7 +2762,9 @@
                     "text": "Hakusan-dori Intersection",
                     "linkTitle": "Live nonstop since at least Jun 2025."
                 }
-            ]
+            ],
+            "lat": 32.7945,
+            "lng": 130.7252
         },
         {
             "name": "山形市小白川町 山形大学前 - Yamagata University front",
@@ -2922,7 +2936,10 @@
                     "text": "YouTube channel",
                     "kind": "home"
                 }
-            ]
+            ],
+            "lat": 34.8262,
+            "lng": 134.6892,
+            "region": "Hyogo"
         },
         {
             "name": "Enoshima LiveCamera - Enoshima, Zushi & Zaimokuza Beaches",
