@@ -657,17 +657,22 @@
             "name": "弁当屋さんのライブカメラ キッチンDIVE - Live camera from a bento shop in Koto-ku, Tokyo"
         },
         {
+            "name": "JR Chuo Main Line Live Camera 中央本線 (Kasugai-cho ⇔ Isiwa Onsen)",
             "isAlive": true,
+            "tags": "trainlines, sound",
+            "region": "Yamanashi",
+            "lat": 35.662,
+            "lng": 138.639,
             "images": [
                 {
                     "src": "/pictures/theDramaticCrossing1.jpg",
-                    "alt": "JR Chuo Main Line Live Camera",
+                    "title": "JR Chuo Main Line Live Camera",
                     "width": 356,
                     "height": 200
                 },
                 {
                     "src": "/pictures/TheDramaticCrossing2.jpg",
-                    "alt": "JR Chuo Main Line Live Camera",
+                    "title": "JR Chuo Main Line Live Camera",
                     "width": 800,
                     "height": 200
                 }
@@ -675,15 +680,10 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UCZ974tQkAeV7_l_opPHCcdg/streams",
-                    "text": "The Dramatic Chuo Line channel",
-                    "kind": "home"
+                    "kind": "home",
+                    "text": "The Dramatic Chuo Line channel"
                 }
-            ],
-            "tags": "trainlines, sound",
-            "region": "Yamanashi",
-            "lat": 35.662,
-            "lng": 138.639,
-            "name": "JR Chuo Main Line Live Camera (Kasugai-cho ⇔ Isiwa Onsen)"
+            ]
         },
         {
             "isAlive": true,
