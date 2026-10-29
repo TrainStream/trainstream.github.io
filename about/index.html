@@ -11,14 +11,22 @@ classic_url: /classic/
 </section>
 
 <section class="panel prose">
-    <h2 class="panel-title">更新履歴 <small>Update log</small></h2>
+    <h2 class="panel-title">更新履歴 <small>Site updates</small></h2>
     <ul class="update-log">
-        {%- for s in added limit: 30 %}
-        <li><time datetime="{{ s.addedAt }}">{{ s.addedAt | date: '%Y.%m.%d' }}</time>New camera: {{ s.name | escape }}</li>
-        {%- endfor %}
         <li><time datetime="2026-10-29">2026.10.29</time>リニューアル！ Site renewal: new camera list with tickets, timetable, departure board and map views, TV wall, train omikuji, submission tool. The old design lives on as the <a href="/classic/">classic view</a>.</li>
         <li><time datetime="2021-02-02">2021.02.02</time>The camera list can now be edited with trainstream-editor by altbdoor.</li>
         <li><time datetime="{{ site.ts_since }}">{{ site.ts_since | date: '%Y.%m.%d' }}</time>開設 The site opens.</li>
+    </ul>
+</section>
+
+<section class="panel prose">
+    <h2 class="panel-title">新着カメラ <small>New cameras</small></h2>
+    <ul class="update-log">
+        {%- for s in added limit: 100 %}
+        <li><time datetime="{{ s.addedAt }}">{{ s.addedAt | date: '%Y.%m.%d' }}</time>{{ s.name | escape }}</li>
+        {%- else %}
+        <li>No new cameras yet.</li>
+        {%- endfor %}
     </ul>
 </section>
 

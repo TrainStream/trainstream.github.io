@@ -153,10 +153,13 @@
     /* other "visitors" keep arriving while you read */
     function keepTicking(note) {
         var noteBox = document.getElementById('counter-note');
+        var shown = currentCount;
         function tick() {
             var groupTour = Math.random() < 1 / 15;
             var add = groupTour ? 40 + Math.floor(Math.random() * 20) : 1 + Math.floor(Math.random() * 3);
-            showCount(currentCount + add, note);
+            // only the odometer (everyone) moves; "your" number stays the one you arrived with
+            shown += add;
+            renderDigits(shown);
             if (groupTour) {
                 noteBox.hidden = false;
                 noteBox.textContent = '🚌 団体様ご来店！ A tour group just arrived (+' + add + ')';
