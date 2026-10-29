@@ -6,7 +6,7 @@
         {{ tag.name }}
     </button>
 
-    {% if tag.slug == 'all' or tag.slug == 'shrine' %}
+    {% if forloop.index == 1 or forloop.index == 13 %}
         <br />
     {% endif %}
 {% endfor %}
