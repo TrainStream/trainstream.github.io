@@ -303,6 +303,203 @@
             });
     }
 
+    /* ---------- multi-track drifting, seen from above ---------- */
+    // Drawn on a small canvas (1 unit = 1 screen pixel of the pixel art) and scaled up crisply.
+    function topDownTrain(l) {
+        var n = l.cars || 3;
+        var CL = 36;
+        var G = 2;
+        var L = n * CL + (n - 1) * G;
+        var c = document.createElement('canvas');
+        c.width = L;
+        c.height = 16;
+        var ctx = c.getContext('2d');
+        var band = l.bands && l.bands.length ? l.bands[l.bands.length - 1][2] : l.body;
+        var roof = l.roof || (l.nose ? l.body : '#d7dbdf');
+        function rect(x, y, w, h, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, w, h);
+        }
+        for (var i = 0; i < n; i++) {
+            var x0 = i * (CL + G);
+            var tipFront = l.nose && i === n - 1;
+            var tipBack = l.nose && i === 0;
+            for (var x = 0; x < CL; x++) {
+                // a Shinkansen nose narrows towards the tip
+                var d = tipFront ? CL - 1 - x : tipBack ? x : 99;
+                var inset = d < 14 ? Math.ceil((14 - d) / 3) : 0;
+                var top = 1 + inset;
+                var h = 14 - 2 * inset;
+                var edge = x === 0 || x === CL - 1;
+                rect(x0 + x, top, 1, h, '#1b1f3b');
+                if (edge) continue;
+                rect(x0 + x, top + 1, 1, h - 2, l.body);
+                rect(x0 + x, top + 2, 1, 1, band);
+                rect(x0 + x, top + h - 3, 1, 1, band);
+                if (h > 8) rect(x0 + x, top + 3, 1, h - 6, roof);
+            }
+            if (!l.nose) {
+                rect(x0 + 6, 6, 3, 4, '#8a9198');
+                rect(x0 + 27, 6, 3, 4, '#8a9198');
+            }
+            if ((l.panto || []).indexOf(i) !== -1) {
+                rect(x0 + 15, 4, 6, 1, '#1b1f3b');
+                rect(x0 + 15, 11, 6, 1, '#1b1f3b');
+                rect(x0 + 17, 4, 2, 8, '#1b1f3b');
+            }
+            if (i < n - 1) rect(x0 + CL, 5, G, 6, '#1b1f3b');
+        }
+        // the front: windscreen and headlights
+        if (l.nose) {
+            rect(L - 8, 6, 3, 4, NAVY);
+        } else {
+            rect(L - 3, 3, 2, 10, NAVY);
+            rect(L - 2, 3, 1, 1, l.light || '#ffd400');
+            rect(L - 2, 12, 1, 1, l.light || '#ffd400');
+        }
+        return c;
+    }
+
+    function trackBed(W, H, tracks) {
+        var c = document.createElement('canvas');
+        c.width = W;
+        c.height = H;
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#8f897d';
+        ctx.fillRect(0, 0, W, H);
+        // ballast
+        for (var k = 0; k < (W * H) / 5; k++) {
+            ctx.fillStyle = k % 3 ? '#7b766b' : '#a39d91';
+            ctx.fillRect(Math.floor(Math.random() * W), Math.floor(Math.random() * H), 1, 1);
+        }
+        tracks.forEach(function (y) {
+            ctx.fillStyle = '#4a3523';
+            for (var x = 0; x < W; x += 6) ctx.fillRect(x, y - 8, 3, 16);
+            ctx.fillStyle = '#3e4750';
+            ctx.fillRect(0, y - 6, W, 2);
+            ctx.fillRect(0, y + 5, W, 2);
+            ctx.fillStyle = '#e1e6ea';
+            ctx.fillRect(0, y - 6, W, 1);
+            ctx.fillRect(0, y + 5, W, 1);
+        });
+        return c;
+    }
+
+    function driftCam(l) {
+        var id = runId;
+        var s = Math.max(scale(), 1.5); // a bit bigger than the side view on phones
+        var W = Math.floor(vw() / s);
+        var tracks = [12, 35, 58, 81];
+        var H = 93;
+        var panel = prop('drift-cam', '<canvas></canvas><span class="drift-cam-label"><i>●</i> LIVE 上空カメラ</span>', 0);
+        var canvas = panel.querySelector('canvas');
+        canvas.width = W;
+        canvas.height = H;
+        canvas.style.width = W * s + 'px';
+        canvas.style.height = H * s + 'px';
+        var ctx = canvas.getContext('2d');
+        ctx.imageSmoothingEnabled = false;
+        var bed = trackBed(W, H, tracks);
+        var body = topDownTrain(l);
+        var L = body.width;
+        var particles = [];
+
+        // the route: straight on the top track, drift across all four, straight out on the bottom one
+        var speed = (SPEED * 1.5) / 2; // units per second
+        var xa = Math.round(W * 0.25);
+        var xb = Math.round(W * 0.75);
+        var x = -L;
+        var burst = false;
+        var maxAngle = 0.5; // about 29 degrees, rear swung out
+        var last = null;
+
+        function ease(u) {
+            return u * u * (3 - 2 * u);
+        }
+
+        function state(cx) {
+            var u = Math.max(0, Math.min(1, (cx - xa) / (xb - xa)));
+            var y = tracks[0] + (tracks[3] - tracks[0]) * ease(u);
+            var angle = maxAngle * Math.pow(Math.sin(Math.PI * Math.min(1, u * 1.15)), 0.6);
+            return { y: y, angle: u > 0 && u < 1 ? angle : 0, sliding: u > 0 && u < 1 };
+        }
+
+        function emit(cx, cy, angle) {
+            var cos = Math.cos(angle);
+            var sin = Math.sin(angle);
+            for (var i = 0; i < L; i += 18) {
+                var lx = i + 4 - L / 2;
+                [-7, 7].forEach(function (ly) {
+                    var px = cx + lx * cos - ly * sin;
+                    var py = cy + lx * sin + ly * cos;
+                    if (Math.random() < 0.35) {
+                        particles.push({ x: px, y: py, vx: -20 - Math.random() * 30, vy: (Math.random() - 0.5) * 30, life: 0.35, age: 0, spark: true });
+                    }
+                    if (Math.random() < 0.12) {
+                        particles.push({ x: px, y: py, vx: -8 - Math.random() * 8, vy: -4 - Math.random() * 6, life: 1.1, age: 0, spark: false });
+                    }
+                });
+            }
+        }
+
+        function draw(dt) {
+            var st = state(x + L / 2);
+            ctx.drawImage(bed, 0, 0);
+            particles = particles.filter(function (p) {
+                p.age += dt;
+                p.x += p.vx * dt;
+                p.y += p.vy * dt;
+                return p.age < p.life;
+            });
+            particles.forEach(function (p) {
+                if (p.spark) return;
+                var size = 3 + Math.floor((p.age / p.life) * 5);
+                ctx.fillStyle = 'rgba(255, 255, 255, ' + (0.9 - (p.age / p.life) * 0.8) + ')';
+                ctx.fillRect(Math.round(p.x - size / 2), Math.round(p.y - size / 2), size, size);
+            });
+            ctx.save();
+            ctx.translate(Math.round(x + L / 2), Math.round(st.y));
+            ctx.rotate(st.angle);
+            ctx.drawImage(body, -L / 2, -8);
+            ctx.restore();
+            particles.forEach(function (p) {
+                if (!p.spark) return;
+                ctx.fillStyle = p.age < p.life / 2 ? '#ffd400' : '#ff8a00';
+                ctx.fillRect(Math.round(p.x), Math.round(p.y), 2, 2);
+            });
+            if (st.sliding) emit(x + L / 2, st.y, st.angle);
+            return st;
+        }
+
+        return new Promise(function (resolve, reject) {
+            function frame(now) {
+                if (id !== runId) return reject(ABORT);
+                var dt = last === null ? 0 : Math.min(0.05, (now - last) / 1000);
+                last = now;
+                var st = state(x + L / 2);
+                // brakes a little in the slide, then floors it
+                x += speed * (st.sliding ? 0.6 : 1) * dt;
+                draw(dt);
+                if (st.sliding && !burst) {
+                    burst = true;
+                    var b = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.max(8, Math.min(Math.round(xa * s), vw() - 230)));
+                    b.style.bottom = H * s + 12 + 'px';
+                    panel.classList.add('shake');
+                }
+                if (x > W + 20 && !particles.length) return resolve();
+                requestAnimationFrame(frame);
+            }
+            panel.classList.add('on');
+            draw(0);
+            later(function () {
+                requestAnimationFrame(frame);
+            }, 400);
+        }).then(function () {
+            panel.classList.remove('on');
+            return wait(400);
+        });
+    }
+
     /* ---------- scenarios ---------- */
     // Each one gets the main train already dressed (ltr unless it says so) and returns a Promise.
     var SCENARIOS = {
@@ -460,57 +657,11 @@
             }
         },
 
-        // the famous meme, on its own manga panel so it reads on any background
+        // the famous meme: an overhead camera shows the train sliding sideways across every track at once
         drift: {
             weight: 7,
-            run: function (w) {
-                var W = vw();
-                var s = scale();
-                var gap = 13 * s;
-                var panel = prop('drift-panel', '<i></i><i></i><i></i>', 0);
-                panel.style.height = 2 * gap + 24 * s + 20 + 'px';
-                Array.prototype.forEach.call(panel.children, function (rail, i) {
-                    rail.style.bottom = 5 + i * gap + 'px';
-                });
-                var ghosts = [1, 2].map(function (i) {
-                    var g = extraTrain(train.livery, {});
-                    g.style.bottom = 6 + i * gap + 'px';
-                    g.style.zIndex = 5 - i;
-                    g.style.opacity = '0';
-                    return g;
-                });
-                var all = [train].concat(ghosts);
-                all.forEach(function (el) {
-                    place(el, -w);
-                });
-                var mid = Math.round(W / 2 - w / 2);
-                panel.classList.add('on');
-                return drive(train, mid - 140, { boost: 2 })
-                    .then(function () {
-                        ghosts.forEach(function (g, i) {
-                            place(g, mid - 140 - (i + 1) * 16);
-                            animate(g, [{ opacity: 0 }, { opacity: 0.9 - i * 0.15 }], 200);
-                        });
-                        var sparks = prop('drift-sparks', new Array(13).join('<i></i>'), mid - 20);
-                        sparks.style.height = 2 * gap + 'px';
-                        var burst = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.max(8, Math.min(mid + w / 2 - 40, W - 230)));
-                        burst.style.bottom = 2 * gap + 24 * s + 28 + 'px';
-                        return Promise.all(all.map(function (el, i) {
-                            return drive(el, mid - i * 16, { ms: 1100, easing: 'ease-out', extra: 'skewX(-14deg) rotate(-2deg)' });
-                        }));
-                    })
-                    .then(function () {
-                        return wait(1800);
-                    })
-                    .then(function () {
-                        return Promise.all(all.map(function (el) {
-                            return drive(el, W + 40, { boost: 2.5, easing: 'ease-in' });
-                        }));
-                    })
-                    .then(function () {
-                        panel.classList.remove('on');
-                        return wait(400);
-                    });
+            run: function () {
+                return driftCam(train.livery);
             }
         },
 

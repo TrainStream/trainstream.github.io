@@ -924,88 +924,48 @@ textarea {
 }
 
 /* MULTI-TRACK DRIFTING!! */
-.drift-panel {
+.drift-cam {
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 6;
     border-top: 3px solid #1b1f3b;
-    // white manga panel with black speed lines streaming past
-    background-color: #fff;
-    background-image: repeating-linear-gradient(90deg, #fff 0 60px, transparent 60px 140px, #fff 140px 170px, transparent 170px 260px),
-        repeating-linear-gradient(
-            180deg,
-            transparent 0 5px,
-            rgba(27, 31, 59, 0.55) 5px 6px,
-            transparent 6px 9px,
-            rgba(27, 31, 59, 0.25) 9px 10px,
-            transparent 10px 15px
-        );
-    box-shadow: 0 -3px 0 #fff;
+    background: #c9c2b3;
     transform: translateY(100%);
     transition: transform 0.3s steps(3);
-    animation: speed-lines 0.4s steps(4) infinite;
 
     &.on {
         transform: none;
     }
 
-    i {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: #1b1f3b;
-        box-shadow: 0 2px 0 #fff;
+    &.shake canvas {
+        animation: cam-shake 0.25s steps(2) 6;
+    }
 
-        // sleepers
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 3px;
-            height: 3px;
-            background: repeating-linear-gradient(90deg, #6b4a2b 0 4px, transparent 4px 16px);
-        }
+    canvas {
+        display: block;
+        image-rendering: pixelated;
     }
 }
 
-@keyframes speed-lines {
-    to {
-        background-position: -260px 0, 0 0;
-    }
-}
-
-.drift-sparks {
-    bottom: 8px;
-    z-index: 6;
+.drift-cam-label {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    padding: 1px 6px;
+    font: 0.8rem var(--font-pixel);
+    color: var(--led-red);
+    background: var(--led-bg);
+    border: 2px solid #1b1f3b;
 
     i {
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background: #ffd400;
-        box-shadow: 0 0 0 2px #e60012;
-        animation: spark 0.5s steps(4) infinite;
-
-        @for $i from 1 through 12 {
-            &:nth-child(#{$i}) {
-                left: #{($i % 4) * 18 - 30}px;
-                bottom: #{floor(($i - 1) / 4) * 50%};
-                animation-delay: #{$i * 0.06}s;
-            }
-        }
+        font-style: normal;
+        animation: blink 1s steps(1) infinite;
     }
 }
 
-@keyframes spark {
-    from {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-40px, -22px);
-        opacity: 0;
+@keyframes cam-shake {
+    50% {
+        transform: translate(2px, -1px);
     }
 }
 
