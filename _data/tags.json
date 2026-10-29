@@ -1,66 +1,98 @@
 [
     {
         "name": "Show All",
-        "slug": "all"
+        "slug": "all",
+        "code": "ALL",
+        "color": "#333333"
     },
     {
         "name": "Train Station",
-        "slug": "trainstation"
+        "slug": "trainstation",
+        "code": "TS",
+        "color": "#008a3e"
     },
     {
         "name": "Train Lines",
-        "slug": "trainlines"
+        "slug": "trainlines",
+        "code": "TL",
+        "color": "#d35400"
     },
     {
         "name": "Street View",
-        "slug": "street"
+        "slug": "street",
+        "code": "ST",
+        "color": "#6d4c41"
     },
     {
         "name": "Traffic View",
-        "slug": "traffic"
+        "slug": "traffic",
+        "code": "TF",
+        "color": "#9a6b00"
     },
     {
         "name": "City View",
-        "slug": "city"
+        "slug": "city",
+        "code": "CI",
+        "color": "#1e5aa8"
     },
     {
         "name": "Shrine/Temple",
-        "slug": "shrine"
+        "slug": "shrine",
+        "code": "SH",
+        "color": "#c62828"
     },
     {
         "name": "Bridge",
-        "slug": "bridge"
+        "slug": "bridge",
+        "code": "BR",
+        "color": "#5b6770"
     },
     {
         "name": "AirPort",
-        "slug": "airport"
+        "slug": "airport",
+        "code": "AP",
+        "color": "#0077b6"
     },
     {
         "name": "SeaPort",
-        "slug": "seaport"
+        "slug": "seaport",
+        "code": "SP",
+        "color": "#004e7c"
     },
     {
         "name": "Scenery",
-        "slug": "scenery"
+        "slug": "scenery",
+        "code": "SC",
+        "color": "#2e7d32"
     },
     {
         "name": "Shore",
-        "slug": "shore"
+        "slug": "shore",
+        "code": "SR",
+        "color": "#00897b"
     },
     {
         "name": "Shop",
-        "slug": "shop"
+        "slug": "shop",
+        "code": "SO",
+        "color": "#c2185b"
     },
     {
         "name": "Sound",
-        "slug": "sound"
+        "slug": "sound",
+        "code": "SN",
+        "color": "#800000"
     },
     {
         "name": "Other",
-        "slug": "other"
+        "slug": "other",
+        "code": "OT",
+        "color": "#666666"
     },
     {
         "name": "IP Cameras",
-        "slug": "ipcamera"
+        "slug": "ipcamera",
+        "code": "IP",
+        "color": "#6a1b9a"
     }
 ]

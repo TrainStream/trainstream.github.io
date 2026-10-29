@@ -1,0 +1,29 @@
+---
+title: How to set up MPV
+classic_url: /classic/watching/mpv
+---
+<nav class="page-nav"><a class="btn btn--small" href="/watching/">◀ Video players</a><a class="btn btn--small" href="/">📹 Camera list</a></nav>
+<article class="panel prose">
+    <h1 class="panel-title">MPV <small>How to set up MPV</small></h1>
+    <p>Some people use MPC-HC for the Yunokami stream, but for me personally it runs at low fps, so I am using mpv instead, which runs at a smooth 30 fps.</p>
+    <p>Download mpv from here: <a href="https://mpv.srsfckn.biz/">https://mpv.srsfckn.biz/</a></p>
+
+    <h3>Config file (optional)</h3>
+    <p>Now let's set up a small config file (not compulsory). We will set up the screenshot settings in it. You can download my config file from here: <a href="https://pomf.pyonpyon.moe/mgfhdc.zip">https://pomf.pyonpyon.moe/mgfhdc.zip</a> (extract it from the zip).</p>
+    <p>You can see two commands already written there:</p>
+    <pre><code>--screenshot-template=E:\My Videos\Pictures\train\1New\train-%n
+--screenshot-jpeg-quality=96</code></pre>
+    <ul>
+        <li>The first command is where to save the screenshots. Change it to the path you want. The <code>train-%n</code> part is how screenshots are named, here "train-" plus the number of the picture in the folder.</li>
+        <li>The second command is the picture quality. 96 is a good balance between quality and file size for me.</li>
+        <li>While watching the stream press <kbd>S</kbd> to take a screenshot.</li>
+    </ul>
+
+    <h3>How to run a stream</h3>
+    <ol>
+        <li>Make a shortcut to the mpv.exe file (right click → Send to → Desktop (create shortcut)).</li>
+        <li>On the shortcut press right click → Properties.</li>
+        <li>In the "Target:" field, at the end of the path after mpv.exe, put <code>rtmp://114.160.7.45/livepkgr/live-cam003</code> (no quotation marks, and leave a space between mpv.exe and the stream link).</li>
+        <li>Press OK and you are done. You can rename the shortcut to "Yunokami" or whatever you want.</li>
+    </ol>
+</article>

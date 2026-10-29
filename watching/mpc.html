@@ -1,0 +1,26 @@
+---
+title: How to set up MPC-HC
+classic_url: /classic/watching/mpc
+---
+<nav class="page-nav"><a class="btn btn--small" href="/watching/">◀ Video players</a><a class="btn btn--small" href="/">📹 Camera list</a></nav>
+<article class="panel prose">
+    <h1 class="panel-title">MPC-HC <small>How to set up MPC-HC with Streamlink</small></h1>
+    <ol>
+        <li>Download the .exe Streamlink version: <a href="https://github.com/streamlink/streamlink/releases/latest">https://github.com/streamlink/streamlink/releases/latest</a> and install it with every option selected.</li>
+        <li>Before pressing Finish select "Edit configuration file" (or find the <code>streamlinkrc</code> file at <code>C:\Users\BAKA\AppData\Roaming\streamlink</code>).</li>
+        <li>Find where it says MPC-HC. On the second row delete the <code>#</code> and make sure it points to your mpc-hc.exe, for example:
+            <pre><code>player="C:\Program Files (x86)\Combined Community Codec Pack\MPC\mpc-hc.exe"</code></pre>
+        </li>
+        <li>Press <kbd>Ctrl</kbd>+<kbd>S</kbd> to save and exit.</li>
+        <li>Now press the Start button, write <code>streamlink.exe https://youtu.be/vYzRrH78JkQ best</code> and press Enter.</li>
+    </ol>
+
+    <h3>Make a .bat file</h3>
+    <p>Alternatively you can make yourself a .bat file that quickly runs the stream from any directory. Make a "New Text Document.txt" file, open it and write this (edit it to match your own setup):</p>
+    <pre><code>@echo
+streamlink.exe https://youtu.be/vYzRrH78JkQ best
+@echo off</code></pre>
+    <p>From the Notepad menu select File → Save as. Change "Save as type" to "All Files (*.*)", change the file name to <code>Bessho.bat</code> and press Save.</p>
+    <p>Premade .bat file: <a href="https://pomf.pyonpyon.moe/ocoxfc.zip">https://pomf.pyonpyon.moe/ocoxfc.zip</a> (just extract it from the .zip file).</p>
+    <p class="notice notice--warn">Note: streams like the Shibuya one can run at 60 fps, which breaks Streamlink/MPC-HC (even though MPC-HC can run at 60 fps). Instead of <code>best</code> you can write <code>720p</code> or <code>1080p</code>.</p>
+</article>

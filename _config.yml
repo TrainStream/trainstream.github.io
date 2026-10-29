@@ -3,4 +3,27 @@ defaults:
     scope:
       path: ""
     values:
-      layout: base
+      layout: default
+
+exclude:
+  - scripts
+  - package.json
+  - package-lock.json
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# The GitHub repository the submit tool and GitHub Actions talk to.
+ts_repo: TrainStream/trainstream.github.io
+
+# The day the first page went up.
+ts_since: 2018-05-03
+
+# Footer visitor counter: "joke" (made up, no third parties) or "real"
+# (counts page loads with the free counterapi.dev service). "real" needs a free
+# counterapi.dev account: create a workspace there, make a public counter, and
+# put both names below. If the service fails, the joke counter is shown instead.
+visitor_counter: joke
+counter_workspace: ""
+counter_name: visits

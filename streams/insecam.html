@@ -1,0 +1,17 @@
+---
+title: インセカム Insecam picks
+classic_url: /classic/streams/insecam
+---
+<section class="panel">
+    <h1 class="panel-title">インセカム <small>Insecam: recommended from the thread</small></h1>
+    <p>A few unsecured IP cameras in Japan that people in the thread liked. The full list lives at <a href="http://www.insecam.org/en/bycountry/JP/">insecam.org</a>. These come and go, so don't be sad if one is gone (´・ω・`)</p>
+    <ul class="insecam-list">
+        {% for cam in site.data.insecure_cams %}
+        {% capture safe_link %}{% include safe-link.html link=cam.url %}{% endcapture %}
+        <li>
+            <strong>{{ cam.name | escape }}</strong><br />
+            {% if safe_link != '' %}<a href="{{ safe_link }}" target="_blank" rel="noopener noreferrer">{{ cam.url | escape }}</a>{% else %}{{ cam.url | escape }}{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>

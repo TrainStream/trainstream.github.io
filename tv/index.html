@@ -1,0 +1,42 @@
+---
+title: テレビ壁 TV wall
+description: Watch several Japanese live cameras at once.
+scripts:
+  - /assets/js/cards.js
+  - /assets/js/tv.js
+---
+{% include data-json.html %}
+<section class="panel">
+    <h1 class="panel-title">テレビ壁 <small>TV wall: watch up to 9 cameras at once</small></h1>
+    <div class="toolbar-row">
+        <span class="toolbar-label">画面 Layout</span>
+        <div class="view-switch" role="group" aria-label="Columns">
+            <button class="btn btn--small" type="button" data-cols="1" aria-pressed="false">1×</button>
+            <button class="btn btn--small" type="button" data-cols="2" aria-pressed="true">2×</button>
+            <button class="btn btn--small" type="button" data-cols="3" aria-pressed="false">3×</button>
+        </div>
+        <button class="btn btn--small" type="button" id="tv-share">🔗 Copy share link</button>
+        <button class="btn btn--small" type="button" id="tv-empty">✕ Clear wall</button>
+        <a class="btn btn--small" href="/">📹 Camera list</a>
+    </div>
+    <p class="notes">All screens start muted (browsers block autoplay with sound). Channel screens show the channel's current live stream, if it is live right now.</p>
+</section>
+
+<div class="tv-wall" id="tv-wall"></div>
+<div class="panel empty-state" id="tv-none" hidden>
+    <p class="kaomoji">📺 (ﾟдﾟ)</p>
+    <p>Your TV wall is empty. Add screens below, or press 📺＋ on the <a href="/">camera list</a>.</p>
+</div>
+
+<section class="panel">
+    <h2 class="panel-title">チャンネル <small>Add a screen</small></h2>
+    <form class="toolbar-row" id="tv-add-form">
+        <label class="search">
+            <span class="visually-hidden">YouTube link</span>
+            <input type="url" id="tv-add-url" placeholder="Paste any YouTube live link (youtube.com/watch?v=…, youtu.be/…, /live/…)" />
+        </label>
+        <button class="btn btn--pink" type="submit">📺＋ Add</button>
+    </form>
+    <p class="hint" id="tv-add-msg">Channels linked as <code>@name/streams</code> can't be embedded directly: open the channel, copy the link of the live video, and paste it here.</p>
+    <ul class="admin-list" id="tv-picker"></ul>
+</section>

@@ -1,0 +1,179 @@
+{%- assign live_count = 0 -%}{%- assign dead_count = 0 -%}
+{%- for s in site.data.streams.data -%}{%- if s.isAlive -%}{%- assign live_count = live_count | plus: 1 -%}{%- else -%}{%- assign dead_count = dead_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% if page.title %}{{ page.title }} | {% endif %}トレインストリーム TrainStream</title>
+        <meta name="description" content="{{ page.description | default: 'A hand-picked guide to live train, station and city cameras in Japan.' }}" />
+
+        <script>
+            (function () {
+                var root = document.documentElement;
+                root.className = root.className.replace('no-js', 'js');
+                try {
+                    var theme = localStorage.getItem('ts.theme');
+                    if (theme === 'dark' || theme === 'light') root.setAttribute('data-theme', theme);
+                    {% if page.classic_url -%}
+                    if (localStorage.getItem('trainstreamStyle') === 'classic') {
+                        var target = '{{ page.classic_url }}';
+                        {% if page.classic_dead_url -%}
+                        if (/[?&]status=dead\b/.test(location.search)) target = '{{ page.classic_dead_url }}';
+                        {%- endif %}
+                        location.replace(target);
+                    }
+                    {%- endif %}
+                } catch (e) {}
+            })();
+        </script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" />
+        <link rel="stylesheet" href="/assets/css/site.css" />
+    </head>
+    <body class="{{ page.body_class }}">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <span id="top"></span>
+
+        <header class="site-header">
+            <div class="station-sign">
+                <div class="sign-board">
+                    <span class="sign-number" aria-hidden="true"><b>TS</b>01</span>
+                    <a class="sign-name" href="/">
+                        <span class="sign-kanji">鉄道配信案内所</span>
+                        <span class="sign-kana">とれいんすとりーむ</span>
+                        <span class="sign-romaji">TrainStream</span>
+                    </a>
+                </div>
+                <nav class="sign-stripe" aria-label="Neighbouring stations">
+                    <a class="sign-prev" href="{{ page.classic_url | default: '/classic/' }}" data-set-style="classic">
+                        <span class="arrow" aria-hidden="true">◀</span>
+                        <span><span class="ja">きゅうでざいん</span><span class="en">Classic view</span></span>
+                    </a>
+                    {%- if page.next_url %}
+                    <a class="sign-next" id="sign-next" href="{{ page.next_url }}">
+                        <span><span class="ja">{{ page.next_ja }}</span><span class="en">{{ page.next_en }}</span></span>
+                        <span class="arrow" aria-hidden="true">▶</span>
+                    </a>
+                    {%- else %}
+                    <a class="sign-next" href="/">
+                        <span><span class="ja">かめらいちらん</span><span class="en">Camera list</span></span>
+                        <span class="arrow" aria-hidden="true">▶</span>
+                    </a>
+                    {%- endif %}
+                </nav>
+            </div>
+
+            <details class="menu" id="menu">
+                <summary class="menu-button"><span class="ja">メニュー</span> <span aria-hidden="true">☰</span><span class="visually-hidden">Menu</span></summary>
+                <nav class="menu-panel" aria-label="Main menu">
+                    <p class="menu-title">きっぷうりば — Ticket machine</p>
+                    <a class="ticket-btn" href="/"><span class="icon" aria-hidden="true">📹</span><span class="ja">カメラ一覧</span><span class="en">Cameras</span></a>
+                    <a class="ticket-btn" href="/tv/"><span class="icon" aria-hidden="true">📺</span><span class="ja">テレビ壁</span><span class="en">TV wall</span></a>
+                    <a class="ticket-btn" href="/watching/"><span class="icon" aria-hidden="true">🖥️</span><span class="ja">再生ソフト</span><span class="en">Video players</span></a>
+                    <a class="ticket-btn" href="/recording/"><span class="icon" aria-hidden="true">⏺️</span><span class="ja">録画</span><span class="en">Recording</span></a>
+                    <a class="ticket-btn" href="/streams/insecam"><span class="icon" aria-hidden="true">🐟</span><span class="ja">インセカム</span><span class="en">Insecam picks</span></a>
+                    <a class="ticket-btn ticket-btn--pink" href="/submit/"><span class="icon" aria-hidden="true">📮</span><span class="ja">投稿</span><span class="en">Submit a stream</span></a>
+                    <a class="ticket-btn" href="/about/"><span class="icon" aria-hidden="true">ℹ️</span><span class="ja">サイト案内</span><span class="en">About &amp; credits</span></a>
+                    <a class="ticket-btn" href="{{ page.classic_url | default: '/classic/' }}" data-set-style="classic"><span class="icon" aria-hidden="true">🕰️</span><span class="ja">旧デザイン</span><span class="en">Classic view</span></a>
+                    <button class="ticket-btn" type="button" id="theme-toggle"><span class="icon" aria-hidden="true">🌙</span><span class="ja">夜行列車</span><span class="en">Night mode</span></button>
+                </nav>
+            </details>
+
+            <div class="led-board" role="marquee" aria-label="Station announcements">
+                <span class="led-label" aria-hidden="true">お知らせ</span>
+                <div class="led-window">
+                    <p class="led-text" id="led-text">
+                        <span>ようこそ！ Welcome to the (Train) Stream Guide</span>
+                        <span>運転中 {{ live_count }} cameras in service ／ 運休 {{ dead_count }} suspended</span>
+                        <span>電車が参ります。白線の内側までお下がりください。 A train is arriving, please stand behind the white line</span>
+                        <span>R.I.P. Aizu-Wakamatsu</span>
+                        <span>新しいカメラを見つけた？ Found a new cam? Submit it! 📮</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <main id="main" class="site-main">
+            {{ content }}
+        </main>
+
+        <footer class="site-footer">
+            <a class="to-top" href="#top">▲ ページの先頭へ / Back to top</a>
+
+            <div class="counter" id="counter" data-mode="{{ site.visitor_counter }}" data-workspace="{{ site.counter_workspace }}" data-name="{{ site.counter_name }}" data-since="{{ site.ts_since }}">
+                <span>あなたは</span>
+                <span class="odometer" id="counter-digits">0000000</span>
+                <span>人目のお客様です</span>
+                <span class="counter-en">You are visitor No. <span id="counter-en">…</span></span>
+                <span class="kiriban" id="kiriban" hidden></span>
+            </div>
+
+            <p class="footer-dates">
+                since {{ site.ts_since | date: '%Y.%m.%d' }} ／ 最終更新 Last updated {{ site.time | date: '%Y.%m.%d' }}
+            </p>
+
+            <p class="rip">🕯️ Rest in Peace Aizu-Wakamatsu 🕯️</p>
+
+            <p class="sponsor"><span class="sponsor-label">提供</span> Sponsored by fufufu.moe</p>
+            <div style="display:none;">Sponsored by fufufu.moe</div>
+
+            <div class="footer-banner">
+                <a href="https://trainstream.github.io/"><img src="/assets/img/banner-88x31.png" width="88" height="31" alt="TrainStream" /></a>
+                <p>リンクフリー！ Link-free. Feel free to hotlink this banner.</p>
+            </div>
+
+            <p class="footer-small">
+                推奨環境: any browser, 1024×768 or bigger (lol) ／
+                Old pastebin: <a href="https://pastebin.com/WGqBmfrw">pastebin.com/WGqBmfrw</a> ／
+                Original editor: <a href="https://github.com/altbdoor/trainstream-editor">trainstream-editor by altbdoor</a>
+            </p>
+
+            <button class="pixel-train" type="button" id="pixel-train" title="ﾌｧｧｧﾝ!" aria-label="Honk the train horn">
+                <svg viewBox="0 0 120 24" width="240" height="48" aria-hidden="true" shape-rendering="crispEdges">
+                    <g>
+                        <rect x="2" y="4" width="36" height="16" fill="#f4f4ec" />
+                        <rect x="2" y="13" width="36" height="3" fill="#00913a" />
+                        <rect x="0" y="8" width="4" height="10" fill="#f4f4ec" />
+                        <rect x="0" y="9" width="3" height="4" fill="#2b3a55" />
+                        <rect x="8" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="16" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="24" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="32" y="7" width="4" height="5" fill="#2b3a55" />
+                        <rect x="40" y="4" width="36" height="16" fill="#f4f4ec" />
+                        <rect x="40" y="13" width="36" height="3" fill="#00913a" />
+                        <rect x="44" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="52" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="60" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="68" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="78" y="4" width="36" height="16" fill="#f4f4ec" />
+                        <rect x="78" y="13" width="36" height="3" fill="#00913a" />
+                        <rect x="82" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="90" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="98" y="7" width="5" height="5" fill="#2b3a55" />
+                        <rect x="112" y="8" width="6" height="10" fill="#f4f4ec" />
+                        <rect x="114" y="9" width="4" height="4" fill="#2b3a55" />
+                        <rect x="116" y="15" width="2" height="2" fill="#ffd400" />
+                        <rect x="6" y="20" width="4" height="3" fill="#333" />
+                        <rect x="30" y="20" width="4" height="3" fill="#333" />
+                        <rect x="44" y="20" width="4" height="3" fill="#333" />
+                        <rect x="68" y="20" width="4" height="3" fill="#333" />
+                        <rect x="82" y="20" width="4" height="3" fill="#333" />
+                        <rect x="106" y="20" width="4" height="3" fill="#333" />
+                        <rect x="20" y="1" width="2" height="3" fill="#333" />
+                        <rect x="16" y="0" width="10" height="1" fill="#333" />
+                    </g>
+                </svg>
+            </button>
+            <span class="horn" id="horn" aria-live="polite"></span>
+        </footer>
+
+        <script src="/assets/js/site.js" defer></script>
+        {%- for script in page.scripts %}
+        <script src="{{ script }}" defer></script>
+        {%- endfor %}
+    </body>
+</html>
