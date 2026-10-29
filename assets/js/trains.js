@@ -460,19 +460,22 @@
             }
         },
 
-        // the famous meme
+        // the famous meme, on its own manga panel so it reads on any background
         drift: {
             weight: 7,
             run: function (w) {
                 var W = vw();
-                var gap = 7.5 * scale();
-                var rails = prop('drift-rails', '<i></i><i></i><i></i>', 0);
-                Array.prototype.forEach.call(rails.children, function (rail, i) {
-                    rail.style.bottom = i * gap + 'px';
+                var s = scale();
+                var gap = 13 * s;
+                var panel = prop('drift-panel', '<i></i><i></i><i></i>', 0);
+                panel.style.height = 2 * gap + 24 * s + 20 + 'px';
+                Array.prototype.forEach.call(panel.children, function (rail, i) {
+                    rail.style.bottom = 5 + i * gap + 'px';
                 });
                 var ghosts = [1, 2].map(function (i) {
-                    var g = extraTrain(train.livery, { back: true });
+                    var g = extraTrain(train.livery, {});
                     g.style.bottom = 6 + i * gap + 'px';
+                    g.style.zIndex = 5 - i;
                     g.style.opacity = '0';
                     return g;
                 });
@@ -481,27 +484,32 @@
                     place(el, -w);
                 });
                 var mid = Math.round(W / 2 - w / 2);
+                panel.classList.add('on');
                 return drive(train, mid - 140, { boost: 2 })
                     .then(function () {
-                        rails.classList.add('on');
                         ghosts.forEach(function (g, i) {
-                            place(g, mid - 140);
-                            animate(g, [{ opacity: 0 }, { opacity: 0.55 - i * 0.2 }], 300);
+                            place(g, mid - 140 - (i + 1) * 16);
+                            animate(g, [{ opacity: 0 }, { opacity: 0.9 - i * 0.15 }], 200);
                         });
-                        prop('drift-sparks', '<i></i><i></i><i></i><i></i><i></i><i></i>', mid - 40);
-                        var burst = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.min(mid + w / 2, W - 190));
-                        burst.style.marginLeft = '-20px';
-                        return Promise.all(all.map(function (el) {
-                            return drive(el, mid, { ms: 1100, easing: 'ease-out', extra: 'skewX(-14deg) rotate(-2deg)' });
+                        var sparks = prop('drift-sparks', new Array(13).join('<i></i>'), mid - 20);
+                        sparks.style.height = 2 * gap + 'px';
+                        var burst = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.max(8, Math.min(mid + w / 2 - 40, W - 230)));
+                        burst.style.bottom = 2 * gap + 24 * s + 28 + 'px';
+                        return Promise.all(all.map(function (el, i) {
+                            return drive(el, mid - i * 16, { ms: 1100, easing: 'ease-out', extra: 'skewX(-14deg) rotate(-2deg)' });
                         }));
                     })
                     .then(function () {
-                        return wait(1600);
+                        return wait(1800);
                     })
                     .then(function () {
                         return Promise.all(all.map(function (el) {
                             return drive(el, W + 40, { boost: 2.5, easing: 'ease-in' });
                         }));
+                    })
+                    .then(function () {
+                        panel.classList.remove('on');
+                        return wait(400);
                     });
             }
         },
