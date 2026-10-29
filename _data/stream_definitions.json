@@ -115,6 +115,13 @@
                 "text": {
                     "description": "The text to display, will override URL",
                     "type": "string"
+                },
+                "kind": {
+                    "description": "Optional link type: \"home\" for a home page / camera portal. Leave out for a normal stream link.",
+                    "type": "string",
+                    "enum": [
+                        "home"
+                    ]
                 }
             }
         }

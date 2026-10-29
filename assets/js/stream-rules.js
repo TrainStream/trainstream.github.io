@@ -94,6 +94,7 @@
                 var out = {};
                 if (str(extra.link)) out.link = str(extra.link);
                 if (str(extra.linkTitle)) out.linkTitle = str(extra.linkTitle);
+                if (str(extra.kind) && str(extra.kind) !== 'stream') out.kind = str(extra.kind);
                 if (str(extra.text)) out.text = str(extra.text);
                 return out;
             })
@@ -148,6 +149,7 @@
             }
             check(!extra.text || extra.text.length <= LIMITS.text, n + ': text is too long.');
             check(!extra.linkTitle || extra.linkTitle.length <= LIMITS.text, n + ': note is too long.');
+            check(!extra.kind || extra.kind === 'home', n + ': unknown link type "' + extra.kind + '".');
         });
         check(linkCount > 0, 'Add at least one link to the stream or channel.');
 

@@ -142,6 +142,7 @@
                     href: href,
                     text: extra.text || extra.link,
                     note: extra.linkTitle || '',
+                    kind: extra.kind === 'home' ? 'home' : 'stream',
                     youtube: youtube(href),
                     raw: rawStreamUrl(href),
                 });
@@ -264,6 +265,7 @@
         model.links.slice(0, maxLinks).forEach(function (link) {
             linkItems.push(
                 el('li', null, [
+                    linkKindBadge(link),
                     el('a', { href: link.href, target: link.href.charAt(0) === '/' ? null : '_blank', rel: 'noopener noreferrer', title: link.note || null, text: link.text }),
                     link.note ? el('small', { text: link.note }) : null,
                 ])
@@ -325,6 +327,10 @@
         );
     }
 
+    function linkKindBadge(link) {
+        return link.kind === 'home' ? el('span', { className: 'link-kind', title: 'Home page / camera portal', text: '🏠 公式 Home' }) : null;
+    }
+
     function copyText(text) {
         function toast() {
             var t = el('div', { className: 'copied-toast', role: 'status', text: 'コピーしました！ Copied' });
@@ -364,6 +370,7 @@
         tagIndex: tagIndex,
         tagInfo: tagInfo,
         badge: badge,
+        linkKindBadge: linkKindBadge,
         normalize: normalize,
         renderCard: renderCard,
         copyText: copyText,
