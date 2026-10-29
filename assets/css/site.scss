@@ -924,48 +924,103 @@ textarea {
 }
 
 /* MULTI-TRACK DRIFTING!! */
-.drift-cam {
+.drift-rails {
     right: 0;
     bottom: 0;
-    z-index: 6;
-    border-top: 3px solid #1b1f3b;
-    background: #c9c2b3;
-    transform: translateY(100%);
-    transition: transform 0.3s steps(3);
+    height: 60px;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.3s steps(3);
 
     &.on {
-        transform: none;
+        opacity: 1;
     }
 
-    &.shake canvas {
-        animation: cam-shake 0.25s steps(2) 6;
+    // two rails: the far one (first) and the near one, each on a strip of ballast
+    i {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 8px;
+        background: linear-gradient(#e1e6ea 0 1px, #1b1f3b 1px 3px, transparent 3px),
+            repeating-linear-gradient(90deg, #4a3523 0 4px, #8f897d 4px 12px);
+        box-shadow: 0 1px 0 #1b1f3b;
     }
 
-    canvas {
-        display: block;
-        image-rendering: pixelated;
+    i:first-child {
+        filter: brightness(0.8);
     }
 }
 
-.drift-cam-label {
+// sparks and smoke at the front and rear wheels, riding along with the train
+.drift-fx {
     position: absolute;
-    top: 6px;
-    right: 8px;
-    padding: 1px 6px;
-    font: 0.8rem var(--font-pixel);
-    color: var(--led-red);
-    background: var(--led-bg);
-    border: 2px solid #1b1f3b;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    b {
+        position: absolute;
+        bottom: 0;
+    }
+
+    i,
+    u {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 6px;
+        height: 6px;
+    }
 
     i {
-        font-style: normal;
-        animation: blink 1s steps(1) infinite;
+        background: #ffd400;
+        box-shadow: 0 0 0 2px #e60012;
+        animation: spark 0.45s steps(3) infinite;
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.09}s;
+                left: #{$i * 3 - 6}px;
+            }
+        }
+    }
+
+    u {
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        box-shadow: 0 0 0 2px #1b1f3b;
+        animation: smoke 0.9s steps(5) infinite;
+
+        @for $i from 6 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{($i - 6) * 0.3}s;
+            }
+        }
     }
 }
 
-@keyframes cam-shake {
-    50% {
-        transform: translate(2px, -1px);
+@keyframes spark {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-46px, -26px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke {
+    from {
+        transform: translate(0, 0) scale(0.6);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-70px, -20px) scale(1.8);
+        opacity: 0;
     }
 }
 
