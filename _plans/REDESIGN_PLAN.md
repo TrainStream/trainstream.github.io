@@ -1,7 +1,22 @@
 # TrainStream redesign plan
 
-Status: **plan only, nothing implemented yet.** Branch: `claude/wonderful-fermat-auisai`.
+Status: **phases 1–7 implemented** on branch `claude/wonderful-fermat-auisai` (phase 8, the Cloudflare Worker, is not built). See `README.md` for how it works now.
 The `_plans/` folder starts with `_`, so Jekyll does not publish it.
+
+### Decisions taken
+- **D1:** yes, map view; region and approximate coordinates were filled in for the existing streams.
+- **D2:** yes, a GitHub account is needed for now.
+- **D3:** both counters; the joke one is the default and `real` is switched on in `_config.yml`.
+- **D4:** yes, pictures are mirrored on publish.
+- **D5:** yes, the classic choice is remembered.
+- **D6:** yes, TV wall.
+- **D7:** all views can be chosen and the browser remembers the choice. The default is tickets on desktop and timetable on phones.
+
+### Changes from the plan below
+- Submissions stay **issues** (no pull requests). The bot validates them and comments. The **`approved`** label, or "Approve & publish" in the `/submit/` review queue, publishes. Trusted authors (write access or listed in `publishers.yml`) publish instantly. Editing the JSON in the issue is the "edit before approving" step.
+- Cards are rendered client-side from the embedded JSON by one renderer (`assets/js/cards.js`), which the submit-tool preview shares. There is a `<noscript>` list of live cameras for no-JS visitors.
+- `/classic/streams/` is the classic equivalent of `/`. The old table-of-contents page is at `/classic/`.
+- An "✏️ Suggest an edit" button on every stream pre-fills `/submit/?edit=<id>`.
 
 ---
 
