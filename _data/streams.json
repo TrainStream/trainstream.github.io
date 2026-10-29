@@ -1156,23 +1156,28 @@
             "name": "うめたくん - Seibu Ikebukuro Line, Tokyo"
         },
         {
+            "name": "Kabukicho Red-Light District, Tokyo",
             "isAlive": true,
+            "tags": "street, nightview",
+            "region": "Tokyo",
+            "lat": 35.6945,
+            "lng": 139.7035,
             "images": [
                 {
                     "src": "/pictures/Shinjuku_kabukicho1.jpg",
-                    "alt": "Shinjuku_kabukicho",
+                    "title": "Shinjuku_kabukicho",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/Kabukicho02.png",
-                    "alt": "Kabukicho",
+                    "title": "Kabukicho",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/Kabukicho01.png",
-                    "alt": "Kabukicho",
+                    "title": "Kabukicho",
                     "width": 357,
                     "height": 200
                 }
@@ -1180,26 +1185,20 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw/streams",
-                    "linkTitle": "Shinjuku Kabukicho Live Camera",
-                    "text": "Kabukicho channel",
-                    "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@kabukicho-2/streams",
-                    "text": "Kabukicho Live Channel II",
-                    "kind": "home"
+                    "kind": "home",
+                    "text": "Kabukicho Channel I"
                 },
                 {
                     "link": "https://www.youtube.com/@kabukicho-1/streams",
-                    "text": "Kabukicho Live Channel",
-                    "kind": "home"
+                    "kind": "home",
+                    "text": "Kabukicho Live Channel II"
+                },
+                {
+                    "link": "https://www.youtube.com/@kabukicho-2/streams",
+                    "kind": "home",
+                    "text": "Kabukicho Live Channel III"
                 }
-            ],
-            "tags": "street, nightview",
-            "region": "Tokyo",
-            "lat": 35.6945,
-            "lng": 139.7035,
-            "name": "Kabukicho Red-Light District, Tokyo"
+            ]
         },
         {
             "isAlive": true,
