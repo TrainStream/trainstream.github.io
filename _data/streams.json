@@ -403,7 +403,7 @@
         },
         {
             "name": "新大阪ライブカメラ Sin-Osaka Station",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "trainlines, city, traffic, sound, shinkansen",
             "region": "Osaka",
             "lat": 34.7335,
@@ -557,7 +557,7 @@
         },
         {
             "name": "Okinawa Times",
-            "isAlive": true,
+            "isAlive": false,
             "tags": "street, traffic, city, multicam",
             "region": "Okinawa",
             "lat": 26.2145,
@@ -941,7 +941,7 @@
             "lng": 139.7714
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Tokyo Shinjuku JR 1.jpg",
@@ -1411,7 +1411,7 @@
             "name": "Live Camera Shonan Kamakura Japan"
         },
         {
-            "isAlive": true,
+            "isAlive": false,
             "images": [
                 {
                     "src": "/pictures/Akihabara01.jpg",
