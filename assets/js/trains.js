@@ -460,55 +460,41 @@
             }
         },
 
-        // the famous meme, on its own manga panel so it reads on any background
+        // the famous meme: the train rides across the screen with its wheels on two tracks at once
         drift: {
             weight: 7,
             run: function (w) {
                 var W = vw();
                 var s = scale();
-                var gap = 13 * s;
-                var panel = prop('drift-panel', '<i></i><i></i><i></i>', 0);
-                panel.style.height = 2 * gap + 24 * s + 20 + 'px';
-                Array.prototype.forEach.call(panel.children, function (rail, i) {
-                    rail.style.bottom = 5 + i * gap + 'px';
+                var gap = Math.round(12 * s);
+                var rails = prop('drift-rails', '<i></i><i></i>', 0);
+                rails.children[0].style.bottom = gap + 'px';
+                // lean the train so the rear wheels stay on the near rail and the front ones reach the far rail
+                var lean = (Math.atan(gap / (w - 12 * s)) * 180) / Math.PI;
+                var fx = document.createElement('span');
+                fx.className = 'train-fx drift-fx';
+                fx.innerHTML = '<b></b><b></b>';
+                fx.children[0].style.left = 6 * s + 'px';
+                fx.children[1].style.left = w - 14 * s + 'px';
+                // sparks at both ends, smoke only from the rear so it trails behind
+                Array.prototype.forEach.call(fx.children, function (wheels, i) {
+                    wheels.innerHTML = '<i></i><i></i><i></i><i></i><i></i>' + (i ? '' : '<u></u><u></u><u></u>');
                 });
-                var ghosts = [1, 2].map(function (i) {
-                    var g = extraTrain(train.livery, {});
-                    g.style.bottom = 6 + i * gap + 'px';
-                    g.style.zIndex = 5 - i;
-                    g.style.opacity = '0';
-                    return g;
-                });
-                var all = [train].concat(ghosts);
-                all.forEach(function (el) {
-                    place(el, -w);
-                });
-                var mid = Math.round(W / 2 - w / 2);
-                panel.classList.add('on');
-                return drive(train, mid - 140, { boost: 2 })
+                train.appendChild(fx);
+                train.style.transformOrigin = 'left bottom';
+                place(train, -w, 'skewY(' + -lean.toFixed(2) + 'deg)');
+                rails.classList.add('on');
+                var speed = train.speed * 1.5;
+                later(function () {
+                    var burst = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.max(8, Math.round(W / 2 - 100)));
+                    burst.style.bottom = 24 * s + gap + 40 + 'px';
+                }, ((W / 2 - w / 2 + w) / speed) * 1000 - 900);
+                return wait(300)
                     .then(function () {
-                        ghosts.forEach(function (g, i) {
-                            place(g, mid - 140 - (i + 1) * 16);
-                            animate(g, [{ opacity: 0 }, { opacity: 0.9 - i * 0.15 }], 200);
-                        });
-                        var sparks = prop('drift-sparks', new Array(13).join('<i></i>'), mid - 20);
-                        sparks.style.height = 2 * gap + 'px';
-                        var burst = prop('train-manga', 'MULTI-<br />TRACK<br />DRIFTING!!', Math.max(8, Math.min(mid + w / 2 - 40, W - 230)));
-                        burst.style.bottom = 2 * gap + 24 * s + 28 + 'px';
-                        return Promise.all(all.map(function (el, i) {
-                            return drive(el, mid - i * 16, { ms: 1100, easing: 'ease-out', extra: 'skewX(-14deg) rotate(-2deg)' });
-                        }));
+                        return drive(train, W, { boost: 1.5 });
                     })
                     .then(function () {
-                        return wait(1800);
-                    })
-                    .then(function () {
-                        return Promise.all(all.map(function (el) {
-                            return drive(el, W + 40, { boost: 2.5, easing: 'ease-in' });
-                        }));
-                    })
-                    .then(function () {
-                        panel.classList.remove('on');
+                        rails.classList.remove('on');
                         return wait(400);
                     });
             }
