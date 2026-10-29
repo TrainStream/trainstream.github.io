@@ -126,18 +126,6 @@
         "color": "#455a64"
     },
     {
-        "name": "Animals",
-        "slug": "animals",
-        "code": "AN",
-        "color": "#7cb342"
-    },
-    {
-        "name": "Tram/Streetcar",
-        "slug": "tram",
-        "code": "TM",
-        "color": "#00838f"
-    },
-    {
         "name": "River",
         "slug": "river",
         "code": "RV",
