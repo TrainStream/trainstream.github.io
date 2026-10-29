@@ -253,7 +253,7 @@
                       })
                     : el('span', { className: 'kaomoji', style: 'display:grid;place-items:center;height:100%;color:#ddd', text: '(・_・) no image' }),
                 model.images.length > 1
-                    ? el('span', { className: 'cams-chip', title: model.images.length + ' pictures', text: '🖼×' + model.images.length })
+                    ? el('span', { className: 'cams-chip', title: model.images.length + ' pictures', text: '×' + model.images.length })
                     : null,
                 model.alive ? null : el('span', { className: 'dead-stamp', text: '運休' }),
             ]

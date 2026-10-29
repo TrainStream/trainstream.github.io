@@ -2169,7 +2169,8 @@ textarea {
 
 /* Small line icons for the details row, drawn in CSS: unlike emoji they look the same on every system and follow the text colour. */
 .detail-date::before,
-.detail-pictures::before {
+.detail-pictures::before,
+.cams-chip::before {
     content: '';
     display: inline-block;
     width: 1.1em;
@@ -2190,7 +2191,8 @@ textarea {
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='16' rx='2.5'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01'/%3E%3C/svg%3E");
 }
 
-.detail-pictures::before {
+.detail-pictures::before,
+.cams-chip::before {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='16' rx='2.5'/%3E%3Ccircle cx='8.5' cy='9.5' r='1.5'/%3E%3Cpath d='M3.5 17.5l5-5 4 4 3-3 5 5'/%3E%3C/svg%3E");
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='16' rx='2.5'/%3E%3Ccircle cx='8.5' cy='9.5' r='1.5'/%3E%3Cpath d='M3.5 17.5l5-5 4 4 3-3 5 5'/%3E%3C/svg%3E");
 }
