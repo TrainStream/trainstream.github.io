@@ -13,3 +13,6 @@
 # Add one username per line, like:
 #   - some-github-user
 publishers:
+  - TrainStream
+  - githubuser537
+  - altbdoor
