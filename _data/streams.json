@@ -1730,6 +1730,2085 @@
             "addedAt": "2026-06-25"
         },
         {
+            "name": "山梨県南アルプス市・富士川町 道路ライブカメラ - Road Cameras, Minami-Alps & Fujikawa",
+            "isAlive": true,
+            "tags": "traffic, bridge, river, multicam",
+            "region": "Yamanashi",
+            "lat": 35.6085,
+            "lng": 138.4651,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-SitepD5vzlM.jpg",
+                    "title": "Mitesu River Bridge",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-jIjsSNlgflM.jpg",
+                    "title": "Fuji Bridge",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-BuBGphGBPEA.jpg",
+                    "title": "Fujikawa Ohashi west intersection",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E5%B1%B1%E6%A2%A8%E7%9C%8C%E5%8D%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E5%B8%82%E5%AF%8C%E5%A3%AB%E5%B7%9D/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "10 cameras on this channel"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=oWzkS5g6oqc",
+                    "text": "Road Cameras, Minami-Alps & Fujikawa",
+                    "linkTitle": "Live nonstop since at least Aug 2023."
+                }
+            ]
+        },
+        {
+            "name": "鉄道ライブカメラ静岡 - Shizuoka Shinkansen Live Camera",
+            "isAlive": true,
+            "tags": "trainlines, shinkansen",
+            "region": "Shizuoka",
+            "lat": 34.9718,
+            "lng": 138.3899,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-K_3jCycj0qk.jpg",
+                    "title": "Shizuoka Shinkansen Live Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@ShinkansenLiveCamera/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "リビエラ - Zushi & Seabornia Marinas",
+            "isAlive": true,
+            "tags": "seaport, shore, multicam",
+            "region": "Kanagawa",
+            "lat": 35.2957,
+            "lng": 139.5536,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-fl0YqYWGvd8.jpg",
+                    "title": "Zushi Marina",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-DoC_PlS1P_M.jpg",
+                    "title": "Enoshima Yacht Harbor",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-KG_NX5YkkOo.jpg",
+                    "title": "Seabornia Marina",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@rivieraofficial8715/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Zushi Marina, Enoshima Yacht Harbor, Seabornia Marina"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=DoC_PlS1P_M",
+                    "text": "Enoshima Yacht Harbor",
+                    "linkTitle": "Live nonstop since at least Jun 2023."
+                }
+            ]
+        },
+        {
+            "name": "JR京都駅ライブカメラ - JR Kyoto Station",
+            "isAlive": true,
+            "tags": "trainstation, trainlines",
+            "region": "Kyoto",
+            "lat": 34.9847,
+            "lng": 135.7577,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Px4XobGsobo.jpg",
+                    "title": "Station overview",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-gcWty8bA7Dc.jpg",
+                    "title": "Takakura overpass, east side",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@JRKyotoStationLiveCam/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Station overview, Takakura overpass, east side"
+                }
+            ]
+        },
+        {
+            "name": "butsuguya - Kyoto Tower & Higashi Honganji",
+            "isAlive": true,
+            "tags": "city, shrine, nightview, multicam",
+            "region": "Kyoto",
+            "lat": 34.9876,
+            "lng": 135.7593,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-CeSitkT_nbw.jpg",
+                    "title": "Kyoto Tower",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-faaDguOLQrQ.jpg",
+                    "title": "Oshigashi-san Plaza",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-Y1XxYLwpJy4.jpg",
+                    "title": "Higashi Honganji",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@butsuguya/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Kyoto Tower, Oshigashi-san Plaza, Higashi Honganji"
+                }
+            ]
+        },
+        {
+            "name": "iTSCOM - Aoba IC, Futako-Tamagawa, Shibuya & Yoga",
+            "isAlive": true,
+            "tags": "traffic, city, street, multicam",
+            "region": "Tokyo",
+            "lat": 35.6114,
+            "lng": 139.6291,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-LzlrHXS-ebM.jpg",
+                    "title": "Yokohama Aoba IC",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-fndY3LREfdE.jpg",
+                    "title": "Futako-Tamagawa",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-f50R4vDlCmA.jpg",
+                    "title": "Shibuya",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@itscomch/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Yokohama Aoba IC, Futako-Tamagawa, Shibuya, Yoga"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=f50R4vDlCmA",
+                    "text": "Shibuya",
+                    "linkTitle": "Live nonstop since at least Jun 2023."
+                }
+            ]
+        },
+        {
+            "name": "アナザーレンタカー長崎空港店 - Nagasaki Airport Parking",
+            "isAlive": true,
+            "tags": "airport, traffic",
+            "region": "Nagasaki",
+            "lat": 32.9169,
+            "lng": 129.9165,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-sPOq_two14k.jpg",
+                    "title": "Nagasaki Airport Parking",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E3%82%A2%E3%83%8A%E3%82%B6%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC%E9%95%B7%E5%B4%8E%E7%A9%BA%E6%B8%AF%E5%BA%97/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=sPOq_two14k",
+                    "text": "Nagasaki Airport Parking",
+                    "linkTitle": "Live nonstop since at least Apr 2023."
+                }
+            ]
+        },
+        {
+            "name": "鉄道仮面 - Totsuka Station",
+            "isAlive": true,
+            "tags": "trainstation, trainlines",
+            "region": "Kanagawa",
+            "lat": 35.4033,
+            "lng": 139.5334,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-DhoxKUF4lSk.jpg",
+                    "title": "Totsuka Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E9%89%84%E9%81%93%E4%BB%AE%E9%9D%A2/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "TOKYO LIVE CAMERA - Tokyo Bay at Night",
+            "isAlive": true,
+            "tags": "city, nightview, shore, sound",
+            "region": "Tokyo",
+            "lat": 35.6311,
+            "lng": 139.7774,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-4ZiucC7cvw8.jpg",
+                    "title": "Tokyo Bay at Night",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@TOKYO_LIVE_CAMERA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "置石fm - Kamakura Wakamiya-oji Dankazura",
+            "isAlive": true,
+            "tags": "street, city, multicam",
+            "region": "Kanagawa",
+            "lat": 35.3217,
+            "lng": 139.5537,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-nY3VSZBQP1o.jpg",
+                    "title": "Sky camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-5bEHNKM2H2k.jpg",
+                    "title": "Camera 3",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-UrZWLQSjOuQ.jpg",
+                    "title": "Camera 2",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@okiishi-fm/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Sky camera, Camera 3, Camera 2, Camera 1"
+                }
+            ]
+        },
+        {
+            "name": "石垣島ライブカメラ - Ishigaki 730 Intersection",
+            "isAlive": true,
+            "tags": "street, traffic",
+            "region": "Okinawa",
+            "lat": 24.3383,
+            "lng": 124.1577,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-b6tb6fT3M-s.jpg",
+                    "title": "Ishigaki 730 Intersection",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@-ishigakiisland-2224/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "上高地 五千尺ホテル - Kappabashi Bridge, Kamikochi",
+            "isAlive": true,
+            "tags": "bridge, scenery, mountain, river",
+            "region": "Nagano",
+            "lat": 36.2493,
+            "lng": 137.6374,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Iv2VUE_UhRQ.jpg",
+                    "title": "Kappabashi Bridge, Kamikochi",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@gosenjaku-hotel/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=Iv2VUE_UhRQ",
+                    "text": "Kappabashi Bridge, Kamikochi",
+                    "linkTitle": "Live nonstop since at least Jul 2022."
+                }
+            ]
+        },
+        {
+            "name": "夜光電気 - Adachi Ward, Tokyo",
+            "isAlive": true,
+            "tags": "street, traffic, multicam",
+            "region": "Tokyo",
+            "lat": 35.7749,
+            "lng": 139.8045,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-hW9xQI9sqGQ.jpg",
+                    "title": "Adachi, Qwatch camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-fCK9PquKkRU.jpg",
+                    "title": "Adachi Ward, Tokyo",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-KOZD88I7h48.jpg",
+                    "title": "Nippori-Toneri Liner side",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@yakoudenki/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "6 cameras on this channel"
+                }
+            ]
+        },
+        {
+            "name": "長崎ケーブルメディア - Gunkanjima, Nagasaki Station & City Hall",
+            "isAlive": true,
+            "tags": "trainstation, scenery, city, multicam",
+            "region": "Nagasaki",
+            "lat": 32.7524,
+            "lng": 129.8689,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-pmdZ-D1XOJA.jpg",
+                    "title": "Gunkanjima (Hashima)",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-ZoETGE0w5w8.jpg",
+                    "title": "City hall",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-ECA5G89gogI.jpg",
+                    "title": "Nabekanmuri Park",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@nagasakicablemedia/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Gunkanjima (Hashima), City hall, Nabekanmuri Park, JR Nagasaki Station"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=ECA5G89gogI",
+                    "text": "Nabekanmuri Park",
+                    "linkTitle": "Live nonstop since at least Apr 2023."
+                }
+            ]
+        },
+        {
+            "name": "ライブカメラDB - Motomachi, Sapporo",
+            "isAlive": true,
+            "tags": "trainstation, street",
+            "region": "Hokkaido",
+            "lat": 43.0941,
+            "lng": 141.3717,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-CqtfZqZAxlU.jpg",
+                    "title": "Motomachi Station intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-T0OEy6-kF6w.jpg",
+                    "title": "Around Motomachi Station (subway)",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@livecamdb/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Motomachi Station intersection, Around Motomachi Station (subway)"
+                }
+            ]
+        },
+        {
+            "name": "岐阜柳ヶ瀬 - Gifu Yanagase",
+            "isAlive": true,
+            "tags": "street, city, nightview",
+            "region": "Gifu",
+            "lat": 35.4192,
+            "lng": 136.7604,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-m9XOe3u5IPA.jpg",
+                    "title": "Gifu Yanagase",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-Ck9kfes-Jjw.jpg",
+                    "title": "Gifu Yanagase",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@yanagase/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "2 cameras on this channel"
+                }
+            ]
+        },
+        {
+            "name": "吉塚ライブカメラ - Shizuoka Station",
+            "isAlive": true,
+            "tags": "trainstation, trainlines, shinkansen",
+            "region": "Shizuoka",
+            "lat": 34.9718,
+            "lng": 138.389,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-oV6t05kFHAY.jpg",
+                    "title": "Shizuoka Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@radac_yoshizuka/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "岡垣町観光協会 - Hazu Beach, Okagaki",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Fukuoka",
+            "lat": 33.8803,
+            "lng": 130.5556,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Lo1mf9sTVjg.jpg",
+                    "title": "Hazu Beach, Okagaki",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@okagakikankou/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=Lo1mf9sTVjg",
+                    "text": "Hazu Beach, Okagaki",
+                    "linkTitle": "Live nonstop since at least Feb 2023."
+                }
+            ]
+        },
+        {
+            "name": "Tokyo Suibou Channel - Tokyo Rivers (30 cameras)",
+            "isAlive": true,
+            "tags": "river, bridge, multicam",
+            "region": "Tokyo",
+            "lat": 35.6664,
+            "lng": 139.3161,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-evjYruwTtGE.jpg",
+                    "title": "Minamiasakawa, Yokoyama Bridge",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-VHZHJ9WVUh0.jpg",
+                    "title": "Zanbori River, Tachikawa Bridge",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-fqrh8GsxN3Q.jpg",
+                    "title": "Shiroyama River, Inari Bridge",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@TokyoSuibou/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "30 cameras on this channel"
+                }
+            ]
+        },
+        {
+            "name": "ちんあなご - Rainbow Bridge & Kanda River",
+            "isAlive": true,
+            "tags": "bridge, city, river, multicam",
+            "region": "Tokyo",
+            "lat": 35.6364,
+            "lng": 139.7639,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-2qxYeWnELv8.jpg",
+                    "title": "Rainbow Bridge close-up",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-OqhMBZHnmA4.jpg",
+                    "title": "Takadanobaba, Kanda River",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-fGOCRGXPgRY.jpg",
+                    "title": "Rainbow Bridge",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@chinanago/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Rainbow Bridge close-up, Takadanobaba, Kanda River, Rainbow Bridge"
+                }
+            ]
+        },
+        {
+            "name": "Live Cam Yokohama - Kisha-michi",
+            "isAlive": true,
+            "tags": "street, city",
+            "region": "Kanagawa",
+            "lat": 35.4447,
+            "lng": 139.6422,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-BF_N3krqSMk.jpg",
+                    "title": "Kisha-michi",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@YokohamaLiveCam/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "MBS NEWS - Dotonbori & Itami Airport",
+            "isAlive": true,
+            "tags": "street, city, airport, multicam",
+            "region": "Osaka",
+            "lat": 34.669,
+            "lng": 135.5016,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-6OgYfTMOmhY.jpg",
+                    "title": "Dotonbori, Glico sign",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-_nUgTC9zJyc.jpg",
+                    "title": "Itami Airport",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@mbsnews/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Dotonbori, Glico sign, Itami Airport"
+                }
+            ]
+        },
+        {
+            "name": "TUFテレビユー福島 - Koriyama, Aizuwakamatsu & Onahama",
+            "isAlive": true,
+            "tags": "city, multicam",
+            "region": "Fukushima",
+            "lat": 37.3985,
+            "lng": 140.3888,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-lFl4hgnoQTA.jpg",
+                    "title": "Koriyama, Aizuwakamatsu & Onahama",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@TUFchannel/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "HTB北海道テレビ - New Chitose Airport & JR Sapporo Station",
+            "isAlive": true,
+            "tags": "airport, trainstation, multicam",
+            "region": "Hokkaido",
+            "lat": 42.7868,
+            "lng": 141.683,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Azbdr5jbN6o.jpg",
+                    "title": "New Chitose Airport",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-gaNLXSEUVRw.jpg",
+                    "title": "JR Sapporo Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@HTB6CH/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: New Chitose Airport, JR Sapporo Station"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=gaNLXSEUVRw",
+                    "text": "JR Sapporo Station",
+                    "linkTitle": "Live nonstop since at least Feb 2022."
+                }
+            ]
+        },
+        {
+            "name": "SODANE - Susukino, Sapporo",
+            "isAlive": true,
+            "tags": "street, city, nightview",
+            "region": "Hokkaido",
+            "lat": 43.0561,
+            "lng": 141.3574,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-wRYonRnKsKw.jpg",
+                    "title": "Susukino Crossing",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-kfIQBC0hrII.jpg",
+                    "title": "Sapporo city",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@SODANE/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Susukino Crossing, Sapporo city"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=kfIQBC0hrII",
+                    "text": "Sapporo city",
+                    "linkTitle": "Live nonstop since at least Dec 2022."
+                }
+            ]
+        },
+        {
+            "name": "Jagaimon Project - Shihoro Town, Hokkaido",
+            "isAlive": true,
+            "tags": "scenery, other",
+            "region": "Hokkaido",
+            "lat": 43.1682,
+            "lng": 143.2418,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-cElpVZpu1wI.jpg",
+                    "title": "Shihoro Town, Hokkaido",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@jagaimonpj/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "丸沼高原 - Marunuma Kogen Resort",
+            "isAlive": true,
+            "tags": "mountain, snow, scenery, multicam",
+            "region": "Gunma",
+            "lat": 40.8392,
+            "lng": 140.42,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-eBs8Ywvvz_Q.jpg",
+                    "title": "Sky terrace, 2000 m",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-WTNOUFXORBE.jpg",
+                    "title": "Entrance",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-f6WLh3hVfew.jpg",
+                    "title": "Tree Adventure",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@marunumakogen/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "7 cameras on this channel"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=cqvEOhOzN2o",
+                    "text": "Camping Valley",
+                    "linkTitle": "Live nonstop since at least Sep 2021."
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=Xd5ssXY_BVA",
+                    "text": "Restaurant Tonfan",
+                    "linkTitle": "Live nonstop since at least Dec 2021."
+                }
+            ]
+        },
+        {
+            "name": "チューリップテレビ - Toyama Station, Himi & Tateyama Murodo",
+            "isAlive": true,
+            "tags": "trainstation, trainlines, mountain, multicam",
+            "region": "Toyama",
+            "lat": 36.7008,
+            "lng": 137.2129,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-u13B_yxQCB0.jpg",
+                    "title": "Himi city",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-YiX6DQ_dJ0I.jpg",
+                    "title": "Toyama Station south exit (LRT)",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-rWO9PXZwahM.jpg",
+                    "title": "Tateyama Murodo",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@bansenTUT/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Himi city, Toyama Station south exit (LRT), Tateyama Murodo, Toyama city, Tower 111"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=ZAwOiSKL4Xc",
+                    "text": "Toyama city, Tower 111",
+                    "linkTitle": "Live nonstop since at least Dec 2022."
+                }
+            ]
+        },
+        {
+            "name": "khb東日本放送 - Sendai Station",
+            "isAlive": true,
+            "tags": "trainstation, city",
+            "region": "Miyagi",
+            "lat": 34.4688,
+            "lng": 133.8211,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-AinAZQgQp_s.jpg",
+                    "title": "Sendai Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@khb/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=AinAZQgQp_s",
+                    "text": "Sendai Station",
+                    "linkTitle": "Live nonstop since at least Sep 2021."
+                }
+            ]
+        },
+        {
+            "name": "ふじさん駿河湾フェリー - Toi Terminal",
+            "isAlive": true,
+            "tags": "seaport, shore",
+            "region": "Shizuoka",
+            "lat": 34.9024,
+            "lng": 138.815,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-pj8r6m24lh8.jpg",
+                    "title": "Toi Terminal",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E4%B8%80%E8%88%AC%E7%A4%BE%E5%9B%A3%E6%B3%95%E4%BA%BA%E3%81%B5%E3%81%98%E3%81%95%E3%82%93%E9%A7%BF%E6%B2%B3/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=pj8r6m24lh8",
+                    "text": "Toi Terminal",
+                    "linkTitle": "Live nonstop since at least Oct 2021."
+                }
+            ]
+        },
+        {
+            "name": "Atelier COCOON - Fushino Coast, Tottori",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Tottori",
+            "lat": 35.5151,
+            "lng": 134.1231,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-0ZN0CW-IpVk.jpg",
+                    "title": "Fushino Coast, Tottori",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@ateliercocoon/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "TBS NEWS DIG - Shinjuku Station & Haneda Airport",
+            "isAlive": true,
+            "tags": "trainstation, airport, city, multicam",
+            "region": "Tokyo",
+            "lat": 35.6917,
+            "lng": 139.6997,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-u7kCTaCX_J4.jpg",
+                    "title": "Shinjuku Station front",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-dYpspgeXSaQ.jpg",
+                    "title": "Haneda Terminal 2",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-2f9NOSw-FqM.jpg",
+                    "title": "Haneda Terminal 1",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@tbsnewsdig/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Shinjuku Station front, Haneda Terminal 2, Haneda Terminal 1"
+                }
+            ]
+        },
+        {
+            "name": "Isshikiboat - Isshiki Beach, Hayama",
+            "isAlive": true,
+            "tags": "shore, seaport",
+            "region": "Kanagawa",
+            "lat": 35.2687,
+            "lng": 139.5897,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Svky4oWhSyE.jpg",
+                    "title": "Isshiki Beach, Hayama",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@isshikiboat/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "金剛山ライブ - Mt. Kongo",
+            "isAlive": true,
+            "tags": "mountain, scenery",
+            "region": "Osaka",
+            "lat": 34.4194,
+            "lng": 135.6729,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-t5vmpxuWG4g.jpg",
+                    "title": "Mt. Kongo",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E9%87%91%E5%89%9B%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "Ocean Hotel Iwato - Makurazaki, Kagoshima",
+            "isAlive": true,
+            "tags": "seaport, shore, scenery, multicam",
+            "region": "Kagoshima",
+            "lat": 31.2729,
+            "lng": 130.2969,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-O_O6yqHEyhs.jpg",
+                    "title": "Rooftop camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-5OVwS6D0kLw.jpg",
+                    "title": "Yassy family cheering camera",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-qGZY73RSdXM.jpg",
+                    "title": "Town direction",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@OceanHotelIwato/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Rooftop camera, Yassy family cheering camera, Town direction"
+                }
+            ]
+        },
+        {
+            "name": "五老ヶ岳 GORO SKY TOWER - Maizuru",
+            "isAlive": true,
+            "tags": "scenery, shore, mountain",
+            "region": "Kyoto",
+            "lat": 35.465,
+            "lng": 135.3434,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-KSMtPlNaoMM.jpg",
+                    "title": "Maizuru",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@goroskytowergorogatakepark2992/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=KSMtPlNaoMM",
+                    "text": "Maizuru",
+                    "linkTitle": "Live nonstop since at least Dec 2021."
+                }
+            ]
+        },
+        {
+            "name": "印南漁港 - Inami Fishing Port",
+            "isAlive": true,
+            "tags": "seaport, shore",
+            "region": "Wakayama",
+            "lat": 33.8212,
+            "lng": 135.2147,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-7sforfBRcZQ.jpg",
+                    "title": "Inami Fishing Port",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%9F%B3%E6%A9%8B/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=7sforfBRcZQ",
+                    "text": "Inami Fishing Port",
+                    "linkTitle": "Live nonstop since at least Dec 2021."
+                }
+            ]
+        },
+        {
+            "name": "モトブテラス - Motobu Terrace, Okinawa",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Okinawa",
+            "lat": 26.6575,
+            "lng": 127.8978,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Tlc3uegvdrQ.jpg",
+                    "title": "Motobu Terrace, Okinawa",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@motobuterrace1840/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "霧ヶ峰高原ビバルデの丘 - Kirigamine Kogen",
+            "isAlive": true,
+            "tags": "scenery, mountain",
+            "region": "Nagano",
+            "lat": 36.1,
+            "lng": 138.19,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-IZ3hxdfZlwo.jpg",
+                    "title": "Kirigamine Kogen",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E9%9C%A7%E3%83%B6%E5%B3%B0%E9%AB%98%E5%8E%9F%E3%83%93%E3%83%90%E3%83%AB%E3%83%87%E3%81%AE%E4%B8%98/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=IZ3hxdfZlwo",
+                    "text": "Kirigamine Kogen",
+                    "linkTitle": "Live nonstop since at least May 2020."
+                }
+            ]
+        },
+        {
+            "name": "ゾーホージャパン - Senzu Station area, Kawanehon",
+            "isAlive": true,
+            "tags": "trainstation, localline, scenery",
+            "region": "Shizuoka",
+            "lat": 35.1081,
+            "lng": 138.1378,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-hgy6ct46BnI.jpg",
+                    "title": "Senzu Station area, Kawanehon",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@%E3%82%BE%E3%83%BC%E3%83%9B%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=hgy6ct46BnI",
+                    "text": "Senzu Station area, Kawanehon",
+                    "linkTitle": "Live nonstop since at least Mar 2020."
+                }
+            ]
+        },
+        {
+            "name": "agataJapan - Kyoto & Aichi Cameras",
+            "isAlive": true,
+            "tags": "scenery, city, multicam",
+            "region": "Kyoto",
+            "lat": 35.2962,
+            "lng": 135.4962,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-roNVuAMzr-A.jpg",
+                    "title": "Miyama Kayabuki no Sato",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-0s5kMFZ1FfQ.jpg",
+                    "title": "Kameoka Kiri Terrace",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-3x4oCaO-tLE.jpg",
+                    "title": "Nagaoka Tenmangu",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/@agataJapan/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "7 cameras on this channel"
+                }
+            ]
+        },
+        {
+            "name": "F.S.T.NET - Osaka City Cameras",
+            "isAlive": true,
+            "tags": "street, city, traffic, multicam",
+            "region": "Osaka",
+            "lat": 34.6754,
+            "lng": 135.4992,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-CtFhpJFGqC8.jpg",
+                    "title": "Kitashinchi",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-ztXjQgNxi4o.jpg",
+                    "title": "Koreatown",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-aVAO2wSUsPo.jpg",
+                    "title": "Shinsaibashi crossing",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCwNfkYp9gKIvQDN1kPhpCsQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Kitashinchi, Koreatown, Shinsaibashi crossing, Minoh, Shinsaibashi Uniqlo, Kadoma Costco, Kadoma IC northbound"
+                }
+            ]
+        },
+        {
+            "name": "Hiroshima Latest News - Tomonoura, Hondori & Miyajima",
+            "isAlive": true,
+            "tags": "city, scenery, seaport, multicam",
+            "region": "Hiroshima",
+            "lat": 34.3809,
+            "lng": 133.3803,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-mqqYqShxy0Q.jpg",
+                    "title": "Tomonoura",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-oW2Gb8YoGAg.jpg",
+                    "title": "Hondori intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-s2CxZ7N25i0.jpg",
+                    "title": "Miyajima",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCRnFGOp_mjaCYEhMzsE2iHA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Tomonoura, Hondori intersection, Miyajima"
+                }
+            ]
+        },
+        {
+            "name": "草津町 - Kusatsu Onsen",
+            "isAlive": true,
+            "tags": "onsen, snow, mountain, multicam",
+            "region": "Gunma",
+            "lat": 36.6208,
+            "lng": 138.5963,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-eX7vAL4Jtfk.jpg",
+                    "title": "Ski area, Tengu-yama foot",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-J3zIOmIrSzM.jpg",
+                    "title": "Michi-no-Eki",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-rHuoK_TWOnA.jpg",
+                    "title": "Route 292 entrance",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCbn5eHDjwmPC2K9RG8P0i_A/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "15 cameras on this channel"
+                }
+            ]
+        },
+        {
+            "name": "読売テレビ - Kobe Airport & Expo Grand Ring",
+            "isAlive": true,
+            "tags": "airport, city, multicam",
+            "region": "Hyogo",
+            "lat": 34.6343,
+            "lng": 135.2279,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-1V-rE4Z1ZZQ.jpg",
+                    "title": "Kobe Airport",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-kCE6T3p8AZ4.jpg",
+                    "title": "Grand Ring and Yumeshima",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCv7_krlrre3GQi79d4guxHQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Kobe Airport, Grand Ring and Yumeshima"
+                }
+            ]
+        },
+        {
+            "name": "東京千鳥ヶ淵 - Chidorigafuchi",
+            "isAlive": true,
+            "tags": "scenery, city",
+            "region": "Tokyo",
+            "lat": 35.6915,
+            "lng": 139.7475,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-kQcdLNZNQmM.jpg",
+                    "title": "Chidorigafuchi",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCJrDvNbGDWn0NcxhOyG8TmA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "河津桜まつり実行委員会 - Kawazu Cherry Blossoms",
+            "isAlive": true,
+            "tags": "scenery",
+            "region": "Shizuoka",
+            "lat": 34.7472,
+            "lng": 138.9962,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-xTVFzc8vC48.jpg",
+                    "title": "Kawazu Cherry Blossoms",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCFA0SpDauGJpCK0DjVBOTIw/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "十和田湖マリーナ - Lake Towada",
+            "isAlive": true,
+            "tags": "scenery, shore, mountain",
+            "region": "Aomori",
+            "lat": 40.4587,
+            "lng": 140.8711,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-trSGa-eTSrk.jpg",
+                    "title": "Lake Towada",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCusBqJK8c15Hq-D8IfKHQAg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "京都市観光協会 - Saga-Toriimoto, Seiryoji & Daikakuji",
+            "isAlive": true,
+            "tags": "shrine, scenery, multicam",
+            "region": "Kyoto",
+            "lat": 35.0264,
+            "lng": 135.6668,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Qm4X_oY-9YM.jpg",
+                    "title": "Saga-Toriimoto",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-4Za-6AXfu4w.jpg",
+                    "title": "Seiryoji",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-ldO0Eqoomms.jpg",
+                    "title": "Daikakuji",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCFyohCp_Vx6WC82DiJ0l88w/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Saga-Toriimoto, Seiryoji, Daikakuji"
+                }
+            ]
+        },
+        {
+            "name": "サンシャイン60通り - Ikebukuro",
+            "isAlive": true,
+            "tags": "street, city",
+            "region": "Tokyo",
+            "lat": 35.7299,
+            "lng": 139.7154,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-0HCO9fncu_4.jpg",
+                    "title": "Ikebukuro",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCEloGRn_GCcr-I_6f5MYJPw/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "8131 okichan - Kokusai-dori & Tomari Bridge",
+            "isAlive": true,
+            "tags": "street, traffic, bridge, multicam",
+            "region": "Okinawa",
+            "lat": 26.2168,
+            "lng": 127.6958,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-0Oi1m8pR8Vs.jpg",
+                    "title": "Asato intersection",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-hUQzS5zx3YM.jpg",
+                    "title": "Asato intersection 2",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-xlk-AHT8Mr4.jpg",
+                    "title": "Urasoe Station area",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCo_JM-fsLQQLz8hovcKkK0A/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Asato intersection, Asato intersection 2, Urasoe Station area, Tomari Bridge"
+                }
+            ]
+        },
+        {
+            "name": "IBC岩手放送 - Miyako Information Camera",
+            "isAlive": true,
+            "tags": "seaport, city",
+            "region": "Iwate",
+            "lat": 39.6396,
+            "lng": 141.9461,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-b4fafEFfDRw.jpg",
+                    "title": "Miyako Information Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCMbq0m2vILQTbc0VhOcVWaQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "ぐるっと福島TV - Fukushima City",
+            "isAlive": true,
+            "tags": "city, street",
+            "region": "Fukushima",
+            "lat": 37.7608,
+            "lng": 140.4747,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-3MM0yX3QPX4.jpg",
+                    "title": "Fukushima City",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCdI2ChbySxWNGSWEOaeTjFg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "kimopy - Kurihama, Yokosuka",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Kanagawa",
+            "lat": 35.2327,
+            "lng": 139.7012,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-hVGdqZAd1xA.jpg",
+                    "title": "Kurihama, Yokosuka",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCTTbcfIcioz1eGwlLIYmDIg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "ATV青森テレビ - Route 4, Yanagimachi, Aomori",
+            "isAlive": true,
+            "tags": "street, traffic",
+            "region": "Aomori",
+            "lat": 40.8212,
+            "lng": 140.7446,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-XyqzzI_vSCo.jpg",
+                    "title": "Route 4, Yanagimachi, Aomori",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCdNYphHZdRYjpys_gwofUNQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "QAB琉球朝日放送 - Naha Airport Weather Camera",
+            "isAlive": true,
+            "tags": "airport, city",
+            "region": "Okinawa",
+            "lat": 26.1967,
+            "lng": 127.649,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-NFYOcLaF6uM.jpg",
+                    "title": "Naha Airport Weather Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCWzx-v_6kdTKi3oXhWOK1FA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "琉球新報 - Kokusai-dori, Naha",
+            "isAlive": true,
+            "tags": "street, city",
+            "region": "Okinawa",
+            "lat": 26.2185,
+            "lng": 127.6937,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-j1nfkpuQDLQ.jpg",
+                    "title": "Kokusai-dori, Naha",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC-jBJkLN89AlQp6eeCNnnWg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "BANKSY GINOWAN - Route 58 & Naha Airport",
+            "isAlive": true,
+            "tags": "traffic, airport, multicam",
+            "region": "Okinawa",
+            "lat": 26.2693,
+            "lng": 127.7342,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-7uT0izIZpD4.jpg",
+                    "title": "Route 58, Ginowan",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-3e_uPkJCTNo.jpg",
+                    "title": "Naha Airport and Senagajima",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCCpZAU0b2vZv598fDBlTlqw/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Route 58, Ginowan, Naha Airport and Senagajima"
+                }
+            ]
+        },
+        {
+            "name": "CAHAYA BULAN - Bise, Motobu",
+            "isAlive": true,
+            "tags": "shore, scenery, shop",
+            "region": "Okinawa",
+            "lat": 26.703,
+            "lng": 127.8844,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-5ZIw5x5jnQg.jpg",
+                    "title": "Bise, Motobu",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC-NuZ8QbpIIDK8ZhzsOyEpQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "Sunny Funny Days - Mikage Coast, Hayama",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Kanagawa",
+            "lat": 35.2721,
+            "lng": 139.5862,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-4IrXQFXGQaI.jpg",
+                    "title": "Mikage Coast, Hayama",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCd4bLjkx26G2fWcHoy9ytBQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "白浜町 - Shirarahama Beach",
+            "isAlive": true,
+            "tags": "shore, scenery",
+            "region": "Wakayama",
+            "lat": 33.6816,
+            "lng": 135.3447,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-KXbqUNKtAOs.jpg",
+                    "title": "Shirarahama Beach",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCZBtrisIssVz8n0NbeHvlPA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "FujiyamaTV 富士五湖TV - Fuji from Oshino Hakkai",
+            "isAlive": true,
+            "tags": "scenery, mountain",
+            "region": "Yamanashi",
+            "lat": 35.4602,
+            "lng": 138.8327,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-PxzwnWh1dKk.jpg",
+                    "title": "Fuji from Oshino Hakkai",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/user/FujigokoTV/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "NEdS RECORDS - Nishi-Shinjuku Railroad Camera",
+            "isAlive": true,
+            "tags": "trainlines, trainstation, city",
+            "region": "Tokyo",
+            "lat": 35.6943,
+            "lng": 139.6932,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-Ep9BUx4l14M.jpg",
+                    "title": "Nishi-Shinjuku Railroad Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC5tScs1xEO1wqNmLCeWr99w/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "BANTV - Lake Biwa, Otsu",
+            "isAlive": true,
+            "tags": "shore, scenery, multicam",
+            "region": "Shiga",
+            "lat": 36.8468,
+            "lng": 140.7781,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-sM2IjSRBwnY.jpg",
+                    "title": "Otsu Port",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-jyJ9W-nqbk8.jpg",
+                    "title": "Lakeside beach",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-iBWy_HERzek.jpg",
+                    "title": "Lake Biwa",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCjvpBcOLMBqktt0KJxjtJCg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Otsu Port, Lakeside beach, Lake Biwa"
+                }
+            ]
+        },
+        {
+            "name": "倉敷ケーブルテレビ - Washuzan, Seto Ohashi",
+            "isAlive": true,
+            "tags": "bridge, seaport, scenery",
+            "region": "Okayama",
+            "lat": 34.4355,
+            "lng": 133.8125,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-FLKZxsNoT0U.jpg",
+                    "title": "Washuzan, Seto Ohashi",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCxNJOB2V-5Jm6pMdl8UXnPg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "塩原温泉 - Shiobara Onsen Street Camera",
+            "isAlive": true,
+            "tags": "street, onsen, ipcamera",
+            "region": "Tochigi",
+            "lat": 36.9639,
+            "lng": 139.8324,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/shiobara-onsen.jpg",
+                    "title": "Shiobara Onsen street",
+                    "width": 267,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://61.211.241.239/nphMotionJpeg?resolution=640x480",
+                    "text": "Camera stream (MJPEG)",
+                    "kind": "home",
+                    "linkTitle": "IP camera, live video in the browser"
+                }
+            ]
+        },
+        {
+            "name": "岩座神 - Isarigami Rice Terraces, Taka",
+            "isAlive": true,
+            "tags": "scenery, mountain, sound",
+            "region": "Hyogo",
+            "lat": 35.1333,
+            "lng": 134.8824,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/isarigami.jpg",
+                    "title": "Isarigami terraced rice fields",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://isarigami.net/weather/live",
+                    "text": "Isarigami live camera page",
+                    "kind": "home",
+                    "linkTitle": "Also shows the local weather"
+                },
+                {
+                    "link": "https://isarigami.0g0.jp/hls/std.m3u8",
+                    "text": "HLS stream",
+                    "linkTitle": "About 5-6 seconds delay"
+                }
+            ]
+        },
+        {
+            "name": "比布町 - Pippu Town Web Camera",
+            "isAlive": true,
+            "tags": "scenery, mountain, ipcamera",
+            "region": "Hokkaido",
+            "lat": 43.8757,
+            "lng": 142.4772,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/pippu-town.jpg",
+                    "title": "Pippu, towards Taisetsuzan",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://www.town.pippu.hokkaido.jp/cms/webcam.html",
+                    "text": "Pippu Web Camera page",
+                    "kind": "home"
+                },
+                {
+                    "link": "http://www.town.pippu.hokkaido.jp/camera/webimg/pippucam2.jpg",
+                    "text": "Camera image",
+                    "linkTitle": "A still picture that refreshes about every minute"
+                }
+            ]
+        },
+        {
+            "name": "民宿 吉野屋 - Road by Hodaigi Ski Area, Minakami",
+            "isAlive": true,
+            "tags": "snow, mountain, street, ipcamera",
+            "region": "Gunma",
+            "lat": 36.8315,
+            "lng": 139.0839,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yoshinoya-hodaigi.jpg",
+                    "title": "Road in front of Hodaigi Ski Area",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://e-yoshinoya.com/livecam",
+                    "text": "Minshuku Yoshinoya camera page",
+                    "kind": "home"
+                },
+                {
+                    "link": "https://yoshinoya.whitesnow.jp/cam/live.jpg",
+                    "text": "Camera image",
+                    "linkTitle": "A still picture that refreshes every few minutes"
+                }
+            ]
+        },
+        {
             "name": "ケーブルテレビ河口湖 - Mt. Fuji Live Cameras (Kawaguchiko TV)",
             "isAlive": true,
             "tags": "scenery, mountain, multicam",
