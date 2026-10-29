@@ -457,6 +457,8 @@
         var meta = el('div', { className: 'detail-meta' }, [
             el('span', { className: 'status-pill' + (stream.alive ? '' : ' is-dead'), text: stream.alive ? '運転中 Live' : '運休 Dead' }),
             stream.region ? el('span', { text: '📍 ' + stream.region }) : null,
+            stream.cameras ? el('span', { text: TS.camLabel(stream.cameras) }) : null,
+            stream.images.length > 1 ? el('span', { text: '🖼 ' + stream.images.length + ' pictures' }) : null,
             stream.addedAt ? el('span', { text: '🗓 Added ' + stream.addedAt }) : null,
             stream.submittedBy ? el('span', { text: '🙏 Thanks to ' + stream.submittedBy }) : null,
         ]);
@@ -655,6 +657,7 @@
                     if (!s.geo) return;
                     var popup = el('div', { className: 'map-popup' }, [
                         el('strong', { text: s.name }),
+                        s.cameras ? el('span', { style: 'display:block;margin-bottom:4px', text: TS.camLabel(s.cameras) }) : null,
                         el('button', { type: 'button', className: 'btn btn--small', 'data-map-open': s.id, text: '詳細 Details' }),
                     ]);
                     window.L.circleMarker(s.geo, {

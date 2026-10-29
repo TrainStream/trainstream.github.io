@@ -184,10 +184,10 @@
             isNew: isNew(raw.addedAt),
             geo: hasGeo ? [lat, lng] : null,
         };
-        /* "cameras" is an optional hand-entered count; without it we fall back to the number of pictures */
+        /* "cameras" is an optional hand-entered count of camera views, separate from the number of pictures */
         var cams = Math.floor(Number(raw.cameras));
         model.cameras = cams > 0 ? cams : 0;
-        model.camCount = model.cameras || images.length;
+        model.camCount = model.cameras;
         model.search = [
             model.name,
             model.region,
@@ -252,11 +252,9 @@
                           decoding: 'async',
                       })
                     : el('span', { className: 'kaomoji', style: 'display:grid;place-items:center;height:100%;color:#ddd', text: '(・_・) no image' }),
-                model.cameras > 1
-                    ? el('span', { className: 'cams-chip', title: model.cameras + ' cameras', text: '📷×' + model.cameras })
-                    : model.images.length > 1
-                      ? el('span', { className: 'cams-chip', title: model.images.length + ' pictures', text: '🖼×' + model.images.length })
-                      : null,
+                model.images.length > 1
+                    ? el('span', { className: 'cams-chip', title: model.images.length + ' pictures', text: '🖼×' + model.images.length })
+                    : null,
                 model.alive ? null : el('span', { className: 'dead-stamp', text: '運休' }),
             ]
         );
@@ -331,19 +329,26 @@
             },
             [
                 el('header', { className: 'card-strip' }, [
-                    el('span', { className: 'strip-status', text: model.alive ? '運転中 IN SERVICE' : '運休 SUSPENDED' }),
+                    el('span', { className: 'strip-status' }, [
+                        model.alive ? '運転中 IN SERVICE' : '運休 SUSPENDED',
+                        model.cameras ? el('span', { className: 'strip-cams', text: ' · ' + camLabel(model.cameras) }) : null,
+                    ]),
                     el('span', { className: 'serial', text: 'No.' + String(model.index + FIRST_NUMBER).padStart(4, '0') }),
                 ]),
                 thumb,
                 el('div', { className: 'card-body' }, [
                     heading,
                     tagList,
-                    el('span', { className: 'board-cams', text: model.camCount + ' cam' + (model.camCount === 1 ? '' : 's') }),
+                    el('span', { className: 'board-cams', text: model.cameras ? model.cameras + ' cam' + (model.cameras === 1 ? '' : 's') : '—' }),
                     el('ul', { className: 'card-links' }, linkItems),
                     actions,
                 ]),
             ]
         );
+    }
+
+    function camLabel(n) {
+        return '📷 ' + n + ' cam' + (n === 1 ? '' : 's');
     }
 
     function linkKindBadge(link) {
@@ -392,6 +397,7 @@
         tagInfo: tagInfo,
         badge: badge,
         linkKindBadge: linkKindBadge,
+        camLabel: camLabel,
         normalize: normalize,
         renderCard: renderCard,
         copyText: copyText,
