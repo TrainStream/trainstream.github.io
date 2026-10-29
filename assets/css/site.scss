@@ -2732,3 +2732,28 @@ fieldset.field {
 .link-kind--stream {
     background: #1e5aa8;
 }
+
+.counter-note {
+    flex-basis: 100%;
+    font-weight: 700;
+    color: var(--jr-green);
+}
+
+.counter-rule {
+    flex-basis: 100%;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+}
+
+.kaisuken {
+    flex-basis: 100%;
+    font-family: var(--font-pixel);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+
+    &.is-free {
+        color: var(--red);
+        font-weight: 700;
+    }
+}

@@ -85,7 +85,11 @@
 
     /* ---------- visitor counter (joke or real) ---------- */
     var counter = document.getElementById('counter');
-    function showCount(number, note) {
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var currentCount = 0;
+    var hitKiriban = false;
+
+    function renderDigits(number) {
         var digits = String(Math.max(0, Math.floor(number))).padStart(7, '0');
         var box = document.getElementById('counter-digits');
         box.textContent = '';
@@ -94,24 +98,119 @@
             span.textContent = d;
             box.appendChild(span);
         });
-        document.getElementById('counter-en').textContent = Number(number).toLocaleString('en-US') + (note || '');
-        var kiriban = document.getElementById('kiriban');
-        var isKiriban = /^(\d)\1+$/.test(digits.replace(/^0+/, '')) || /(000|777)$/.test(digits);
-        if (isKiriban) {
-            kiriban.hidden = false;
-            kiriban.textContent = '🎉 キリ番ゲット！ Kiriban get! Screenshot it and post it in the thread for eternal glory 🎉';
+    }
+
+    /* キリ番: repeated digits (777, 5555), round thousands, ...777 endings and 12345-style runs */
+    function isKiriban(n) {
+        var s = String(n);
+        return n >= 100 && (/^(\d)\1+$/.test(s) || /000$/.test(s) || /777$/.test(s) || '1234567890'.indexOf(s) === 0);
+    }
+
+    function checkKiriban(n) {
+        var box = document.getElementById('kiriban');
+        if (isKiriban(n)) {
+            hitKiriban = true;
+            box.hidden = false;
+            box.textContent = '🎉 キリ番ゲット！ Kiriban get! No.' + n.toLocaleString('en-US') + '. Screenshot it and post it in the thread for eternal glory 🎉';
+        } else if (!hitKiriban && (isKiriban(n - 1) || isKiriban(n + 1))) {
+            box.hidden = false;
+            box.textContent = '前後賞！ So close… one away from a キリ番 (´；ω；`)';
+        } else if (!hitKiriban) {
+            box.hidden = true;
         }
     }
-    function jokeCount() {
+
+    function showCount(number, note) {
+        currentCount = Math.max(0, Math.floor(number));
+        renderDigits(currentCount);
+        document.getElementById('counter-en').textContent = currentCount.toLocaleString('en-US') + (note || '');
+        checkKiriban(currentCount);
+    }
+
+    /* the odometer spins up from zero, then settles on the number */
+    function rollTo(target, note, done) {
+        if (reduceMotion) {
+            showCount(target, note);
+            if (done) done();
+            return;
+        }
+        var start = null;
+        var duration = 1400;
+        function frame(time) {
+            if (start === null) start = time;
+            var t = Math.min(1, (time - start) / duration);
+            var eased = 1 - Math.pow(1 - t, 3);
+            renderDigits(Math.floor(target * eased));
+            if (t < 1) requestAnimationFrame(frame);
+            else {
+                showCount(target, note);
+                if (done) done();
+            }
+        }
+        requestAnimationFrame(frame);
+    }
+
+    /* other "visitors" keep arriving while you read */
+    function keepTicking(note) {
+        var noteBox = document.getElementById('counter-note');
+        function tick() {
+            var groupTour = Math.random() < 1 / 15;
+            var add = groupTour ? 40 + Math.floor(Math.random() * 20) : 1 + Math.floor(Math.random() * 3);
+            showCount(currentCount + add, note);
+            if (groupTour) {
+                noteBox.hidden = false;
+                noteBox.textContent = '🚌 団体様ご来店！ A tour group just arrived (+' + add + ')';
+                setTimeout(function () {
+                    noteBox.hidden = true;
+                }, 4000);
+            }
+            setTimeout(tick, 4000 + Math.random() * 5000);
+        }
+        setTimeout(tick, 4000 + Math.random() * 5000);
+    }
+
+    /* 回数券: one punch per visit (per browser session), the 11th ride is free */
+    function countVisit() {
+        var visits = parseInt(store('ts.visits') || '0', 10);
+        var counted = false;
+        try {
+            counted = sessionStorage.getItem('ts.visit') === '1';
+            sessionStorage.setItem('ts.visit', '1');
+        } catch (e) {}
+        if (!counted) {
+            visits += 1;
+            store('ts.visits', String(visits));
+        }
+        return Math.max(1, visits);
+    }
+
+    function showKaisuken(visits) {
+        var box = document.getElementById('kaisuken');
+        if (!box) return;
+        var punched = visits % 11 || 11;
+        var holes = '';
+        for (var i = 1; i <= 11; i++) holes += i <= punched ? '●' : '○';
+        if (punched === 11) {
+            box.textContent = '🎫 回数券 ' + holes + '  無料乗車！ Free ride! 乗車記念 Thank you for riding TrainStream (visit ' + visits + ')';
+            box.classList.add('is-free');
+        } else {
+            box.textContent = '🎫 回数券 Coupon ticket ' + holes + '  ' + (11 - punched) + ' more visit' + (11 - punched === 1 ? '' : 's') + ' until your free ride';
+        }
+    }
+
+    function jokeCount(visits) {
         var since = new Date((counter.dataset.since || '2018-05-03') + 'T00:00:00Z').getTime();
         var days = Math.floor((Date.now() - since) / 86400000);
-        var visits = parseInt(store('ts.visits') || '0', 10) + 1;
-        store('ts.visits', String(visits));
         var n = 1337 + days * 41 + new Date().getHours() * 3 + visits;
-        if (Math.random() < 1 / 30) n = 777777;
+        var luck = Math.random();
+        if (luck < 1 / 40) n = Math.ceil(n / 1000) * 1000; // a キリ番
+        else if (luck < 2 / 40) n = Math.ceil(n / 1000) * 1000 - 1; // 前後賞
         counter.title = 'This counter is a joke. The number is made up (´・ω・`)';
-        showCount(n, ' (probably)');
+        rollTo(n, ' (probably)', function () {
+            keepTicking(' (probably)');
+        });
     }
+
     function pickNumber(obj) {
         if (typeof obj === 'number') return obj;
         if (!obj || typeof obj !== 'object') return null;
@@ -121,7 +220,10 @@
         }
         return pickNumber(obj.data);
     }
+
     if (counter) {
+        var visits = countVisit();
+        showKaisuken(visits);
         var workspace = counter.dataset.workspace;
         if (counter.dataset.mode === 'real' && workspace) {
             var counted = false;
@@ -140,11 +242,13 @@
                     try {
                         sessionStorage.setItem('ts.counted', '1');
                     } catch (e) {}
-                    showCount(n);
+                    rollTo(n);
                 })
-                .catch(jokeCount);
+                .catch(function () {
+                    jokeCount(visits);
+                });
         } else {
-            jokeCount();
+            jokeCount(visits);
         }
     }
 
