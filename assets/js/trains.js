@@ -351,6 +351,8 @@
                 place(train, -w);
                 return wait(50)
                     .then(function () {
+                        // the lowered barrier is in front of the waiting train...
+                        crossing.style.zIndex = '6';
                         crossing.classList.add('down');
                         say(crossing, 'カンカンカン', 9000, 'say-red');
                         return drive(train, armTip - 8 - w - 60);
@@ -370,6 +372,10 @@
                     .then(function () {
                         crossing.classList.remove('down');
                         return wait(900);
+                    })
+                    .then(function () {
+                        // ...and once it is up, the train passes in front of the crossing
+                        crossing.style.zIndex = '';
                     })
                     .then(function () {
                         say(train, 'ヨシ！', 1400);
