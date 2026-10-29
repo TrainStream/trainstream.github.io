@@ -4,6 +4,7 @@
 
     var SITE = 'https://trainstream.github.io';
     var NEW_DAYS = 30;
+    var FIRST_NUMBER = 2; /* ticket numbers start at No.0002 on purpose: nothing is No.0001 */
     var FALLBACK_COLORS = ['#1e5aa8', '#d35400', '#008a3e', '#6a1b9a', '#00897b', '#c2185b', '#5b6770', '#9a6b00'];
 
     function el(tag, attrs, children) {
@@ -313,7 +314,7 @@
             [
                 el('header', { className: 'card-strip' }, [
                     el('span', { className: 'strip-status', text: model.alive ? '運転中 IN SERVICE' : '運休 SUSPENDED' }),
-                    el('span', { className: 'serial', text: 'No.' + String(model.index + 1).padStart(4, '0') }),
+                    el('span', { className: 'serial', text: 'No.' + String(model.index + FIRST_NUMBER).padStart(4, '0') }),
                 ]),
                 thumb,
                 el('div', { className: 'card-body' }, [
