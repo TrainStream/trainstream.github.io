@@ -49,7 +49,7 @@
         {
             "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
-            "tags": "trainstation, bridge, scenery, other, localline, onsen, snow",
+            "tags": "trainstation, bridge, scenery, localline, onsen, snow, other",
             "region": "Fukushima",
             "lat": 37.2933,
             "lng": 139.9161,
@@ -92,16 +92,14 @@
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/watch?v=z1MErdsqsw8",
-                    "linkTitle": "Yunokami-Onsen Station stream. Same link live nonstop since at least Sep 2025 (rtmp link in the old note is outdated)"
-                },
-                {
                     "link": "https://www.youtube.com/channel/UC18wakGTIO6r-3e44biki3g/streams",
-                    "text": "Shimogo Town YouTube channel: live stream page",
-                    "linkTitle": "Also streams Kannon-numa, Tonohetsuri, Michi-no-Eki Shimogo and Ouchi-juku cameras"
+                    "linkTitle": "Also streams Kannon-numa, Tonohetsuri, Michi-no-Eki Shimogo and Ouchi-juku cameras",
+                    "kind": "home",
+                    "text": "Shimogo Town YouTube channel: live stream page"
                 },
                 {
-                    "text": "For the others hover their images to see live-cam00x number. 001 and 005 move."
+                    "link": "https://www.youtube.com/watch?v=z1MErdsqsw8",
+                    "linkTitle": "Yunokami-Onsen Station stream."
                 }
             ]
         },
