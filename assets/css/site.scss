@@ -2713,3 +2713,7 @@ fieldset.field {
 .link-kind + a::before {
     content: none;
 }
+
+.link-kind--stream {
+    background: #1e5aa8;
+}
