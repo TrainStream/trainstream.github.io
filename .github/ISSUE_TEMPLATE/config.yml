@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📮 Submit a stream with the web form (recommended)
+    url: https://trainstream.github.io/submit/
+    about: Fill in a form with a live preview; it opens the issue for you.

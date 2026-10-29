@@ -1,39 +1,26 @@
 ---
-title: Streaming
+title: How to set up MPC-HC
+classic_url: /classic/watching/mpc
 ---
+<nav class="page-nav"><a class="btn btn--small" href="/watching/">◀ Video players</a><a class="btn btn--small" href="/">📹 Camera list</a></nav>
+<article class="panel prose">
+    <h1 class="panel-title">MPC-HC <small>How to set up MPC-HC with Streamlink</small></h1>
+    <ol>
+        <li>Download the .exe Streamlink version: <a href="https://github.com/streamlink/streamlink/releases/latest">https://github.com/streamlink/streamlink/releases/latest</a> and install it with every option selected.</li>
+        <li>Before pressing Finish select "Edit configuration file" (or find the <code>streamlinkrc</code> file at <code>C:\Users\BAKA\AppData\Roaming\streamlink</code>).</li>
+        <li>Find where it says MPC-HC. On the second row delete the <code>#</code> and make sure it points to your mpc-hc.exe, for example:
+            <pre><code>player="C:\Program Files (x86)\Combined Community Codec Pack\MPC\mpc-hc.exe"</code></pre>
+        </li>
+        <li>Press <kbd>Ctrl</kbd>+<kbd>S</kbd> to save and exit.</li>
+        <li>Now press the Start button, write <code>streamlink.exe https://youtu.be/vYzRrH78JkQ best</code> and press Enter.</li>
+    </ol>
 
-<p><a href="/"><img src=/pictures/mainpage.png></a>
-<br /><a href="/watching"><img src=/pictures/videoplayer.png></a></p>
-
-  <p><center><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>How to Setup MPC-HC:</strong></font></center></p>
-  </br /><p><span style="color: #FFFFFF">
-<br />Download the .exe streamlink version: <a style="text-decoration:none; color:#2a00ee;" href="https://github.com/streamlink/streamlink/releases/latest">https://github.com/streamlink/streamlink/releases/latest</a>
-<br />Install it with every option selected.
-<br />Before pressing finish select "Edit configuration file" (or find the streamlinkrc file at C:\Users\BAKA\AppData\Roaming\streamlink)
-<br />
-<br />Find where it says MPC-HC
-<br />On the second row delete the # and make sure it is properly linked to the mpc-hc.exe. For example:
-<br />player="C:\Program Files (x86)\Combined Community Codec Pack\MPC\mpc-hc.exe"
-<br />Press ctrl+s to save and exit.
-<br />
-<br />Now press the start button, write "streamlink.exe https://youtu.be/vYzRrH78JkQ best" (without the quotes) and press enter.
-<br />
-<br />Alternatively you can make yourself a .bat file (a file that will quickly run the stream from any directory.
-<br />Make a "New Text Document.txt" file. Open it. Write down this (edit release folder directory to match your own):
-<br />@echo
-<br />streamlink.exe https://youtu.be/vYzRrH78JkQ best
-<br />@echo off
-<br />
-<br />From the notepad menu select File -> Save as. Change "Save as type" to "All Files (*.*)"
-<br />Change the file name to Bessho.bat
-<br />Press the "Save" button.
-<br />
-<br /><a style="text-decoration:none; color:#2a00ee;" href="https://pomf.pyonpyon.moe/ocoxfc.zip">https://pomf.pyonpyon.moe/ocoxfc.zip</a>
-<br />In this link you can find a premade .bat file. Just extract it from the .zip file.
-<br />Note: Streams like the Shibuya one can run at 60fps, which breaks streamlink/MPC-HC (even though MPC-HC can run at 60fps). Instead of "best" you can write 720p or 1080p for resolution choice.
-</p></font>
-
-
-<br /><br /><br /><br />
-<p><a href="/watching"><img src=/pictures/videoplayer.png></a>
-<br /><a href="/"><img src=/pictures/mainpage.png></a></p>
+    <h3>Make a .bat file</h3>
+    <p>Alternatively you can make yourself a .bat file that quickly runs the stream from any directory. Make a "New Text Document.txt" file, open it and write this (edit it to match your own setup):</p>
+    <pre><code>@echo
+streamlink.exe https://youtu.be/vYzRrH78JkQ best
+@echo off</code></pre>
+    <p>From the Notepad menu select File → Save as. Change "Save as type" to "All Files (*.*)", change the file name to <code>Bessho.bat</code> and press Save.</p>
+    <p>Premade .bat file: <a href="https://pomf.pyonpyon.moe/ocoxfc.zip">https://pomf.pyonpyon.moe/ocoxfc.zip</a> (just extract it from the .zip file).</p>
+    <p class="notice notice--warn">Note: streams like the Shibuya one can run at 60 fps, which breaks Streamlink/MPC-HC (even though MPC-HC can run at 60 fps). Instead of <code>best</code> you can write <code>720p</code> or <code>1080p</code>.</p>
+</article>

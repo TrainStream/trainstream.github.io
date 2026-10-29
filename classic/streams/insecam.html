@@ -1,0 +1,26 @@
+---
+layout: classic
+new_url: /streams/insecam
+title: Streams
+---
+
+<p><a href="/classic/"><img src=/pictures/mainpage.png></a></p>
+
+<center>
+  <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>Insecam Recommended:</strong></font><br /><br />
+
+{% for data in site.data.insecure_cams %}
+  <p>
+    <font size="4">
+      <span style="color: #000d8a"><strong>{{ data.name | escape }}:</strong></span>
+    </font>
+    <br />
+    <a style="text-decoration: none; color: #2a00ee" href="{% include safe-link.html link=data.url %}">{{ data.url | escape }}</a>
+  </p>
+  <p>&nbsp;</p>
+{% endfor %}
+
+</center></span>
+
+<br /><br /><br /><br />
+<p><a href="/classic/"><img src=/pictures/mainpage.png></a></p>

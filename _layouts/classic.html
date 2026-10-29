@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ page.title | default: '' }}</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.ico">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <style>
+            .classic-switch {
+                position: fixed;
+                top: 8px;
+                right: 8px;
+                z-index: 10;
+                padding: 4px 8px;
+                font: bold 13px sans-serif;
+                color: #000d8a;
+                background: #ffffcc;
+                border: 2px outset #ffffcc;
+                text-decoration: none;
+            }
+            .classic-switch:hover { background: #ffff99; }
+        </style>
+    </head>
+    <body>
+        <a class="classic-switch" href="{{ page.new_url | default: '/' }}" title="Switch to the new design"
+           onclick="try { localStorage.setItem('trainstreamStyle', 'new'); } catch (e) {}">✨ 新デザイン New view</a>
+        {{ content }}
+    </body>
+</html>

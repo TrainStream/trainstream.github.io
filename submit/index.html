@@ -1,0 +1,156 @@
+---
+title: 投稿 Submit a stream
+description: Suggest a new live camera for the TrainStream list, or publish one if you are a maintainer.
+scripts:
+  - /assets/js/cards.js
+  - /assets/js/stream-rules.js
+  - /assets/js/submit.js
+---
+{% include data-json.html %}
+
+<section class="panel">
+    <h1 class="panel-title">投稿 <small>Submit a stream</small></h1>
+    <p>Found a camera that belongs here? Fill in the form and check the live preview. When you send it, a GitHub issue opens with everything filled in (you need a free GitHub account). A maintainer reviews it, fixes anything if needed, and publishes it. Your name can go on the ticket as thanks.</p>
+    <ol>
+        <li><strong>Pictures:</strong> take screenshots of the stream, upload them to an image host (<a href="https://imgur.com/upload">imgur</a>, <a href="https://catbox.moe/">catbox</a>…) and paste the <em>direct image links</em>. When it is published, the pictures are copied into the site so they never break.</li>
+        <li><strong>Text:</strong> write the name and description yourself. Put Japanese and English in the name if you can, e.g. <code>湯野上温泉駅 Yunokami-Onsen Station</code>.</li>
+        <li><strong>Links:</strong> for YouTube, link the channel's <code>/streams</code> page. Video links change when a stream restarts.</li>
+    </ol>
+    <p class="notice">
+        🙏 This tool is built after the original <a href="https://github.com/altbdoor/trainstream-editor">trainstream-editor</a> by <a href="https://github.com/altbdoor">altbdoor</a>, which first made editing this site easy. It still works, and both tools save the camera list in the same format.
+    </p>
+    <div class="tabs" role="group" aria-label="Mode">
+        <button class="btn" type="button" data-tab="suggest" aria-pressed="true">📮 Suggest a stream</button>
+        <button class="btn" type="button" data-tab="admin" aria-pressed="false">🔑 Maintainers &amp; publishers</button>
+    </div>
+</section>
+
+<section class="panel" id="admin-panel" hidden>
+    <h2 class="panel-title">係員専用 <small>Maintainers &amp; publishers</small></h2>
+    <div id="signin">
+        <p>Sign in with a GitHub <strong>personal access token</strong> to publish directly, review suggestions, and edit or retire streams. The token stays in this browser and is only sent to GitHub.</p>
+        <details class="notes">
+            <summary>How do I get a token?</summary>
+            <ol>
+                <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → Settings → Developer settings → Fine-grained tokens → Generate new token</a>.</li>
+                <li>Resource owner: the owner of <code>{{ site.ts_repo }}</code>. Repository access: <em>Only select repositories</em> → <code>{{ site.ts_repo }}</code>.</li>
+                <li>Permissions → Repository: <strong>Contents: Read and write</strong> and <strong>Issues: Read and write</strong>.</li>
+                <li>Generate, copy, and paste it below.</li>
+            </ol>
+            <p><strong>Trusted publisher without repo access?</strong> You don't need a token. Just use "Suggest a stream": if your GitHub username is listed in <code>.github/publishers.yml</code>, your suggestions are published automatically within a minute or two.</p>
+        </details>
+        <div class="form-grid">
+            <div class="field">
+                <label for="token">Personal access token</label>
+                <input type="password" id="token" autocomplete="off" spellcheck="false" placeholder="github_pat_…" />
+            </div>
+            <label><input type="checkbox" id="remember" /> Remember on this device (otherwise it's forgotten when you close the tab)</label>
+            <div class="toolbar-row">
+                <button class="btn btn--green" type="button" id="signin-btn">🔑 Sign in</button>
+                <button class="btn" type="button" id="signout-btn" hidden>Sign out</button>
+            </div>
+        </div>
+    </div>
+    <p id="signin-status" class="notice" hidden></p>
+
+    <div id="admin-tools" hidden>
+        <h3 class="panel-title">審査待ち <small>Review queue</small></h3>
+        <ul class="admin-list" id="queue"></ul>
+
+        <h3 class="panel-title">在籍一覧 <small>All streams</small></h3>
+        <label class="search"><span class="visually-hidden">Filter streams</span><input type="search" id="manage-filter" placeholder="🔍 Filter by name…" /></label>
+        <ul class="admin-list" id="manage"></ul>
+    </div>
+</section>
+
+<div class="submit-layout">
+    <form class="panel form-grid" id="stream-form" novalidate>
+        <div id="edit-banner" class="notice notice--warn" hidden></div>
+
+        <div class="field">
+            <label for="f-name">Name <span class="req">*</span></label>
+            <input type="text" id="f-name" maxlength="200" placeholder="湯野上温泉駅 Yunokami-Onsen Station" />
+        </div>
+
+        <fieldset class="field">
+            <legend class="field-label">Status</legend>
+            <div class="toolbar-row">
+                <label><input type="radio" name="status" value="live" checked /> 運転中 Live</label>
+                <label><input type="radio" name="status" value="dead" /> 運休 Dead</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="field">
+            <legend class="field-label">Tags <span class="req">*</span></legend>
+            <ul class="tag-list" id="f-tags"></ul>
+        </fieldset>
+
+        <div class="field">
+            <span class="field-label">Pictures <span class="req">*</span></span>
+            <span class="hint">Direct links to screenshots (ending in .jpg / .png / .webp). Size is detected automatically. One picture per camera if the stream has several.</span>
+            <div class="row-editor" id="f-images"></div>
+            <button class="btn btn--small" type="button" id="add-image">＋ Add picture</button>
+        </div>
+
+        <div class="field">
+            <span class="field-label">Links <span class="req">*</span></span>
+            <span class="hint">At least one link. "Text" replaces the URL on screen; "Note" is shown under it. A row with only text (no URL) becomes a note, good for raw rtmp:// addresses.</span>
+            <div class="row-editor" id="f-links"></div>
+            <button class="btn btn--small" type="button" id="add-link">＋ Add link</button>
+        </div>
+
+        <div class="field">
+            <label for="f-description">Description</label>
+            <textarea id="f-description" maxlength="2000" placeholder="What can you see? When is it best to watch? Does it have sound?"></textarea>
+        </div>
+
+        <div class="toolbar-row">
+            <div class="field" style="flex: 2 1 200px">
+                <label for="f-region">Region / prefecture</label>
+                <input type="text" id="f-region" list="prefectures" placeholder="Fukushima" />
+            </div>
+            <div class="field" style="flex: 1 1 110px">
+                <label for="f-lat">Latitude</label>
+                <input type="number" id="f-lat" step="any" min="-90" max="90" placeholder="37.29" />
+            </div>
+            <div class="field" style="flex: 1 1 110px">
+                <label for="f-lng">Longitude</label>
+                <input type="number" id="f-lng" step="any" min="-180" max="180" placeholder="139.91" />
+            </div>
+        </div>
+        <span class="hint" style="margin-top: -8px">Optional. The coordinates put a pin on the map: right-click a place in Google Maps or OpenStreetMap to copy them.</span>
+        <datalist id="prefectures">
+            {%- assign prefs = "Hokkaido,Aomori,Iwate,Miyagi,Akita,Yamagata,Fukushima,Ibaraki,Tochigi,Gunma,Saitama,Chiba,Tokyo,Kanagawa,Niigata,Toyama,Ishikawa,Fukui,Yamanashi,Nagano,Gifu,Shizuoka,Aichi,Mie,Shiga,Kyoto,Osaka,Hyogo,Nara,Wakayama,Tottori,Shimane,Okayama,Hiroshima,Yamaguchi,Tokushima,Kagawa,Ehime,Kochi,Fukuoka,Saga,Nagasaki,Kumamoto,Oita,Miyazaki,Kagoshima,Okinawa,Various" | split: "," -%}
+            {%- for p in prefs %}<option value="{{ p }}"></option>{% endfor %}
+        </datalist>
+
+        <div class="field">
+            <label for="f-credit">Credit me as</label>
+            <input type="text" id="f-credit" maxlength="80" placeholder="Anonymous train enjoyer" />
+            <span class="hint">Optional. Shown as "Thanks to …" on the stream.</span>
+        </div>
+
+        <ul class="form-errors" id="form-errors" aria-live="polite"></ul>
+
+        <div class="toolbar-row" id="public-actions">
+            <button class="btn btn--pink" type="submit" id="send-btn">📮 Send suggestion via GitHub</button>
+            <button class="btn" type="button" id="copy-json">📋 Copy JSON</button>
+            <button class="btn" type="button" id="reset-form">🧹 Start over</button>
+        </div>
+        <div class="toolbar-row" id="admin-actions" hidden>
+            <button class="btn btn--green" type="button" id="publish-btn">🚀 Publish now</button>
+        </div>
+        <div id="result" aria-live="polite"></div>
+
+        <details class="notes">
+            <summary>Show the JSON</summary>
+            <pre class="prose" id="json-out" style="white-space: pre-wrap; overflow-wrap: anywhere"></pre>
+        </details>
+    </form>
+
+    <aside class="preview-col" aria-label="Preview">
+        <h2 class="panel-title">プレビュー <small>Live preview</small></h2>
+        <div class="preview-wrap" id="preview"></div>
+        <p class="notes">This is how your ticket will look on the camera list.</p>
+    </aside>
+</div>

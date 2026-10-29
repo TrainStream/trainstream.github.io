@@ -1,0 +1,29 @@
+name: Validate stream data
+
+on:
+  push:
+    paths:
+      - _data/streams.json
+      - _data/tags.json
+      - assets/js/stream-rules.js
+      - scripts/**
+  pull_request:
+    paths:
+      - _data/streams.json
+      - _data/tags.json
+      - assets/js/stream-rules.js
+      - scripts/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-streams.mjs

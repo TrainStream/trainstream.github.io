@@ -1,0 +1,41 @@
+---
+title: このサイトについて About
+classic_url: /classic/
+---
+{%- assign added = site.data.streams.data | where_exp: "s", "s.addedAt" | sort: "addedAt" | reverse -%}
+<section class="panel prose">
+    <h1 class="panel-title">このサイトについて <small>About this site</small></h1>
+    <p><strong>Welcome to our (Train) Stream Guide!</strong> TrainStream is a hand-picked list of live cameras in Japan: train stations, train lines, streets, harbours, shrines, volcanoes and one bento shop. It started as a pastebin in a thread and has been a website since {{ site.ts_since | date: '%Y' }}.</p>
+    <p>Everything lives in one public GitHub repository, <a href="https://github.com/{{ site.ts_repo }}">{{ site.ts_repo }}</a>. The camera list is a single data file, <code>_data/streams.json</code>.</p>
+    <p class="rip">🕯️ Rest in Peace Aizu-Wakamatsu 🕯️</p>
+</section>
+
+<section class="panel prose">
+    <h2 class="panel-title">更新履歴 <small>Update log</small></h2>
+    <ul class="update-log">
+        {%- for s in added limit: 30 %}
+        <li><time datetime="{{ s.addedAt }}">{{ s.addedAt | date: '%Y.%m.%d' }}</time>New camera: {{ s.name | escape }}</li>
+        {%- endfor %}
+        <li><time datetime="2026-10-29">2026.10.29</time>リニューアル！ Site renewal: new camera list with tickets, timetable, departure board and map views, TV wall, train omikuji, submission tool. The old design lives on as the <a href="/classic/">classic view</a>.</li>
+        <li><time datetime="2021-02-02">2021.02.02</time>The camera list can now be edited with trainstream-editor by altbdoor.</li>
+        <li><time datetime="{{ site.ts_since }}">{{ site.ts_since | date: '%Y.%m.%d' }}</time>開設 The site opens.</li>
+    </ul>
+</section>
+
+<section class="panel prose">
+    <h2 class="panel-title">クレジット <small>Credits</small></h2>
+    <ul>
+        <li><strong>The original editor:</strong> <a href="https://github.com/altbdoor/trainstream-editor">trainstream-editor</a> by <a href="https://github.com/altbdoor">altbdoor</a>, the first tool that let people update this site without touching code. It still works, and the new <a href="/submit/">submit tool</a> keeps the same data format so both can be used side by side.</li>
+        <li>Everyone in the thread who found, checked and recommended cameras. ありがとう！</li>
+        <li>Image resizing by <a href="https://images.weserv.nl/">images.weserv.nl</a>. Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Pixel font <a href="https://fonts.google.com/specimen/DotGothic16">DotGothic16</a>.</li>
+        <li><span class="sponsor-label">提供</span> Sponsored by fufufu.moe</li>
+    </ul>
+</section>
+
+<section class="panel prose">
+    <h2 class="panel-title">リンク <small>Link to us</small></h2>
+    <p>リンクフリー！ This site is link-free: no need to ask. You are welcome to use this banner:</p>
+    <p><a href="https://trainstream.github.io/"><img src="/assets/img/banner-88x31.png" width="88" height="31" alt="TrainStream" style="image-rendering: pixelated" /></a></p>
+    <pre><code>&lt;a href="https://trainstream.github.io/"&gt;&lt;img src="https://trainstream.github.io/assets/img/banner-88x31.png" width="88" height="31" alt="TrainStream"&gt;&lt;/a&gt;</code></pre>
+    <p>Old pastebin: <a href="https://pastebin.com/WGqBmfrw">https://pastebin.com/WGqBmfrw</a></p>
+</section>

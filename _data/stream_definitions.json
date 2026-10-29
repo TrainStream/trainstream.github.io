@@ -42,6 +42,35 @@
                 "isAlive": {
                     "description": "Is the stream alive?",
                     "type": "boolean"
+                },
+                "id": {
+                    "description": "Optional stable id for permalinks/favourites. Defaults to a slug of the name.",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Optional longer description shown in the detail panel",
+                    "type": "string"
+                },
+                "region": {
+                    "description": "Optional prefecture or area, e.g. \"Tokyo\" or \"Various\"",
+                    "type": "string"
+                },
+                "lat": {
+                    "description": "Optional latitude for the map view",
+                    "type": "number"
+                },
+                "lng": {
+                    "description": "Optional longitude for the map view",
+                    "type": "number"
+                },
+                "addedAt": {
+                    "description": "Optional date the stream was added (YYYY-MM-DD), used for NEW! badges",
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "submittedBy": {
+                    "description": "Optional name to credit the person who submitted the stream",
+                    "type": "string"
                 }
             }
         },
@@ -64,6 +93,10 @@
                 "height": {
                     "description": "The height for the image",
                     "type": "number"
+                },
+                "alt": {
+                    "description": "Alternative to title (written by the original trainstream-editor)",
+                    "type": "string"
                 }
             }
         },

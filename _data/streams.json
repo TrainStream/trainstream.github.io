@@ -5,6 +5,9 @@
             "name": "Tokyo Roppongi Sky View",
             "isAlive": false,
             "tags": "traffic, city",
+            "region": "Tokyo",
+            "lat": 35.6605,
+            "lng": 139.7292,
             "images": [
                 {
                     "src": "/pictures/7.jpg",
@@ -46,6 +49,9 @@
             "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
             "tags": "trainstation, bridge, scenery, other",
+            "region": "Fukushima",
+            "lat": 37.2933,
+            "lng": 139.9161,
             "images": [
                 {
                     "src": "/pictures/1.jpg",
@@ -96,6 +102,9 @@
             "name": "別所温泉駅 Bessho-Onsen Station/Ueda Cable Vision Cameras",
             "isAlive": true,
             "tags": "trainstation, shrine, bridge, scenery, shop, other",
+            "region": "Nagano",
+            "lat": 36.3563,
+            "lng": 138.1597,
             "images": [
                 {
                     "src": "/pictures/2.jpg",
@@ -151,6 +160,9 @@
             "name": "東京 汐留 鉄道 ライブカメラ Tokyo Shiodome Railway",
             "isAlive": false,
             "tags": "trainlines, traffic, city, sound",
+            "region": "Tokyo",
+            "lat": 35.6646,
+            "lng": 139.76,
             "images": [
                 {
                     "src": "/pictures/4.jpg",
@@ -170,6 +182,9 @@
             "name": "渋谷スクランブル交差点 ライブ映像 Tokyo Shibuya Scramble Crossing",
             "isAlive": false,
             "tags": "street, traffic",
+            "region": "Tokyo",
+            "lat": 35.6595,
+            "lng": 139.7005,
             "images": [
                 {
                     "src": "/pictures/5.jpg",
@@ -189,6 +204,9 @@
             "name": "北海道ｏｎ天気ライブカメラ HTB's Weather Live Cameras in Hokkaido",
             "isAlive": false,
             "tags": "traffic, city, bridge",
+            "region": "Hokkaido",
+            "lat": 43.0618,
+            "lng": 141.3545,
             "images": [
                 {
                     "src": "/pictures/3.jpg",
@@ -208,6 +226,9 @@
             "name": "長崎港 Nagasaki Harbor | 佐世保港 Sasebo Port | 本社屋上 HQ Rooftop | 長崎空港 Nagasaki Airport",
             "isAlive": true,
             "tags": "traffic, city, airport, seaport, sound",
+            "region": "Nagasaki",
+            "lat": 32.7503,
+            "lng": 129.8779,
             "images": [
                 {
                     "src": "/pictures/9.jpg",
@@ -242,6 +263,9 @@
             "name": "JR帯広駅ライブカメラ JR Obihiro Station, Hokkaido (and 3 others)",
             "isAlive": true,
             "tags": "trainstation, traffic, bridge, airport",
+            "region": "Hokkaido",
+            "lat": 42.9177,
+            "lng": 143.2047,
             "images": [
                 {
                     "src": "/pictures/16.jpg",
@@ -279,6 +303,9 @@
             "name": "【中書島】京阪電車を生ライブ【淀】 Keihan Raliway, Kyoto",
             "isAlive": true,
             "tags": "trainlines, sound",
+            "region": "Kyoto",
+            "lat": 34.92,
+            "lng": 135.73,
             "images": [
                 {
                     "src": "/pictures/8.jpg",
@@ -298,6 +325,9 @@
             "name": "部屋の窓から(大岡川＆ランドマーク方面＋京急 Keikyu Line & Ooka River, Yokohama",
             "isAlive": false,
             "tags": "trainlines, traffic, city, bridge",
+            "region": "Kanagawa",
+            "lat": 35.4437,
+            "lng": 139.623,
             "images": [
                 {
                     "src": "/pictures/20.jpg",
@@ -317,6 +347,9 @@
             "name": "JR中央線　豊田駅～日野駅間 JR Chuo Line Toyoda~Hino Station, Tokyo",
             "isAlive": true,
             "tags": "trainlines, sound",
+            "region": "Tokyo",
+            "lat": 35.665,
+            "lng": 139.395,
             "images": [
                 {
                     "src": "/pictures/21.jpg",
@@ -345,6 +378,9 @@
             "name": "新大阪ライブカメラ Sin-Osaka Station",
             "isAlive": true,
             "tags": "trainlines, city, traffic, sound",
+            "region": "Osaka",
+            "lat": 34.7335,
+            "lng": 135.5002,
             "images": [
                 {
                     "src": "/pictures/22.jpg",
@@ -356,7 +392,7 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@bgvcam9668/streams",
-                    "text": "hhttps://www.youtube.com/@bgvcam9668/streams"
+                    "text": "https://www.youtube.com/@bgvcam9668/streams"
                 }
             ]
         },
@@ -364,6 +400,9 @@
             "name": "北陸新幹線　金沢駅ライブカメラ　Kanazawa Station, Ishikawa | 金沢港ライブカメラ Kanazawa Port",
             "isAlive": true,
             "tags": "trainlines, city, traffic, bridge, seaport, shore",
+            "region": "Ishikawa",
+            "lat": 36.5781,
+            "lng": 136.648,
             "images": [
                 {
                     "src": "/pictures/23.jpg",
@@ -407,6 +446,9 @@
             "name": "Kabukicho, Tokyo",
             "isAlive": false,
             "tags": "street",
+            "region": "Tokyo",
+            "lat": 35.695,
+            "lng": 139.703,
             "images": [
                 {
                     "src": "/pictures/25.jpg",
@@ -435,6 +477,9 @@
             "name": "Amarube Railway in Kami-Cho (Mikata, Hyogo)",
             "isAlive": false,
             "tags": "trainlines, bridge, scenery, shore",
+            "region": "Hyogo",
+            "lat": 35.6303,
+            "lng": 134.6288,
             "images": [
                 {
                     "src": "/pictures/13.jpg",
@@ -453,6 +498,9 @@
             "name": "Soemon-cho, Osaka (oposite side of Dotonbori)",
             "isAlive": false,
             "tags": "street",
+            "region": "Osaka",
+            "lat": 34.669,
+            "lng": 135.502,
             "images": [
                 {
                     "src": "/pictures/15.jpg",
@@ -475,6 +523,9 @@
             "name": "Okinawa Times",
             "isAlive": true,
             "tags": "street, traffic, city",
+            "region": "Okinawa",
+            "lat": 26.2145,
+            "lng": 127.6792,
             "images": [
                 {
                     "src": "/pictures/26.jpg",
@@ -502,6 +553,7 @@
             "name": "A Big List of Variety of Security Cameras in Japan",
             "isAlive": true,
             "tags": "ipcamera, other",
+            "region": "Various",
             "images": [
                 {
                     "src": "/pictures/14.jpg",
@@ -549,6 +601,9 @@
                 }
             ],
             "tags": "city, scenery, traffic",
+            "region": "Osaka",
+            "lat": 34.6937,
+            "lng": 135.5023,
             "name": "Osaka Sky Livecam"
         },
         {
@@ -569,6 +624,9 @@
                 }
             ],
             "tags": "shop",
+            "region": "Tokyo",
+            "lat": 35.673,
+            "lng": 139.817,
             "name": "弁当屋さんのライブカメラ キッチンDIVE - Live camera from a bento shop in Koto-ku, Tokyo"
         },
         {
@@ -595,6 +653,9 @@
                 }
             ],
             "tags": "trainlines, sound",
+            "region": "Yamanashi",
+            "lat": 35.662,
+            "lng": 138.639,
             "name": "JR Chuo Main Line Live Camera (Kasugai-cho ⇔ Isiwa Onsen)"
         },
         {
@@ -615,6 +676,9 @@
                 }
             ],
             "tags": "other",
+            "region": "Ehime",
+            "lat": 33.852,
+            "lng": 132.786,
             "name": "Dogo Onsen"
         },
         {
@@ -647,6 +711,9 @@
                 }
             ],
             "tags": "city, traffic, other, sound",
+            "region": "Shizuoka",
+            "lat": 34.7037,
+            "lng": 137.735,
             "name": "ZaZa magazine - Various views of the city of Hamamatsu"
         },
         {
@@ -667,6 +734,7 @@
                 }
             ],
             "tags": "trainlines, sound",
+            "region": "Hokkaido",
             "name": "Hakodate Main Line"
         },
         {
@@ -687,6 +755,9 @@
                 }
             ],
             "tags": "trainstation, sound",
+            "region": "Hyogo",
+            "lat": 34.793,
+            "lng": 135.355,
             "name": "阪急電車 阪急今津線 小林駅 Japan Train Hankyu Imazu Line Obayashi Station"
         },
         {
@@ -707,6 +778,9 @@
                 }
             ],
             "tags": "shrine",
+            "region": "Tokyo",
+            "lat": 35.711,
+            "lng": 139.7967,
             "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
         },
         {
@@ -727,6 +801,9 @@
                 }
             ],
             "tags": "trainlines, street, traffic, sound",
+            "region": "Tokyo",
+            "lat": 35.6918,
+            "lng": 139.7709,
             "name": "神田駅北口ライブカメラ Tokyo Kanda Live Camera"
         },
         {
@@ -758,6 +835,9 @@
                 }
             ],
             "tags": "scenery, shore, city, sound",
+            "region": "Kagoshima",
+            "lat": 31.5966,
+            "lng": 130.5571,
             "name": "Active volcano Sakurajima and Kagoshima City, Kagoshima Prefecture"
         },
         {
@@ -816,6 +896,9 @@
                 }
             ],
             "tags": "trainlines, city, sound",
+            "region": "Tokyo",
+            "lat": 35.6896,
+            "lng": 139.7006,
             "name": "東京 新宿 鉄道 ライブ Tokyo Shinjuku Live"
         },
         {
@@ -836,6 +919,9 @@
                 }
             ],
             "tags": "street, city",
+            "region": "Osaka",
+            "lat": 34.6687,
+            "lng": 135.5013,
             "name": "大阪 道頓堀 ライブカメラ Osaka Dotonbori live camera"
         },
         {
@@ -868,6 +954,9 @@
                 }
             ],
             "tags": "trainlines, city, sound",
+            "region": "Osaka",
+            "lat": 34.684,
+            "lng": 135.522,
             "name": "Osaka Loop Line Live Camera"
         },
         {
@@ -894,6 +983,9 @@
                 }
             ],
             "tags": "city, traffic, sound",
+            "region": "Hyogo",
+            "lat": 34.6901,
+            "lng": 135.1955,
             "name": "LIVECAM KOBE JAPAN"
         },
         {
@@ -967,6 +1059,9 @@
                 }
             ],
             "tags": "scenery, other",
+            "region": "Shizuoka / Yamanashi",
+            "lat": 35.3606,
+            "lng": 138.7274,
             "name": "Views of the Legendary Mount Fuji"
         },
         {
@@ -993,6 +1088,9 @@
                 }
             ],
             "tags": "trainstation, trainlines, airport, traffic",
+            "region": "Tokyo",
+            "lat": 35.6812,
+            "lng": 139.7671,
             "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
         },
         {
@@ -1013,6 +1111,9 @@
                 }
             ],
             "tags": "trainstation, trainlines, sound",
+            "region": "Tokyo",
+            "lat": 35.7356,
+            "lng": 139.6517,
             "name": "うめたくん - Seibu Ikebukuro Line, Tokyo"
         },
         {
@@ -1055,6 +1156,9 @@
                 }
             ],
             "tags": "street",
+            "region": "Tokyo",
+            "lat": 35.6945,
+            "lng": 139.7035,
             "name": "Kabukicho Red-Light District, Tokyo"
         },
         {
@@ -1075,6 +1179,9 @@
                 }
             ],
             "tags": "trainlines, street, traffic, city, sound",
+            "region": "Tokyo",
+            "lat": 35.6909,
+            "lng": 139.7003,
             "name": "Tokyo Shinjuku Live Camera"
         },
         {
@@ -1095,6 +1202,9 @@
                 }
             ],
             "tags": "trainstation, trainlines, street, traffic, city, sound",
+            "region": "Tokyo",
+            "lat": 35.6975,
+            "lng": 139.7865,
             "name": "東京 総武線 浅草橋駅 秋葉原方面ライブカメラ 4K / Japan Tokyo Asakusabashi Akihabara Livecam"
         },
         {
@@ -1127,6 +1237,9 @@
                 }
             ],
             "tags": "trainlines, street, traffic, city, shore",
+            "region": "Fukui",
+            "lat": 36.0641,
+            "lng": 136.2196,
             "name": "FBC 福井放送公式チャンネル - Various Views Around Fukui Prefecture"
         },
         {
@@ -1165,6 +1278,7 @@
                 }
             ],
             "tags": "trainstation, street, city, airport, scenery",
+            "region": "Various",
             "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan"
         },
         {
@@ -1203,6 +1317,9 @@
                 }
             ],
             "tags": "trainlines, street, traffic, city, shore, sound",
+            "region": "Kanagawa",
+            "lat": 35.309,
+            "lng": 139.5,
             "name": "Live Camera Shonan Kamakura Japan"
         },
         {
@@ -1223,6 +1340,9 @@
                 }
             ],
             "tags": "street",
+            "region": "Tokyo",
+            "lat": 35.6984,
+            "lng": 139.7731,
             "name": "オノデンch - Akihabara Live Camera"
         },
         {
@@ -1243,6 +1363,9 @@
                 }
             ],
             "tags": "trainstation, trainlines",
+            "region": "Niigata",
+            "lat": 38.059,
+            "lng": 139.408,
             "name": "中条駅観光交流室 - Nakajo Station, City of Tainai, Niigata"
         },
         {
@@ -1263,6 +1386,9 @@
                 }
             ],
             "tags": "trainstation",
+            "region": "Nagano",
+            "lat": 35.5196,
+            "lng": 137.8217,
             "name": "飯田ケーブルテレビ飯田駅ホームライブカメラ のライブ配信 - Iida Station, Nagano Pref."
         },
         {
@@ -1283,6 +1409,9 @@
                 }
             ],
             "tags": "trainstation, traffic, city",
+            "region": "Hiroshima",
+            "lat": 34.404,
+            "lng": 132.461,
             "name": "上野学園ホール - Hakushima Station, Hiroshima"
         },
         {
@@ -1303,6 +1432,9 @@
                 }
             ],
             "tags": "scenery",
+            "region": "Fukushima",
+            "lat": 37.48,
+            "lng": 139.963,
             "name": "会津 東山温泉 向瀧 中庭 ライブカメラ/Aizu Higashiyama Spa MUKAITAKI"
         },
         {
@@ -1343,6 +1475,9 @@
                 }
             ],
             "tags": "trainstation, trainlines, traffic, sound",
+            "region": "Hyogo",
+            "lat": 34.737,
+            "lng": 135.414,
             "name": "鉄道ライブカメラ 阪急神戸線 武庫之荘駅 - Hankyu Kobe Line Live Camera, Mukonosho Station"
         },
         {
@@ -1375,6 +1510,7 @@
                 }
             ],
             "tags": "trainlines, city, scenery",
+            "region": "Various",
             "name": "共同通信LiveCamera - Kyodo News Live Camera"
         },
         {
@@ -1401,6 +1537,9 @@
                 }
             ],
             "tags": "trainstation, trainlines, scenery, shore",
+            "region": "Ishikawa",
+            "lat": 37.231,
+            "lng": 136.91,
             "name": "穴水町公式チャンネル - Anamizu Town Official Channel"
         },
         {
@@ -1421,6 +1560,9 @@
                 }
             ],
             "tags": "trainlines, sound",
+            "region": "Tokyo",
+            "lat": 35.778,
+            "lng": 139.721,
             "name": "Tokyo Akabane Live Camera"
         }
     ]

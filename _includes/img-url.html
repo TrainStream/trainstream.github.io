@@ -1,0 +1,19 @@
+{%- comment -%}
+  Outputs a weserv.nl proxied image URL for a stream image.
+  Repo images ("/pictures/...") are prefixed with the site URL, third-party
+  http(s) images are proxied directly. Anything else outputs nothing.
+  Params: src (required), h (optional height in px)
+{%- endcomment -%}
+{%- assign _src = include.src | strip -%}
+{%- assign _first = _src | slice: 0, 1 -%}
+{%- assign _scheme = _src | slice: 0, 8 | downcase -%}
+{%- assign _full = '' -%}
+{%- if _first == '/' and _src != '/' -%}
+  {%- assign _second = _src | slice: 1, 1 -%}
+  {%- unless _second == '/' -%}{%- assign _full = 'https://trainstream.github.io' | append: _src -%}{%- endunless -%}
+{%- elsif _scheme == 'https://' or _scheme contains 'http://' -%}
+  {%- assign _full = _src -%}
+{%- endif -%}
+{%- if _full != '' -%}
+//images.weserv.nl/?{% if include.h %}h={{ include.h }}&amp;{% endif %}url={{ _full | url_encode }}
+{%- endif -%}

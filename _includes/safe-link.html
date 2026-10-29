@@ -1,0 +1,14 @@
+{%- comment -%}
+  Outputs the link only if it is http(s) or a site-relative path, so
+  submitted data can never produce javascript: or data: links.
+  Params: link (required), prefix (optional, prepended to site-relative paths)
+{%- endcomment -%}
+{%- assign _link = include.link | strip -%}
+{%- assign _first = _link | slice: 0, 1 -%}
+{%- assign _second = _link | slice: 1, 1 -%}
+{%- assign _scheme = _link | slice: 0, 8 | downcase -%}
+{%- if _first == '/' and _second != '/' -%}
+{{ include.prefix }}{{ _link | escape }}
+{%- elsif _scheme == 'https://' or _scheme contains 'http://' -%}
+{{ _link | escape }}
+{%- endif -%}

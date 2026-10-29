@@ -1,19 +1,145 @@
 ---
-title: Train Streams
+title: カメラ一覧 Camera list
+description: A hand-picked guide to live train, station and city cameras in Japan. Filter, search, browse on a map or build your own TV wall.
+classic_url: /classic/streams/
+classic_dead_url: /classic/streams/dead
+next_url: /?status=dead
+next_ja: うんきゅう
+next_en: Dead cameras
+body_class: page-cameras
+scripts:
+  - /assets/js/cards.js
+  - /assets/js/streams.js
 ---
+{% include data-json.html %}
 
-<center class="custom-link">
-  <p><font size="7"><strong>Welcome to our (Train) Stream Guide</strong></font>
-    <br />
-  <span style="color: #fccdcd">Rest in Peace Aizu-Wakamatsu</font></p>
-  <br /><br /><br />
-  <p><font size="6"><span style="background-color: #000000; color: #ffffff;"><strong>Table of Content:</strong></span></font></p>
-    <p><strong><font size="5">
-          <a href="/streams">List of Cameras</a>
-    <br /><a href="/watching">Video Players for PC</a>
-    <br /><a href="/recording">Recording</p></a></font></strong></p>
+<section class="panel intro" aria-labelledby="list-title">
+    <h1 class="panel-title" id="list-title">カメラ一覧 <small>List of Cameras</small></h1>
+    <div class="toolbar-row">
+        <button class="btn btn--pink" type="button" id="omikuji-open">🎲 電車おみくじ Train omikuji</button>
+        <a class="btn" href="/submit/">📮 Submit a stream</a>
+    </div>
+    <details class="notes">
+        <summary>ご案内 Notes for passengers</summary>
+        <ul>
+            <li>For YouTube, usually only the channel's live/streams page is linked (unless the stream is hidden), because live video links change.</li>
+            <li>Other videos might exist on a channel outside its streams page, including past recordings.</li>
+            <li>Click a picture to see every camera of that stream bigger, with all the links. Raw stream URLs (rtmp…) get a copy button, see <a href="/watching/">Video players</a>.</li>
+            <li>📺＋ adds a YouTube stream to your own <a href="/tv/">TV wall</a> to watch several at once. ☆ saves favourites in this browser.</li>
+        </ul>
+    </details>
+</section>
 
-<div style="display:none;">Sponsored by fufufu.moe</div>
-    <br /><br /><br /><br /><br />
-  <p><span style="color: #33cccc;">Old Pastebin: </span><a style="color: #000000; background-color: #ffffff;" href="https://pastebin.com/WGqBmfrw">https://pastebin.com/WGqBmfrw</a></span></p>
-</center>
+<section class="panel toolbar" aria-label="Filters">
+    <div class="toolbar-row">
+        <div class="rollsign" role="group" aria-label="Camera status">
+            <button type="button" data-status="live" aria-pressed="true"><span class="ja">運転中</span><span class="en">IN SERVICE <span data-count="live"></span></span></button>
+            <button type="button" data-status="all" aria-pressed="false"><span class="ja">全部</span><span class="en">ALL <span data-count="all"></span></span></button>
+            <button type="button" data-status="dead" aria-pressed="false"><span class="ja">運休</span><span class="en">SUSPENDED <span data-count="dead"></span></span></button>
+        </div>
+        <label class="search">
+            <span class="visually-hidden">Search cameras</span>
+            <input type="search" id="search" placeholder="🔍 検索 Search names, places, links…" autocomplete="off" />
+        </label>
+    </div>
+
+    <div class="toolbar-row">
+        <span class="toolbar-label">路線 Tags</span>
+        <ul class="tag-list" id="tag-filters"></ul>
+    </div>
+
+    <div class="toolbar-row">
+        <span class="toolbar-label">Match</span>
+        <div class="view-switch" role="group" aria-label="Tag match mode">
+            <button class="btn btn--small" type="button" data-mode="any" aria-pressed="true" title="Show cameras with at least one selected tag">ANY tag</button>
+            <button class="btn btn--small" type="button" data-mode="all" aria-pressed="false" title="Show cameras with every selected tag">ALL tags</button>
+        </div>
+        <button class="btn btn--small" type="button" id="clear-filters">✕ Clear</button>
+        <button class="btn btn--small fav-btn" type="button" id="fav-only" aria-pressed="false">★ Favourites only</button>
+    </div>
+
+    <div class="toolbar-row">
+        <span class="toolbar-label">表示 View</span>
+        <div class="view-switch" role="group" aria-label="View">
+            <button class="btn btn--small" type="button" data-view="tickets" aria-pressed="false">🎫 Tickets</button>
+            <button class="btn btn--small" type="button" data-view="list" aria-pressed="false">📋 Timetable</button>
+            <button class="btn btn--small" type="button" data-view="board" aria-pressed="false">🚉 Departure board</button>
+            <button class="btn btn--small" type="button" data-view="map" aria-pressed="false">🗾 Map</button>
+        </div>
+        <label>
+            <span class="toolbar-label">並び Sort</span>
+            <select class="select" id="sort">
+                <option value="default">Recommended order</option>
+                <option value="name">Name A→Z</option>
+                <option value="newest">Newest first</option>
+                <option value="cams">Most cameras</option>
+            </select>
+        </label>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
+    </div>
+</section>
+
+<div class="map-wrap" id="map-wrap">
+    <div class="map" id="map" role="region" aria-label="Map of cameras"></div>
+</div>
+
+<div class="stream-list" id="stream-list">
+    <div class="board-head" aria-hidden="true">
+        <span>状態 Status</span><span>行先 Name</span><span>種別 Type</span><span>番線 Cams</span><span>案内 Links</span>
+    </div>
+    <h2 class="panel-title map-unknown-title">現在地不明 <small>Location unknown</small></h2>
+</div>
+<div class="panel empty-state" id="empty-state" hidden>
+    <p class="kaomoji">(；´Д｀)</p>
+    <p>No cameras match. 該当なし… Try fewer tags or clear the search.</p>
+</div>
+
+<noscript>
+    <section class="panel">
+        <p><strong>JavaScript is off</strong>, so here is the simple list of live cameras. Filters, dead cameras and the map need JavaScript, or use the <a href="/classic/streams/">classic view</a>.</p>
+        <div class="noscript-list">
+            {% for s in site.data.streams.data %}{% if s.isAlive %}
+            <article>
+                <h3>{{ s.name | escape }}</h3>
+                {% assign first_img = s.images | first %}
+                {% if first_img %}<img src="{% include img-url.html src=first_img.src h=200 %}" alt="{{ first_img.title | default: first_img.alt | default: s.name | escape }}" height="200" loading="lazy" />{% endif %}
+                <ul>
+                    {% for extra in s.extras %}{% capture safe_link %}{% include safe-link.html link=extra.link %}{% endcapture %}
+                    {% if safe_link != '' %}<li><a href="{{ safe_link }}">{{ extra.text | default: extra.link | escape }}</a></li>{% elsif extra.text %}<li>{{ extra.text | escape }}</li>{% endif %}
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}{% endfor %}
+        </div>
+    </section>
+</noscript>
+
+<div class="tv-tray" id="tv-tray" hidden>
+    <span>📺 TV wall: <strong id="tv-count">0</strong></span>
+    <a class="btn btn--small btn--pink" href="/tv/" id="tv-open">▶ Watch</a>
+    <button class="btn btn--small" type="button" id="tv-clear">✕</button>
+</div>
+
+<dialog class="dialog" id="detail" aria-labelledby="detail-title">
+    <div class="dialog-head" id="detail-head">
+        <h2 id="detail-title"></h2>
+        <button class="dialog-close" type="button" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="dialog-body" id="detail-body"></div>
+</dialog>
+
+<dialog class="dialog omikuji" id="omikuji" aria-labelledby="omikuji-title">
+    <div class="dialog-head">
+        <h2 id="omikuji-title">電車おみくじ Train omikuji</h2>
+        <button class="dialog-close" type="button" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="omikuji-slip" id="omikuji-slip">
+        <span class="fortune" id="omikuji-fortune">大吉</span>
+        <span class="fortune-en" id="omikuji-en">Great luck!</span>
+        <p class="lucky">今日のラッキーカメラ<br />Today's lucky camera:<br /><strong id="omikuji-camera"></strong></p>
+    </div>
+    <div class="dialog-actions">
+        <button class="btn btn--green" type="button" id="omikuji-go">🚃 Go there</button>
+        <button class="btn" type="button" id="omikuji-again">🔄 Draw again</button>
+    </div>
+</dialog>

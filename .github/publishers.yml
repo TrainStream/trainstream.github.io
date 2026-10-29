@@ -1,0 +1,15 @@
+# Trusted publishers.
+#
+# GitHub usernames listed here can publish new streams instantly through
+# https://trainstream.github.io/submit/ (or the "New stream" issue form),
+# WITHOUT having write access to this repository. A GitHub Action validates
+# their submission and commits it to _data/streams.json for them.
+# They can also approve other people's submissions by adding the "approved" label
+# (only if they have at least triage access, since labels need that).
+#
+# Only people with write access can edit this file, so only they can add
+# publishers. Remove a line to take the right away again.
+#
+# Add one username per line, like:
+#   - some-github-user
+publishers:
