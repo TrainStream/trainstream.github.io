@@ -458,7 +458,7 @@
             el('span', { className: 'status-pill' + (stream.alive ? '' : ' is-dead'), text: stream.alive ? '運転中 Live' : '運休 Dead' }),
             stream.region ? el('span', { text: '📍 ' + stream.region }) : null,
             stream.cameras ? el('span', { text: TS.camLabel(stream.cameras) }) : null,
-            stream.images.length > 1 ? el('span', { text: '🖼 ' + stream.images.length + ' pictures' }) : null,
+            stream.images.length > 1 ? el('span', { className: 'detail-pictures', text: stream.images.length + ' pictures' }) : null,
             stream.addedAt ? el('span', { className: 'detail-date', title: 'Date this entry was added to the list', text: 'Added ' + stream.addedAt }) : null,
             stream.submittedBy ? el('span', { text: '🙏 Thanks to ' + stream.submittedBy }) : null,
         ]);
