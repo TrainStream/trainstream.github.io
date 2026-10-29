@@ -264,7 +264,12 @@
                 el('a', { href: detailHref, 'data-action': 'details', text: model.name }),
                 model.isNew ? el('span', { className: 'new-badge', text: 'NEW!' }) : null,
             ]),
-            model.region ? el('p', { className: 'card-region', text: '📍 ' + model.region }) : null,
+            model.region || model.cameras
+                ? el('p', {
+                      className: 'card-region',
+                      text: [model.region ? '📍 ' + model.region : '', model.cameras ? camLabel(model.cameras) : ''].filter(Boolean).join(' · '),
+                  })
+                : null,
         ]);
 
         var tagList = el(
@@ -331,7 +336,6 @@
                 el('header', { className: 'card-strip' }, [
                     el('span', { className: 'strip-status' }, [
                         model.alive ? '運転中 IN SERVICE' : '運休 SUSPENDED',
-                        model.cameras ? el('span', { className: 'strip-cams', text: ' · ' + camLabel(model.cameras) }) : null,
                     ]),
                     el('span', { className: 'serial', text: 'No.' + String(model.index + FIRST_NUMBER).padStart(4, '0') }),
                 ]),
