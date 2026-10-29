@@ -1189,17 +1189,17 @@
                 {
                     "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw/streams",
                     "kind": "home",
-                    "text": "Kabukicho Channel I"
+                    "text": "Kabukicho Channel 1"
                 },
                 {
                     "link": "https://www.youtube.com/@kabukicho-1/streams",
                     "kind": "home",
-                    "text": "Kabukicho Live Channel II"
+                    "text": "Kabukicho Channel 2"
                 },
                 {
                     "link": "https://www.youtube.com/@kabukicho-2/streams",
                     "kind": "home",
-                    "text": "Kabukicho Live Channel III"
+                    "text": "Kabukicho Channel 3"
                 }
             ]
         },
