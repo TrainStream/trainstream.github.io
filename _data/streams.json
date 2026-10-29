@@ -1730,6 +1730,268 @@
             "addedAt": "2026-06-25"
         },
         {
+            "name": "ハチ高原 - Hachi Kogen, Mt. Hachibuse",
+            "isAlive": true,
+            "tags": "mountain, scenery, snow",
+            "region": "Hyogo",
+            "lat": 35.3843,
+            "lng": 134.5344,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-8Tc2jpzNHCA.jpg",
+                    "title": "Hachi Kogen, Mt. Hachibuse",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCrNNR-KdmbpaV-uP_E8UpUg/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "鹿屋体育大学 - Kanoya, National Institute of Fitness and Sports",
+            "isAlive": true,
+            "tags": "scenery, other, multicam",
+            "region": "Kagoshima",
+            "lat": 31.3936,
+            "lng": 130.7879,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-MBeT3dWEFM4.jpg",
+                    "title": "Osumi Lake",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-oUH66g3sgmc.jpg",
+                    "title": "Shiromizu campus",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCCk_mV0977ZBEExItWcQgng/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Osumi Lake, Shiromizu campus"
+                }
+            ]
+        },
+        {
+            "name": "精進湖民宿村 - Lake Shojiko and Mt. Fuji",
+            "isAlive": true,
+            "tags": "scenery, mountain, nightview",
+            "region": "Yamanashi",
+            "lat": 35.4887,
+            "lng": 138.6066,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-U7Jf2CtSzck.jpg",
+                    "title": "Lake Shojiko and Mt. Fuji",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCFgYp_dOj7S-wRroOxBD2Ag/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "Cerevo - Akihabara Live Camera",
+            "isAlive": true,
+            "tags": "street, city",
+            "region": "Tokyo",
+            "lat": 35.6989,
+            "lng": 139.774,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-4cA_-WAm-SE.jpg",
+                    "title": "Akihabara Live Camera",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCrGS8VyrgCqYwaogH5bQpxQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "酒井電機 - Saiwai Bridge, Fukui",
+            "isAlive": true,
+            "tags": "bridge, river, city",
+            "region": "Fukui",
+            "lat": 36.0606,
+            "lng": 136.2163,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-NeqcGRluu8w.jpg",
+                    "title": "Saiwai Bridge, Fukui",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCS9zYkc1fxdJghAAwTL4UTA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "LIVE SHIMODA - Shimoda Beaches",
+            "isAlive": true,
+            "tags": "shore, scenery, multicam",
+            "region": "Shizuoka",
+            "lat": 34.6871,
+            "lng": 138.9726,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-mWu0lcIsEX8.jpg",
+                    "title": "Shirahama Chuo Beach",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-suBsw5F_1u0.jpg",
+                    "title": "Sotoura Beach",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-y2snSN1CIEg.jpg",
+                    "title": "Tsumekizaki",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCKqYWckqq6044l6zUxISqkw/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Shirahama Chuo Beach, Sotoura Beach, Tsumekizaki, Shirahama Ohama Beach"
+                }
+            ]
+        },
+        {
+            "name": "渋谷公園通り - Shibuya Koen-dori",
+            "isAlive": true,
+            "tags": "street, city",
+            "region": "Tokyo",
+            "lat": 35.6616,
+            "lng": 139.7,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-DPtIH3unwDY.jpg",
+                    "title": "Shibuya Koen-dori",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC1LK8PM_k4Fak8v4PBtcQIQ/streams",
+                    "text": "YouTube channel",
+                    "kind": "home"
+                }
+            ]
+        },
+        {
+            "name": "UTYテレビ山梨 - Uenohara IC, Kawaguchiko & Kofu",
+            "isAlive": true,
+            "tags": "traffic, trainstation, scenery, mountain, multicam",
+            "region": "Yamanashi",
+            "lat": 35.4985,
+            "lng": 138.7672,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-0ZWLeCUwSOU.jpg",
+                    "title": "Uenohara IC, Chuo Expressway",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-rW5aaFv8oxs.jpg",
+                    "title": "Mt. Fuji from the Panorama Ropeway",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-ipbHUjTeUIw.jpg",
+                    "title": "Kawaguchiko Station",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCk2oG--VyYST4SYyQkeadjA/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Uenohara IC, Chuo Expressway, Mt. Fuji from the Panorama Ropeway, Kawaguchiko Station, Kofu basin, Science Museum"
+                }
+            ]
+        },
+        {
+            "name": "筑波山チャンネル - Mt. Tsukuba",
+            "isAlive": true,
+            "tags": "mountain, scenery, multicam",
+            "region": "Ibaraki",
+            "lat": 36.2254,
+            "lng": 140.1067,
+            "addedAt": "2026-10-29",
+            "images": [
+                {
+                    "src": "/pictures/yt-hvpzxZB1US8.jpg",
+                    "title": "Mt. Nantai",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-FeVIva52DiA.jpg",
+                    "title": "Tsukuba Plum Grove",
+                    "width": 357,
+                    "height": 200
+                },
+                {
+                    "src": "/pictures/yt-dojmzSgF-yk.jpg",
+                    "title": "Nyotai summit junction",
+                    "width": 357,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UC_Ah4M1mOd8TW0Ou7X5wJ7w/streams",
+                    "text": "YouTube channel",
+                    "kind": "home",
+                    "linkTitle": "Also: Mt. Nantai, Tsukuba Plum Grove, Nyotai summit junction, Mt. Nyotai"
+                }
+            ]
+        },
+        {
             "name": "山梨県南アルプス市・富士川町 道路ライブカメラ - Road Cameras, Minami-Alps & Fujikawa",
             "isAlive": true,
             "tags": "traffic, bridge, river, multicam",
