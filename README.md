@@ -17,6 +17,7 @@ Plain Jekyll on GitHub Pages: no build step, no plugins, no npm.
 | `streams/index.html`, `streams/dead.html` | Redirects from the old URLs to `/` and `/?status=dead`. |
 | `classic/` | **The old design**, kept as-is (layout `_layouts/classic.html`, CSS `assets/css/main.scss`). It reads the same data, so it is always up to date. |
 | `_layouts/default.html`, `assets/css/site.scss`, `assets/js/site.js` | The new design: station-sign header, LED ticker, ticket-machine menu, footer, pixel train. |
+| `assets/js/trains.js` | The pixel train: real-world liveries and the rare scenarios (level crossing, passing, crash, multi-track drifting, Doctor Yellow, overrun, station cat, rush hour, deer, early departure, snowplough in winter, sleeper train at night). Force one with `/?train=crash&livery=hankyu`. |
 | `assets/js/stream-rules.js` | Validation + formatting rules shared by the submit tool and the GitHub Actions. |
 | `scripts/` | Node scripts the Actions run (not published). |
 | `.github/` | Issue form, workflows, and the trusted publishers list. |

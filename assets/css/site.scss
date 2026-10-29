@@ -753,6 +753,412 @@ textarea {
     }
 }
 
+/* trains.js takes over from the keyframes above: liveries + rare scenarios */
+.train-js .pixel-train {
+    animation: none;
+    transform: translateX(-2000px);
+}
+
+.train-prop {
+    position: fixed;
+    left: 0;
+    bottom: 6px;
+    z-index: 5;
+    pointer-events: none;
+
+    svg {
+        display: block;
+        image-rendering: pixelated;
+    }
+}
+
+.extra-train.on-back-track {
+    z-index: 4;
+    bottom: 18px;
+    filter: brightness(0.85);
+}
+
+.train-say {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 4px);
+    padding: 1px 6px;
+    font: 0.85rem var(--font-pixel);
+    color: #1b1f3b;
+    white-space: nowrap;
+    background: #fff;
+    border: 2px solid #1b1f3b;
+    box-shadow: 2px 2px 0 #1b1f3b;
+    transform: translateX(-50%);
+    pointer-events: none;
+    animation: say-pop 0.25s steps(3);
+
+    &.say-red {
+        color: #fff;
+        background: var(--red);
+    }
+}
+
+@keyframes say-pop {
+    from {
+        transform: translate(-50%, 6px) scale(0.6);
+    }
+}
+
+/* 踏切 */
+.crossing {
+    z-index: 6;
+    margin-left: -20px;
+
+    .lamp {
+        fill: #5a1010;
+    }
+
+    &.down .lamp-a {
+        animation: lamp-blink 0.8s steps(1) infinite;
+    }
+
+    &.down .lamp-b {
+        animation: lamp-blink 0.8s steps(1) 0.4s infinite;
+    }
+
+    &.whoosh::after {
+        content: '';
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        bottom: 0;
+        height: 100px;
+        background: repeating-linear-gradient(90deg, transparent 0 6px, rgba(27, 31, 59, 0.5) 6px 8px);
+        animation: whoosh 1.2s steps(6) forwards;
+    }
+}
+
+.crossing-arm {
+    position: absolute;
+    transform-origin: right center;
+    transform: rotate(90deg);
+    transition: transform 0.9s steps(6);
+    background: repeating-linear-gradient(90deg, #ffd400 0 8px, #1b1f3b 8px 16px);
+    box-shadow: 1px 1px 0 #1b1f3b;
+
+    .crossing.down & {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes lamp-blink {
+    0% {
+        fill: #ff3b30;
+    }
+    50% {
+        fill: #5a1010;
+    }
+}
+
+@keyframes whoosh {
+    from {
+        transform: translateY(40px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+/* ドカーン */
+.train-boom {
+    z-index: 7;
+    bottom: 10px;
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffd400;
+    clip-path: polygon(50% 0, 60% 28%, 92% 8%, 74% 42%, 100% 55%, 70% 64%, 84% 100%, 52% 74%, 22% 100%, 30% 66%, 0 60%, 26% 44%, 8% 10%, 40% 28%);
+    animation: boom 2.6s steps(4) forwards;
+
+    span {
+        font: 1rem var(--font-pixel);
+        color: #1b1f3b;
+        text-shadow: 1px 1px 0 #fff;
+    }
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(0.2);
+    }
+    15% {
+        transform: scale(1.15);
+        background: #ff8a00;
+    }
+    30% {
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1) translateY(-10px);
+    }
+}
+
+/* MULTI-TRACK DRIFTING!! */
+.drift-rails {
+    right: 0;
+    height: 40px;
+    bottom: 4px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s steps(3);
+
+    &.on {
+        opacity: 1;
+    }
+
+    i {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: repeating-linear-gradient(90deg, #555 0 10px, #888 10px 12px);
+    }
+}
+
+.drift-sparks {
+    bottom: 8px;
+    z-index: 6;
+
+    i {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #ffd400;
+        box-shadow: 4px 0 0 #ff8a00;
+        animation: spark 0.6s steps(4) infinite;
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                left: #{$i * 14 - 40}px;
+                animation-delay: #{$i * 0.1}s;
+            }
+        }
+    }
+}
+
+@keyframes spark {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-30px, -26px);
+        opacity: 0;
+    }
+}
+
+.train-manga {
+    z-index: 7;
+    bottom: 60px;
+    padding: 26px 30px;
+    font: 1.1rem/1.15 var(--font-pixel);
+    color: #000;
+    text-align: center;
+    background: radial-gradient(closest-side, #fff 72%, rgba(255, 255, 255, 0) 100%),
+        repeating-conic-gradient(rgba(0, 0, 0, 0.8) 0 2deg, transparent 2deg 10deg);
+    border-radius: 50%;
+    animation: manga 3s steps(4) forwards;
+}
+
+@keyframes manga {
+    0% {
+        transform: scale(0.3) rotate(-8deg);
+    }
+    15% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    25%,
+    85% {
+        transform: scale(1) rotate(-3deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(-3deg);
+        opacity: 0;
+    }
+}
+
+/* ドクターイエロー */
+.train-lucky {
+    z-index: 7;
+    bottom: 64px;
+    padding: 4px 10px;
+    font: 1.2rem var(--font-pixel);
+    color: #1d4fa0;
+    text-align: center;
+    background: #ffd800;
+    border: 2px solid #1b1f3b;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(-50%);
+    animation: lucky 3.4s steps(6) forwards;
+
+    small {
+        display: block;
+        font-size: 0.75rem;
+    }
+}
+
+@keyframes lucky {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+    15%,
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -16px);
+    }
+}
+
+/* 停止位置目標 */
+.stop-marker {
+    width: 4px;
+    height: 56px;
+    margin-left: -2px;
+    z-index: 4;
+    background: #555;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: -9px;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 0.9rem var(--font-pixel);
+        color: #1b1f3b;
+        background: #fff;
+        border: 2px solid #1b1f3b;
+    }
+}
+
+/* 駅長 and the deer */
+.track-animal {
+    z-index: 6;
+    bottom: 8px;
+    filter: drop-shadow(2px 0 0 #1b1f3b) drop-shadow(-2px 0 0 #1b1f3b) drop-shadow(0 -2px 0 #1b1f3b);
+    animation: cat-in 0.8s steps(4);
+
+    &.leaving {
+        animation: cat-out 1.1s steps(5) forwards;
+    }
+}
+
+/* お詫び */
+.train-notice {
+    z-index: 7;
+    bottom: 64px;
+    max-width: min(560px, calc(100vw - 32px));
+    padding: 6px 12px;
+    font: 0.95rem var(--font-pixel);
+    color: var(--led-orange);
+    background: var(--led-bg);
+    border: 2px solid #1b1f3b;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(-50%);
+    animation: lucky 5s steps(6) forwards;
+
+    b {
+        color: var(--led-red);
+        font-weight: normal;
+    }
+
+    small {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--led-green);
+    }
+}
+
+/* 雪 */
+.snowfall {
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    z-index: 6;
+    background-image: radial-gradient(#fff 1.5px, transparent 2px), radial-gradient(#fff 1px, transparent 1.5px);
+    background-size: 46px 46px, 28px 28px;
+    background-position: 0 0, 13px 7px;
+    filter: drop-shadow(1px 1px 0 rgba(27, 31, 59, 0.4));
+    -webkit-mask-image: linear-gradient(transparent, #000 40%);
+    mask-image: linear-gradient(transparent, #000 40%);
+    animation: snowfall 3s steps(12) infinite;
+}
+
+@keyframes snowfall {
+    to {
+        background-position: -46px 46px, -15px 63px;
+    }
+}
+
+.snow-spray {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    pointer-events: none;
+
+    i {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        box-shadow: 1px 1px 0 #1b1f3b;
+        animation: spray 0.5s steps(4) infinite;
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                bottom: #{($i % 3) * 4}px;
+                animation-delay: #{$i * 0.08}s;
+            }
+        }
+    }
+}
+
+@keyframes spray {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(24px, -30px);
+        opacity: 0;
+    }
+}
+
+@keyframes cat-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+}
+
+@keyframes cat-out {
+    to {
+        opacity: 0;
+        transform: translate(20px, -24px) scale(0.7);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .led-text {
         animation: none;
