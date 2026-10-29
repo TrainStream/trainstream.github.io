@@ -32,7 +32,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" />
-        <link rel="stylesheet" href="/assets/css/site.css" />
+        <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}" />
     </head>
     <body class="{{ page.body_class }}">
         <a class="skip-link" href="#main">Skip to content</a>
@@ -173,8 +173,8 @@
             <span class="horn" id="horn" aria-live="polite"></span>
         </footer>
 
-        <script src="/assets/js/site.js" defer></script>
-        <script src="/assets/js/trains.js" defer></script>
+        <script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
+        <script src="/assets/js/trains.js?v={{ site.time | date: '%s' }}" defer></script>
         {%- for script in page.scripts %}
         <script src="{{ script }}" defer></script>
         {%- endfor %}
