@@ -16,6 +16,8 @@ scripts:
             <button class="btn btn--small" type="button" data-cols="2" aria-pressed="true">2×</button>
             <button class="btn btn--small" type="button" data-cols="3" aria-pressed="false">3×</button>
         </div>
+        <button class="btn btn--small" type="button" data-tv-expand aria-pressed="false">⤢ Expand</button>
+        <button class="btn btn--small" type="button" data-tv-full aria-pressed="false" hidden>⛶ Full screen</button>
         <button class="btn btn--small" type="button" id="tv-share">🔗 Copy share link</button>
         <button class="btn btn--small" type="button" id="tv-empty">✕ Clear wall</button>
         <a class="btn btn--small" href="/">📹 Camera list</a>
@@ -23,7 +25,19 @@ scripts:
     <p class="notes">All screens start muted (browsers block autoplay with sound). Channel screens show the channel's current live stream, if it is live right now.</p>
 </section>
 
-<div class="tv-wall" id="tv-wall"></div>
+<div class="tv-stage" id="tv-stage">
+    <div class="tv-stage-bar">
+        <span class="tv-stage-title">テレビ壁 TV wall</span>
+        <div class="view-switch" role="group" aria-label="Columns">
+            <button class="btn btn--small" type="button" data-cols="1" aria-pressed="false">1×</button>
+            <button class="btn btn--small" type="button" data-cols="2" aria-pressed="true">2×</button>
+            <button class="btn btn--small" type="button" data-cols="3" aria-pressed="false">3×</button>
+        </div>
+        <button class="btn btn--small" type="button" data-tv-full aria-pressed="false" hidden>⛶ Full screen</button>
+        <button class="btn btn--small" type="button" data-tv-expand aria-pressed="true">⤡ Back to page</button>
+    </div>
+    <div class="tv-wall" id="tv-wall"></div>
+</div>
 <div class="panel empty-state" id="tv-none" hidden>
     <p class="kaomoji">📺 (ﾟдﾟ)</p>
     <p>Your TV wall is empty. Add screens below, or press 📺＋ on the <a href="/">camera list</a>.</p>

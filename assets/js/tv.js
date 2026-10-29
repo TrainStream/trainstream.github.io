@@ -100,6 +100,7 @@
 
     var cols = parseInt(store('ts.tvcols') || '2', 10);
     var wallNode = document.getElementById('tv-wall');
+    var stage = document.getElementById('tv-stage');
 
     function save() {
         store('ts.tv', JSON.stringify(wall));
@@ -107,11 +108,22 @@
         history.replaceState(null, '', location.pathname + (query ? '?w=' + query : ''));
     }
 
+    function renderCols() {
+        wallNode.style.setProperty('--cols', String(cols));
+        document.querySelectorAll('[data-cols]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(Number(b.dataset.cols) === cols));
+        });
+    }
+
+    /* rebuilds every screen (reloads the videos): only when the screens themselves change */
     function render() {
         wallNode.textContent = '';
-        wallNode.style.setProperty('--cols', String(cols));
-        wallNode.hidden = wall.length === 0;
+        stage.hidden = wall.length === 0;
         document.getElementById('tv-none').hidden = wall.length > 0;
+        if (!wall.length && stage.classList.contains('is-expanded')) {
+            if (fullMode && fullscreenElement()) exitFullscreen();
+            else setExpanded(false);
+        }
         wall.forEach(function (item, i) {
             var yt = parseKey(item.k);
             wallNode.appendChild(
@@ -126,9 +138,7 @@
                 ])
             );
         });
-        document.querySelectorAll('[data-cols]').forEach(function (b) {
-            b.setAttribute('aria-pressed', String(Number(b.dataset.cols) === cols));
-        });
+        renderCols();
         renderPicker();
     }
 
@@ -186,10 +196,16 @@
             })
             .then(function () {
                 buildOptions();
+                /* only rebuild the screens (and reload their videos) if a screen got a better name */
+                var renamed = false;
                 wall.forEach(function (t) {
-                    if (t.label === t.k && labelFor[t.k]) t.label = labelFor[t.k];
+                    if (t.label === t.k && labelFor[t.k]) {
+                        t.label = labelFor[t.k];
+                        renamed = true;
+                    }
                 });
-                render();
+                if (renamed) render();
+                else renderPicker();
                 renderLiveStatus();
             });
     }
@@ -262,7 +278,7 @@
         b.addEventListener('click', function () {
             cols = Number(b.dataset.cols);
             store('ts.tvcols', String(cols));
-            render();
+            renderCols();
         });
     });
     document.getElementById('tv-share').addEventListener('click', function () {
@@ -273,6 +289,70 @@
         wall = [];
         save();
         render();
+    });
+
+    /* ⤢ fills the browser window, ⛶ makes the page full screen with the wall expanded
+       (the whole page, so the pixel trains still drive over it) */
+    var fullMode = false;
+    function fullscreenElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement || null;
+    }
+    function exitFullscreen() {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    }
+    function setExpanded(on) {
+        stage.classList.toggle('is-expanded', on);
+        document.documentElement.classList.toggle('tv-expanded', on);
+        var full = fullMode && !!fullscreenElement();
+        document.querySelectorAll('[data-tv-expand]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(on));
+        });
+        document.querySelectorAll('[data-tv-full]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(full));
+        });
+    }
+    function toggleExpanded() {
+        if (!wall.length) return;
+        if (fullMode && fullscreenElement()) exitFullscreen(); /* leaving full screen also shrinks the wall, below */
+        else setExpanded(!stage.classList.contains('is-expanded'));
+    }
+    function toggleFullscreen() {
+        if (fullMode && fullscreenElement()) {
+            exitFullscreen();
+            return;
+        }
+        if (!wall.length) return;
+        var page = document.documentElement;
+        fullMode = true;
+        setExpanded(true);
+        var request = (page.requestFullscreen || page.webkitRequestFullscreen).call(page);
+        if (request && request.catch) {
+            request.catch(function () {
+                fullMode = false;
+                setExpanded(false);
+            });
+        }
+    }
+    function onFullscreenChange() {
+        if (fullMode && !fullscreenElement()) {
+            fullMode = false;
+            setExpanded(false);
+        } else setExpanded(stage.classList.contains('is-expanded'));
+    }
+    document.querySelectorAll('[data-tv-expand]').forEach(function (b) {
+        b.addEventListener('click', toggleExpanded);
+    });
+    if (document.fullscreenEnabled || document.webkitFullscreenEnabled) {
+        document.querySelectorAll('[data-tv-full]').forEach(function (b) {
+            b.hidden = false;
+            b.addEventListener('click', toggleFullscreen);
+        });
+        document.addEventListener('fullscreenchange', onFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+    }
+    /* Esc leaves the expanded wall (full screen handles Esc itself) */
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && stage.classList.contains('is-expanded') && !fullscreenElement()) setExpanded(false);
     });
 
     save();
