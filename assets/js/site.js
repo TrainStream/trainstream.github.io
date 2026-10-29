@@ -88,6 +88,7 @@
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var currentCount = 0;
     var hitKiriban = false;
+    var rememberedHigh = 0; // the un-rounded number that is saved, so lucky jumps don't inflate the counter
 
     function renderDigits(number) {
         var digits = String(Math.max(0, Math.floor(number))).padStart(7, '0');
@@ -108,6 +109,7 @@
 
     function checkKiriban(n) {
         var box = document.getElementById('kiriban');
+        box.classList.remove('is-pun');
         if (isKiriban(n)) {
             hitKiriban = true;
             box.hidden = false;
@@ -116,8 +118,25 @@
             box.hidden = false;
             box.textContent = '前後賞！ So close… one away from a キリ番 (´；ω；`)';
         } else if (!hitKiriban) {
-            box.hidden = true;
+            var pun = numberPun(n);
+            box.hidden = !pun;
+            box.textContent = pun || '';
+            box.classList.toggle('is-pun', !!pun);
         }
+    }
+
+    /* 語呂合わせ: Japanese number puns on the end of your visitor number */
+    function numberPun(n) {
+        var s = String(n);
+        var two = s.slice(-2);
+        var last = s.slice(-1);
+        if (two === '39') return '39 = サンキュー！ Thank you for riding TrainStream 🙇';
+        if (two === '88') return '88 = パチパチ 👏 Applause for you!';
+        if (two[0] === two[1]) return 'ゾロ目 ' + two + '! Matching digits, small luck ✨';
+        if (last === '8') return '8 = 末広がり: a lucky number, your future spreads out like the tracks ↗';
+        if (last === '4') return '4 = し… an unlucky number. Touch a train for good luck 🚃';
+        if (last === '5') return '5 = ご縁: may you meet good trains today 🎋';
+        return null;
     }
 
     function showCount(number, note) {
@@ -155,14 +174,20 @@
         var noteBox = document.getElementById('counter-note');
         var shown = currentCount;
         function tick() {
-            var groupTour = Math.random() < 1 / 15;
-            var add = groupTour ? 40 + Math.floor(Math.random() * 20) : 1 + Math.floor(Math.random() * 3);
+            var roll = Math.random();
+            var extraTrain = roll < 1 / 25;
+            var groupTour = !extraTrain && roll < 1 / 8;
+            var add = extraTrain ? 100 + Math.floor(Math.random() * 50) : groupTour ? 40 + Math.floor(Math.random() * 20) : 1 + Math.floor(Math.random() * 3);
             // only the odometer (everyone) moves; "your" number stays the one you arrived with
             shown += add;
             renderDigits(shown);
-            if (groupTour) {
+            rememberedHigh += add;
+            store('ts.counterHigh', String(rememberedHigh));
+            if (groupTour || extraTrain) {
                 noteBox.hidden = false;
-                noteBox.textContent = '🚌 団体様ご来店！ A tour group just arrived (+' + add + ')';
+                noteBox.textContent = extraTrain
+                    ? '🚃 臨時列車到着！ An extra train just arrived (+' + add + ')'
+                    : '🚌 団体様ご来店！ A tour group just arrived (+' + add + ')';
                 setTimeout(function () {
                     noteBox.hidden = true;
                 }, 4000);
@@ -204,14 +229,44 @@
     function jokeCount(visits) {
         var since = new Date((counter.dataset.since || '2018-05-03') + 'T00:00:00Z').getTime();
         var days = Math.floor((Date.now() - since) / 86400000);
-        var n = 1337 + days * 41 + new Date().getHours() * 3 + visits;
+        var base = 1337 + days * 41 + new Date().getHours() * 3 + visits;
+        // never go backwards: start above the highest number this browser has seen
+        var high = parseInt(store('ts.counterHigh') || '0', 10) || 0;
+        var n = Math.max(base, high) + 1 + Math.floor(Math.random() * 25);
         var luck = Math.random();
-        if (luck < 1 / 40) n = Math.ceil(n / 1000) * 1000; // a キリ番
-        else if (luck < 2 / 40) n = Math.ceil(n / 1000) * 1000 - 1; // 前後賞
+        var jackpot = luck < 1 / 300;
+        var broken = !jackpot && luck < 1 / 300 + 1 / 120;
+        rememberedHigh = n;
+        store('ts.counterHigh', String(n)); // lucky jumps below are not remembered
+        if (jackpot) n = 7777777; // 大当たり
+        else if (!broken && luck < 1 / 15) n = Math.ceil(n / 1000) * 1000; // a キリ番
+        else if (!broken && luck < 2 / 15) n = Math.ceil(n / 1000) * 1000 - 1; // 前後賞
         counter.title = 'This counter is a joke. The number is made up (´・ω・`)';
-        rollTo(n, ' (probably)', function () {
-            keepTicking(' (probably)');
-        });
+        function start() {
+            rollTo(n, ' (probably)', function () {
+                if (jackpot) {
+                    var box = document.getElementById('kiriban');
+                    box.hidden = false;
+                    box.textContent = '🎰 大当たり！ JACKPOT 7777777! You win… nothing, but a lot of respect 🎉🎉🎉';
+                }
+                keepTicking(' (probably)');
+            });
+        }
+        if (broken) {
+            // 故障中: the counter "breaks" for a moment, then repairs itself
+            renderDigits(8888888);
+            counter.classList.add('is-broken');
+            var note = document.getElementById('counter-note');
+            note.hidden = false;
+            note.textContent = '🔧 故障中… The counter broke! Repairing, please wait';
+            setTimeout(function () {
+                counter.classList.remove('is-broken');
+                note.hidden = true;
+                start();
+            }, 2200);
+        } else {
+            start();
+        }
     }
 
     function pickNumber(obj) {
