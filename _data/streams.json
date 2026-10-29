@@ -18,7 +18,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw",
+                    "link": "https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw/streams",
                     "kind": "home",
                     "text": "Roppongi Sky View channel"
                 },
@@ -179,8 +179,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw/videos?view=2&flow=grid",
-                    "text": "Tokyo Live Camera channel"
+                    "link": "https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw/streams",
+                    "text": "Tokyo Live Camera channel",
+                    "kind": "home"
                 }
             ]
         },
@@ -201,8 +202,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/user/sibchtv/videos?flow=grid&view=2",
-                    "text": "Shibuya Television channel"
+                    "link": "https://www.youtube.com/user/sibchtv/streams",
+                    "text": "Shibuya Television channel",
+                    "kind": "home"
                 }
             ]
         },
@@ -223,8 +225,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/user/HTBNEWS/videos?view=2&flow=grid&disable_polymer=1",
-                    "text": "HTB Hokkaido News channel"
+                    "link": "https://www.youtube.com/user/HTBNEWS/streams",
+                    "text": "HTB Hokkaido News channel",
+                    "kind": "home"
                 }
             ]
         },
@@ -258,7 +261,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@ncctvnagasaki/streams",
-                    "text": "NCC Nagasaki live streams"
+                    "text": "NCC Nagasaki live streams",
+                    "kind": "home"
                 },
                 {
                     "text": "Nagasaki Harbor and Nagasaki Airport have sound."
@@ -301,7 +305,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kachimai/streams",
-                    "text": "Tokachi Mainichi live streams"
+                    "text": "Tokachi Mainichi live streams",
+                    "kind": "home"
                 }
             ]
         },
@@ -323,7 +328,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@manamix95/streams",
-                    "text": "Keihan Manamix live streams"
+                    "text": "Keihan Manamix live streams",
+                    "kind": "home"
                 }
             ]
         },
@@ -344,8 +350,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg/videos?view=2&flow=grid&disable_polymer=1",
-                    "text": "Stream Kantan channel"
+                    "link": "https://www.youtube.com/channel/UCUWtF4U0L25NthgyZNf9PUg/streams",
+                    "text": "Stream Kantan channel",
+                    "kind": "home"
                 }
             ]
         },
@@ -373,7 +380,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kakitubata19781011/streams",
-                    "text": "Railway Video Channel live streams"
+                    "text": "Railway Video Channel live streams",
+                    "kind": "home"
                 },
                 {
                     "text": "The one on the left has sound."
@@ -398,7 +406,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@bgvcam9668/streams",
-                    "text": "BGV Cam live streams"
+                    "text": "BGV Cam live streams",
+                    "kind": "home"
                 }
             ]
         },
@@ -444,7 +453,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@habmigochannel/streams",
-                    "text": "Hokuriku Asahi Broadcasting live streams"
+                    "text": "Hokuriku Asahi Broadcasting live streams",
+                    "kind": "home"
                 }
             ]
         },
@@ -471,8 +481,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw/videos?view=2&flow=grid&disable_polymer=1",
-                    "text": "TOCACOCAN 2 channel"
+                    "link": "https://www.youtube.com/channel/UCZZXeJQBCiER6-QPP2s2omw/streams",
+                    "text": "TOCACOCAN 2 channel",
+                    "kind": "home"
                 },
                 {
                     "text": "Left picture is old view, right picture is new view."
@@ -602,7 +613,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UC7lHIZbQzHILorlX4R0izsw",
+                    "link": "https://www.youtube.com/channel/UC7lHIZbQzHILorlX4R0izsw/streams",
                     "text": "Starstyle in Japan channel",
                     "kind": "home"
                 },
@@ -630,7 +641,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w",
+                    "link": "https://www.youtube.com/channel/UCo9e_ilRlTxHTCFAcaLR2-w/streams",
                     "linkTitle": "Bento shop a 5-minute walk from JR Kameido Station in Koto-ku, Tokyo",
                     "text": "Kitchen DIVE channel",
                     "kind": "home"
@@ -660,7 +671,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCZ974tQkAeV7_l_opPHCcdg",
+                    "link": "https://www.youtube.com/channel/UCZ974tQkAeV7_l_opPHCcdg/streams",
                     "text": "The Dramatic Chuo Line channel",
                     "kind": "home"
                 }
@@ -683,7 +694,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ",
+                    "link": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ/streams",
                     "linkTitle": "Famous onsen in the city of Matsuyama, Ehime Prefecture. Inspiration for the bathhouse in Spirited Away.",
                     "text": "Dogo Onsen official channel",
                     "kind": "home"
@@ -719,7 +730,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/c/ZAZAマガジンチャンネル/",
+                    "link": "https://www.youtube.com/c/ZAZAマガジンチャンネル/streams",
                     "text": "ZaZa Magazine channel",
                     "kind": "home"
                 }
@@ -742,7 +753,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A",
+                    "link": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A/streams",
                     "text": "Welcome to Hakodate channel",
                     "kind": "home"
                 }
@@ -763,7 +774,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCIQmoWaeozFXv0W9vAlY-8g",
+                    "link": "https://www.youtube.com/channel/UCIQmoWaeozFXv0W9vAlY-8g/streams",
                     "text": "Obayashi Station channel",
                     "kind": "home"
                 }
@@ -786,7 +797,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCh1UcGFBIuFo5I-I1WMyclA",
+                    "link": "https://www.youtube.com/channel/UCh1UcGFBIuFo5I-I1WMyclA/streams",
                     "linkTitle": "Views of the famous Senso-ji temple in Asakusa, Tokyo",
                     "text": "Asakusa Nakaya channel",
                     "kind": "home"
@@ -810,7 +821,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCu76uqpelv-VALL5d6zsljg",
+                    "link": "https://www.youtube.com/channel/UCu76uqpelv-VALL5d6zsljg/streams",
                     "text": "Kanda Live Channel",
                     "kind": "home"
                 }
@@ -839,13 +850,13 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA",
+                    "link": "https://www.youtube.com/channel/UCpWU25qIleNLmUEF9VwBdMA/streams",
                     "linkTitle": "Sakurajima from Tarumizu City, Kagoshima",
                     "text": "Zaihou official channel",
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg",
+                    "link": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg/streams",
                     "linkTitle": "Sakurajima and Kagoshima city",
                     "text": "Uenojo official channel",
                     "kind": "home"
@@ -887,13 +898,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw",
-                    "text": "YouTube channel (home)",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Nippori and Mukomachi rail cameras"
                 }
             ],
@@ -914,7 +921,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UC1kDVgEX2DsE295Bkum_K9Q",
+                    "link": "https://www.youtube.com/channel/UC1kDVgEX2DsE295Bkum_K9Q/streams",
                     "text": "Tokyo Shinjuku Live channel",
                     "kind": "home"
                 }
@@ -937,7 +944,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA",
+                    "link": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA/streams",
                     "linkTitle": "Famous Osaka Dotonbori district",
                     "text": "Radical Video Jockey channel",
                     "kind": "home"
@@ -973,7 +980,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ",
+                    "link": "https://www.youtube.com/channel/UCRruWUK0POjg2veibHucffQ/streams",
                     "linkTitle": "Osaka West Loop train track and skyline",
                     "text": "Osaka Loop Line channel",
                     "kind": "home"
@@ -1003,7 +1010,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w",
+                    "link": "https://www.youtube.com/channel/UCnpKhR0jbJgGyvKr5BaRt9w/streams",
                     "text": "Livecam Kobe channel",
                     "kind": "home"
                 }
@@ -1026,7 +1033,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA",
+                    "link": "https://www.youtube.com/channel/UCynDLZ-YJnrMLSQvwYi-bUA/streams",
                     "linkTitle": "Hachioji Tokyo Train Live Camera",
                     "text": "Aoba Traffics channel",
                     "kind": "home"
@@ -1065,19 +1072,19 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCwzJctz6m-0wG_evkheecZA",
+                    "link": "https://www.youtube.com/channel/UCwzJctz6m-0wG_evkheecZA/streams",
                     "linkTitle": "Mt. Fuji from the Mt. Fuji Panoramic Ropeway",
                     "text": "Fujiyama Navi channel",
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw",
+                    "link": "https://www.youtube.com/channel/UCiIA2H7KnbK7Wsyhpw1_glw/streams",
                     "linkTitle": "Mt. Fuji from Kawaguchiko",
                     "text": "fuji-net channel",
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/channel/UCkUdb6wh-TE9MK7Q2VTE5-A",
+                    "link": "https://www.youtube.com/channel/UCkUdb6wh-TE9MK7Q2VTE5-A/streams",
                     "linkTitle": "Mt. Fuji from Shizuoka City",
                     "text": "Satta Pass Live Camera channel",
                     "kind": "home"
@@ -1085,7 +1092,8 @@
                 {
                     "link": "https://www.youtube.com/@maotv_official/streams",
                     "linkTitle": "Omaezaki Port",
-                    "text": "Omaezaki CATV live streams"
+                    "text": "Omaezaki CATV live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "scenery, other, mountain",
@@ -1112,7 +1120,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ",
+                    "link": "https://www.youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ/streams",
                     "text": "NTV News channel",
                     "kind": "home"
                 }
@@ -1135,7 +1143,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UCAPMlxH-TQVQNzKgD9V_JEw",
+                    "link": "https://www.youtube.com/channel/UCAPMlxH-TQVQNzKgD9V_JEw/streams",
                     "linkTitle": "Level crossing near Hoya Station on the Seibu Ikebukuro Line, Tokyo",
                     "text": "Umetakun channel",
                     "kind": "home"
@@ -1171,18 +1179,18 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw",
+                    "link": "https://www.youtube.com/channel/UC0bo0F5nUfsHTgUWf3FKrIw/streams",
                     "linkTitle": "Shinjuku Kabukicho Live Camera",
                     "text": "Kabukicho channel",
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/@kabukicho-2",
+                    "link": "https://www.youtube.com/@kabukicho-2/streams",
                     "text": "Kabukicho Live Channel II",
                     "kind": "home"
                 },
                 {
-                    "link": "https://www.youtube.com/@kabukicho-1",
+                    "link": "https://www.youtube.com/@kabukicho-1/streams",
                     "text": "Kabukicho Live Channel",
                     "kind": "home"
                 }
@@ -1205,7 +1213,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@info-shinjuku/featured",
+                    "link": "https://www.youtube.com/@info-shinjuku/streams",
                     "linkTitle": "Live camera near Shinjuku crossing",
                     "text": "Info Shinjuku channel",
                     "kind": "home"
@@ -1229,7 +1237,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@livecameratokyo7377",
+                    "link": "https://www.youtube.com/@livecameratokyo7377/streams",
                     "text": "Tokyo Live Camera channel",
                     "kind": "home"
                 }
@@ -1264,7 +1272,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@FBC",
+                    "link": "https://www.youtube.com/@FBC/streams",
                     "text": "FBC Fukui Broadcasting channel",
                     "kind": "home"
                 }
@@ -1305,7 +1313,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@LIVE-hr9eo/featured",
+                    "link": "https://www.youtube.com/@LIVE-hr9eo/streams",
                     "linkTitle": "Asahi Shimbun LIVE, views from Hokkaido to Okinawa",
                     "text": "Asahi Shimbun LIVE channel",
                     "kind": "home"
@@ -1347,7 +1355,8 @@
                 {
                     "link": "https://www.youtube.com/@shonan-livecam/streams",
                     "linkTitle": "Views from Tokyo, Yokohama and Kamakura, Japan",
-                    "text": "Shonan Kamakura live streams"
+                    "text": "Shonan Kamakura live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainlines, street, traffic, city, shore, sound",
@@ -1370,7 +1379,8 @@
                 {
                     "link": "https://www.youtube.com/@ch-rz3bx/streams",
                     "linkTitle": "Live camera from otaku Mecca",
-                    "text": "Onoden channel live streams"
+                    "text": "Onoden channel live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "street",
@@ -1392,7 +1402,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@nakajosta/streams",
-                    "text": "Nakajo Station live streams"
+                    "text": "Nakajo Station live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainstation, trainlines, localline, snow",
@@ -1413,7 +1424,7 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@cvn%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0",
+                    "link": "https://www.youtube.com/@cvn%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0/streams",
                     "linkTitle": "Iida Station, Nagano Prefecture",
                     "text": "Iida CATV channel",
                     "kind": "home"
@@ -1439,7 +1450,8 @@
                 {
                     "link": "https://www.youtube.com/@%E4%B8%8A%E9%87%8E%E5%AD%A6%E5%9C%92%E3%83%9B%E3%83%BC%E3%83%AB%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B/streams",
                     "linkTitle": "Hakushima Station camera, Hiroshima",
-                    "text": "Ueno Gakuen Hall live streams"
+                    "text": "Ueno Gakuen Hall live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainstation, traffic, city",
@@ -1462,7 +1474,8 @@
                 {
                     "link": "https://www.youtube.com/@mukaitaki/streams",
                     "linkTitle": "Aizu Higashiyama onsen",
-                    "text": "Mukaitaki inn live streams"
+                    "text": "Mukaitaki inn live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "scenery, onsen, snow",
@@ -1485,7 +1498,8 @@
                 {
                     "link": "https://www.youtube.com/@uminekoshouten/streams",
                     "linkTitle": "Views from a small cafe and workshop in Iwaki City",
-                    "text": "Umineko Shouten live streams"
+                    "text": "Umineko Shouten live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "shop, traffic",
@@ -1507,7 +1521,8 @@
                 {
                     "link": "https://www.youtube.com/@mukoekilive/streams",
                     "linkTitle": "Hankyu Kobe Line",
-                    "text": "Mukonosho Station live streams"
+                    "text": "Mukonosho Station live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainstation, trainlines, traffic, sound",
@@ -1542,7 +1557,8 @@
                 {
                     "link": "https://www.youtube.com/@fl5vf9kr5b/streams",
                     "linkTitle": "Kyodo News, various views across Japan, mostly Toyko",
-                    "text": "Kyodo News LiveCamera live streams"
+                    "text": "Kyodo News LiveCamera live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainlines, city, scenery, multicam",
@@ -1569,7 +1585,8 @@
                 {
                     "link": "https://www.youtube.com/@Anamizu_Town/streams",
                     "linkTitle": "Various views around Anamizu Town, Ishikawa Prefecture",
-                    "text": "Anamizu Town live streams"
+                    "text": "Anamizu Town live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainstation, trainlines, scenery, shore, localline",
@@ -1591,7 +1608,8 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@RailwayLiveCamera/streams",
-                    "text": "Tokyo Akabane live streams"
+                    "text": "Tokyo Akabane live streams",
+                    "kind": "home"
                 }
             ],
             "tags": "trainlines, sound",
@@ -1628,13 +1646,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@KawaguchikoTV",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@KawaguchikoTV/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "6 cameras on this channel"
                 },
                 {
@@ -1667,13 +1681,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@officialyoutubechannel7270",
+                    "link": "https://www.youtube.com/@officialyoutubechannel7270/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@officialyoutubechannel7270/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=maMMEh-2Bsk",
@@ -1706,13 +1716,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@inc8774",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@inc8774/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: JR Nagano Station, Zenkoji Temple"
                 },
                 {
@@ -1746,13 +1752,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@ANNnewsCH",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@ANNnewsCH/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Shibuya Scramble Crossing, Haneda Airport Terminal 2"
                 }
             ],
@@ -1775,13 +1777,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@Channel-tf8sn",
+                    "link": "https://www.youtube.com/@Channel-tf8sn/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@Channel-tf8sn/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=jp8YydpqWJA",
@@ -1814,13 +1812,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E8%88%B9%E5%AE%BF%E3%81%82%E3%81%BF%E6%B8%85",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@%E8%88%B9%E5%AE%BF%E3%81%82%E3%81%BF%E6%B8%85/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Asakusa and Skytree (daily stream), Asakusa and Skytree"
                 },
                 {
@@ -1854,13 +1848,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kawazu-live",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@kawazu-live/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Sasahara Park, Kawazu town"
                 },
                 {
@@ -1900,13 +1890,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@Tokyo_Views",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@Tokyo_Views/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Odaiba, Aqua Symphony, Odaiba Beach and Fuji TV, Tokyo Bay"
                 },
                 {
@@ -1940,13 +1926,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@alfaliveyoda",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@alfaliveyoda/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Koriyama, Tohoku Shinkansen, Koriyama, nonstop camera"
                 }
             ],
@@ -1981,13 +1963,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@tvehime",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@tvehime/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Uwajima, Ainan, Matsuyama Airport, Shimanami Kaido"
                 },
                 {
@@ -2025,13 +2003,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kadoritsu44",
+                    "link": "https://www.youtube.com/@kadoritsu44/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@kadoritsu44/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.9064,
@@ -2053,13 +2027,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9",
+                    "link": "https://www.youtube.com/@%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.8286,
@@ -2081,13 +2051,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E9%BE%8D%E6%B1%9F%E5%9C%B0%E5%9F%9F%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB",
+                    "link": "https://www.youtube.com/@%E9%BE%8D%E6%B1%9F%E5%9C%B0%E5%9F%9F%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E9%BE%8D%E6%B1%9F%E5%9C%B0%E5%9F%9F%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.5188,
@@ -2109,13 +2075,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@HANSHINKOUSOKU3",
+                    "link": "https://www.youtube.com/@HANSHINKOUSOKU3/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@HANSHINKOUSOKU3/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 34.685,
@@ -2143,13 +2105,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@telewaka5ch",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@telewaka5ch/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Kushimoto, Koyasan"
                 },
                 {
@@ -2189,13 +2147,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@rkknews",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@rkknews/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "7 cameras on this channel"
                 },
                 {
@@ -2229,13 +2183,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@fujimino_taroh",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@fujimino_taroh/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Towards Ikebukuro, East exit, towards Kawagoe"
                 }
             ],
@@ -2258,13 +2208,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E8%8B%A5%E6%88%B8%E5%A4%A7%E6%A9%8BLIVE%E3%82%AB%E3%83%A1%E3%83%A9",
+                    "link": "https://www.youtube.com/@%E8%8B%A5%E6%88%B8%E5%A4%A7%E6%A9%8BLIVE%E3%82%AB%E3%83%A1%E3%83%A9/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E8%8B%A5%E6%88%B8%E5%A4%A7%E6%A9%8BLIVE%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 33.9028,
@@ -2286,13 +2232,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@TVQ7ch",
+                    "link": "https://www.youtube.com/@TVQ7ch/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@TVQ7ch/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=EkH8SihBx9E",
@@ -2319,13 +2261,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kanmon",
+                    "link": "https://www.youtube.com/@kanmon/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@kanmon/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=_r-g8wU-0o8",
@@ -2352,13 +2290,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@otari-gabutta",
+                    "link": "https://www.youtube.com/@otari-gabutta/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@otari-gabutta/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=UEhW0UQ5kiE",
@@ -2385,13 +2319,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@loveflightjack",
+                    "link": "https://www.youtube.com/@loveflightjack/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@loveflightjack/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7759,
@@ -2413,13 +2343,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@fujizoomnet3776",
+                    "link": "https://www.youtube.com/@fujizoomnet3776/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@fujizoomnet3776/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.1614,
@@ -2441,13 +2367,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@FM807MHz",
+                    "link": "https://www.youtube.com/@FM807MHz/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@FM807MHz/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=s--MDmshT3I",
@@ -2474,13 +2396,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@ttscch6163",
+                    "link": "https://www.youtube.com/@ttscch6163/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@ttscch6163/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6417,
@@ -2502,13 +2420,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@ODAIBATOKYO",
+                    "link": "https://www.youtube.com/@ODAIBATOKYO/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@ODAIBATOKYO/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6364,
@@ -2530,13 +2444,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@Livecamakiba",
+                    "link": "https://www.youtube.com/@Livecamakiba/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@Livecamakiba/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6989,
@@ -2570,13 +2480,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@STVhokkaido",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@STVhokkaido/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Hokkaido, Sapporo, Okurayama Ski Jump Stadium, Kitahiroshima, New Chitose Airport, Sapporo Station"
                 },
                 {
@@ -2616,13 +2522,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@VICENTEAGEMATSU",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@VICENTEAGEMATSU/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Mt. Fuji from Tokyo, Mt. Fuji summit, Mt. Fuji"
                 }
             ],
@@ -2657,13 +2559,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kyototouristspotlive",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@kyototouristspotlive/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "13 cameras on this channel"
                 }
             ],
@@ -2698,13 +2596,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E8%94%B5%E7%8E%8B%E7%B4%A2%E9%81%93%E5%8D%94%E4%BC%9A",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@%E8%94%B5%E7%8E%8B%E7%B4%A2%E9%81%93%E5%8D%94%E4%BC%9A/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "9 cameras on this channel"
                 },
                 {
@@ -2744,13 +2638,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@LIVECAMTraffic",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@LIVECAMTraffic/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Takebashi JCT, Gofukubashi JCT, Takaracho, Hamazakibashi JCT, Kasai, towards Ariake"
                 }
             ],
@@ -2773,13 +2663,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@ryuichishinnaga6853",
+                    "link": "https://www.youtube.com/@ryuichishinnaga6853/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@ryuichishinnaga6853/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=0PAnSx_u_a8",
@@ -2804,13 +2690,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6%E5%89%8D%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6%E5%89%8D%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6%E5%89%8D%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 38.2467,
@@ -2832,13 +2714,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E9%95%B7%E4%BA%95%E5%B8%82%E5%B9%B3%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E9%95%B7%E4%BA%95%E5%B8%82%E5%B9%B3%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E9%95%B7%E4%BA%95%E5%B8%82%E5%B9%B3%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 38.0983,
@@ -2860,13 +2738,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6671,
@@ -2888,13 +2762,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E7%9C%8C%E9%85%92%E7%94%B0%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96-m6q",
+                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E7%9C%8C%E9%85%92%E7%94%B0%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96-m6q/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E7%9C%8C%E9%85%92%E7%94%B0%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96-m6q/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 38.9288,
@@ -2916,13 +2786,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9",
+                    "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 37.3976,
@@ -2944,13 +2810,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%B8%82%E8%94%B5%E7%8E%8B%E4%B8%8A%E9%87%8E%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%B8%82%E8%94%B5%E7%8E%8B%E4%B8%8A%E9%87%8E%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%B8%82%E8%94%B5%E7%8E%8B%E4%B8%8A%E9%87%8E%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 38.1736,
@@ -2971,13 +2833,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kouji.d-sanyo-train-live-ch",
+                    "link": "https://www.youtube.com/@kouji.d-sanyo-train-live-ch/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@kouji.d-sanyo-train-live-ch/streams",
-                    "text": "Live stream page"
                 }
             ]
         },
@@ -3009,13 +2867,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@FlyingSuika",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@FlyingSuika/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "7 cameras on this channel"
                 },
                 {
@@ -3043,13 +2897,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@tetsunohako",
+                    "link": "https://www.youtube.com/@tetsunohako/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@tetsunohako/streams",
-                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=HeD0lx2Qm_k",
@@ -3076,13 +2926,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%97%A9%E7%A8%B2%E7%94%B0%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9",
+                    "link": "https://www.youtube.com/@%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%97%A9%E7%A8%B2%E7%94%B0%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%97%A9%E7%A8%B2%E7%94%B0%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7079,
@@ -3104,13 +2950,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%A4%AE%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%A4%AE%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%A4%AE%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6074,
@@ -3144,13 +2986,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@dcnextllc5177",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@dcnextllc5177/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Sasagawa Nagare roadside station, Sunset, Kujiranami Beach, Swans, Lake Hyoko, Sasagawa Nagare Yuhi Kaikan"
                 },
                 {
@@ -3190,13 +3028,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@KIN-TAKA",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@KIN-TAKA/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Naha New Port, airport north, Naha Port and airport runway, Naha Cruise Terminal, Tomari Bridge and Akebono"
                 }
             ],
@@ -3219,13 +3053,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%A4%A7%E9%98%AA%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E5%A4%A7%E9%98%AA%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%A4%A7%E9%98%AA%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 34.688,
@@ -3259,13 +3089,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@iinamicom",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@iinamicom/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Kushima Koigaura, Nichinan Umegahama, Aoshima, Kizakihama, Hitotsuba, Kawaminami Ikuragahama"
                 }
             ],
@@ -3294,13 +3120,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@4994land80",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@4994land80/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Weather station camera 3, Camera 1"
                 }
             ],
@@ -3323,13 +3145,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@NaritasanTemple",
+                    "link": "https://www.youtube.com/@NaritasanTemple/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@NaritasanTemple/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7863,
@@ -3357,13 +3175,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@kabukicho526",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@kabukicho526/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Ichibangai, Kabukicho 24h"
                 }
             ],
@@ -3386,13 +3200,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E4%B8%AD%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E4%B8%AD%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E4%B8%AD%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7078,
@@ -3414,13 +3224,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E9%85%92%E7%94%B0%E6%B8%AF%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E9%85%92%E7%94%B0%E6%B8%AF%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E9%85%92%E7%94%B0%E6%B8%AF%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 38.9176,
@@ -3442,13 +3248,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E5%B0%8F%E7%94%B0%E5%8E%9F%E6%A0%84%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E5%B0%8F%E7%94%B0%E5%8E%9F%E6%A0%84%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E5%B0%8F%E7%94%B0%E5%8E%9F%E6%A0%84%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 35.2539,
@@ -3470,13 +3272,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@%E7%86%8A%E8%B0%B7%E5%B8%82%E5%8E%9F%E5%B3%B6%E3%83%A9%E3%82%A4%E3%83%96",
+                    "link": "https://www.youtube.com/@%E7%86%8A%E8%B0%B7%E5%B8%82%E5%8E%9F%E5%B3%B6%E3%83%A9%E3%82%A4%E3%83%96/streams",
                     "text": "YouTube channel",
                     "kind": "home"
-                },
-                {
-                    "link": "https://www.youtube.com/@%E7%86%8A%E8%B0%B7%E5%B8%82%E5%8E%9F%E5%B3%B6%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page"
                 }
             ],
             "lat": 36.1665,
@@ -3510,13 +3308,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@taxichiba",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@taxichiba/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "5 cameras on this channel"
                 }
             ],
@@ -3551,13 +3345,9 @@
             ],
             "extras": [
                 {
-                    "link": "https://www.youtube.com/@WanganGo",
-                    "text": "YouTube channel",
-                    "kind": "home"
-                },
-                {
                     "link": "https://www.youtube.com/@WanganGo/streams",
-                    "text": "Live stream page",
+                    "text": "YouTube channel",
+                    "kind": "home",
                     "linkTitle": "Also: Miura Beach, Shuto Expressway, Shinonome JCT, Haneda Airport, Tokyo Bay lo-fi, Tokyo Gate Bridge and Ariake"
                 }
             ],
