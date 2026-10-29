@@ -901,7 +901,9 @@
                 }
             ],
             "tags": "trainlines, airport, sound",
-            "name": "JAPAN Railway and Airport LIVE (くまくまくま Kumakumakuma Channel) - Trainlines and Airport"
+            "name": "JAPAN Railway and Airport LIVE (くまくまくま Kumakumakuma Channel) - Trainlines and Airport",
+            "lat": 35.728,
+            "lng": 139.7714
         },
         {
             "isAlive": true,
@@ -1498,7 +1500,9 @@
                 }
             ],
             "tags": "shop, traffic",
-            "name": "ウミネコ商店 - Umineko Shouten cafe"
+            "name": "ウミネコ商店 - Umineko Shouten cafe",
+            "lat": 36.9627,
+            "lng": 140.8908
         },
         {
             "isAlive": true,
@@ -1659,7 +1663,9 @@
                 {
                     "text": "Live when checked (6): 葉山・富士山ライブカメラ 裕次郎灯台・江の島 波情報 \"mount fuji live camera\" from Hayama (Japan) / 山中湖からの「富士山ライブカメラ」 \"mount fuji live camera\" from Lake Yamanakako FUJISAN (Japan Y / 「富士山と新東名高速ライブカメラ」 View of Mt. Fuji & Shin-Tomei Expressway Live Camera / 河口湖からの「富士山ライブカメラ」\"mount fuji live camera\" from Lak"
                 }
-            ]
+            ],
+            "lat": 35.5233,
+            "lng": 138.7465
         },
         {
             "name": "箱根ターンパイク - Mt. Fuji & Lake Ashinoko from Daikanzan",
@@ -1692,7 +1698,9 @@
                     "text": "富士山・芦ノ湖ライブカメラ ～箱根大観山・アネスト岩田ターンパイク箱根より～ / Mt. Fuji and Lake Ashinoko Live Camera ",
                     "linkTitle": "Same link has been live nonstop since at least Sep 2023"
                 }
-            ]
+            ],
+            "lat": 35.1831,
+            "lng": 139.0462
         },
         {
             "name": "INC長野ケーブルテレビ - JR Nagano Station & Zenkoji Temple",
@@ -1734,7 +1742,9 @@
                 {
                     "text": "Live when checked (2): JR長野駅LIVEカメラ（JR Nagano Station Live Cam）INC長野ケーブルテレビ / 善光寺LIVEカメラ（Zenkoji Temple Live Cam) INC長野ケーブルテレビ"
                 }
-            ]
+            ],
+            "lat": 36.6441,
+            "lng": 138.1879
         },
         {
             "name": "ANNnewsCH - Shibuya Scramble Crossing & Haneda Airport",
@@ -1777,7 +1787,9 @@
                 {
                     "text": "Live when checked (3): 渋谷スクランブル交差点 / Shibuya Scramble Crossing Live CameraANN/テレ朝 / 羽田空港第2ターミナルを24時間配信中！ HANEDA,Tokyo International Airport Terminal2ANN/テレ朝 / “最強”だけが生まれるシロワニの静かな泳ぎ｜サメ好きの”聖地”から24時間ライブ配信！アクアワールド茨城県大洗水族館 24/7 Live Shark Cam"
                 }
-            ]
+            ],
+            "lat": 35.6595,
+            "lng": 139.7005
         },
         {
             "name": "笠置キャンプ場 - Kasagi Campsite",
@@ -1810,7 +1822,9 @@
                     "text": "笠置キャンプ場ライブカメラ／Kasagi campsite livecam",
                     "linkTitle": "Same link has been live nonstop since at least Jan 2024"
                 }
-            ]
+            ],
+            "lat": 34.759,
+            "lng": 135.9357
         },
         {
             "name": "船宿あみ清 - Asakusa, Sumida River & Skytree",
@@ -1852,7 +1866,9 @@
                 {
                     "text": "Live when checked (2): 2026-10-29 12:00 ～ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船 / ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船"
                 }
-            ]
+            ],
+            "lat": 35.7107,
+            "lng": 139.7976
         },
         {
             "name": "河津町ライブカメラ - Kawazu Town",
@@ -1894,7 +1910,9 @@
                 {
                     "text": "Live when checked (2): 河津町笹原公園ライブカメラ / 河津町ライブカメラ"
                 }
-            ]
+            ],
+            "lat": 34.7473,
+            "lng": 138.9966
         },
         {
             "name": "Tokyo Views LIVE - Odaiba & Tokyo Bay",
@@ -1942,7 +1960,9 @@
                 {
                     "text": "Live when checked (3): Odaiba Live Camera - Tokyo Aqua Symphony お台場ライブカメラ東京アクアシンフォニー 4K HDR LIVE / Odaiba Live Camera お台場ライブカメラ | Odaiba Beach & FUJI TV - 4K HDR LIVE / Tokyo Live Camera 東京ライブカメラ Tokyo Bay 4K with Lofi and soft Jazz BGM in 4K UHD"
                 }
-            ]
+            ],
+            "lat": 35.6311,
+            "lng": 139.7774
         },
         {
             "name": "東北新幹線 アルファライブ - Tohoku Shinkansen at Koriyama",
@@ -1979,7 +1999,9 @@
                 {
                     "text": "Live when checked (2): 🚄東北新幹線 郡山 LIVEREC ライブカメラ 鉄道 爆速 MAX320km/h Shinkansen TOHOKU🗾Japan / LIVE Shinkansen TOHOKU🗾JAPAN NONSTOP CAMERA 東北新幹線 郡山 ライブカメラ 鉄道 爆速 MAX320km/h bul"
                 }
-            ]
+            ],
+            "lat": 37.3985,
+            "lng": 140.3888
         },
         {
             "name": "テレビ愛媛 EBC - Shimanami Kaido, Matsuyama Airport & Ainan",
@@ -2037,7 +2059,9 @@
                 {
                     "text": "Live when checked (4): 宇和島市ライブカメラ / 愛南町ライブカメラ / 松山空港ライブカメラ / しまなみライブカメラ"
                 }
-            ]
+            ],
+            "lat": 33.8273,
+            "lng": 132.7013
         },
         {
             "name": "さいたま市鉄道ライブカメラ - Saitama City Railway",
@@ -2065,7 +2089,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.9064,
+            "lng": 139.6243
         },
         {
             "name": "トレインタイムス - Nagareyama Line, Matsudo",
@@ -2093,7 +2119,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.8286,
+            "lng": 139.92
         },
         {
             "name": "龍江地域づくりチャンネル - Ina Valley, JR Iida Line & Tenryu River",
@@ -2121,7 +2149,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.5188,
+            "lng": 137.8207
         },
         {
             "name": "阪神高速3号神戸線 京橋PA - Hanshin Expressway Kobe Line",
@@ -2149,7 +2179,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 34.685,
+            "lng": 135.1962
         },
         {
             "name": "テレビ和歌山 - Koyasan Information Cameras",
@@ -2191,7 +2223,9 @@
                 {
                     "text": "Live when checked (2): 串本町 情報カメラ／テレビ和歌山 / 高野山 情報カメラ／テレビ和歌山"
                 }
-            ]
+            ],
+            "lat": 34.2139,
+            "lng": 135.5837
         },
         {
             "name": "RKK NEWS DIG - Kumamoto Station, Airport & Aso",
@@ -2239,7 +2273,9 @@
                 {
                     "text": "Live when checked (7): 熊本駅白川口ライブカメラ / 熊本空港ライブカメラ / 熊本県天草市牛深町ライブカメラ / 熊本市内の風景 / 阿蘇ライブカメラ～阿蘇火山博物館・草千里～ / 人吉市内ライブカメラ / 熊本市内 白川ライブカメラ"
                 }
-            ]
+            ],
+            "lat": 32.7903,
+            "lng": 130.689
         },
         {
             "name": "ふじみ野太郎 - Kamifukuoka Station, Tobu Tojo Line",
@@ -2276,7 +2312,9 @@
                 {
                     "text": "Live when checked (2): ライブカメラ｜東武東上線 池袋方面 （2026/10/29 7:24-） / 東口ライブカメラ｜東武東上線 川越方面（2026/10/29 7:23-)"
                 }
-            ]
+            ],
+            "lat": 35.8739,
+            "lng": 139.5118
         },
         {
             "name": "若戸大橋 LIVEカメラ - Wakato Bridge, Kitakyushu",
@@ -2304,7 +2342,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 33.9028,
+            "lng": 130.8166
         },
         {
             "name": "テレQ - Hakata Port, Fukuoka",
@@ -2337,7 +2377,9 @@
                     "text": "テレＱ ライブ配信（福岡・博多港／たまに大博通） ※緊急時には映像を切り替え随時情報をお届けします。",
                     "linkTitle": "Same link has been live nonstop since at least Sep 2024"
                 }
-            ]
+            ],
+            "lat": 33.6043,
+            "lng": 130.3978
         },
         {
             "name": "SEA & SKY ch - Kanmon Strait from Mojiko",
@@ -2370,7 +2412,9 @@
                     "text": "関門海峡癒しの空間、関門海峡を（門司港から）ライブ配信中！ 船の汽笛が聴けるように生音での配信中！※チャット参加の方は概要欄一読を🙏",
                     "linkTitle": "Same link has been live nonstop since at least Sep 2024"
                 }
-            ]
+            ],
+            "lat": 33.9451,
+            "lng": 130.9615
         },
         {
             "name": "長野県小谷村CATV - Kamaike Pond, Otari",
@@ -2403,7 +2447,9 @@
                     "text": "小谷村鎌池ライブカメラ4K映像",
                     "linkTitle": "Same link has been live nonstop since at least Dec 2025"
                 }
-            ]
+            ],
+            "lat": 36.8692,
+            "lng": 137.9723
         },
         {
             "name": "Love Flight Jack - Narita Airport Plane Spotting",
@@ -2431,7 +2477,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.7759,
+            "lng": 140.3933
         },
         {
             "name": "霊峰富士山マツリチャンネル - Mt. Fuji from Fuji City",
@@ -2459,7 +2507,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.1614,
+            "lng": 138.6763
         },
         {
             "name": "FMいるか - Mt. Hakodate Ropeway Live Camera",
@@ -2492,7 +2542,9 @@
                     "text": "函館山ライブカメラ ／ Mt. Hakodate Ropeway Live Camera",
                     "linkTitle": "Same link has been live nonstop since at least Dec 2025"
                 }
-            ]
+            ],
+            "lat": 41.7592,
+            "lng": 140.7049
         },
         {
             "name": "TTSC CH - JR Chuo Line, Takao Station",
@@ -2520,7 +2572,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.6417,
+            "lng": 139.2816
         },
         {
             "name": "ODAIBA TOKYO LIVE - Rainbow Bridge & Odaiba",
@@ -2548,7 +2602,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.6364,
+            "lng": 139.7639
         },
         {
             "name": "North Akihabara Live Camera - Akihabara Station",
@@ -2576,7 +2632,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.6989,
+            "lng": 139.774
         },
         {
             "name": "STV札幌テレビ放送 - Sapporo Station, New Chitose Airport & more",
@@ -2624,7 +2682,9 @@
                 {
                     "text": "Live when checked (6): ライブカメラ 北海道(ＳＴＶ札幌テレビ放送)/LiveCamera Hokkaido Japan / いまの札幌 ライブカメラ（STV札幌テレビ放送）北海道札幌市中央区 /Live Camera Sapporo , Hokkaido / ライブカメラ 大倉山ジャンプ競技場 山頂展望台(STV札幌テレビ放送)北海道札幌市中央区宮の森 /Live Camera Okurayama Ski Jump  / ライブカメラ 北広島市（STV札幌テレビ放送）北海道北広島市／Live Camera Kitahirosima City, Hokkaido / ライブカメ"
                 }
-            ]
+            ],
+            "lat": 43.0687,
+            "lng": 141.3508
         },
         {
             "name": "VICENTE AGEMATSU - Mt. Fuji Live Cameras",
@@ -2667,7 +2727,9 @@
                 {
                     "text": "Live when checked (3): TOKYO LIVE CAMERA. Mt'Fuji from Tokyo 富士山 紅富士 赤富士 東京からの富士山 #東京ライブカメラ #富士山東京 #東京夜 / 赤富士パワーを毎日お届け。\"LIVE from Mt\"Fuji summit\" #富士山頂ライブカメラ #ペルセウス座流星群 #perseidmeteorsho / 赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#赤"
                 }
-            ]
+            ],
+            "lat": 35.3628,
+            "lng": 138.7308
         },
         {
             "name": "京都観光混雑状況Live - Kyoto Temples & Shrines",
@@ -2710,7 +2772,9 @@
                 {
                     "text": "Live when checked (13): 京都 城南宮ライブ中継カメラ／Jonangu Shrine, Kyoto Live camera / 京都 神護寺ライブ中継カメラ／Jingoji Temple, Kyoto Live camera / 京都 大原野神社ライブ中継カメラ／Oharano-jinja Shrine, Kyoto Live camera / 京都 寂光院ライブ中継カメラ／Jakkoin Temple, Kyoto Live camera / 京都 醍醐寺ライブ中継カメラ／Daigoji Temple, Kyoto Live camera / 京都 道の駅ウッディー京北ライブ中"
                 }
-            ]
+            ],
+            "lat": 34.9853,
+            "lng": 135.7588
         },
         {
             "name": "蔵王索道協会 - Zao Ropeway & Ski Slopes",
@@ -2758,7 +2822,9 @@
                 {
                     "text": "Live when checked (9): 蔵王ロープウェイ駐車場ライブカメラ / 蔵王サンライズライブカメラ / 樹氷高原駅舎ライブカメラ / 中央ゲレンデライブカメラ / 大森駐車場ライブカメラ / 横倉ゲレンデライブカメラ / 中央ロープウェイ第一駐車場ライブカメラ / 上の台第一駐車場ライブカメラ / JUPEERゲレンデライブカメラ"
                 }
-            ]
+            ],
+            "lat": 38.1611,
+            "lng": 140.3947
         },
         {
             "name": "交通情報ライブカメラCH - Shuto Expressway, Tokyo",
@@ -2801,7 +2867,9 @@
                 {
                     "text": "Live when checked (5): 首都高 都心環状線 竹橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 都心環状線 呉服橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 都心環状線 宝町付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 1号羽田線 浜崎橋JCT ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ /"
                 }
-            ]
+            ],
+            "lat": 35.6839,
+            "lng": 139.7691
         },
         {
             "name": "白山通り交差点 - Hakusan-dori Intersection",
@@ -2862,7 +2930,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 38.2467,
+            "lng": 140.3481
         },
         {
             "name": "長井市平山 - Hirayama, Nagai",
@@ -2890,7 +2960,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 38.0983,
+            "lng": 140.0048
         },
         {
             "name": "新橋駅新幹線ライブカメラ - Shimbashi, Tokyo",
@@ -2918,7 +2990,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.6671,
+            "lng": 139.7596
         },
         {
             "name": "酒田市下安町 - Shimoyasucho, Sakata",
@@ -2946,7 +3020,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 38.9288,
+            "lng": 139.8563
         },
         {
             "name": "郡山市豊田町 - Toyodamachi, Koriyama",
@@ -2974,7 +3050,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 37.3976,
+            "lng": 140.3662
         },
         {
             "name": "山形市蔵王大鳥居前 - Zao Great Torii, Yamagata",
@@ -3002,7 +3080,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 38.1736,
+            "lng": 140.3321
         },
         {
             "name": "JR山陽本線ライブ鉄道チャンネル - JR Sanyo Main Line",
@@ -3077,7 +3157,9 @@
                 {
                     "text": "Live when checked (7): 材木座海岸／由比ガ浜 ／県営材木座駐車場＠ローカス鎌倉：by HviewCam / 海岸線ズーム / 海岸線：by HviewCam / 逗子海岸ワイド：by HviewCam / 江の島ズーム ：Enoshima LiveCamera 24Hours：by HviewCam / 片瀬海岸東浜 ：Enoshima LiveCamera 24Hoursby HviewCam / 腰越海岸：Enoshima LiveCamera 24Hoursby HviewCam"
                 }
-            ]
+            ],
+            "lat": 35.3001,
+            "lng": 139.4806
         },
         {
             "name": "鉄の箱 - Kasadera Station, Nagoya (freight & Shinkansen)",
@@ -3110,7 +3192,9 @@
                     "text": "鉄の箱の笠寺駅ライブカメラ‼ 貨物列車と新幹線いろいろいっぱい‼ メンバーシップ様以外のスクショを厳重にお断りします‼",
                     "linkTitle": "Same link has been live nonstop since at least Aug 2025"
                 }
-            ]
+            ],
+            "lat": 35.0963,
+            "lng": 136.9268
         },
         {
             "name": "新宿区西早稲田 - Nishi-Waseda, Shinjuku",
@@ -3138,7 +3222,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.7079,
+            "lng": 139.709
         },
         {
             "name": "千葉市中央区中央 - Chuo, Chiba",
@@ -3166,7 +3252,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.6074,
+            "lng": 140.1066
         },
         {
             "name": "Sora Irodori Weather Channel - Sasagawa Nagare, Niigata",
@@ -3214,7 +3302,9 @@
                 {
                     "text": "Live when checked (4): 新潟県・道の駅 笹川流れライブチャンネル＋外部マイク ※晴れた日には粟島の島影も御覧いただけます ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 日本海に沈む美しい夕日 ライブチャンネル（新潟県・鯨波海岸)＋BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 白鳥（新潟県国指定瓢湖鳥獣保護区）Liveチャンネル ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 新潟県・笹川流れ 夕日会館 Liveチャンネル+BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆"
                 }
-            ]
+            ],
+            "lat": 38.375,
+            "lng": 139.4583
         },
         {
             "name": "KIN-TAKA - Naha Port & Airport, Okinawa",
@@ -3257,7 +3347,9 @@
                 {
                     "text": "Live when checked (4): 沖縄ライブカメラ同時モニター那覇新港 那覇空港北側 那覇市 ライブ カメラ NAHA OKINAWA port 泊港入口 那覇クルーズターミナル / 沖縄ライブ カメラ 那覇市 那覇新港 那覇空港 滑走路北側 OKINAWA NAHA PORT LIVE / HAKUREI🟪🚢⚓️ 沖縄ライブカメラ 那覇クルーズターミナル 沖縄県 那覇市 泊港入口 波の上 若狭 NAHA Port OKINAWA / 💙沖縄ライブカメラ 那覇市 泊大橋～曙 渋滞状況 沖縄県 NAHA OKINAWA Tomari Bridge 那覇新港"
                 }
-            ]
+            ],
+            "lat": 26.2337,
+            "lng": 127.6774
         },
         {
             "name": "大阪市鶴見区放出 - Hanazono, Tsurumi, Osaka",
@@ -3285,7 +3377,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 34.688,
+            "lng": 135.563
         },
         {
             "name": "ii-nami.com - Miyazaki Surf Cameras",
@@ -3328,7 +3422,9 @@
                 {
                     "text": "Live when checked (6): 串間市恋ヶ浦ライブカメラ / 日南市梅ヶ浜ライブカメラ / 宮崎市青島ライブカメラ / 宮崎市木崎浜ライブカメラ / 宮崎市一ツ葉ライブカメラ / 川南町伊倉ヶ浜ライブカメラ"
                 }
-            ]
+            ],
+            "lat": 31.7997,
+            "lng": 131.467
         },
         {
             "name": "諏訪湖八ヶ岳ライブカメラ - Lake Suwa & Yatsugatake",
@@ -3365,7 +3461,9 @@
                 {
                     "text": "Live when checked (2): ４Ｋ諏訪湖・八ヶ岳ライブ気象情報カメラ３｜Weather Station Live｜長野県諏訪盆地 2026/10/29 05:06 / ４Ｋ諏訪湖・八ヶ岳ライブカメラ１｜信州 諏訪盆地｜Nagano Japan 2026/10/29 05:00"
                 }
-            ]
+            ],
+            "lat": 36.0479,
+            "lng": 138.0833
         },
         {
             "name": "成田山新勝寺 - Naritasan Shinshoji Temple",
@@ -3393,7 +3491,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.7863,
+            "lng": 140.3172
         },
         {
             "name": "歌舞伎町ゴジラ前ライブ - Kabukicho Ichibangai (Godzilla)",
@@ -3430,7 +3530,9 @@
                 {
                     "text": "Live when checked (2): 歌舞伎町一番街LIVEカメラ / 新宿 歌舞伎町LIVE 東京 Tokyo Kabukicho Shinjuku Japan 24時間ライブ"
                 }
-            ]
+            ],
+            "lat": 35.6954,
+            "lng": 139.702
         },
         {
             "name": "武蔵野市中町 - Nakacho, Musashino",
@@ -3458,7 +3560,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.7078,
+            "lng": 139.5653
         },
         {
             "name": "酒田市船場町 酒田港 - Sakata Port",
@@ -3486,7 +3590,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 38.9176,
+            "lng": 139.8288
         },
         {
             "name": "小田原市栄町 - Sakaecho, Odawara",
@@ -3514,7 +3620,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 35.2539,
+            "lng": 139.1576
         },
         {
             "name": "熊谷市原島 - Harajima, Kumagaya",
@@ -3542,7 +3650,9 @@
                     "text": "Live stream page",
                     "linkTitle": "All current and past streams of this channel"
                 }
-            ]
+            ],
+            "lat": 36.1665,
+            "lng": 139.3716
         },
         {
             "name": "千葉県タクシー協会京葉支部 - JR Motoyawata Station North Exit",
@@ -3585,7 +3695,9 @@
                 {
                     "text": "Live when checked (5): JR本八幡駅北口ライブカメラ 本八幡駅側 LIVECAMERA livestream webcam 電車 鉄道カメラ train station JAPAN 交 / JR本八幡駅北口タクシー乗り場ライブカメラ JAPAN LIVECAMERA MOTOYAWATA STATION / 東武鎌ヶ谷駅タクシー乗り場ライブカメラ JAPAN KAMAGAYA STATION LIVECAMERA livestream / 東武鎌ヶ谷駅ライブカメラ タクシー乗り場 JAPAN KAMAGAYA STATION TAXI POOL livecamera lives"
                 }
-            ]
+            ],
+            "lat": 35.7207,
+            "lng": 139.9277
         },
         {
             "name": "WanganGo - Miura Beach, Shuto Expressway & Haneda Airport",
@@ -3628,7 +3740,9 @@
                 {
                     "text": "Live when checked (5): 三浦海岸ライブカメラ 24時間 波の音・海・睡眠・作業用 | Miura Beach Live Cam Japan / 首都高ライブカメラ 4K 🚗 湾岸線・東雲JCT | Tokyo Highway Live Cam / 羽田空港ライブカメラ ✈️ 飛行機・東京湾 | Haneda Airport Live Cam Tokyo / 東京湾岸Lo-fiライブカメラ 24/7 🌙 夜景・作業用BGM | Tokyo Lo-fi Radio / 東京湾ライブカメラ 4K 🌃 東京ゲートブリッジ・有明 | Tokyo Bay Live Cam City Lig"
                 }
-            ]
+            ],
+            "lat": 35.1882,
+            "lng": 139.6533
         }
     ]
 }
