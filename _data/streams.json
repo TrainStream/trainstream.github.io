@@ -4,10 +4,11 @@
         {
             "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
-            "tags": "trainstation, bridge, scenery, localline, onsen, snow, other",
+            "tags": "trainstation, bridge, scenery, localline, onsen, snow, other, multicam",
             "region": "Fukushima",
             "lat": 37.2933,
             "lng": 139.9161,
+            "cameras": 5,
             "images": [
                 {
                     "src": "/pictures/1.jpg",
@@ -62,10 +63,11 @@
         {
             "name": "別所温泉駅 Bessho-Onsen Station/Ueda Cable Vision Cameras",
             "isAlive": true,
-            "tags": "trainstation, shrine, bridge, scenery, shop, other, localline, onsen",
+            "tags": "trainstation, shrine, bridge, scenery, shop, other, localline, onsen, multicam",
             "region": "Nagano",
             "lat": 36.3563,
             "lng": 138.1597,
+            "cameras": 40,
             "images": [
                 {
                     "src": "/pictures/2.jpg",
@@ -146,6 +148,7 @@
             "name": "Kabukicho (original)",
             "isAlive": false,
             "tags": "street",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/6.jpg",
@@ -241,6 +244,7 @@
             "region": "Nagasaki",
             "lat": 32.7503,
             "lng": 129.8779,
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/9.jpg",
@@ -275,10 +279,11 @@
         {
             "name": "JR帯広駅ライブカメラ JR Obihiro Station, Hokkaido (and 3 others)",
             "isAlive": true,
-            "tags": "trainstation, traffic, bridge, airport, snow, river",
+            "tags": "trainstation, traffic, bridge, airport, snow, river, multicam",
             "region": "Hokkaido",
             "lat": 42.9177,
             "lng": 143.2047,
+            "cameras": 4,
             "images": [
                 {
                     "src": "/pictures/16.jpg",
@@ -320,6 +325,7 @@
             "region": "Kyoto",
             "lat": 34.92,
             "lng": 135.73,
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/8.jpg",
@@ -362,10 +368,11 @@
         {
             "name": "JR中央線　豊田駅～日野駅間 JR Chuo Line Toyoda~Hino Station, Tokyo",
             "isAlive": true,
-            "tags": "trainlines, sound",
+            "tags": "trainlines, sound, multicam",
             "region": "Tokyo",
             "lat": 35.665,
             "lng": 139.395,
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/21.jpg",
@@ -398,6 +405,7 @@
             "region": "Osaka",
             "lat": 34.7335,
             "lng": 135.5002,
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/22.jpg",
@@ -417,10 +425,11 @@
         {
             "name": "北陸新幹線　金沢駅ライブカメラ　Kanazawa Station, Ishikawa | 金沢港ライブカメラ Kanazawa Port",
             "isAlive": true,
-            "tags": "trainlines, city, traffic, bridge, seaport, shore, shinkansen",
+            "tags": "trainlines, city, traffic, bridge, seaport, shore, shinkansen, multicam",
             "region": "Ishikawa",
             "lat": 36.5781,
             "lng": 136.648,
+            "cameras": 7,
             "images": [
                 {
                     "src": "/pictures/23.jpg",
@@ -500,6 +509,7 @@
             "region": "Hyogo",
             "lat": 35.6303,
             "lng": 134.6288,
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/13.jpg",
@@ -518,10 +528,11 @@
         {
             "name": "Soemon-cho, Osaka (oposite side of Dotonbori)",
             "isAlive": false,
-            "tags": "street",
+            "tags": "street, multicam",
             "region": "Osaka",
             "lat": 34.669,
             "lng": 135.502,
+            "cameras": 9,
             "images": [
                 {
                     "src": "/pictures/15.jpg",
@@ -544,10 +555,11 @@
         {
             "name": "Okinawa Times",
             "isAlive": true,
-            "tags": "street, traffic, city",
+            "tags": "street, traffic, city, multicam",
             "region": "Okinawa",
             "lat": 26.2145,
             "lng": 127.6792,
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/26.jpg",
@@ -626,10 +638,11 @@
                     "text": "Osaka skyline scenery, recommended viewing during sunrise and sunset."
                 }
             ],
-            "tags": "city, scenery, traffic, nightview",
+            "tags": "city, scenery, traffic, nightview, multicam",
             "region": "Osaka",
             "lat": 34.6937,
             "lng": 135.5023,
+            "cameras": 6,
             "name": "Osaka Sky Livecam"
         },
         {
@@ -654,15 +667,17 @@
             "region": "Tokyo",
             "lat": 35.673,
             "lng": 139.817,
+            "cameras": 1,
             "name": "弁当屋さんのライブカメラ キッチンDIVE - Live camera from a bento shop in Koto-ku, Tokyo"
         },
         {
             "name": "JR Chuo Main Line Live Camera 中央本線 (Kasugai-cho ⇔ Isiwa Onsen)",
             "isAlive": true,
-            "tags": "trainlines, sound",
+            "tags": "trainlines, sound, multicam",
             "region": "Yamanashi",
             "lat": 35.662,
             "lng": 138.639,
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/theDramaticCrossing1.jpg",
@@ -707,6 +722,7 @@
             "region": "Ehime",
             "lat": 33.852,
             "lng": 132.786,
+            "cameras": 1,
             "name": "Dogo Onsen"
         },
         {
@@ -738,10 +754,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "city, traffic, other, sound",
+            "tags": "city, traffic, other, sound, multicam",
             "region": "Shizuoka",
             "lat": 34.7037,
             "lng": 137.735,
+            "cameras": 9,
             "name": "ZaZa magazine - Various views of the city of Hamamatsu"
         },
         {
@@ -763,6 +780,7 @@
             ],
             "tags": "trainlines, sound, snow",
             "region": "Hokkaido",
+            "cameras": 1,
             "name": "Hakodate Main Line"
         },
         {
@@ -786,6 +804,7 @@
             "region": "Hyogo",
             "lat": 34.793,
             "lng": 135.355,
+            "cameras": 1,
             "name": "阪急電車 阪急今津線 小林駅 Japan Train Hankyu Imazu Line Obayashi Station"
         },
         {
@@ -810,6 +829,7 @@
             "region": "Tokyo",
             "lat": 35.711,
             "lng": 139.7967,
+            "cameras": 1,
             "name": "浅草（ASAKUSA）のライブカメラ／浅草中屋 (ASAKUSA NAKAYA) 屋上よりの映像"
         },
         {
@@ -833,6 +853,7 @@
             "region": "Tokyo",
             "lat": 35.6918,
             "lng": 139.7709,
+            "cameras": 1,
             "name": "神田駅北口ライブカメラ Tokyo Kanda Live Camera"
         },
         {
@@ -865,10 +886,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "scenery, shore, city, sound, mountain",
+            "tags": "scenery, shore, city, sound, mountain, multicam",
             "region": "Kagoshima",
             "lat": 31.5966,
             "lng": 130.5571,
+            "cameras": 5,
             "name": "Active volcano Sakurajima and Kagoshima City, Kagoshima Prefecture"
         },
         {
@@ -907,7 +929,8 @@
                     "linkTitle": "Nippori and Mukomachi rail cameras"
                 }
             ],
-            "tags": "trainlines, airport, sound",
+            "tags": "trainlines, airport, sound, multicam",
+            "cameras": 2,
             "name": "JAPAN Railway and Airport LIVE (くまくまくま Kumakumakuma Channel) - Trainlines and Airport",
             "lat": 35.728,
             "lng": 139.7714
@@ -957,6 +980,7 @@
             "region": "Osaka",
             "lat": 34.6687,
             "lng": 135.5013,
+            "cameras": 1,
             "name": "大阪 道頓堀 ライブカメラ Osaka Dotonbori live camera"
         },
         {
@@ -989,10 +1013,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainlines, city, sound",
+            "tags": "trainlines, city, sound, multicam",
             "region": "Osaka",
             "lat": 34.684,
             "lng": 135.522,
+            "cameras": 3,
             "name": "Osaka Loop Line Live Camera"
         },
         {
@@ -1099,10 +1124,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "scenery, other, mountain",
+            "tags": "scenery, other, mountain, multicam",
             "region": "Shizuoka / Yamanashi",
             "lat": 35.3606,
             "lng": 138.7274,
+            "cameras": 15,
             "name": "Views of the Legendary Mount Fuji"
         },
         {
@@ -1132,6 +1158,7 @@
             "region": "Tokyo",
             "lat": 35.6812,
             "lng": 139.7671,
+            "cameras": 2,
             "name": "日テレNEWS - Views of Tokyo Station, Haneda Airport and more"
         },
         {
@@ -1152,19 +1179,21 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainstation, trainlines, sound",
+            "tags": "trainstation, trainlines, sound, multicam",
             "region": "Tokyo",
             "lat": 35.7356,
             "lng": 139.6517,
+            "cameras": 2,
             "name": "うめたくん - Seibu Ikebukuro Line, Tokyo"
         },
         {
             "name": "Kabukicho Red-Light District, Tokyo",
             "isAlive": true,
-            "tags": "street, nightview",
+            "tags": "street, nightview, multicam",
             "region": "Tokyo",
             "lat": 35.6945,
             "lng": 139.7035,
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/Shinjuku_kabukicho1.jpg",
@@ -1225,6 +1254,7 @@
             "region": "Tokyo",
             "lat": 35.6909,
             "lng": 139.7003,
+            "cameras": 1,
             "name": "Tokyo Shinjuku Live Camera"
         },
         {
@@ -1283,6 +1313,7 @@
             "region": "Fukui",
             "lat": 36.0641,
             "lng": 136.2196,
+            "cameras": 6,
             "name": "FBC 福井放送公式チャンネル - Various Views Around Fukui Prefecture"
         },
         {
@@ -1323,6 +1354,7 @@
             ],
             "tags": "trainstation, street, city, airport, scenery, multicam",
             "region": "Various",
+            "cameras": 11,
             "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan"
         },
         {
@@ -1361,10 +1393,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainlines, street, traffic, city, shore, sound",
+            "tags": "trainlines, street, traffic, city, shore, sound, multicam",
             "region": "Kanagawa",
             "lat": 35.309,
             "lng": 139.5,
+            "cameras": 3,
             "name": "Live Camera Shonan Kamakura Japan"
         },
         {
@@ -1389,6 +1422,7 @@
             "region": "Tokyo",
             "lat": 35.6984,
             "lng": 139.7731,
+            "cameras": 1,
             "name": "オノデンch - Akihabara Live Camera"
         },
         {
@@ -1408,10 +1442,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainstation, trainlines, localline, snow",
+            "tags": "trainstation, trainlines, localline, snow, multicam",
             "region": "Niigata",
             "lat": 38.059,
             "lng": 139.408,
+            "cameras": 2,
             "name": "中条駅観光交流室 - Nakajo Station, City of Tainai, Niigata"
         },
         {
@@ -1436,6 +1471,7 @@
             "region": "Nagano",
             "lat": 35.5196,
             "lng": 137.8217,
+            "cameras": 1,
             "name": "飯田ケーブルテレビ飯田駅ホームライブカメラ のライブ配信 - Iida Station, Nagano Pref."
         },
         {
@@ -1456,10 +1492,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainstation, traffic, city",
+            "tags": "trainstation, traffic, city, multicam",
             "region": "Hiroshima",
             "lat": 34.404,
             "lng": 132.461,
+            "cameras": 2,
             "name": "上野学園ホール - Hakushima Station, Hiroshima"
         },
         {
@@ -1484,6 +1521,7 @@
             "region": "Fukushima",
             "lat": 37.48,
             "lng": 139.963,
+            "cameras": 1,
             "name": "会津 東山温泉 向瀧 中庭 ライブカメラ/Aizu Higashiyama Spa MUKAITAKI"
         },
         {
@@ -1504,7 +1542,8 @@
                     "kind": "home"
                 }
             ],
-            "tags": "shop, traffic",
+            "tags": "shop, traffic, multicam",
+            "cameras": 3,
             "name": "ウミネコ商店 - Umineko Shouten cafe",
             "lat": 36.9627,
             "lng": 140.8908
@@ -1531,6 +1570,7 @@
             "region": "Hyogo",
             "lat": 34.737,
             "lng": 135.414,
+            "cameras": 1,
             "name": "鉄道ライブカメラ 阪急神戸線 武庫之荘駅 - Hankyu Kobe Line Live Camera, Mukonosho Station"
         },
         {
@@ -1565,6 +1605,7 @@
             ],
             "tags": "trainlines, city, scenery, multicam",
             "region": "Various",
+            "cameras": 5,
             "name": "共同通信LiveCamera - Kyodo News Live Camera"
         },
         {
@@ -1591,10 +1632,11 @@
                     "kind": "home"
                 }
             ],
-            "tags": "trainstation, trainlines, scenery, shore, localline",
+            "tags": "trainstation, trainlines, scenery, shore, localline, multicam",
             "region": "Ishikawa",
             "lat": 37.231,
             "lng": 136.91,
+            "cameras": 4,
             "name": "穴水町公式チャンネル - Anamizu Town Official Channel"
         },
         {
@@ -1618,6 +1660,7 @@
             "region": "Tokyo",
             "lat": 35.778,
             "lng": 139.721,
+            "cameras": 1,
             "name": "Tokyo Akabane Live Camera"
         },
         {
@@ -1626,6 +1669,7 @@
             "tags": "scenery, mountain, multicam",
             "region": "Yamanashi",
             "addedAt": "2026-10-29",
+            "cameras": 6,
             "images": [
                 {
                     "src": "/pictures/yt-tuNC0ot0j9I.jpg",
@@ -1673,6 +1717,7 @@
             "tags": "scenery, mountain",
             "region": "Kanagawa",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-maMMEh-2Bsk.jpg",
@@ -1702,6 +1747,7 @@
             "tags": "trainstation, shrine, multicam",
             "region": "Nagano",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt--LxeC1RhMrU.jpg",
@@ -1738,6 +1784,7 @@
             "tags": "street, traffic, city, airport, multicam",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/yt-5B4LmH4JbnY.jpg",
@@ -1769,6 +1816,7 @@
             "tags": "scenery, river",
             "region": "Kyoto",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-jp8YydpqWJA.jpg",
@@ -1798,6 +1846,7 @@
             "tags": "city, river, scenery",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-hW9BAP5cbHc.jpg",
@@ -1831,9 +1880,10 @@
         {
             "name": "河津町ライブカメラ - Kawazu Town",
             "isAlive": true,
-            "tags": "scenery, other",
+            "tags": "scenery, other, multicam",
             "region": "Shizuoka",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt-jX46WOhWAFo.jpg",
@@ -1867,9 +1917,10 @@
         {
             "name": "Tokyo Views LIVE - Odaiba & Tokyo Bay",
             "isAlive": true,
-            "tags": "city, bridge, shore, nightview",
+            "tags": "city, bridge, shore, nightview, multicam",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/yt-GJhnjzX5xYI.jpg",
@@ -1912,6 +1963,7 @@
             "tags": "trainlines, shinkansen",
             "region": "Fukushima",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-PJLOkY8I-P8.jpg",
@@ -1943,6 +1995,7 @@
             "tags": "airport, bridge, scenery, multicam",
             "region": "Ehime",
             "addedAt": "2026-10-29",
+            "cameras": 4,
             "images": [
                 {
                     "src": "/pictures/yt-aJcTvBuj5AA.jpg",
@@ -1995,6 +2048,7 @@
             "tags": "trainlines, city",
             "region": "Saitama",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-K8G9ck6niWw.jpg",
@@ -2019,6 +2073,7 @@
             "tags": "trainlines, localline, river",
             "region": "Chiba",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-01voRQGraaE.jpg",
@@ -2043,6 +2098,7 @@
             "tags": "trainlines, localline, scenery, river",
             "region": "Nagano",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-iYsVI17IrEM.jpg",
@@ -2067,6 +2123,7 @@
             "tags": "traffic, city",
             "region": "Hyogo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-VJ6mknbUOWg.jpg",
@@ -2091,6 +2148,7 @@
             "tags": "shrine, mountain, multicam",
             "region": "Wakayama",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt-QPFEvMS-LoU.jpg",
@@ -2127,6 +2185,7 @@
             "tags": "trainstation, airport, city, scenery, multicam",
             "region": "Kumamoto",
             "addedAt": "2026-10-29",
+            "cameras": 7,
             "images": [
                 {
                     "src": "/pictures/yt-Mfq_QtuyrYI.jpg",
@@ -2166,9 +2225,10 @@
         {
             "name": "ふじみ野太郎 - Kamifukuoka Station, Tobu Tojo Line",
             "isAlive": true,
-            "tags": "trainstation, trainlines",
+            "tags": "trainstation, trainlines, multicam",
             "region": "Saitama",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt-1QHnFRwdC88.jpg",
@@ -2200,6 +2260,7 @@
             "tags": "bridge, seaport, traffic",
             "region": "Fukuoka",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-L-S83ttJYo8.jpg",
@@ -2224,6 +2285,7 @@
             "tags": "seaport, city",
             "region": "Fukuoka",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-EkH8SihBx9E.jpg",
@@ -2253,6 +2315,7 @@
             "tags": "seaport, shore",
             "region": "Fukuoka",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-_r-g8wU-0o8.jpg",
@@ -2282,6 +2345,7 @@
             "tags": "scenery, mountain",
             "region": "Nagano",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-UEhW0UQ5kiE.jpg",
@@ -2311,6 +2375,7 @@
             "tags": "airport",
             "region": "Chiba",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-gCxnhv7-IEI.jpg",
@@ -2335,6 +2400,7 @@
             "tags": "scenery, mountain",
             "region": "Shizuoka",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-XrD1uwcAlnY.jpg",
@@ -2359,6 +2425,7 @@
             "tags": "city, nightview, scenery, mountain",
             "region": "Hokkaido",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-s--MDmshT3I.jpg",
@@ -2388,6 +2455,7 @@
             "tags": "trainstation, trainlines",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-9_bsMcIIt7c.jpg",
@@ -2412,6 +2480,7 @@
             "tags": "city, bridge, shore, nightview",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-hlbh4P0Mz8M.jpg",
@@ -2436,6 +2505,7 @@
             "tags": "trainlines, street, city",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-StEb8dHM5_A.jpg",
@@ -2460,6 +2530,7 @@
             "tags": "trainstation, airport, city, snow, multicam",
             "region": "Hokkaido",
             "addedAt": "2026-10-29",
+            "cameras": 6,
             "images": [
                 {
                     "src": "/pictures/yt-DWTW3yqK5kU.jpg",
@@ -2499,9 +2570,10 @@
         {
             "name": "VICENTE AGEMATSU - Mt. Fuji Live Cameras",
             "isAlive": true,
-            "tags": "scenery, mountain",
+            "tags": "scenery, mountain, multicam",
             "region": "Shizuoka / Yamanashi",
             "addedAt": "2026-10-29",
+            "cameras": 3,
             "images": [
                 {
                     "src": "/pictures/yt-qKlFk02P9FY.jpg",
@@ -2539,6 +2611,7 @@
             "tags": "shrine, street, multicam",
             "region": "Kyoto",
             "addedAt": "2026-10-29",
+            "cameras": 13,
             "images": [
                 {
                     "src": "/pictures/yt-5hlP34DHcFk.jpg",
@@ -2576,6 +2649,7 @@
             "tags": "snow, mountain, multicam",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 9,
             "images": [
                 {
                     "src": "/pictures/yt-Rs4CcR79sWA.jpg",
@@ -2618,6 +2692,7 @@
             "tags": "traffic, city, multicam",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 5,
             "images": [
                 {
                     "src": "/pictures/yt-rSmabvVE0zU.jpg",
@@ -2655,6 +2730,7 @@
             "tags": "street, traffic",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-0PAnSx_u_a8.jpg",
@@ -2682,6 +2758,7 @@
             "tags": "street, city",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-Pzc-Ipu3g2Q.jpg",
@@ -2706,6 +2783,7 @@
             "tags": "street",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-49lllbOST0k.jpg",
@@ -2730,6 +2808,7 @@
             "tags": "trainlines, shinkansen, city",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-iQ1BQARsMYA.jpg",
@@ -2754,6 +2833,7 @@
             "tags": "street",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-nfoA5nwV14U.jpg",
@@ -2778,6 +2858,7 @@
             "tags": "street",
             "region": "Fukushima",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-0uumDOVqm-Q.jpg",
@@ -2802,6 +2883,7 @@
             "tags": "street, scenery",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-utnJTWdiU1c.jpg",
@@ -2825,6 +2907,7 @@
             "isAlive": true,
             "tags": "trainlines",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-d0gP7v70mJ8.jpg",
@@ -2847,6 +2930,7 @@
             "tags": "shore, scenery, multicam",
             "region": "Kanagawa",
             "addedAt": "2026-10-29",
+            "cameras": 7,
             "images": [
                 {
                     "src": "/pictures/yt-Z9Q9akr7QSE.jpg",
@@ -2889,6 +2973,7 @@
             "tags": "trainstation, trainlines, shinkansen",
             "region": "Aichi",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-HeD0lx2Qm_k.jpg",
@@ -2918,6 +3003,7 @@
             "tags": "street, city",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-kAyosmWlJko.jpg",
@@ -2942,6 +3028,7 @@
             "tags": "street, city",
             "region": "Chiba",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-PQohzzQ554I.jpg",
@@ -2963,9 +3050,10 @@
         {
             "name": "Sora Irodori Weather Channel - Sasagawa Nagare, Niigata",
             "isAlive": true,
-            "tags": "shore, scenery",
+            "tags": "shore, scenery, multicam",
             "region": "Niigata",
             "addedAt": "2026-10-29",
+            "cameras": 4,
             "images": [
                 {
                     "src": "/pictures/yt--hyYkoP0RBU.jpg",
@@ -3008,6 +3096,7 @@
             "tags": "seaport, airport, city, multicam",
             "region": "Okinawa",
             "addedAt": "2026-10-29",
+            "cameras": 4,
             "images": [
                 {
                     "src": "/pictures/yt-IEjBM0YD8go.jpg",
@@ -3045,6 +3134,7 @@
             "tags": "trainstation, street",
             "region": "Osaka",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-WtCA1QxwoII.jpg",
@@ -3069,6 +3159,7 @@
             "tags": "shore, scenery, multicam",
             "region": "Miyazaki",
             "addedAt": "2026-10-29",
+            "cameras": 6,
             "images": [
                 {
                     "src": "/pictures/yt-dGlRWKipLh4.jpg",
@@ -3103,9 +3194,10 @@
         {
             "name": "諏訪湖八ヶ岳ライブカメラ - Lake Suwa & Yatsugatake",
             "isAlive": true,
-            "tags": "scenery, mountain, city",
+            "tags": "scenery, mountain, city, multicam",
             "region": "Nagano",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt-x7qWuoeZ78U.jpg",
@@ -3137,6 +3229,7 @@
             "tags": "shrine",
             "region": "Chiba",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-g9Y-Bkq5O0Q.jpg",
@@ -3158,9 +3251,10 @@
         {
             "name": "歌舞伎町ゴジラ前ライブ - Kabukicho Ichibangai (Godzilla)",
             "isAlive": true,
-            "tags": "street, nightview",
+            "tags": "street, nightview, multicam",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 2,
             "images": [
                 {
                     "src": "/pictures/yt--PIM7Sc7uE4.jpg",
@@ -3192,6 +3286,7 @@
             "tags": "street, city",
             "region": "Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-nZYwfnbES8o.jpg",
@@ -3216,6 +3311,7 @@
             "tags": "seaport, street",
             "region": "Yamagata",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-x3vUJXP4Uvg.jpg",
@@ -3240,6 +3336,7 @@
             "tags": "street",
             "region": "Kanagawa",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-kJqL3xSgwzg.jpg",
@@ -3264,6 +3361,7 @@
             "tags": "street",
             "region": "Saitama",
             "addedAt": "2026-10-29",
+            "cameras": 1,
             "images": [
                 {
                     "src": "/pictures/yt-_L2oVf6xBGQ.jpg",
@@ -3285,9 +3383,10 @@
         {
             "name": "千葉県タクシー協会京葉支部 - JR Motoyawata Station North Exit",
             "isAlive": true,
-            "tags": "trainstation, trainlines, street",
+            "tags": "trainstation, trainlines, street, multicam",
             "region": "Chiba",
             "addedAt": "2026-10-29",
+            "cameras": 5,
             "images": [
                 {
                     "src": "/pictures/yt-oQVfclB6nvY.jpg",
@@ -3325,6 +3424,7 @@
             "tags": "shore, traffic, airport, multicam",
             "region": "Kanagawa / Tokyo",
             "addedAt": "2026-10-29",
+            "cameras": 5,
             "images": [
                 {
                     "src": "/pictures/yt-MOkZUavnHM4.jpg",
