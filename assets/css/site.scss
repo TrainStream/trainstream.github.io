@@ -1052,8 +1052,8 @@ textarea {
     }
 }
 
-/* 駅長 */
-.track-cat {
+/* 駅長 and the deer */
+.track-animal {
     z-index: 6;
     bottom: 8px;
     filter: drop-shadow(2px 0 0 #1b1f3b) drop-shadow(-2px 0 0 #1b1f3b) drop-shadow(0 -2px 0 #1b1f3b);
@@ -1061,6 +1061,87 @@ textarea {
 
     &.leaving {
         animation: cat-out 1.1s steps(5) forwards;
+    }
+}
+
+/* お詫び */
+.train-notice {
+    z-index: 7;
+    bottom: 64px;
+    max-width: min(560px, calc(100vw - 32px));
+    padding: 6px 12px;
+    font: 0.95rem var(--font-pixel);
+    color: var(--led-orange);
+    background: var(--led-bg);
+    border: 2px solid #1b1f3b;
+    box-shadow: var(--shadow-sm);
+    transform: translateX(-50%);
+    animation: lucky 5s steps(6) forwards;
+
+    b {
+        color: var(--led-red);
+        font-weight: normal;
+    }
+
+    small {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--led-green);
+    }
+}
+
+/* 雪 */
+.snowfall {
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    z-index: 6;
+    background-image: radial-gradient(#fff 1.5px, transparent 2px), radial-gradient(#fff 1px, transparent 1.5px);
+    background-size: 46px 46px, 28px 28px;
+    background-position: 0 0, 13px 7px;
+    filter: drop-shadow(1px 1px 0 rgba(27, 31, 59, 0.4));
+    -webkit-mask-image: linear-gradient(transparent, #000 40%);
+    mask-image: linear-gradient(transparent, #000 40%);
+    animation: snowfall 3s steps(12) infinite;
+}
+
+@keyframes snowfall {
+    to {
+        background-position: -46px 46px, -15px 63px;
+    }
+}
+
+.snow-spray {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    pointer-events: none;
+
+    i {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        box-shadow: 1px 1px 0 #1b1f3b;
+        animation: spray 0.5s steps(4) infinite;
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                bottom: #{($i % 3) * 4}px;
+                animation-delay: #{$i * 0.08}s;
+            }
+        }
+    }
+}
+
+@keyframes spray {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(24px, -30px);
+        opacity: 0;
     }
 }
 

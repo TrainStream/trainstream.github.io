@@ -31,6 +31,8 @@
         { id: 'ginza', name: 'Tokyo Metro Ginza Line 1000', body: '#ff9500', bands: [[16, 1, '#c96a00']], panto: [] },
         { id: 'enoden', name: 'Enoshima Electric Railway', cars: 2, body: '#f2ecd0', bands: [[13, 7, '#2e7d4f']], panto: [0], pantoType: 'diamond' },
         { id: 'n700', name: 'Tōkaidō Shinkansen N700', cars: 4, nose: true, speed: 2.6, body: '#f7f7f7', bands: [[14, 2, '#1d4fa0'], [17, 1, '#1d4fa0']], panto: [1] },
+        // the last night train in Japan, only after dark
+        { id: 'sunrise', name: 'Sunrise Izumo / Seto 285', weight: 0, cars: 4, speed: 0.7, lit: true, body: '#e8dcc4', bands: [[13, 1, '#c9a24a'], [14, 6, '#8b2a2a']], light: '#fff6c0', panto: [1] },
         { id: 'doctor-yellow', name: 'Doctor Yellow', weight: 0, cars: 4, nose: true, speed: 4, body: '#ffd800', bands: [[14, 2, '#1d4fa0']], panto: [1] }
     ];
 
@@ -60,7 +62,7 @@
         return window.matchMedia && window.matchMedia('(max-width: 640px)').matches ? 4 / 3 : 2;
     }
 
-    function trainSvg(l, factor) {
+    function trainSvg(l, factor, plough) {
         var n = l.cars || 3;
         var CW = 36;
         var G = 2;
@@ -68,7 +70,8 @@
         var front = l.nose ? 8 : 6;
         var W = back + n * CW + (n - 1) * G + front;
         var id = 'ts-train-' + ++svgCount;
-        var win = isDark() ? '#ffe9a0' : l.win || NAVY;
+        var win = l.lit || isDark() ? '#ffe9a0' : l.win || NAVY;
+        var extra = plough ? 6 : 0;
         var shapes = [];
         var out = [];
 
@@ -132,6 +135,12 @@
             out.push(rect(W - 6, 9, 4, 4, win));
             out.push(rect(W - 4, 15, 2, 2, light));
         }
+        // a yellow-and-black snowplough on the front
+        if (plough) {
+            out.push('<polygon points="' + [W - 4, 15, W + 6, 23, W - 4, 23].join(' ') + '" fill="#ffd400" />');
+            out.push(rect(W - 4, 20, 4, 3, '#1b1f3b') + rect(W + 1, 21, 2, 2, '#1b1f3b'));
+        }
+        W += extra;
 
         return (
             '<svg viewBox="0 0 ' + W + ' 24" width="' + Math.round(W * factor) + '" height="' + Math.round(24 * factor) +
@@ -159,7 +168,7 @@
         opts = opts || {};
         var old = el.querySelector('svg');
         if (old) el.removeChild(old);
-        el.insertAdjacentHTML('afterbegin', trainSvg(l, scale() * (opts.size || 1)));
+        el.insertAdjacentHTML('afterbegin', trainSvg(l, scale() * (opts.size || 1), opts.plough));
         var svg = el.querySelector('svg');
         el.ltr = !opts.rtl;
         svg.style.transform = opts.rtl ? 'scaleX(-1)' : '';
@@ -233,7 +242,7 @@
             if (el.parentNode) el.parentNode.removeChild(el);
         });
         props = [];
-        Array.prototype.forEach.call(train.querySelectorAll('.train-say'), function (b) {
+        Array.prototype.forEach.call(train.querySelectorAll('.train-say, .train-fx'), function (b) {
             b.parentNode.removeChild(b);
         });
         train.style.opacity = '';
@@ -241,12 +250,40 @@
         place(train, -2000, '');
     }
 
+    // Something sits on the tracks: the train stops, the lines play, it leaves.
+    function blocker(w, cls, html, lines) {
+        var W = vw();
+        var cx = Math.round(W * 0.58);
+        var animal = prop(cls + ' track-animal', html, cx);
+        place(train, -w);
+        var chain = drive(train, cx - w - 140).then(function () {
+            return drive(train, cx - w - 14, { ms: 1800, easing: 'ease-out' });
+        });
+        lines.forEach(function (line) {
+            chain = chain.then(function () {
+                say(line[0] === 'animal' ? animal : train, line[1], 1600);
+                return wait(1800);
+            });
+        });
+        return chain
+            .then(function () {
+                animal.classList.add('leaving');
+                return wait(1200);
+            })
+            .then(function () {
+                return drive(train, cx - w + 80, { ms: 1500, easing: 'ease-in' });
+            })
+            .then(function () {
+                return drive(train, W);
+            });
+    }
+
     /* ---------- scenarios ---------- */
     // Each one gets the main train already dressed (ltr unless it says so) and returns a Promise.
     var SCENARIOS = {
         // the everyday drive-by, now and then in the other direction
         normal: {
-            weight: 60,
+            weight: 30,
             run: function (w) {
                 var W = vw();
                 if (Math.random() < 0.3) {
@@ -261,7 +298,7 @@
 
         // 踏切: the train waits at a level crossing like a car would
         crossing: {
-            weight: 6,
+            weight: 8,
             run: function (w) {
                 var W = vw();
                 var cx = Math.round(W * 0.62);
@@ -324,7 +361,7 @@
 
         // two trains passing each other on parallel tracks
         pass: {
-            weight: 7,
+            weight: 9,
             run: function (w) {
                 var W = vw();
                 var other = extraTrain(pickLivery(train.livery), { rtl: true, back: true, size: 0.8 });
@@ -341,7 +378,7 @@
 
         // ...and the version where they are on the same track
         crash: {
-            weight: 3,
+            weight: 7,
             run: function (w) {
                 var W = vw();
                 var other = extraTrain(pickLivery(train.livery), { rtl: true });
@@ -400,7 +437,7 @@
 
         // the famous meme
         drift: {
-            weight: 3,
+            weight: 7,
             run: function (w) {
                 var W = vw();
                 var gap = 7.5 * scale();
@@ -446,7 +483,7 @@
 
         // seeing the yellow inspection Shinkansen is said to bring good luck
         doctorYellow: {
-            weight: 4,
+            weight: 6,
             livery: 'doctor-yellow',
             run: function (w) {
                 var W = vw();
@@ -462,7 +499,7 @@
 
         // overshoots the stop marker, then backs up (yes, they really do this)
         overrun: {
-            weight: 5,
+            weight: 7,
             run: function (w) {
                 var W = vw();
                 var cx = Math.round(W * 0.55);
@@ -494,12 +531,9 @@
 
         // a stationmaster cat (hi Tama) sits on the tracks
         cat: {
-            weight: 5,
+            weight: 7,
             run: function (w) {
-                var W = vw();
-                var cx = Math.round(W * 0.58);
-                var cat = prop(
-                    'track-cat',
+                return blocker(w, 'track-cat',
                     '<svg viewBox="0 0 14 12" width="' + 21 * scale() + '" height="' + 18 * scale() + '" shape-rendering="crispEdges">' +
                         '<rect x="3" y="0" width="6" height="2" fill="#1d2b5c" /><rect x="5" y="1" width="2" height="1" fill="#ffd400" />' +
                         '<rect x="3" y="2" width="1" height="1" fill="#e08a2c" /><rect x="8" y="2" width="1" height="1" fill="#222" />' +
@@ -511,41 +545,109 @@
                         '<rect x="12" y="5" width="1" height="2" fill="#e08a2c" />' +
                         '<rect x="2" y="11" width="2" height="1" fill="#fff" /><rect x="8" y="11" width="2" height="1" fill="#fff" />' +
                     '</svg>',
-                    cx
+                    [[train, '…ねこ？'], ['animal', 'にゃ〜'], [train, 'お疲れ様です、駅長！']]
                 );
+            }
+        },
+
+        // a deer that will not move (a real thing on rural lines)
+        deer: {
+            weight: 7,
+            run: function (w) {
+                var s = scale();
+                return blocker(w, 'track-deer',
+                    '<svg viewBox="0 0 16 16" width="' + 24 * s + '" height="' + 24 * s + '" shape-rendering="crispEdges">' +
+                        '<rect x="1" y="0" width="1" height="3" fill="#6b4a2b" /><rect x="5" y="0" width="1" height="3" fill="#6b4a2b" />' +
+                        '<rect x="0" y="1" width="1" height="1" fill="#6b4a2b" /><rect x="6" y="1" width="1" height="1" fill="#6b4a2b" />' +
+                        '<rect x="2" y="2" width="3" height="1" fill="#6b4a2b" />' +
+                        '<rect x="1" y="3" width="5" height="4" fill="#b5784a" /><rect x="2" y="4" width="1" height="1" fill="#222" />' +
+                        '<rect x="0" y="5" width="2" height="2" fill="#b5784a" /><rect x="0" y="6" width="1" height="1" fill="#222" />' +
+                        '<rect x="4" y="7" width="3" height="2" fill="#b5784a" />' +
+                        '<rect x="4" y="8" width="11" height="4" fill="#b5784a" /><rect x="6" y="9" width="1" height="1" fill="#f4e6cf" />' +
+                        '<rect x="9" y="10" width="1" height="1" fill="#f4e6cf" /><rect x="12" y="9" width="1" height="1" fill="#f4e6cf" />' +
+                        '<rect x="14" y="7" width="2" height="2" fill="#f4e6cf" />' +
+                        '<rect x="5" y="12" width="1" height="4" fill="#6b4a2b" /><rect x="7" y="12" width="1" height="4" fill="#6b4a2b" />' +
+                        '<rect x="12" y="12" width="1" height="4" fill="#6b4a2b" /><rect x="14" y="12" width="1" height="4" fill="#6b4a2b" />' +
+                    '</svg>',
+                    [[train, '鹿！？'], [train, 'ﾌｧﾝ!'], ['animal', '…'], [train, 'どいてください…'], ['animal', 'ぴゃー']]
+                );
+            }
+        },
+
+        // the 2017 Tsukuba Express apology, but for this train
+        early: {
+            weight: 7,
+            run: function (w) {
+                var W = vw();
+                var stop = Math.round(W / 2 - w / 2);
                 place(train, -w);
-                return drive(train, cx - w - 140)
+                return drive(train, stop - 140)
                     .then(function () {
-                        return drive(train, cx - w - 14, { ms: 1800, easing: 'ease-out' });
+                        return drive(train, stop, { ms: 2000, easing: 'ease-out' });
                     })
                     .then(function () {
-                        say(train, '…ねこ？', 1600);
-                        return wait(1800);
+                        return wait(500);
                     })
                     .then(function () {
-                        say(cat, 'にゃ〜', 1500);
-                        return wait(1700);
+                        say(train, '発車！', 1000);
+                        return drive(train, stop + 140, { ms: 1600, easing: 'ease-in' });
                     })
                     .then(function () {
-                        say(train, 'お疲れ様です、駅長！', 1800);
-                        return wait(1300);
-                    })
-                    .then(function () {
-                        cat.classList.add('leaving');
-                        return wait(1200);
-                    })
-                    .then(function () {
-                        return drive(train, cx - w + 80, { ms: 1500, easing: 'ease-in' });
-                    })
-                    .then(function () {
+                        prop('train-notice', '【お詫び】 列車が<b>20秒</b>早く発車いたしました。大変ご迷惑をおかけしました。' +
+                            '<small>This train left 20 seconds early. We deeply apologise.</small>', Math.round(W / 2));
                         return drive(train, W);
+                    })
+                    .then(function () {
+                        return wait(2500);
                     });
+            }
+        },
+
+        // winter: a snowplough train ploughing through
+        snow: {
+            weight: function () {
+                var month = new Date().getMonth();
+                return month >= 11 || month <= 2 ? 12 : 3;
+            },
+            dress: { plough: true },
+            run: function (w) {
+                var W = vw();
+                prop('snowfall', '', 0);
+                var spray = document.createElement('span');
+                spray.className = 'train-fx snow-spray';
+                spray.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i>';
+                train.appendChild(spray);
+                place(train, -w);
+                return drive(train, Math.round(W / 2 - w / 2), { boost: 0.8 })
+                    .then(function () {
+                        say(train, 'ザザザザ…', 1600);
+                        return drive(train, W, { boost: 0.8 });
+                    });
+            }
+        },
+
+        // after dark: the Sunrise sleeper, everyone asleep
+        sleeper: {
+            weight: function () {
+                var hour = new Date().getHours();
+                return hour >= 20 || hour < 5 ? 12 : 0;
+            },
+            livery: 'sunrise',
+            run: function (w) {
+                var W = vw();
+                place(train, -w);
+                [800, 4000, 7200].forEach(function (ms) {
+                    setTimeout(function () {
+                        say(train, 'Zzz…', 2200);
+                    }, ms);
+                });
+                return drive(train, W);
             }
         },
 
         // Tokyo rush hour: it stops and gets squeezed
         rushHour: {
-            weight: 5,
+            weight: 7,
             run: function (w) {
                 var W = vw();
                 var stop = Math.round(W / 2 - w / 2);
@@ -595,12 +697,16 @@
     function pickScenario() {
         if (forced) return forced;
         var names = Object.keys(SCENARIOS);
-        var total = names.reduce(function (sum, k) {
-            return sum + SCENARIOS[k].weight;
+        var weights = names.map(function (k) {
+            var weight = SCENARIOS[k].weight;
+            return typeof weight === 'function' ? weight() : weight;
+        });
+        var total = weights.reduce(function (sum, x) {
+            return sum + x;
         }, 0);
         var roll = Math.random() * total;
         for (var i = 0; i < names.length; i++) {
-            roll -= SCENARIOS[names[i]].weight;
+            roll -= weights[i];
             if (roll < 0) return names[i];
         }
         return 'normal';
@@ -611,14 +717,15 @@
         var name = pickScenario();
         var scenario = SCENARIOS[name];
         train.livery = forcedLivery || livery(scenario.livery) || pickLivery();
-        var w = dress(train, train.livery);
+        var w = dress(train, train.livery, scenario.dress);
         train.setAttribute('data-scenario', name);
         scenario
             .run(w)
             .catch(function () {})
             .then(function () {
                 cleanup();
-                schedule(forced ? 3000 : 25000 + Math.random() * 30000);
+                // the next one comes 12-24 seconds after this one has left
+                schedule(forced ? 3000 : 12000 + Math.random() * 12000);
             });
     }
 
