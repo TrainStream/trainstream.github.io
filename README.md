@@ -47,6 +47,8 @@ Anyone can also press "✏️ Suggest an edit" on a camera's detail panel. That 
 
 ### Trusted publishers (publish without repo access)
 
+Every suggestion is an issue opened from the submitter's own GitHub account, and every published commit names them ("suggested by …"). To review someone's history before trusting them, search the issues for `is:issue author:USERNAME label:submission` (add `label:published` to see only what went live).
+
 Add GitHub usernames to [`.github/publishers.yml`](.github/publishers.yml). Their suggestions skip the review: the Action validates them and commits them for them, usually live within a minute or two. They don't need any access to the repository. Delete the line to take the right away.
 
 ## One-time GitHub settings

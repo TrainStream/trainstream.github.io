@@ -500,7 +500,7 @@
         var button = $('publish-btn');
         button.disabled = true;
         result.textContent = '⏳ Publishing…';
-        var message = (editOf ? 'Update stream: ' : 'Add stream: ') + entry.name + (issue ? ' (#' + issue + ')' : '') + ' via submit tool';
+        var message = (editOf ? 'Update stream: ' : 'Add stream: ') + entry.name + (issue ? ' (#' + issue + ', suggested by ' + ctx.fromIssueAuthor + ')' : '') + ' via submit tool';
         commitStreams(function (file) {
             var res = R.upsert(file, entry, editOf);
             if (editOf && !res.replaced) throw new Error('The stream being edited no longer exists. Reload and try again.');
@@ -583,6 +583,7 @@
             return;
         }
         ctx.fromIssue = issue.number;
+        ctx.fromIssueAuthor = issue.user.login;
         var data = parsed.data;
         var editOf = String(data.editOf || '');
         var existing = editOf ? findSiteStream(editOf) : null;
