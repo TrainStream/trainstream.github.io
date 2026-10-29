@@ -1978,23 +1978,23 @@ html.map-expanded {
     }
 }
 
+/* small, next to the + / − zoom buttons */
 .map-hint {
     position: absolute;
-    left: 50%;
-    bottom: 28px;
+    left: 54px;
+    top: 12px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    font-size: 0.85rem;
+    gap: 4px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
     font-weight: 700;
     color: #fff;
     white-space: nowrap;
-    background: rgba(27, 31, 59, 0.82);
+    background: rgba(27, 31, 59, 0.6);
     border-radius: 999px;
     pointer-events: none;
-    transform: translateX(-50%);
     transition: opacity 0.6s;
 
     &.is-gone {
