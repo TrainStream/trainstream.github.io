@@ -84,6 +84,66 @@
         "color": "#800000"
     },
     {
+        "name": "Shinkansen",
+        "slug": "shinkansen",
+        "code": "SK",
+        "color": "#0067c0"
+    },
+    {
+        "name": "Local Line",
+        "slug": "localline",
+        "code": "LL",
+        "color": "#8d6e63"
+    },
+    {
+        "name": "Onsen Town",
+        "slug": "onsen",
+        "code": "ON",
+        "color": "#d84315"
+    },
+    {
+        "name": "Mountain/Volcano",
+        "slug": "mountain",
+        "code": "MT",
+        "color": "#4e6e3a"
+    },
+    {
+        "name": "Snow Country",
+        "slug": "snow",
+        "code": "SW",
+        "color": "#4fa3c7"
+    },
+    {
+        "name": "Night View",
+        "slug": "nightview",
+        "code": "NV",
+        "color": "#3949ab"
+    },
+    {
+        "name": "Multi-Camera Channel",
+        "slug": "multicam",
+        "code": "MC",
+        "color": "#455a64"
+    },
+    {
+        "name": "Animals",
+        "slug": "animals",
+        "code": "AN",
+        "color": "#7cb342"
+    },
+    {
+        "name": "Tram/Streetcar",
+        "slug": "tram",
+        "code": "TM",
+        "color": "#00838f"
+    },
+    {
+        "name": "River",
+        "slug": "river",
+        "code": "RV",
+        "color": "#1565c0"
+    },
+    {
         "name": "Other",
         "slug": "other",
         "code": "OT",
