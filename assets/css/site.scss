@@ -2049,6 +2049,18 @@ html.map-expanded {
 .map-popup {
     font-family: var(--font-body);
 
+    .map-popup-photo {
+        display: block;
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 6px;
+        background: var(--paper-2);
+        border: 2px solid var(--line);
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
     strong {
         display: block;
         margin-bottom: 4px;

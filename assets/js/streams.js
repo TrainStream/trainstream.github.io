@@ -723,7 +723,18 @@
                 markerLayer.clearLayers();
                 visible.forEach(function (s) {
                     if (!s.geo) return;
+                    /* the main photo; its src is only set when the pin is opened, so 100+ pins don't load at once */
+                    var first = s.images[0];
+                    var photo = first
+                        ? el('img', {
+                              className: 'map-popup-photo',
+                              alt: first.title || s.name,
+                              width: 200,
+                              height: first.width && first.height ? Math.round((200 * first.height) / first.width) : 150,
+                          })
+                        : null;
                     var popup = el('div', { className: 'map-popup' }, [
+                        photo,
                         el('strong', { text: s.name }),
                         s.cameras ? el('span', { style: 'display:block;margin-bottom:4px', text: TS.camLabel(s.cameras) }) : null,
                         el('button', { type: 'button', className: 'btn btn--small', 'data-map-open': s.id, text: '詳細 Details' }),
@@ -737,6 +748,9 @@
                     })
                         .bindTooltip(s.name)
                         .bindPopup(popup)
+                        .on('popupopen', function () {
+                            if (photo && !photo.src) photo.src = TS.imgUrl(first.src, 240);
+                        })
                         .addTo(markerLayer);
                 });
             })
