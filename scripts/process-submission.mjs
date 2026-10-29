@@ -176,7 +176,7 @@ async function publish(entry, editOf) {
             writeFileSync(new URL(file.path, ROOT), file.buffer);
             git('add', file.path);
         }
-        git('commit', '-m', `${replaced ? 'Update' : 'Add'} stream: ${entry.name} (#${issue.number})`);
+        git('commit', '-m', `${replaced ? 'Update' : 'Add'} stream: ${entry.name} (#${issue.number}, suggested by ${issue.user.login})`);
         try {
             git('push', 'origin', `HEAD:${branch}`);
             break;
