@@ -687,7 +687,7 @@
         });
         map.addControl(new Control());
     }
-    /* a mouse (or pinch) icon under the + / − buttons, saying you can zoom; fades away once someone has zoomed */
+    /* a mouse (or pinch) icon under the + / − buttons, saying you can zoom */
     function addZoomHint() {
         var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
         var label = touch ? 'Pinch to zoom' : 'Scroll to zoom';
@@ -695,9 +695,6 @@
             el('span', { className: 'map-hint-icon', text: touch ? '🤏' : '🖱️' }),
         ]);
         map.getContainer().appendChild(hint);
-        map.once('zoomstart', function () {
-            hint.classList.add('is-gone');
-        });
     }
     function updateMap() {
         loadLeaflet()

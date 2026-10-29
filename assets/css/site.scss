@@ -1993,33 +1993,6 @@ html.map-expanded {
     line-height: 1;
     background: rgba(27, 31, 59, 0.75);
     border-radius: 4px;
-    transition: opacity 0.6s;
-
-    &.is-gone {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
-.map-hint-icon {
-    display: inline-block;
-    animation: map-hint-wiggle 1.6s ease-in-out infinite;
-}
-
-@keyframes map-hint-wiggle {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .map-hint-icon {
-        animation: none;
-    }
 }
 
 .map-unknown-title {
