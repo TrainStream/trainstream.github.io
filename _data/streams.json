@@ -87,7 +87,8 @@
             "extras": [
                 {
                     "link": "https://shimogo-livecamera.jp/",
-                    "linkTitle": "The site sometimes goes down, but the streams don't."
+                    "linkTitle": "The site sometimes goes down, but the streams don't.",
+                    "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=z1MErdsqsw8",

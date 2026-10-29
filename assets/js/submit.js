@@ -127,13 +127,19 @@
         var link = el('input', { type: 'text', inputmode: 'url', placeholder: 'https://www.youtube.com/@channel/streams', 'data-k': 'link' });
         var text = el('input', { type: 'text', maxlength: '300', placeholder: '(optional) shown instead of the URL', 'data-k': 'text' });
         var note = el('input', { type: 'text', maxlength: '300', placeholder: '(optional) e.g. "has sound"', 'data-k': 'linkTitle' });
+        var kind = el('select', { 'data-k': 'kind' }, [
+            el('option', { value: '', text: '📺 Stream' }),
+            el('option', { value: 'home', text: '🏠 Home page' }),
+        ]);
         link.value = extra.link || '';
         text.value = extra.text || '';
         note.value = extra.linkTitle || '';
+        kind.value = extra.kind === 'home' ? 'home' : '';
         var row = el('div', { className: 'row-item row-item--link' }, [
             field('URL', link),
             field('Text', text),
             field('Note', note),
+            field('Type', kind),
             el('button', { type: 'button', className: 'btn btn--small', 'aria-label': 'Remove link', text: '✕', onclick: function () { row.remove(); update(); } }),
         ]);
         linksBox.appendChild(row);

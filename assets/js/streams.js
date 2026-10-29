@@ -509,6 +509,7 @@
             linkList.appendChild(
                 el('li', null, [
                     el('div', { className: 'link-main' }, [
+                        TS.linkKindBadge(link),
                         el('a', { href: link.href, target: link.href.charAt(0) === '/' ? null : '_blank', rel: 'noopener noreferrer', text: link.text }),
                         link.note ? el('small', { text: link.note }) : null,
                     ]),
@@ -634,7 +635,7 @@
         loadLeaflet()
             .then(function () {
                 if (!map) {
-                    map = window.L.map('map', { scrollWheelZoom: false }).fitBounds([
+                    map = window.L.map('map', { scrollWheelZoom: true }).fitBounds([
                         [30.5, 128.5],
                         [45.5, 146],
                     ]);
