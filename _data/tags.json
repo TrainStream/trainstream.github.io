@@ -120,7 +120,7 @@
         "color": "#3949ab"
     },
     {
-        "name": "Multi-Camera Channel",
+        "name": "Multi-Camera",
         "slug": "multicam",
         "code": "MC",
         "color": "#455a64"

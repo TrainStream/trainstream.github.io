@@ -66,6 +66,8 @@
         if (str(input.description)) entry.description = str(input.description);
         if (str(input.addedAt)) entry.addedAt = str(input.addedAt);
         if (str(input.submittedBy)) entry.submittedBy = str(input.submittedBy);
+        var cameras = toNumber(input.cameras);
+        if (cameras !== undefined) entry.cameras = isNaN(cameras) ? cameras : Math.floor(cameras);
         entry.images = (input.images || [])
             .map(function (img) {
                 img = img || {};
@@ -156,6 +158,7 @@
         check(!entry.description || entry.description.length <= LIMITS.description, 'Description is too long (max ' + LIMITS.description + ' characters).');
         check(!entry.region || entry.region.length <= 80, 'Region is too long.');
         check(!entry.submittedBy || entry.submittedBy.length <= 80, 'Credit name is too long.');
+        check(entry.cameras === undefined || (entry.cameras >= 1 && entry.cameras <= 999), 'Number of cameras must be between 1 and 999.');
         check(!entry.addedAt || /^\d{4}-\d{2}-\d{2}$/.test(entry.addedAt), 'Added date must look like 2026-10-29.');
 
         var hasLat = entry.lat !== undefined;
@@ -196,6 +199,7 @@
                     errors.push(where + ': link ' + (j + 1) + ' must be http(s) or a /path.');
                 }
             });
+            if (s.cameras !== undefined && !(Number.isInteger(s.cameras) && s.cameras >= 1)) errors.push(where + ': cameras must be a whole number of 1 or more.');
             ['lat', 'lng'].forEach(function (key) {
                 if (s[key] !== undefined && typeof s[key] !== 'number') errors.push(where + ': ' + key + ' must be a number.');
             });

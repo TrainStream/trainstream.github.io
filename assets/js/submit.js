@@ -178,6 +178,7 @@
             lng: $('f-lng').value,
             description: $('f-description').value,
             submittedBy: $('f-credit').value,
+            cameras: $('f-cameras').value,
             addedAt: ctx.editOf ? ctx.editAddedAt : today(),
             images: readRows(imagesBox),
             extras: readRows(linksBox),
@@ -198,6 +199,7 @@
         $('f-lng').value = entry.lng !== undefined ? entry.lng : '';
         $('f-description').value = entry.description || '';
         $('f-credit').value = entry.submittedBy || '';
+        $('f-cameras').value = entry.cameras || '';
         imagesBox.textContent = '';
         linksBox.textContent = '';
         (entry.images && entry.images.length ? entry.images : [{}]).forEach(addImageRow);
