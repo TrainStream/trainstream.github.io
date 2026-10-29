@@ -2,53 +2,6 @@
     "$schema": "./stream_definitions.json",
     "data": [
         {
-            "name": "Tokyo Roppongi Sky View",
-            "isAlive": false,
-            "tags": "traffic, city",
-            "region": "Tokyo",
-            "lat": 35.6605,
-            "lng": 139.7292,
-            "images": [
-                {
-                    "src": "/pictures/7.jpg",
-                    "title": "Roppongi Sky View",
-                    "width": 356,
-                    "height": 200
-                }
-            ],
-            "extras": [
-                {
-                    "link": "https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw/streams",
-                    "kind": "home",
-                    "text": "Roppongi Sky View channel"
-                },
-                {
-                    "link": "https://www.youtube.com/watch?v=IXr6INJs0TA",
-                    "text": "It has been down for a while now."
-                }
-            ]
-        },
-        {
-            "name": "MOBOTIX Q24  mx10-11-240-143 Live",
-            "isAlive": false,
-            "tags": "street",
-            "images": [
-                {
-                    "src": "/pictures/6.jpg",
-                    "title": "MOBOTIX",
-                    "width": 265,
-                    "height": 200
-                }
-            ],
-            "extras": [
-                {
-                    "link": "http://180.3.172.145/control/userimage.html",
-                    "linkTitle": "You can increase fps to 25.",
-                    "text": "Camera stream"
-                }
-            ]
-        },
-        {
             "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
             "tags": "trainstation, bridge, scenery, localline, onsen, snow, other",
@@ -159,6 +112,53 @@
                 },
                 {
                     "text": "On the Ueda site there are also other shop, mountain and scenery cameras."
+                }
+            ]
+        },
+        {
+            "name": "Tokyo Roppongi Sky View",
+            "isAlive": false,
+            "tags": "traffic, city",
+            "region": "Tokyo",
+            "lat": 35.6605,
+            "lng": 139.7292,
+            "images": [
+                {
+                    "src": "/pictures/7.jpg",
+                    "title": "Roppongi Sky View",
+                    "width": 356,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "https://www.youtube.com/channel/UCzonDuufKwrGxKVyxLPrZcw/streams",
+                    "kind": "home",
+                    "text": "Roppongi Sky View channel"
+                },
+                {
+                    "link": "https://www.youtube.com/watch?v=IXr6INJs0TA",
+                    "text": "It has been down for a while now."
+                }
+            ]
+        },
+        {
+            "name": "MOBOTIX Q24  mx10-11-240-143 Live",
+            "isAlive": false,
+            "tags": "street",
+            "images": [
+                {
+                    "src": "/pictures/6.jpg",
+                    "title": "MOBOTIX",
+                    "width": 265,
+                    "height": 200
+                }
+            ],
+            "extras": [
+                {
+                    "link": "http://180.3.172.145/control/userimage.html",
+                    "linkTitle": "You can increase fps to 25.",
+                    "text": "Camera stream"
                 }
             ]
         },
