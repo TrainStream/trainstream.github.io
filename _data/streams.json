@@ -895,7 +895,7 @@
                 {
                     "link": "https://www.youtube.com/channel/UCDyC7xeQxsihyZj8SoICLEw/streams",
                     "text": "Live stream page",
-                    "linkTitle": "Streaming again (checked 2026-10-29): Nippori and Mukomachi rail cameras"
+                    "linkTitle": "Nippori and Mukomachi rail cameras"
                 }
             ],
             "tags": "trainlines, airport, sound",
@@ -1615,24 +1615,23 @@
             "isAlive": true,
             "tags": "scenery, mountain, multicam",
             "region": "Yamanashi",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-tuNC0ot0j9I.jpg",
-                    "title": "葉山・富士山ライブカメラ 裕次郎灯台・江の島 波情報 \"mount fuji live camera\" from Hayama (Japan)",
+                    "title": "Hayama",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-F2NbYrc-gBU.jpg",
-                    "title": "山中湖からの「富士山ライブカメラ」 \"mount fuji live camera\" from Lake Yamanakako FUJISAN (Japan Y",
+                    "title": "Lake Yamanakako",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-DyYXe3LJOW8.jpg",
-                    "title": "「富士山と新東名高速ライブカメラ」 View of Mt. Fuji & Shin-Tomei Expressway Live Camera",
+                    "title": "Mt. Fuji and Shin-Tomei Expressway",
                     "width": 357,
                     "height": 200
                 }
@@ -1640,26 +1639,21 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@KawaguchikoTV",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@KawaguchikoTV/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "6 cameras on this channel"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=so_3HK9HIdg",
-                    "text": "精進湖からの「富士山ライブカメラ」 \"mount fuji live camera\" from Lake Shojiko (Yamanashi Japan)",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2024"
+                    "linkTitle": "Lake Shojiko. Live nonstop since at least Jan 2024."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=bdUbACCWmoY",
-                    "text": "河口湖大石公園からの「富士山ライブカメラ」 \"mount fuji live camera\" from Lake Kawaguchiko Oishi Park ",
-                    "linkTitle": "Same link has been live nonstop since at least Sep 2023"
-                },
-                {
-                    "text": "Live when checked (6): 葉山・富士山ライブカメラ 裕次郎灯台・江の島 波情報 \"mount fuji live camera\" from Hayama (Japan) / 山中湖からの「富士山ライブカメラ」 \"mount fuji live camera\" from Lake Yamanakako FUJISAN (Japan Y / 「富士山と新東名高速ライブカメラ」 View of Mt. Fuji & Shin-Tomei Expressway Live Camera / 河口湖からの「富士山ライブカメラ」\"mount fuji live camera\" from Lak"
+                    "linkTitle": "Oishi Park, Lake Kawaguchiko. Live nonstop since at least Sep 2023."
                 }
             ],
             "lat": 35.5233,
@@ -1670,12 +1664,11 @@
             "isAlive": true,
             "tags": "scenery, mountain",
             "region": "Kanagawa",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-maMMEh-2Bsk.jpg",
-                    "title": "富士山・芦ノ湖ライブカメラ ～箱根大観山・アネスト岩田ターンパイク箱根より～ / Mt. Fuji and Lake Ashinoko Live Camera ",
+                    "title": "Mt. Fuji & Lake Ashinoko from Daikanzan",
                     "width": 357,
                     "height": 200
                 }
@@ -1683,18 +1676,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@officialyoutubechannel7270",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@officialyoutubechannel7270/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=maMMEh-2Bsk",
-                    "text": "富士山・芦ノ湖ライブカメラ ～箱根大観山・アネスト岩田ターンパイク箱根より～ / Mt. Fuji and Lake Ashinoko Live Camera ",
-                    "linkTitle": "Same link has been live nonstop since at least Sep 2023"
+                    "linkTitle": "Mt. Fuji & Lake Ashinoko from Daikanzan. Live nonstop since at least Sep 2023."
                 }
             ],
             "lat": 35.1831,
@@ -1705,18 +1696,17 @@
             "isAlive": true,
             "tags": "trainstation, shrine, multicam",
             "region": "Nagano",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt--LxeC1RhMrU.jpg",
-                    "title": "JR長野駅LIVEカメラ（JR Nagano Station Live Cam）INC長野ケーブルテレビ",
+                    "title": "JR Nagano Station",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-HvJdPF46kak.jpg",
-                    "title": "善光寺LIVEカメラ（Zenkoji Temple Live Cam) INC長野ケーブルテレビ",
+                    "title": "Zenkoji Temple",
                     "width": 357,
                     "height": 200
                 }
@@ -1724,21 +1714,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@inc8774",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@inc8774/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: JR Nagano Station, Zenkoji Temple"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=HvJdPF46kak",
-                    "text": "善光寺LIVEカメラ（Zenkoji Temple Live Cam) INC長野ケーブルテレビ",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2024"
-                },
-                {
-                    "text": "Live when checked (2): JR長野駅LIVEカメラ（JR Nagano Station Live Cam）INC長野ケーブルテレビ / 善光寺LIVEカメラ（Zenkoji Temple Live Cam) INC長野ケーブルテレビ"
+                    "linkTitle": "Zenkoji Temple. Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 36.6441,
@@ -1749,24 +1735,17 @@
             "isAlive": true,
             "tags": "street, traffic, city, airport, multicam",
             "region": "Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-5B4LmH4JbnY.jpg",
-                    "title": "渋谷スクランブル交差点 / Shibuya Scramble Crossing Live CameraANN/テレ朝",
+                    "title": "Shibuya Scramble Crossing",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-KMqigNv3LcY.jpg",
-                    "title": "羽田空港第2ターミナルを24時間配信中！ HANEDA,Tokyo International Airport Terminal2ANN/テレ朝",
-                    "width": 357,
-                    "height": 200
-                },
-                {
-                    "src": "/pictures/yt-4GyL-3_I9Kc.jpg",
-                    "title": "“最強”だけが生まれるシロワニの静かな泳ぎ｜サメ好きの”聖地”から24時間ライブ配信！アクアワールド茨城県大洗水族館 24/7 Live Shark Cam",
+                    "title": "Haneda Airport Terminal 2",
                     "width": 357,
                     "height": 200
                 }
@@ -1774,16 +1753,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@ANNnewsCH",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@ANNnewsCH/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (3): 渋谷スクランブル交差点 / Shibuya Scramble Crossing Live CameraANN/テレ朝 / 羽田空港第2ターミナルを24時間配信中！ HANEDA,Tokyo International Airport Terminal2ANN/テレ朝 / “最強”だけが生まれるシロワニの静かな泳ぎ｜サメ好きの”聖地”から24時間ライブ配信！アクアワールド茨城県大洗水族館 24/7 Live Shark Cam"
+                    "linkTitle": "Also: Shibuya Scramble Crossing, Haneda Airport Terminal 2"
                 }
             ],
             "lat": 35.6595,
@@ -1794,12 +1770,11 @@
             "isAlive": true,
             "tags": "scenery, river",
             "region": "Kyoto",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-jp8YydpqWJA.jpg",
-                    "title": "笠置キャンプ場ライブカメラ／Kasagi campsite livecam",
+                    "title": "Kasagi Campsite",
                     "width": 357,
                     "height": 200
                 }
@@ -1807,18 +1782,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@Channel-tf8sn",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@Channel-tf8sn/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=jp8YydpqWJA",
-                    "text": "笠置キャンプ場ライブカメラ／Kasagi campsite livecam",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2024"
+                    "linkTitle": "Kasagi Campsite. Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 34.759,
@@ -1829,18 +1802,17 @@
             "isAlive": true,
             "tags": "city, river, scenery",
             "region": "Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-hW9BAP5cbHc.jpg",
-                    "title": "2026-10-29 12:00 ～ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船",
+                    "title": "Asakusa and Skytree (daily stream)",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-MwcMURMzJ7A.jpg",
-                    "title": "ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船",
+                    "title": "Asakusa and Skytree",
                     "width": 357,
                     "height": 200
                 }
@@ -1848,21 +1820,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E8%88%B9%E5%AE%BF%E3%81%82%E3%81%BF%E6%B8%85",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E8%88%B9%E5%AE%BF%E3%81%82%E3%81%BF%E6%B8%85/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Asakusa and Skytree (daily stream), Asakusa and Skytree"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=MwcMURMzJ7A",
-                    "text": "ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2024"
-                },
-                {
-                    "text": "Live when checked (2): 2026-10-29 12:00 ～ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船 / ライブカメラ-日本-浅草-隅田川-スカイツリー-屋形船"
+                    "linkTitle": "Asakusa and Skytree. Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 35.7107,
@@ -1873,18 +1841,17 @@
             "isAlive": true,
             "tags": "scenery, other",
             "region": "Shizuoka",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-jX46WOhWAFo.jpg",
-                    "title": "河津町笹原公園ライブカメラ",
+                    "title": "Sasahara Park",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-Xn7YQxxC5R0.jpg",
-                    "title": "河津町ライブカメラ",
+                    "title": "Kawazu town",
                     "width": 357,
                     "height": 200
                 }
@@ -1892,21 +1859,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kawazu-live",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kawazu-live/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Sasahara Park, Kawazu town"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=Xn7YQxxC5R0",
-                    "text": "河津町ライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Feb 2024"
-                },
-                {
-                    "text": "Live when checked (2): 河津町笹原公園ライブカメラ / 河津町ライブカメラ"
+                    "linkTitle": "Kawazu town. Live nonstop since at least Feb 2024."
                 }
             ],
             "lat": 34.7473,
@@ -1917,24 +1880,23 @@
             "isAlive": true,
             "tags": "city, bridge, shore, nightview",
             "region": "Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-GJhnjzX5xYI.jpg",
-                    "title": "Odaiba Live Camera - Tokyo Aqua Symphony お台場ライブカメラ東京アクアシンフォニー 4K HDR LIVE",
+                    "title": "Odaiba, Aqua Symphony",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-PN_lkPdGAjI.jpg",
-                    "title": "Odaiba Live Camera お台場ライブカメラ | Odaiba Beach & FUJI TV - 4K HDR LIVE",
+                    "title": "Odaiba Beach and Fuji TV",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-_k-5U7IeK8g.jpg",
-                    "title": "Tokyo Live Camera 東京ライブカメラ Tokyo Bay 4K with Lofi and soft Jazz BGM in 4K UHD",
+                    "title": "Tokyo Bay",
                     "width": 357,
                     "height": 200
                 }
@@ -1942,21 +1904,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@Tokyo_Views",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@Tokyo_Views/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Odaiba, Aqua Symphony, Odaiba Beach and Fuji TV, Tokyo Bay"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=_k-5U7IeK8g",
-                    "text": "Tokyo Live Camera 東京ライブカメラ Tokyo Bay 4K with Lofi and soft Jazz BGM in 4K UHD",
-                    "linkTitle": "Same link has been live nonstop since at least Jul 2025"
-                },
-                {
-                    "text": "Live when checked (3): Odaiba Live Camera - Tokyo Aqua Symphony お台場ライブカメラ東京アクアシンフォニー 4K HDR LIVE / Odaiba Live Camera お台場ライブカメラ | Odaiba Beach & FUJI TV - 4K HDR LIVE / Tokyo Live Camera 東京ライブカメラ Tokyo Bay 4K with Lofi and soft Jazz BGM in 4K UHD"
+                    "linkTitle": "Tokyo Bay. Live nonstop since at least Jul 2025."
                 }
             ],
             "lat": 35.6311,
@@ -1967,18 +1925,17 @@
             "isAlive": true,
             "tags": "trainlines, shinkansen",
             "region": "Fukushima",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-PJLOkY8I-P8.jpg",
-                    "title": "🚄東北新幹線 郡山 LIVEREC ライブカメラ 鉄道 爆速 MAX320km/h Shinkansen TOHOKU🗾Japan",
+                    "title": "Koriyama, Tohoku Shinkansen",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-yLHx5DV9rB8.jpg",
-                    "title": "LIVE Shinkansen TOHOKU🗾JAPAN NONSTOP CAMERA 東北新幹線 郡山 ライブカメラ 鉄道 爆速 MAX320km/h bul",
+                    "title": "Koriyama, nonstop camera",
                     "width": 357,
                     "height": 200
                 }
@@ -1986,16 +1943,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@alfaliveyoda",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@alfaliveyoda/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (2): 🚄東北新幹線 郡山 LIVEREC ライブカメラ 鉄道 爆速 MAX320km/h Shinkansen TOHOKU🗾Japan / LIVE Shinkansen TOHOKU🗾JAPAN NONSTOP CAMERA 東北新幹線 郡山 ライブカメラ 鉄道 爆速 MAX320km/h bul"
+                    "linkTitle": "Also: Koriyama, Tohoku Shinkansen, Koriyama, nonstop camera"
                 }
             ],
             "lat": 37.3985,
@@ -2006,24 +1960,23 @@
             "isAlive": true,
             "tags": "airport, bridge, scenery, multicam",
             "region": "Ehime",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-aJcTvBuj5AA.jpg",
-                    "title": "宇和島市ライブカメラ",
+                    "title": "Uwajima",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-ZgMFLDWgbBo.jpg",
-                    "title": "愛南町ライブカメラ",
+                    "title": "Ainan",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-L9OqeSJgzKA.jpg",
-                    "title": "松山空港ライブカメラ",
+                    "title": "Matsuyama Airport",
                     "width": 357,
                     "height": 200
                 }
@@ -2031,31 +1984,25 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@tvehime",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@tvehime/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Uwajima, Ainan, Matsuyama Airport, Shimanami Kaido"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=aJcTvBuj5AA",
-                    "text": "宇和島市ライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2025"
+                    "linkTitle": "Uwajima. Live nonstop since at least Jan 2025."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=ZgMFLDWgbBo",
-                    "text": "愛南町ライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Jul 2024"
+                    "linkTitle": "Ainan. Live nonstop since at least Jul 2024."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=OV0JEv6C2QQ",
-                    "text": "しまなみライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Jun 2024"
-                },
-                {
-                    "text": "Live when checked (4): 宇和島市ライブカメラ / 愛南町ライブカメラ / 松山空港ライブカメラ / しまなみライブカメラ"
+                    "linkTitle": "Shimanami Kaido. Live nonstop since at least Jun 2024."
                 }
             ],
             "lat": 33.8273,
@@ -2066,12 +2013,11 @@
             "isAlive": true,
             "tags": "trainlines, city",
             "region": "Saitama",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-K8G9ck6niWw.jpg",
-                    "title": "さいたま市鉄道ライブカメラ（JR上野東京ライン・京浜東北線・湘南新宿ライン・東北本線の運行情報）・Saitama City, Japan, Railway Li",
+                    "title": "Saitama City Railway",
                     "width": 357,
                     "height": 200
                 }
@@ -2079,13 +2025,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kadoritsu44",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kadoritsu44/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.9064,
@@ -2096,12 +2041,11 @@
             "isAlive": true,
             "tags": "trainlines, localline, river",
             "region": "Chiba",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-01voRQGraaE.jpg",
-                    "title": "ライブカメラ生中継／千葉県松戸市新坂川桜並木／2026年10月29日",
+                    "title": "Nagareyama Line, Matsudo",
                     "width": 357,
                     "height": 200
                 }
@@ -2109,13 +2053,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.8286,
@@ -2126,12 +2069,11 @@
             "isAlive": true,
             "tags": "trainlines, localline, scenery, river",
             "region": "Nagano",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-iYsVI17IrEM.jpg",
-                    "title": "2026-10-29｜作業用／勉強BGM",
+                    "title": "Ina Valley, JR Iida Line & Tenryu River",
                     "width": 357,
                     "height": 200
                 }
@@ -2139,13 +2081,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E9%BE%8D%E6%B1%9F%E5%9C%B0%E5%9F%9F%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E9%BE%8D%E6%B1%9F%E5%9C%B0%E5%9F%9F%E3%81%A5%E3%81%8F%E3%82%8A%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.5188,
@@ -2156,12 +2097,11 @@
             "isAlive": true,
             "tags": "traffic, city",
             "region": "Hyogo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-VJ6mknbUOWg.jpg",
-                    "title": "阪神高速3号神戸線 京橋PA付近 ライブカメラ Japan Hanshin Expressway No.3 Kobe Line Kyobashi rest ar",
+                    "title": "Hanshin Expressway Kobe Line",
                     "width": 357,
                     "height": 200
                 }
@@ -2169,13 +2109,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@HANSHINKOUSOKU3",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@HANSHINKOUSOKU3/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 34.685,
@@ -2186,18 +2125,17 @@
             "isAlive": true,
             "tags": "shrine, mountain, multicam",
             "region": "Wakayama",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-QPFEvMS-LoU.jpg",
-                    "title": "串本町 情報カメラ／テレビ和歌山",
+                    "title": "Kushimoto",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-XXVXVSLbjAk.jpg",
-                    "title": "高野山 情報カメラ／テレビ和歌山",
+                    "title": "Koyasan",
                     "width": 357,
                     "height": 200
                 }
@@ -2205,21 +2143,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@telewaka5ch",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@telewaka5ch/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Kushimoto, Koyasan"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=XXVXVSLbjAk",
-                    "text": "高野山 情報カメラ／テレビ和歌山",
-                    "linkTitle": "Same link has been live nonstop since at least Aug 2024"
-                },
-                {
-                    "text": "Live when checked (2): 串本町 情報カメラ／テレビ和歌山 / 高野山 情報カメラ／テレビ和歌山"
+                    "linkTitle": "Koyasan. Live nonstop since at least Aug 2024."
                 }
             ],
             "lat": 34.2139,
@@ -2230,24 +2164,23 @@
             "isAlive": true,
             "tags": "trainstation, airport, city, scenery, multicam",
             "region": "Kumamoto",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-Mfq_QtuyrYI.jpg",
-                    "title": "熊本駅白川口ライブカメラ",
+                    "title": "Kumamoto Station",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-rGtE0C62fss.jpg",
-                    "title": "熊本空港ライブカメラ",
+                    "title": "Kumamoto Airport",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-HfSrh4sZf1U.jpg",
-                    "title": "熊本県天草市牛深町ライブカメラ",
+                    "title": "Ushibuka, Amakusa",
                     "width": 357,
                     "height": 200
                 }
@@ -2255,21 +2188,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@rkknews",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@rkknews/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "7 cameras on this channel"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=aVGYOlIzV0A",
-                    "text": "阿蘇ライブカメラ～阿蘇火山博物館・草千里～",
-                    "linkTitle": "Same link has been live nonstop since at least Aug 2024"
-                },
-                {
-                    "text": "Live when checked (7): 熊本駅白川口ライブカメラ / 熊本空港ライブカメラ / 熊本県天草市牛深町ライブカメラ / 熊本市内の風景 / 阿蘇ライブカメラ～阿蘇火山博物館・草千里～ / 人吉市内ライブカメラ / 熊本市内 白川ライブカメラ"
+                    "linkTitle": "Aso, Kusasenri. Live nonstop since at least Aug 2024."
                 }
             ],
             "lat": 32.7903,
@@ -2280,18 +2209,17 @@
             "isAlive": true,
             "tags": "trainstation, trainlines",
             "region": "Saitama",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-1QHnFRwdC88.jpg",
-                    "title": "ライブカメラ｜東武東上線 池袋方面 （2026/10/29 7:24-）",
+                    "title": "Towards Ikebukuro",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-luI6B0GUyBc.jpg",
-                    "title": "東口ライブカメラ｜東武東上線 川越方面（2026/10/29 7:23-)",
+                    "title": "East exit, towards Kawagoe",
                     "width": 357,
                     "height": 200
                 }
@@ -2299,16 +2227,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@fujimino_taroh",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@fujimino_taroh/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (2): ライブカメラ｜東武東上線 池袋方面 （2026/10/29 7:24-） / 東口ライブカメラ｜東武東上線 川越方面（2026/10/29 7:23-)"
+                    "linkTitle": "Also: Towards Ikebukuro, East exit, towards Kawagoe"
                 }
             ],
             "lat": 35.8739,
@@ -2319,12 +2244,11 @@
             "isAlive": true,
             "tags": "bridge, seaport, traffic",
             "region": "Fukuoka",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-L-S83ttJYo8.jpg",
-                    "title": "LIVE｜若戸大橋（Wakato / Red Bridge）北九州 昼景 Japan Live Camera ｜2026/10/29 Day",
+                    "title": "Wakato Bridge, Kitakyushu",
                     "width": 357,
                     "height": 200
                 }
@@ -2332,13 +2256,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E8%8B%A5%E6%88%B8%E5%A4%A7%E6%A9%8BLIVE%E3%82%AB%E3%83%A1%E3%83%A9",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E8%8B%A5%E6%88%B8%E5%A4%A7%E6%A9%8BLIVE%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 33.9028,
@@ -2349,12 +2272,11 @@
             "isAlive": true,
             "tags": "seaport, city",
             "region": "Fukuoka",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-EkH8SihBx9E.jpg",
-                    "title": "テレＱ ライブ配信（福岡・博多港／たまに大博通） ※緊急時には映像を切り替え随時情報をお届けします。",
+                    "title": "Hakata Port, Fukuoka",
                     "width": 357,
                     "height": 200
                 }
@@ -2362,18 +2284,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@TVQ7ch",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@TVQ7ch/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=EkH8SihBx9E",
-                    "text": "テレＱ ライブ配信（福岡・博多港／たまに大博通） ※緊急時には映像を切り替え随時情報をお届けします。",
-                    "linkTitle": "Same link has been live nonstop since at least Sep 2024"
+                    "linkTitle": "Hakata Port, Fukuoka. Live nonstop since at least Sep 2024."
                 }
             ],
             "lat": 33.6043,
@@ -2384,12 +2304,11 @@
             "isAlive": true,
             "tags": "seaport, shore",
             "region": "Fukuoka",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-_r-g8wU-0o8.jpg",
-                    "title": "関門海峡癒しの空間、関門海峡を（門司港から）ライブ配信中！ 船の汽笛が聴けるように生音での配信中！※チャット参加の方は概要欄一読を🙏",
+                    "title": "Kanmon Strait from Mojiko",
                     "width": 357,
                     "height": 200
                 }
@@ -2397,18 +2316,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kanmon",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kanmon/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=_r-g8wU-0o8",
-                    "text": "関門海峡癒しの空間、関門海峡を（門司港から）ライブ配信中！ 船の汽笛が聴けるように生音での配信中！※チャット参加の方は概要欄一読を🙏",
-                    "linkTitle": "Same link has been live nonstop since at least Sep 2024"
+                    "linkTitle": "Kanmon Strait from Mojiko. Live nonstop since at least Sep 2024."
                 }
             ],
             "lat": 33.9451,
@@ -2419,12 +2336,11 @@
             "isAlive": true,
             "tags": "scenery, mountain",
             "region": "Nagano",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-UEhW0UQ5kiE.jpg",
-                    "title": "小谷村鎌池ライブカメラ4K映像",
+                    "title": "Kamaike Pond, Otari",
                     "width": 357,
                     "height": 200
                 }
@@ -2432,18 +2348,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@otari-gabutta",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@otari-gabutta/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=UEhW0UQ5kiE",
-                    "text": "小谷村鎌池ライブカメラ4K映像",
-                    "linkTitle": "Same link has been live nonstop since at least Dec 2025"
+                    "linkTitle": "Kamaike Pond, Otari. Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 36.8692,
@@ -2454,12 +2368,11 @@
             "isAlive": true,
             "tags": "airport",
             "region": "Chiba",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-gCxnhv7-IEI.jpg",
-                    "title": "LIVE at NARITA International Airport Plane Spotting 2026.10.29 成田空港ライブカメラ 成田空港 N",
+                    "title": "Narita Airport Plane Spotting",
                     "width": 357,
                     "height": 200
                 }
@@ -2467,13 +2380,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@loveflightjack",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@loveflightjack/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7759,
@@ -2484,12 +2396,11 @@
             "isAlive": true,
             "tags": "scenery, mountain",
             "region": "Shizuoka",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-XrD1uwcAlnY.jpg",
-                    "title": "富士山ライブカメラ｜富士の麓に抱かれて ― 自然からの授かりと暮らす街｜静岡県富士市からのライブ中継",
+                    "title": "Mt. Fuji from Fuji City",
                     "width": 357,
                     "height": 200
                 }
@@ -2497,13 +2408,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@fujizoomnet3776",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@fujizoomnet3776/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.1614,
@@ -2514,12 +2424,11 @@
             "isAlive": true,
             "tags": "city, nightview, scenery, mountain",
             "region": "Hokkaido",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-s--MDmshT3I.jpg",
-                    "title": "函館山ライブカメラ ／ Mt. Hakodate Ropeway Live Camera",
+                    "title": "Mt. Hakodate Ropeway Live Camera",
                     "width": 357,
                     "height": 200
                 }
@@ -2527,18 +2436,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@FM807MHz",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@FM807MHz/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=s--MDmshT3I",
-                    "text": "函館山ライブカメラ ／ Mt. Hakodate Ropeway Live Camera",
-                    "linkTitle": "Same link has been live nonstop since at least Dec 2025"
+                    "linkTitle": "Mt. Hakodate Ropeway Live Camera. Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 41.7592,
@@ -2549,12 +2456,11 @@
             "isAlive": true,
             "tags": "trainstation, trainlines",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-9_bsMcIIt7c.jpg",
-                    "title": "JR 中央線 高尾駅 周辺 ライブカメラ / 4K LIVE TOKYO JAPAN",
+                    "title": "JR Chuo Line, Takao Station",
                     "width": 357,
                     "height": 200
                 }
@@ -2562,13 +2468,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@ttscch6163",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@ttscch6163/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6417,
@@ -2579,12 +2484,11 @@
             "isAlive": true,
             "tags": "city, bridge, shore, nightview",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-hlbh4P0Mz8M.jpg",
-                    "title": "Tokyo Odaiba Live Camera お台場ライブカメラ｜レインボーブリッジと東京の景色 勉強・作業用Lofi BGM",
+                    "title": "Rainbow Bridge & Odaiba",
                     "width": 357,
                     "height": 200
                 }
@@ -2592,13 +2496,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@ODAIBATOKYO",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@ODAIBATOKYO/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6364,
@@ -2609,12 +2512,11 @@
             "isAlive": true,
             "tags": "trainlines, street, city",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-StEb8dHM5_A.jpg",
-                    "title": "秋葉原駅北側ライブカメラ 緊急地震速報搭載/ Live camera Akihabara Tokyo JAPAN with EEW",
+                    "title": "Akihabara Station",
                     "width": 357,
                     "height": 200
                 }
@@ -2622,13 +2524,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@Livecamakiba",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@Livecamakiba/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6989,
@@ -2639,24 +2540,23 @@
             "isAlive": true,
             "tags": "trainstation, airport, city, snow, multicam",
             "region": "Hokkaido",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-DWTW3yqK5kU.jpg",
-                    "title": "ライブカメラ 北海道(ＳＴＶ札幌テレビ放送)/LiveCamera Hokkaido Japan",
+                    "title": "Hokkaido",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-z3OUPSoABJk.jpg",
-                    "title": "いまの札幌 ライブカメラ（STV札幌テレビ放送）北海道札幌市中央区 /Live Camera Sapporo , Hokkaido",
+                    "title": "Sapporo",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-VZSrCwBZBbw.jpg",
-                    "title": "ライブカメラ 大倉山ジャンプ競技場 山頂展望台(STV札幌テレビ放送)北海道札幌市中央区宮の森 /Live Camera Okurayama Ski Jump ",
+                    "title": "Okurayama Ski Jump Stadium",
                     "width": 357,
                     "height": 200
                 }
@@ -2664,21 +2564,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@STVhokkaido",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@STVhokkaido/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Hokkaido, Sapporo, Okurayama Ski Jump Stadium, Kitahiroshima, New Chitose Airport, Sapporo Station"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=I1kJB1jdGo0",
-                    "text": "ライブカメラ ＪＲ札幌駅 (ＳＴＶ札幌テレビ放送) Live Camera Sapporo Station , Hokkaido",
-                    "linkTitle": "Same link has been live nonstop since at least Dec 2025"
-                },
-                {
-                    "text": "Live when checked (6): ライブカメラ 北海道(ＳＴＶ札幌テレビ放送)/LiveCamera Hokkaido Japan / いまの札幌 ライブカメラ（STV札幌テレビ放送）北海道札幌市中央区 /Live Camera Sapporo , Hokkaido / ライブカメラ 大倉山ジャンプ競技場 山頂展望台(STV札幌テレビ放送)北海道札幌市中央区宮の森 /Live Camera Okurayama Ski Jump  / ライブカメラ 北広島市（STV札幌テレビ放送）北海道北広島市／Live Camera Kitahirosima City, Hokkaido / ライブカメ"
+                    "linkTitle": "Sapporo Station. Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 43.0687,
@@ -2689,24 +2585,23 @@
             "isAlive": true,
             "tags": "scenery, mountain",
             "region": "Shizuoka / Yamanashi",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-qKlFk02P9FY.jpg",
-                    "title": "TOKYO LIVE CAMERA. Mt'Fuji from Tokyo 富士山 紅富士 赤富士 東京からの富士山 #東京ライブカメラ #富士山東京 #東京夜",
+                    "title": "Mt. Fuji from Tokyo",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-LXhTEzxobro.jpg",
-                    "title": "赤富士パワーを毎日お届け。\"LIVE from Mt\"Fuji summit\" #富士山頂ライブカメラ #ペルセウス座流星群 #perseidmeteorsho",
+                    "title": "Mt. Fuji summit",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-2y_YRNxmN8A.jpg",
-                    "title": "赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#赤",
+                    "title": "Mt. Fuji",
                     "width": 357,
                     "height": 200
                 }
@@ -2714,16 +2609,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@VICENTEAGEMATSU",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@VICENTEAGEMATSU/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (3): TOKYO LIVE CAMERA. Mt'Fuji from Tokyo 富士山 紅富士 赤富士 東京からの富士山 #東京ライブカメラ #富士山東京 #東京夜 / 赤富士パワーを毎日お届け。\"LIVE from Mt\"Fuji summit\" #富士山頂ライブカメラ #ペルセウス座流星群 #perseidmeteorsho / 赤富士パワーを毎日お届け。\"Mt. Fuji live camera\" World heritage of JAPAN #富士山ライブ #山中湖ライブカメラ#赤"
+                    "linkTitle": "Also: Mt. Fuji from Tokyo, Mt. Fuji summit, Mt. Fuji"
                 }
             ],
             "lat": 35.3628,
@@ -2734,24 +2626,23 @@
             "isAlive": true,
             "tags": "shrine, street, multicam",
             "region": "Kyoto",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-5hlP34DHcFk.jpg",
-                    "title": "京都 城南宮ライブ中継カメラ／Jonangu Shrine, Kyoto Live camera",
+                    "title": "Jonangu Shrine",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-rjQZjpEjnc4.jpg",
-                    "title": "京都 神護寺ライブ中継カメラ／Jingoji Temple, Kyoto Live camera",
+                    "title": "Jingoji Temple",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-mEqMdNLcpGY.jpg",
-                    "title": "京都 大原野神社ライブ中継カメラ／Oharano-jinja Shrine, Kyoto Live camera",
+                    "title": "Oharano Shrine",
                     "width": 357,
                     "height": 200
                 }
@@ -2759,16 +2650,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kyototouristspotlive",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kyototouristspotlive/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (13): 京都 城南宮ライブ中継カメラ／Jonangu Shrine, Kyoto Live camera / 京都 神護寺ライブ中継カメラ／Jingoji Temple, Kyoto Live camera / 京都 大原野神社ライブ中継カメラ／Oharano-jinja Shrine, Kyoto Live camera / 京都 寂光院ライブ中継カメラ／Jakkoin Temple, Kyoto Live camera / 京都 醍醐寺ライブ中継カメラ／Daigoji Temple, Kyoto Live camera / 京都 道の駅ウッディー京北ライブ中"
+                    "linkTitle": "13 cameras on this channel"
                 }
             ],
             "lat": 34.9853,
@@ -2779,24 +2667,23 @@
             "isAlive": true,
             "tags": "snow, mountain, multicam",
             "region": "Yamagata",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-Rs4CcR79sWA.jpg",
-                    "title": "蔵王ロープウェイ駐車場ライブカメラ",
+                    "title": "Ropeway parking",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-G-wKM6Dw3kA.jpg",
-                    "title": "蔵王サンライズライブカメラ",
+                    "title": "Sunrise camera",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-rpHUbj-7pR0.jpg",
-                    "title": "樹氷高原駅舎ライブカメラ",
+                    "title": "Juhyo Kogen station",
                     "width": 357,
                     "height": 200
                 }
@@ -2804,21 +2691,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E8%94%B5%E7%8E%8B%E7%B4%A2%E9%81%93%E5%8D%94%E4%BC%9A",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E8%94%B5%E7%8E%8B%E7%B4%A2%E9%81%93%E5%8D%94%E4%BC%9A/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "9 cameras on this channel"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=DnrgCsF1nAM",
-                    "text": "上の台第一駐車場ライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Jan 2025"
-                },
-                {
-                    "text": "Live when checked (9): 蔵王ロープウェイ駐車場ライブカメラ / 蔵王サンライズライブカメラ / 樹氷高原駅舎ライブカメラ / 中央ゲレンデライブカメラ / 大森駐車場ライブカメラ / 横倉ゲレンデライブカメラ / 中央ロープウェイ第一駐車場ライブカメラ / 上の台第一駐車場ライブカメラ / JUPEERゲレンデライブカメラ"
+                    "linkTitle": "Kaminodai parking 1. Live nonstop since at least Jan 2025."
                 }
             ],
             "lat": 38.1611,
@@ -2829,24 +2712,23 @@
             "isAlive": true,
             "tags": "traffic, city, multicam",
             "region": "Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-rSmabvVE0zU.jpg",
-                    "title": "首都高 都心環状線 竹橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～",
+                    "title": "Takebashi JCT",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-cF3UzLc8qsA.jpg",
-                    "title": "首都高 都心環状線 呉服橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～",
+                    "title": "Gofukubashi JCT",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-jEjsGepEnQE.jpg",
-                    "title": "首都高 都心環状線 宝町付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～",
+                    "title": "Takaracho",
                     "width": 357,
                     "height": 200
                 }
@@ -2854,16 +2736,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@LIVECAMTraffic",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@LIVECAMTraffic/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (5): 首都高 都心環状線 竹橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 都心環状線 呉服橋JCT付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 都心環状線 宝町付近 ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ / 首都高 1号羽田線 浜崎橋JCT ライブカメラ/Tokyo highway Live Camera 2026/10/29 10:30～ /"
+                    "linkTitle": "Also: Takebashi JCT, Gofukubashi JCT, Takaracho, Hamazakibashi JCT, Kasai, towards Ariake"
                 }
             ],
             "lat": 35.6839,
@@ -2874,12 +2753,11 @@
             "isAlive": true,
             "tags": "street, traffic",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-0PAnSx_u_a8.jpg",
-                    "title": "白山通り交差点 ライブカメラ",
+                    "title": "Hakusan-dori Intersection",
                     "width": 357,
                     "height": 200
                 }
@@ -2887,18 +2765,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@ryuichishinnaga6853",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@ryuichishinnaga6853/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=0PAnSx_u_a8",
-                    "text": "白山通り交差点 ライブカメラ",
-                    "linkTitle": "Same link has been live nonstop since at least Jun 2025"
+                    "linkTitle": "Hakusan-dori Intersection. Live nonstop since at least Jun 2025."
                 }
             ]
         },
@@ -2907,12 +2783,11 @@
             "isAlive": true,
             "tags": "street, city",
             "region": "Yamagata",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-Pzc-Ipu3g2Q.jpg",
-                    "title": "山形県山形市小白川町山形大学前ライブカメラ",
+                    "title": "Yamagata University front",
                     "width": 357,
                     "height": 200
                 }
@@ -2920,13 +2795,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6%E5%89%8D%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%A4%A7%E5%AD%A6%E5%89%8D%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 38.2467,
@@ -2937,12 +2811,11 @@
             "isAlive": true,
             "tags": "street",
             "region": "Yamagata",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-49lllbOST0k.jpg",
-                    "title": "山形県長井市平山ライブカメラ",
+                    "title": "Hirayama, Nagai",
                     "width": 357,
                     "height": 200
                 }
@@ -2950,13 +2823,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E9%95%B7%E4%BA%95%E5%B8%82%E5%B9%B3%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E9%95%B7%E4%BA%95%E5%B8%82%E5%B9%B3%E5%B1%B1%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 38.0983,
@@ -2967,12 +2839,11 @@
             "isAlive": true,
             "tags": "trainlines, shinkansen, city",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-iQ1BQARsMYA.jpg",
-                    "title": "東京都新橋駅新幹線ライブカメラ",
+                    "title": "Shimbashi, Tokyo",
                     "width": 357,
                     "height": 200
                 }
@@ -2980,13 +2851,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E6%96%B0%E5%B9%B9%E7%B7%9A%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6671,
@@ -2997,12 +2867,11 @@
             "isAlive": true,
             "tags": "street",
             "region": "Yamagata",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-nfoA5nwV14U.jpg",
-                    "title": "山形県酒田市下安町ライブカメラ",
+                    "title": "Shimoyasucho, Sakata",
                     "width": 357,
                     "height": 200
                 }
@@ -3010,13 +2879,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E7%9C%8C%E9%85%92%E7%94%B0%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96-m6q",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E7%9C%8C%E9%85%92%E7%94%B0%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96-m6q/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 38.9288,
@@ -3027,12 +2895,11 @@
             "isAlive": true,
             "tags": "street",
             "region": "Fukushima",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-0uumDOVqm-Q.jpg",
-                    "title": "福島県郡山市豊田町ライブカメラ",
+                    "title": "Toyodamachi, Koriyama",
                     "width": 357,
                     "height": 200
                 }
@@ -3040,13 +2907,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E7%A6%8F%E5%B3%B6%E7%9C%8C%E9%83%A1%E5%B1%B1%E5%B8%82%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 37.3976,
@@ -3057,12 +2923,11 @@
             "isAlive": true,
             "tags": "street, scenery",
             "region": "Yamagata",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-utnJTWdiU1c.jpg",
-                    "title": "山形県山形市蔵王大鳥居前ライブカメラ",
+                    "title": "Zao Great Torii, Yamagata",
                     "width": 357,
                     "height": 200
                 }
@@ -3070,13 +2935,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%B8%82%E8%94%B5%E7%8E%8B%E4%B8%8A%E9%87%8E%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%B1%B1%E5%BD%A2%E5%B8%82%E8%94%B5%E7%8E%8B%E4%B8%8A%E9%87%8E%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 38.1736,
@@ -3086,12 +2950,11 @@
             "name": "JR山陽本線ライブ鉄道チャンネル - JR Sanyo Main Line",
             "isAlive": true,
             "tags": "trainlines",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-d0gP7v70mJ8.jpg",
-                    "title": "ＪＲ山陽本線 ライブカメラ ２０２６年１０月２９日",
+                    "title": "JR Sanyo Main Line",
                     "width": 357,
                     "height": 200
                 }
@@ -3099,13 +2962,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kouji.d-sanyo-train-live-ch",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kouji.d-sanyo-train-live-ch/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ]
         },
@@ -3114,24 +2976,23 @@
             "isAlive": true,
             "tags": "shore, scenery, multicam",
             "region": "Kanagawa",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-Z9Q9akr7QSE.jpg",
-                    "title": "材木座海岸／由比ガ浜 ／県営材木座駐車場＠ローカス鎌倉：by HviewCam",
+                    "title": "Zaimokuza and Yuigahama",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-UQJ2AMY72ek.jpg",
-                    "title": "海岸線ズーム",
+                    "title": "Zushi Beach (zoom)",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-8tk5LQkNr5k.jpg",
-                    "title": "海岸線：by HviewCam",
+                    "title": "Zushi Beach 1",
                     "width": 357,
                     "height": 200
                 }
@@ -3139,21 +3000,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@FlyingSuika",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@FlyingSuika/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "7 cameras on this channel"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=xPgeZzojY5o",
-                    "text": "片瀬海岸東浜 ：Enoshima LiveCamera 24Hoursby HviewCam",
-                    "linkTitle": "Same link has been live nonstop since at least Jul 2025"
-                },
-                {
-                    "text": "Live when checked (7): 材木座海岸／由比ガ浜 ／県営材木座駐車場＠ローカス鎌倉：by HviewCam / 海岸線ズーム / 海岸線：by HviewCam / 逗子海岸ワイド：by HviewCam / 江の島ズーム ：Enoshima LiveCamera 24Hours：by HviewCam / 片瀬海岸東浜 ：Enoshima LiveCamera 24Hoursby HviewCam / 腰越海岸：Enoshima LiveCamera 24Hoursby HviewCam"
+                    "linkTitle": "Katase Higashihama. Live nonstop since at least Jul 2025."
                 }
             ],
             "lat": 35.3001,
@@ -3164,12 +3021,11 @@
             "isAlive": true,
             "tags": "trainstation, trainlines, shinkansen",
             "region": "Aichi",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-HeD0lx2Qm_k.jpg",
-                    "title": "鉄の箱の笠寺駅ライブカメラ‼ 貨物列車と新幹線いろいろいっぱい‼ メンバーシップ様以外のスクショを厳重にお断りします‼",
+                    "title": "Kasadera Station, Nagoya (freight & Shinkansen)",
                     "width": 357,
                     "height": 200
                 }
@@ -3177,18 +3033,16 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@tetsunohako",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@tetsunohako/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=HeD0lx2Qm_k",
-                    "text": "鉄の箱の笠寺駅ライブカメラ‼ 貨物列車と新幹線いろいろいっぱい‼ メンバーシップ様以外のスクショを厳重にお断りします‼",
-                    "linkTitle": "Same link has been live nonstop since at least Aug 2025"
+                    "linkTitle": "Kasadera Station, Nagoya (freight & Shinkansen). Live nonstop since at least Aug 2025."
                 }
             ],
             "lat": 35.0963,
@@ -3199,12 +3053,11 @@
             "isAlive": true,
             "tags": "street, city",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-kAyosmWlJko.jpg",
-                    "title": "東京都新宿区西早稲田ライブカメラ。",
+                    "title": "Nishi-Waseda, Shinjuku",
                     "width": 357,
                     "height": 200
                 }
@@ -3212,13 +3065,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%97%A9%E7%A8%B2%E7%94%B0%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%97%A9%E7%A8%B2%E7%94%B0%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7079,
@@ -3229,12 +3081,11 @@
             "isAlive": true,
             "tags": "street, city",
             "region": "Chiba",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-PQohzzQ554I.jpg",
-                    "title": "千葉県千葉市中央区中央ライブカメラ",
+                    "title": "Chuo, Chiba",
                     "width": 357,
                     "height": 200
                 }
@@ -3242,13 +3093,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%A4%AE%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E4%B8%AD%E5%A4%AE%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.6074,
@@ -3259,24 +3109,23 @@
             "isAlive": true,
             "tags": "shore, scenery",
             "region": "Niigata",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt--hyYkoP0RBU.jpg",
-                    "title": "新潟県・道の駅 笹川流れライブチャンネル＋外部マイク ※晴れた日には粟島の島影も御覧いただけます ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆",
+                    "title": "Sasagawa Nagare roadside station",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-lZ0Va0y_KxA.jpg",
-                    "title": "日本海に沈む美しい夕日 ライブチャンネル（新潟県・鯨波海岸)＋BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆",
+                    "title": "Sunset, Kujiranami Beach",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-16IpSMCu4cU.jpg",
-                    "title": "白鳥（新潟県国指定瓢湖鳥獣保護区）Liveチャンネル ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆",
+                    "title": "Swans, Lake Hyoko",
                     "width": 357,
                     "height": 200
                 }
@@ -3284,21 +3133,17 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@dcnextllc5177",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@dcnextllc5177/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "linkTitle": "Also: Sasagawa Nagare roadside station, Sunset, Kujiranami Beach, Swans, Lake Hyoko, Sasagawa Nagare Yuhi Kaikan"
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=nwO2D1yUnT8",
-                    "text": "新潟県・笹川流れ 夕日会館 Liveチャンネル+BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆",
-                    "linkTitle": "Same link has been live nonstop since at least Aug 2025"
-                },
-                {
-                    "text": "Live when checked (4): 新潟県・道の駅 笹川流れライブチャンネル＋外部マイク ※晴れた日には粟島の島影も御覧いただけます ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 日本海に沈む美しい夕日 ライブチャンネル（新潟県・鯨波海岸)＋BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 白鳥（新潟県国指定瓢湖鳥獣保護区）Liveチャンネル ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆ / 新潟県・笹川流れ 夕日会館 Liveチャンネル+BGM ☆日頃、当ライブチャンネルをご視聴頂きありがとうございます。☆"
+                    "linkTitle": "Sasagawa Nagare Yuhi Kaikan. Live nonstop since at least Aug 2025."
                 }
             ],
             "lat": 38.375,
@@ -3309,24 +3154,23 @@
             "isAlive": true,
             "tags": "seaport, airport, city, multicam",
             "region": "Okinawa",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-IEjBM0YD8go.jpg",
-                    "title": "沖縄ライブカメラ同時モニター那覇新港 那覇空港北側 那覇市 ライブ カメラ NAHA OKINAWA port 泊港入口 那覇クルーズターミナル",
+                    "title": "Naha New Port, airport north",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-O_YFJgj90tI.jpg",
-                    "title": "沖縄ライブ カメラ 那覇市 那覇新港 那覇空港 滑走路北側 OKINAWA NAHA PORT LIVE",
+                    "title": "Naha Port and airport runway",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-sG2n6xflJlA.jpg",
-                    "title": "HAKUREI🟪🚢⚓️ 沖縄ライブカメラ 那覇クルーズターミナル 沖縄県 那覇市 泊港入口 波の上 若狭 NAHA Port OKINAWA",
+                    "title": "Naha Cruise Terminal",
                     "width": 357,
                     "height": 200
                 }
@@ -3334,16 +3178,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@KIN-TAKA",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@KIN-TAKA/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (4): 沖縄ライブカメラ同時モニター那覇新港 那覇空港北側 那覇市 ライブ カメラ NAHA OKINAWA port 泊港入口 那覇クルーズターミナル / 沖縄ライブ カメラ 那覇市 那覇新港 那覇空港 滑走路北側 OKINAWA NAHA PORT LIVE / HAKUREI🟪🚢⚓️ 沖縄ライブカメラ 那覇クルーズターミナル 沖縄県 那覇市 泊港入口 波の上 若狭 NAHA Port OKINAWA / 💙沖縄ライブカメラ 那覇市 泊大橋～曙 渋滞状況 沖縄県 NAHA OKINAWA Tomari Bridge 那覇新港"
+                    "linkTitle": "Also: Naha New Port, airport north, Naha Port and airport runway, Naha Cruise Terminal, Tomari Bridge and Akebono"
                 }
             ],
             "lat": 26.2337,
@@ -3354,12 +3195,11 @@
             "isAlive": true,
             "tags": "trainstation, street",
             "region": "Osaka",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-WtCA1QxwoII.jpg",
-                    "title": "大阪府大阪市鶴見区放出駅ライブカメラ",
+                    "title": "Hanazono, Tsurumi, Osaka",
                     "width": 357,
                     "height": 200
                 }
@@ -3367,13 +3207,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%A4%A7%E9%98%AA%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%A4%A7%E9%98%AA%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 34.688,
@@ -3384,24 +3223,23 @@
             "isAlive": true,
             "tags": "shore, scenery, multicam",
             "region": "Miyazaki",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-dGlRWKipLh4.jpg",
-                    "title": "串間市恋ヶ浦ライブカメラ",
+                    "title": "Kushima Koigaura",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-6zNmgIW5Yh8.jpg",
-                    "title": "日南市梅ヶ浜ライブカメラ",
+                    "title": "Nichinan Umegahama",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-f6sy0W5RdHs.jpg",
-                    "title": "宮崎市青島ライブカメラ",
+                    "title": "Aoshima",
                     "width": 357,
                     "height": 200
                 }
@@ -3409,16 +3247,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@iinamicom",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@iinamicom/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (6): 串間市恋ヶ浦ライブカメラ / 日南市梅ヶ浜ライブカメラ / 宮崎市青島ライブカメラ / 宮崎市木崎浜ライブカメラ / 宮崎市一ツ葉ライブカメラ / 川南町伊倉ヶ浜ライブカメラ"
+                    "linkTitle": "Also: Kushima Koigaura, Nichinan Umegahama, Aoshima, Kizakihama, Hitotsuba, Kawaminami Ikuragahama"
                 }
             ],
             "lat": 31.7997,
@@ -3429,18 +3264,17 @@
             "isAlive": true,
             "tags": "scenery, mountain, city",
             "region": "Nagano",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-x7qWuoeZ78U.jpg",
-                    "title": "４Ｋ諏訪湖・八ヶ岳ライブ気象情報カメラ３｜Weather Station Live｜長野県諏訪盆地 2026/10/29 05:06",
+                    "title": "Weather station camera 3",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-94KLDWtQRWA.jpg",
-                    "title": "４Ｋ諏訪湖・八ヶ岳ライブカメラ１｜信州 諏訪盆地｜Nagano Japan 2026/10/29 05:00",
+                    "title": "Camera 1",
                     "width": 357,
                     "height": 200
                 }
@@ -3448,16 +3282,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@4994land80",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@4994land80/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (2): ４Ｋ諏訪湖・八ヶ岳ライブ気象情報カメラ３｜Weather Station Live｜長野県諏訪盆地 2026/10/29 05:06 / ４Ｋ諏訪湖・八ヶ岳ライブカメラ１｜信州 諏訪盆地｜Nagano Japan 2026/10/29 05:00"
+                    "linkTitle": "Also: Weather station camera 3, Camera 1"
                 }
             ],
             "lat": 36.0479,
@@ -3468,12 +3299,11 @@
             "isAlive": true,
             "tags": "shrine",
             "region": "Chiba",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-g9Y-Bkq5O0Q.jpg",
-                    "title": "成田山新勝寺ライブカメラ",
+                    "title": "Naritasan Shinshoji Temple",
                     "width": 357,
                     "height": 200
                 }
@@ -3481,13 +3311,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@NaritasanTemple",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@NaritasanTemple/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7863,
@@ -3498,18 +3327,17 @@
             "isAlive": true,
             "tags": "street, nightview",
             "region": "Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt--PIM7Sc7uE4.jpg",
-                    "title": "歌舞伎町一番街LIVEカメラ",
+                    "title": "Ichibangai",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-TObte08ESr0.jpg",
-                    "title": "新宿 歌舞伎町LIVE 東京 Tokyo Kabukicho Shinjuku Japan 24時間ライブ",
+                    "title": "Kabukicho 24h",
                     "width": 357,
                     "height": 200
                 }
@@ -3517,16 +3345,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@kabukicho526",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@kabukicho526/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (2): 歌舞伎町一番街LIVEカメラ / 新宿 歌舞伎町LIVE 東京 Tokyo Kabukicho Shinjuku Japan 24時間ライブ"
+                    "linkTitle": "Also: Ichibangai, Kabukicho 24h"
                 }
             ],
             "lat": 35.6954,
@@ -3537,12 +3362,11 @@
             "isAlive": true,
             "tags": "street, city",
             "region": "Tokyo",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-nZYwfnbES8o.jpg",
-                    "title": "東京都武蔵野市中町ライブカメラ",
+                    "title": "Nakacho, Musashino",
                     "width": 357,
                     "height": 200
                 }
@@ -3550,13 +3374,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E4%B8%AD%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E6%AD%A6%E8%94%B5%E9%87%8E%E5%B8%82%E4%B8%AD%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.7078,
@@ -3567,12 +3390,11 @@
             "isAlive": true,
             "tags": "seaport, street",
             "region": "Yamagata",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-x3vUJXP4Uvg.jpg",
-                    "title": "山形県酒田市船場町酒田港ライブカメラ",
+                    "title": "Sakata Port",
                     "width": 357,
                     "height": 200
                 }
@@ -3580,13 +3402,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E9%85%92%E7%94%B0%E6%B8%AF%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E9%85%92%E7%94%B0%E6%B8%AF%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 38.9176,
@@ -3597,12 +3418,11 @@
             "isAlive": true,
             "tags": "street",
             "region": "Kanagawa",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-kJqL3xSgwzg.jpg",
-                    "title": "神奈川県小田原市栄町ライブカメラ",
+                    "title": "Sakaecho, Odawara",
                     "width": 357,
                     "height": 200
                 }
@@ -3610,13 +3430,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E5%B0%8F%E7%94%B0%E5%8E%9F%E6%A0%84%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E5%B0%8F%E7%94%B0%E5%8E%9F%E6%A0%84%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 35.2539,
@@ -3627,12 +3446,11 @@
             "isAlive": true,
             "tags": "street",
             "region": "Saitama",
-            "description": "Live camera on YouTube. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-_L2oVf6xBGQ.jpg",
-                    "title": "埼玉県熊谷市原島ライブカメラ",
+                    "title": "Harajima, Kumagaya",
                     "width": 357,
                     "height": 200
                 }
@@ -3640,13 +3458,12 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@%E7%86%8A%E8%B0%B7%E5%B8%82%E5%8E%9F%E5%B3%B6%E3%83%A9%E3%82%A4%E3%83%96",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@%E7%86%8A%E8%B0%B7%E5%B8%82%E5%8E%9F%E5%B3%B6%E3%83%A9%E3%82%A4%E3%83%96/streams",
-                    "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
+                    "text": "Live stream page"
                 }
             ],
             "lat": 36.1665,
@@ -3657,24 +3474,23 @@
             "isAlive": true,
             "tags": "trainstation, trainlines, street",
             "region": "Chiba",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-oQVfclB6nvY.jpg",
-                    "title": "JR本八幡駅北口ライブカメラ 本八幡駅側 LIVECAMERA livestream webcam 電車 鉄道カメラ train station JAPAN 交",
+                    "title": "JR Motoyawata north exit",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-WhNoqKDlx8Y.jpg",
-                    "title": "JR本八幡駅北口タクシー乗り場ライブカメラ JAPAN LIVECAMERA MOTOYAWATA STATION",
+                    "title": "Taxi stand",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-vt1eDSAychw.jpg",
-                    "title": "東武鎌ヶ谷駅タクシー乗り場ライブカメラ JAPAN KAMAGAYA STATION LIVECAMERA livestream",
+                    "title": "Tobu Kamagaya taxi stand",
                     "width": 357,
                     "height": 200
                 }
@@ -3682,16 +3498,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@taxichiba",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@taxichiba/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (5): JR本八幡駅北口ライブカメラ 本八幡駅側 LIVECAMERA livestream webcam 電車 鉄道カメラ train station JAPAN 交 / JR本八幡駅北口タクシー乗り場ライブカメラ JAPAN LIVECAMERA MOTOYAWATA STATION / 東武鎌ヶ谷駅タクシー乗り場ライブカメラ JAPAN KAMAGAYA STATION LIVECAMERA livestream / 東武鎌ヶ谷駅ライブカメラ タクシー乗り場 JAPAN KAMAGAYA STATION TAXI POOL livecamera lives"
+                    "linkTitle": "5 cameras on this channel"
                 }
             ],
             "lat": 35.7207,
@@ -3702,24 +3515,23 @@
             "isAlive": true,
             "tags": "shore, traffic, airport, multicam",
             "region": "Kanagawa / Tokyo",
-            "description": "Live streams from one YouTube channel, bundled in one entry. Checked live on 2026-10-29.",
             "addedAt": "2026-10-29",
             "images": [
                 {
                     "src": "/pictures/yt-MOkZUavnHM4.jpg",
-                    "title": "三浦海岸ライブカメラ 24時間 波の音・海・睡眠・作業用 | Miura Beach Live Cam Japan",
+                    "title": "Miura Beach",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-Mk8f6sknL_4.jpg",
-                    "title": "首都高ライブカメラ 4K 🚗 湾岸線・東雲JCT | Tokyo Highway Live Cam",
+                    "title": "Shuto Expressway, Shinonome JCT",
                     "width": 357,
                     "height": 200
                 },
                 {
                     "src": "/pictures/yt-LZlHg3vzwe0.jpg",
-                    "title": "羽田空港ライブカメラ ✈️ 飛行機・東京湾 | Haneda Airport Live Cam Tokyo",
+                    "title": "Haneda Airport",
                     "width": 357,
                     "height": 200
                 }
@@ -3727,16 +3539,13 @@
             "extras": [
                 {
                     "link": "https://www.youtube.com/@WanganGo",
-                    "text": "YouTube channel (home)",
+                    "text": "YouTube channel",
                     "kind": "home"
                 },
                 {
                     "link": "https://www.youtube.com/@WanganGo/streams",
                     "text": "Live stream page",
-                    "linkTitle": "All current and past streams of this channel"
-                },
-                {
-                    "text": "Live when checked (5): 三浦海岸ライブカメラ 24時間 波の音・海・睡眠・作業用 | Miura Beach Live Cam Japan / 首都高ライブカメラ 4K 🚗 湾岸線・東雲JCT | Tokyo Highway Live Cam / 羽田空港ライブカメラ ✈️ 飛行機・東京湾 | Haneda Airport Live Cam Tokyo / 東京湾岸Lo-fiライブカメラ 24/7 🌙 夜景・作業用BGM | Tokyo Lo-fi Radio / 東京湾ライブカメラ 4K 🌃 東京ゲートブリッジ・有明 | Tokyo Bay Live Cam City Lig"
+                    "linkTitle": "Also: Miura Beach, Shuto Expressway, Shinonome JCT, Haneda Airport, Tokyo Bay lo-fi, Tokyo Gate Bridge and Ariake"
                 }
             ],
             "lat": 35.1882,
