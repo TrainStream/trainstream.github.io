@@ -3,6 +3,7 @@ title: テレビ壁 TV wall
 description: Watch several Japanese live cameras at once.
 scripts:
   - /assets/js/cards.js
+  - /assets/js/youtube-channel.js
   - /assets/js/tv.js
 ---
 {% include data-json.html %}
@@ -33,10 +34,11 @@ scripts:
     <form class="toolbar-row" id="tv-add-form">
         <label class="search">
             <span class="visually-hidden">YouTube link</span>
-            <input type="url" id="tv-add-url" placeholder="Paste any YouTube live link (youtube.com/watch?v=…, youtu.be/…, /live/…)" />
+            <input type="url" id="tv-add-url" placeholder="Paste a YouTube live link (youtube.com/watch?v=…, youtu.be/…, @channel/streams…)" />
         </label>
         <button class="btn btn--pink" type="submit">📺＋ Add</button>
     </form>
-    <p class="hint" id="tv-add-msg">Channels linked as <code>@name/streams</code> can't be embedded directly: open the channel, copy the link of the live video, and paste it here.</p>
+    <p class="hint" id="tv-add-msg">Channel links (<code>@name/streams</code>) work for channels on the camera list. If a channel has several live streams, you get to pick one.</p>
+    <p class="notes" id="tv-live-status"></p>
     <ul class="admin-list" id="tv-picker"></ul>
 </section>

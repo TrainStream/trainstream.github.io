@@ -20,6 +20,7 @@ Plain Jekyll on GitHub Pages: no build step, no plugins, no npm.
 | `assets/js/trains.js` | The pixel train: real-world liveries and the rare scenarios (level crossing, passing, crash, multi-track drifting, Doctor Yellow, overrun, station cat, rush hour, deer, early departure, snowplough in winter, sleeper train at night). Force one with `/?train=crash&livery=hankyu`. |
 | `assets/js/stream-rules.js` | Validation + formatting rules shared by the submit tool and the GitHub Actions. |
 | `scripts/` | Node scripts the Actions run (not published). |
+| `.github/workflows/live.yml`, `scripts/check-live.mjs`, `assets/js/youtube-channel.js` | **Live check** for the TV wall: every 15 minutes, reads each YouTube channel's `/streams` page and lists its live videos in `live.json` on the `live-data` branch. The TV wall loads it from raw.githubusercontent.com, so channels with several live streams show each one. Run it by hand from the Actions tab ("Live check" → Run workflow). |
 | `.github/` | Issue form, workflows, and the trusted publishers list. |
 
 ### Stream fields
@@ -58,6 +59,7 @@ Add GitHub usernames to [`.github/publishers.yml`](.github/publishers.yml). Thei
 - The workflows ask for the permissions they need. If they fail with a 403, set Settings → Actions → General → Workflow permissions to **Read and write permissions**.
 - If `master` has branch protection, allow GitHub Actions to push to it, or the submission Action can't publish.
 - GitHub Pages: deploy from the `master` branch (as before).
+- The live check force-pushes the `live-data` branch. Don't protect that branch. GitHub pauses scheduled workflows after 60 days without commits; re-enable "Live check" in the Actions tab if that happens.
 
 ## Visitor counter
 
