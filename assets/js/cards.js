@@ -106,8 +106,18 @@
         );
     }
 
+    var newBadgeAfter = null;
     function isNew(addedAt) {
         if (!addedAt) return false;
+        if (newBadgeAfter === null) {
+            var node = document.getElementById('ts-config');
+            try {
+                newBadgeAfter = (node && JSON.parse(node.textContent).newBadgeAfter) || '';
+            } catch (e) {
+                newBadgeAfter = '';
+            }
+        }
+        if (newBadgeAfter && addedAt <= newBadgeAfter) return false;
         var time = Date.parse(addedAt);
         return !isNaN(time) && Date.now() - time < NEW_DAYS * 86400000;
     }

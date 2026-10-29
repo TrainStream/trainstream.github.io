@@ -1,3 +1,3 @@
 <script type="application/json" id="ts-streams">{{ site.data.streams.data | jsonify | replace: '</', '<\/' }}</script>
 <script type="application/json" id="ts-tags">{{ site.data.tags | jsonify | replace: '</', '<\/' }}</script>
-<script type="application/json" id="ts-config">{"repo": {{ site.ts_repo | jsonify }}}</script>
+<script type="application/json" id="ts-config">{"repo": {{ site.ts_repo | jsonify }}, "newBadgeAfter": {{ site.new_badge_after | jsonify }}}</script>
