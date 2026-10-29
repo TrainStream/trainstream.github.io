@@ -27,3 +27,7 @@ ts_since: 2018-05-03
 visitor_counter: joke
 counter_workspace: ""
 counter_name: visits
+
+# Cameras added on or before this date never get the NEW! badge (used to clear
+# a big batch import). Later additions get it for 30 days as usual.
+new_badge_after: "2026-10-29"
