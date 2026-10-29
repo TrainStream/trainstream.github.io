@@ -633,7 +633,8 @@
         });
         return leafletLoading;
     }
-    /* ⤢ fills the browser window, ⛶ goes real full screen (where the browser allows it, so not on iPhone) */
+    /* ⤢ fills the browser window, ⛶ goes real full screen (where the browser allows it, so not on iPhone).
+       Full screen is the whole page with the map expanded, not just the map, so the pixel trains still drive over it. */
     function fullscreenElement() {
         return document.fullscreenElement || document.webkitFullscreenElement || null;
     }
@@ -641,9 +642,10 @@
         var canFullscreen = document.fullscreenEnabled || document.webkitFullscreenEnabled;
         var expandBtn = el('button', { type: 'button', className: 'map-size-btn', 'aria-pressed': 'false', title: 'Expand to the window', 'aria-label': 'Expand map to the window', text: '⤢' });
         var fullBtn = canFullscreen ? el('button', { type: 'button', className: 'map-size-btn', 'aria-pressed': 'false', title: 'Full screen', 'aria-label': 'Full screen map', text: '⛶' }) : null;
+        var fullMode = false; /* true while the page is full screen because of ⛶ */
 
         function refresh() {
-            var full = fullscreenElement() === mapWrap;
+            var full = fullMode && !!fullscreenElement();
             var expanded = mapWrap.classList.contains('is-expanded');
             expandBtn.setAttribute('aria-pressed', String(expanded));
             expandBtn.textContent = expanded ? '⤡' : '⤢';
@@ -660,17 +662,39 @@
             refresh();
         }
 
+        function exitFullscreen() {
+            (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+        }
+
         expandBtn.addEventListener('click', function () {
-            if (fullscreenElement()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-            setExpanded(!mapWrap.classList.contains('is-expanded'));
+            if (fullMode && fullscreenElement()) exitFullscreen(); /* leaving full screen also shrinks the map, below */
+            else setExpanded(!mapWrap.classList.contains('is-expanded'));
         });
         if (fullBtn) {
             fullBtn.addEventListener('click', function () {
-                if (fullscreenElement() === mapWrap) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-                else (mapWrap.requestFullscreen || mapWrap.webkitRequestFullscreen).call(mapWrap);
+                if (fullMode && fullscreenElement()) {
+                    exitFullscreen();
+                    return;
+                }
+                var page = document.documentElement;
+                fullMode = true;
+                setExpanded(true);
+                var request = (page.requestFullscreen || page.webkitRequestFullscreen).call(page);
+                if (request && request.catch) {
+                    request.catch(function () {
+                        fullMode = false;
+                        setExpanded(false);
+                    });
+                }
             });
-            document.addEventListener('fullscreenchange', refresh);
-            document.addEventListener('webkitfullscreenchange', refresh);
+            var onFullscreenChange = function () {
+                if (fullMode && !fullscreenElement()) {
+                    fullMode = false;
+                    setExpanded(false);
+                } else refresh();
+            };
+            document.addEventListener('fullscreenchange', onFullscreenChange);
+            document.addEventListener('webkitfullscreenchange', onFullscreenChange);
         }
         /* Esc leaves the expanded map (full screen handles Esc itself; an open dialog gets it first) */
         document.addEventListener('keydown', function (event) {
