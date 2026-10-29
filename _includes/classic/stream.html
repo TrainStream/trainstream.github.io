@@ -1,8 +1,8 @@
-<div class="filterDiv {{ include.stream.tags | split: ',' | join: ' ' }}">
+<div class="filterDiv {{ include.stream.tags | split: ',' | join: ' ' | escape }}">
     <p>
         <font size="4">
             <span style="color: #000d8a">
-                <strong>{{ include.stream.name }}:</strong>
+                <strong>{{ include.stream.name | escape }}:</strong>
             </span>
         </font>
         <br />
@@ -10,10 +10,11 @@
         {% assign images_count = include.stream.images | size %}
         {% for img in include.stream.images %}
             <img
-                src="//images.weserv.nl/?h={{ img.height }}&url=https://trainstream.github.io{{ img.src }}"
-                title="{{ img.title }}"
-                width="{{ img.width }}"
-                height="{{ img.height }}"
+                src="{% include img-url.html src=img.src h=img.height %}"
+                title="{{ img.title | default: img.alt | escape }}"
+                width="{{ img.width | escape }}"
+                height="{{ img.height | escape }}"
+                loading="lazy"
             />
 
             {% if images_count == 4 and forloop.index == 2 %}
@@ -27,16 +28,17 @@
 
         <br />
         {% for extra in include.stream.extras %}
-            {% if extra.link %}
+            {% capture safe_link %}{% include safe-link.html link=extra.link prefix='/classic' %}{% endcapture %}
+            {% if safe_link != '' %}
                 <a
                     style="text-decoration: none; color: #2a00ee"
-                    href="{{ extra.link }}"
-                    {% if extra.linkTitle %}title="{{ extra.linkTitle }}"{% endif %}
+                    href="{{ safe_link }}"
+                    {% if extra.linkTitle %}title="{{ extra.linkTitle | escape }}"{% endif %}
                 >
-                    {{ extra.text | default: extra.link }}
+                    {{ extra.text | default: extra.link | escape }}
                 </a>
             {% else %}
-                <span style="color: #fff">{{ extra.text }}</span>
+                <span style="color: #fff">{{ extra.text | escape }}</span>
             {% endif %}
             <br />
         {% endfor %}
@@ -46,7 +48,7 @@
             {% assign stripped_tag_slug = tag | strip %}
             <button
                 class="btn {% if stripped_tag_slug == 'sound' %}btn2{% endif %}"
-                onclick="filterSelection('{{ stripped_tag_slug }}')"
+                onclick="filterSelection('{{ stripped_tag_slug | escape }}')"
             >
                 {% for source_tag in site.data.tags %}
                     {% if source_tag.slug == stripped_tag_slug %}
