@@ -2757,3 +2757,13 @@ fieldset.field {
         font-weight: 700;
     }
 }
+
+.kiriban.is-pun {
+    color: var(--jr-green);
+    animation: none;
+}
+
+.counter.is-broken .odometer span {
+    color: var(--led-red);
+    animation: blink 0.4s steps(2, start) infinite;
+}
