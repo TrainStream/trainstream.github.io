@@ -184,6 +184,10 @@
             isNew: isNew(raw.addedAt),
             geo: hasGeo ? [lat, lng] : null,
         };
+        /* "cameras" is an optional hand-entered count; without it we fall back to the number of pictures */
+        var cams = Math.floor(Number(raw.cameras));
+        model.cameras = cams > 0 ? cams : 0;
+        model.camCount = model.cameras || images.length;
         model.search = [
             model.name,
             model.region,
@@ -248,7 +252,11 @@
                           decoding: 'async',
                       })
                     : el('span', { className: 'kaomoji', style: 'display:grid;place-items:center;height:100%;color:#ddd', text: '(・_・) no image' }),
-                model.images.length > 1 ? el('span', { className: 'cams-chip', text: '📷×' + model.images.length }) : null,
+                model.cameras > 1
+                    ? el('span', { className: 'cams-chip', title: model.cameras + ' cameras', text: '📷×' + model.cameras })
+                    : model.images.length > 1
+                      ? el('span', { className: 'cams-chip', title: model.images.length + ' pictures', text: '🖼×' + model.images.length })
+                      : null,
                 model.alive ? null : el('span', { className: 'dead-stamp', text: '運休' }),
             ]
         );
@@ -330,7 +338,7 @@
                 el('div', { className: 'card-body' }, [
                     heading,
                     tagList,
-                    el('span', { className: 'board-cams', text: model.images.length + ' cam' + (model.images.length === 1 ? '' : 's') }),
+                    el('span', { className: 'board-cams', text: model.camCount + ' cam' + (model.camCount === 1 ? '' : 's') }),
                     el('ul', { className: 'card-links' }, linkItems),
                     actions,
                 ]),

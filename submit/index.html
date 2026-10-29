@@ -125,6 +125,12 @@ scripts:
         </datalist>
 
         <div class="field">
+            <label for="f-cameras">Number of cameras</label>
+            <input type="number" id="f-cameras" min="1" max="999" step="1" placeholder="e.g. 5" style="max-width: 160px" />
+            <span class="hint">Optional. How many different camera views the stream or site has (not how many pictures you added). Used for the 📷 badge and "Most cameras" sort; for channels whose count changes, give roughly how many there usually are.</span>
+        </div>
+
+        <div class="field">
             <label for="f-credit">Credit me as</label>
             <input type="text" id="f-credit" maxlength="80" placeholder="Anonymous train enjoyer" />
             <span class="hint">Optional. Shown as "Thanks to …" on the stream.</span>

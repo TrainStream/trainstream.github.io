@@ -142,7 +142,7 @@
             });
         } else if (state.sort === 'cams') {
             copy.sort(function (a, b) {
-                return b.images.length - a.images.length || a.index - b.index;
+                return b.camCount - a.camCount || a.index - b.index;
             });
         }
         return copy;

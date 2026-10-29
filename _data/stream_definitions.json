@@ -71,6 +71,11 @@
                 "submittedBy": {
                     "description": "Optional name to credit the person who submitted the stream",
                     "type": "string"
+                },
+                "cameras": {
+                    "description": "Optional number of camera views the stream or site has (not the number of pictures). Used for the camera badge and the 'Most cameras' sort.",
+                    "type": "integer",
+                    "minimum": 1
                 }
             }
         },
