@@ -7,26 +7,73 @@
     var el = TS.el;
     var MAX = 9;
 
+    var config = TS.readJson('ts-config') || {};
+    var LIVE_URL = 'https://raw.githubusercontent.com/' + (config.repo || 'TrainStream/trainstream.github.io') + '/live-data/live.json';
+
     var streams = (TS.readJson('ts-streams') || []).map(function (raw, i) {
         return TS.normalize(raw, i, {});
     });
 
-    /* every embeddable YouTube link, keyed like "video:ID" / "channel:UC…" */
-    var options = [];
-    var labelFor = {};
+    /* one source per YouTube link: a video, or a channel (@name/streams, /channel/UC…) whose live videos come from live.json */
+    var sources = [];
     streams.forEach(function (s) {
-        s.youtubeLinks.forEach(function (link) {
-            var key = link.youtube.kind + ':' + link.youtube.id;
-            if (labelFor[key]) return;
-            var label = s.name + (s.youtubeLinks.length > 1 ? ' — ' + link.text : '');
-            labelFor[key] = label;
-            options.push({ k: key, label: label, alive: s.alive });
+        s.links.forEach(function (link) {
+            var chan = TSChannel.channelKey(link.href);
+            var video = link.youtube && link.youtube.kind === 'video' ? link.youtube : null;
+            if (!video && !chan) return;
+            var many = s.links.filter(function (l) { return l.youtube || TSChannel.channelKey(l.href); }).length > 1;
+            sources.push({
+                stream: s,
+                label: s.name + (many ? ' — ' + link.text : ''),
+                video: video,
+                chan: video ? null : chan,
+                channelId: link.youtube && link.youtube.kind === 'channel' ? link.youtube.id : null,
+                href: link.href,
+            });
         });
     });
 
-    options.sort(function (a, b) {
-        return Number(b.alive) - Number(a.alive);
-    });
+    var live = null; /* live.json once loaded, false if it could not be loaded */
+
+    function liveInfo(chan) {
+        return (live && live.channels && live.channels[chan]) || null;
+    }
+
+    /* picker rows: every live video of a channel gets its own row, so you can choose which one */
+    var options = [];
+    var labelFor = {};
+    function buildOptions() {
+        options = [];
+        labelFor = {};
+        sources.forEach(function (src, order) {
+            var rows = [];
+            if (src.video) {
+                rows.push({ k: 'video:' + src.video.id, label: src.label, pill: src.stream.alive ? 'live' : 'dead' });
+            } else {
+                var info = liveInfo(src.chan);
+                var vids = (info && info.live) || [];
+                vids.forEach(function (v) {
+                    rows.push({ k: 'video:' + v.id, label: src.label + (vids.length > 1 && v.title ? ' — ' + v.title : ''), title: v.title, pill: 'live' });
+                });
+                if (!vids.length) {
+                    var id = (info && info.id) || src.channelId;
+                    var pill = live === null ? 'checking' : info && !info.error ? 'off' : src.stream.alive ? 'live' : 'dead';
+                    rows.push({ k: id ? 'channel:' + id : null, label: src.label, pill: pill, href: src.href });
+                }
+            }
+            rows.forEach(function (row) {
+                if (row.k && labelFor[row.k]) return;
+                if (row.k) labelFor[row.k] = row.label;
+                row.order = order;
+                options.push(row);
+            });
+        });
+        var rank = { live: 0, checking: 1, off: 2, dead: 3 };
+        options.sort(function (a, b) {
+            return rank[a.pill] - rank[b.pill] || a.order - b.order;
+        });
+    }
+    buildOptions();
 
     function parseKey(key) {
         var m = /^(video|channel):([\w-]+)$/.exec(key || '');
@@ -88,25 +135,63 @@
     function renderPicker() {
         var picker = document.getElementById('tv-picker');
         picker.textContent = '';
+        var pills = { live: 'Live', checking: 'Checking…', off: 'Not live now', dead: 'Dead' };
         options.forEach(function (opt) {
-            var on = wall.some(function (t) { return t.k === opt.k; });
             picker.appendChild(
                 el('li', null, [
-                    el('span', { className: 'status-pill' + (opt.alive ? '' : ' is-dead'), text: opt.alive ? 'Live' : 'Dead' }),
-                    el('span', { className: 'name', text: opt.label }),
-                    el('button', {
-                        type: 'button',
-                        className: 'btn btn--small' + (on ? '' : ' btn--pink'),
-                        text: on ? '✕ Remove' : '📺＋ Add',
-                        disabled: !on && wall.length >= MAX,
-                        onclick: function () {
-                            if (on) remove(opt.k);
-                            else add(opt);
-                        },
-                    }),
+                    el('span', { className: 'status-pill' + (opt.pill === 'live' ? '' : ' is-dead'), text: pills[opt.pill] }),
+                    el('span', { className: 'name', title: opt.title || null, text: opt.label }),
+                    opt.k ? addButton(opt) : el('a', { className: 'btn btn--small', href: opt.href, target: '_blank', rel: 'noopener', text: 'Open ↗' }),
                 ])
             );
         });
+    }
+
+    function addButton(opt) {
+        var on = wall.some(function (t) { return t.k === opt.k; });
+        return el('button', {
+            type: 'button',
+            className: 'btn btn--small' + (on ? '' : ' btn--pink'),
+            text: on ? '✕ Remove' : '📺＋ Add',
+            title: !on && /^channel:/.test(opt.k) ? 'Plays the channel\'s live stream when it goes live' : null,
+            disabled: !on && wall.length >= MAX,
+            onclick: function () {
+                if (on) remove(opt.k);
+                else add(opt);
+            },
+        });
+    }
+
+    function renderLiveStatus() {
+        var node = document.getElementById('tv-live-status');
+        if (live === null) node.textContent = 'Checking which channels are live…';
+        else if (!live) node.textContent = '⚠️ Could not load the live check. Channel screens play their main live stream, if any.';
+        else {
+            var mins = Math.max(0, Math.round((Date.now() - Date.parse(live.updated)) / 60000));
+            node.textContent = 'Live streams on channel pages last checked ' + (mins < 1 ? 'just now' : mins + ' min ago') + '. Channels with several live streams list each one.';
+        }
+    }
+
+    function loadLive() {
+        fetch(LIVE_URL, { cache: 'no-cache' })
+            .then(function (res) {
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.json();
+            })
+            .then(function (data) {
+                live = data && data.channels ? data : false;
+            })
+            .catch(function () {
+                if (!live) live = false;
+            })
+            .then(function () {
+                buildOptions();
+                wall.forEach(function (t) {
+                    if (t.label === t.k && labelFor[t.k]) t.label = labelFor[t.k];
+                });
+                render();
+                renderLiveStatus();
+            });
     }
 
     function add(opt) {
@@ -127,19 +212,51 @@
         var input = document.getElementById('tv-add-url');
         var msg = document.getElementById('tv-add-msg');
         var yt = TS.youtube(input.value);
-        if (!yt) {
-            msg.textContent = '⚠️ That is not a YouTube video or /channel/UC… link. (´・ω・`)';
+        var chan = TSChannel.channelKey(input.value);
+        if (!yt && !chan) {
+            msg.textContent = '⚠️ That is not a YouTube video or channel link. (´・ω・`)';
             return;
         }
         if (wall.length >= MAX) {
             msg.textContent = '⚠️ The wall is full (' + MAX + ' screens). Remove one first.';
             return;
         }
-        var key = yt.kind + ':' + yt.id;
-        if (!wall.some(function (t) { return t.k === key; })) add({ k: key, label: labelFor[key] || 'YouTube ' + yt.id });
+        if (yt && yt.kind === 'video') {
+            addPasted('video:' + yt.id);
+            return;
+        }
+        var info = liveInfo(chan);
+        var vids = (info && info.live) || [];
+        var channelId = (info && info.id) || (yt && yt.id);
+        if (vids.length === 1) {
+            addPasted('video:' + vids[0].id, vids[0].title);
+        } else if (vids.length > 1) {
+            msg.textContent = 'This channel has ' + vids.length + ' live streams. Pick one: ';
+            vids.forEach(function (v) {
+                var key = 'video:' + v.id;
+                msg.appendChild(el('button', { type: 'button', className: 'btn btn--small', style: 'margin: 2px 4px 2px 0', text: v.title || v.id, onclick: function () { addPasted(key, v.title); } }));
+            });
+        } else if (channelId) {
+            addPasted('channel:' + channelId);
+            if (info && !info.error) msg.textContent = '✅ Added. The channel is not live right now; the screen plays its live stream once it starts.';
+        } else {
+            msg.textContent = live === null
+                ? '⏳ Still checking which channels are live. Try again in a moment.'
+                : '⚠️ Only channels on the camera list are checked for live streams. Open the channel, copy the link of the live video, and paste it here.';
+        }
+    });
+
+    function addPasted(key, title) {
+        var input = document.getElementById('tv-add-url');
+        var msg = document.getElementById('tv-add-msg');
+        if (wall.length >= MAX) {
+            msg.textContent = '⚠️ The wall is full (' + MAX + ' screens). Remove one first.';
+            return;
+        }
+        if (!wall.some(function (t) { return t.k === key; })) add({ k: key, label: labelFor[key] || title || 'YouTube ' + key.split(':')[1] });
         input.value = '';
         msg.textContent = '✅ Added!';
-    });
+    }
 
     document.querySelectorAll('[data-cols]').forEach(function (b) {
         b.addEventListener('click', function () {
@@ -160,4 +277,7 @@
 
     save();
     render();
+    renderLiveStatus();
+    loadLive();
+    setInterval(loadLive, 5 * 60 * 1000);
 })();

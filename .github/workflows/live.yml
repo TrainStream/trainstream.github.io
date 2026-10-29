@@ -1,0 +1,47 @@
+name: Live check
+
+# Every 15 minutes, look up which YouTube channels are live (and with which
+# videos) and publish live.json to the "live-data" branch. The TV wall reads it
+# from raw.githubusercontent.com, so this never rebuilds the site.
+on:
+  schedule:
+    - cron: '4,19,34,49 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check channels
+        run: |
+          mkdir -p "$RUNNER_TEMP/live"
+          node scripts/check-live.mjs "$RUNNER_TEMP/live/live.json"
+
+      # One orphan commit, force-pushed, so the branch never grows.
+      - name: Publish to live-data
+        working-directory: ${{ runner.temp }}/live
+        run: |
+          git init -q -b live-data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add live.json
+          git commit -q -m 'Update live.json'
+          git push -q --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" live-data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
