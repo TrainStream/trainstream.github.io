@@ -459,7 +459,7 @@
             stream.region ? el('span', { text: '📍 ' + stream.region }) : null,
             stream.cameras ? el('span', { text: TS.camLabel(stream.cameras) }) : null,
             stream.images.length > 1 ? el('span', { text: '🖼 ' + stream.images.length + ' pictures' }) : null,
-            stream.addedAt ? el('span', { text: '🗓 Added ' + stream.addedAt }) : null,
+            stream.addedAt ? el('span', { className: 'detail-date', title: 'Date this entry was added to the list', text: 'Added ' + stream.addedAt }) : null,
             stream.submittedBy ? el('span', { text: '🙏 Thanks to ' + stream.submittedBy }) : null,
         ]);
         detailBody.appendChild(meta);
