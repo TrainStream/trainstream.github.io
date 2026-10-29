@@ -1649,11 +1649,13 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=so_3HK9HIdg",
-                    "linkTitle": "Lake Shojiko. Live nonstop since at least Jan 2024."
+                    "text": "Lake Shojiko",
+                    "linkTitle": "Live nonstop since at least Jan 2024."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=bdUbACCWmoY",
-                    "linkTitle": "Oishi Park, Lake Kawaguchiko. Live nonstop since at least Sep 2023."
+                    "text": "Oishi Park, Lake Kawaguchiko",
+                    "linkTitle": "Live nonstop since at least Sep 2023."
                 }
             ],
             "lat": 35.5233,
@@ -1685,7 +1687,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=maMMEh-2Bsk",
-                    "linkTitle": "Mt. Fuji & Lake Ashinoko from Daikanzan. Live nonstop since at least Sep 2023."
+                    "text": "Mt. Fuji & Lake Ashinoko from Daikanzan",
+                    "linkTitle": "Live nonstop since at least Sep 2023."
                 }
             ],
             "lat": 35.1831,
@@ -1724,7 +1727,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=HvJdPF46kak",
-                    "linkTitle": "Zenkoji Temple. Live nonstop since at least Jan 2024."
+                    "text": "Zenkoji Temple",
+                    "linkTitle": "Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 36.6441,
@@ -1791,7 +1795,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=jp8YydpqWJA",
-                    "linkTitle": "Kasagi Campsite. Live nonstop since at least Jan 2024."
+                    "text": "Kasagi Campsite",
+                    "linkTitle": "Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 34.759,
@@ -1830,7 +1835,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=MwcMURMzJ7A",
-                    "linkTitle": "Asakusa and Skytree. Live nonstop since at least Jan 2024."
+                    "text": "Asakusa and Skytree",
+                    "linkTitle": "Live nonstop since at least Jan 2024."
                 }
             ],
             "lat": 35.7107,
@@ -1869,7 +1875,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=Xn7YQxxC5R0",
-                    "linkTitle": "Kawazu town. Live nonstop since at least Feb 2024."
+                    "text": "Kawazu town",
+                    "linkTitle": "Live nonstop since at least Feb 2024."
                 }
             ],
             "lat": 34.7473,
@@ -1914,7 +1921,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=_k-5U7IeK8g",
-                    "linkTitle": "Tokyo Bay. Live nonstop since at least Jul 2025."
+                    "text": "Tokyo Bay",
+                    "linkTitle": "Live nonstop since at least Jul 2025."
                 }
             ],
             "lat": 35.6311,
@@ -1994,15 +2002,18 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=aJcTvBuj5AA",
-                    "linkTitle": "Uwajima. Live nonstop since at least Jan 2025."
+                    "text": "Uwajima",
+                    "linkTitle": "Live nonstop since at least Jan 2025."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=ZgMFLDWgbBo",
-                    "linkTitle": "Ainan. Live nonstop since at least Jul 2024."
+                    "text": "Ainan",
+                    "linkTitle": "Live nonstop since at least Jul 2024."
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=OV0JEv6C2QQ",
-                    "linkTitle": "Shimanami Kaido. Live nonstop since at least Jun 2024."
+                    "text": "Shimanami Kaido",
+                    "linkTitle": "Live nonstop since at least Jun 2024."
                 }
             ],
             "lat": 33.8273,
@@ -2153,7 +2164,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=XXVXVSLbjAk",
-                    "linkTitle": "Koyasan. Live nonstop since at least Aug 2024."
+                    "text": "Koyasan",
+                    "linkTitle": "Live nonstop since at least Aug 2024."
                 }
             ],
             "lat": 34.2139,
@@ -2198,7 +2210,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=aVGYOlIzV0A",
-                    "linkTitle": "Aso, Kusasenri. Live nonstop since at least Aug 2024."
+                    "text": "Aso, Kusasenri",
+                    "linkTitle": "Live nonstop since at least Aug 2024."
                 }
             ],
             "lat": 32.7903,
@@ -2293,7 +2306,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=EkH8SihBx9E",
-                    "linkTitle": "Hakata Port, Fukuoka. Live nonstop since at least Sep 2024."
+                    "text": "Hakata Port, Fukuoka",
+                    "linkTitle": "Live nonstop since at least Sep 2024."
                 }
             ],
             "lat": 33.6043,
@@ -2325,7 +2339,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=_r-g8wU-0o8",
-                    "linkTitle": "Kanmon Strait from Mojiko. Live nonstop since at least Sep 2024."
+                    "text": "Kanmon Strait from Mojiko",
+                    "linkTitle": "Live nonstop since at least Sep 2024."
                 }
             ],
             "lat": 33.9451,
@@ -2357,7 +2372,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=UEhW0UQ5kiE",
-                    "linkTitle": "Kamaike Pond, Otari. Live nonstop since at least Dec 2025."
+                    "text": "Kamaike Pond, Otari",
+                    "linkTitle": "Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 36.8692,
@@ -2445,7 +2461,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=s--MDmshT3I",
-                    "linkTitle": "Mt. Hakodate Ropeway Live Camera. Live nonstop since at least Dec 2025."
+                    "text": "Mt. Hakodate Ropeway Live Camera",
+                    "linkTitle": "Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 41.7592,
@@ -2574,7 +2591,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=I1kJB1jdGo0",
-                    "linkTitle": "Sapporo Station. Live nonstop since at least Dec 2025."
+                    "text": "Sapporo Station",
+                    "linkTitle": "Live nonstop since at least Dec 2025."
                 }
             ],
             "lat": 43.0687,
@@ -2701,7 +2719,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=DnrgCsF1nAM",
-                    "linkTitle": "Kaminodai parking 1. Live nonstop since at least Jan 2025."
+                    "text": "Kaminodai parking 1",
+                    "linkTitle": "Live nonstop since at least Jan 2025."
                 }
             ],
             "lat": 38.1611,
@@ -2774,7 +2793,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=0PAnSx_u_a8",
-                    "linkTitle": "Hakusan-dori Intersection. Live nonstop since at least Jun 2025."
+                    "text": "Hakusan-dori Intersection",
+                    "linkTitle": "Live nonstop since at least Jun 2025."
                 }
             ]
         },
@@ -3010,7 +3030,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=xPgeZzojY5o",
-                    "linkTitle": "Katase Higashihama. Live nonstop since at least Jul 2025."
+                    "text": "Katase Higashihama",
+                    "linkTitle": "Live nonstop since at least Jul 2025."
                 }
             ],
             "lat": 35.3001,
@@ -3042,7 +3063,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=HeD0lx2Qm_k",
-                    "linkTitle": "Kasadera Station, Nagoya (freight & Shinkansen). Live nonstop since at least Aug 2025."
+                    "text": "Kasadera Station, Nagoya (freight & Shinkansen)",
+                    "linkTitle": "Live nonstop since at least Aug 2025."
                 }
             ],
             "lat": 35.0963,
@@ -3143,7 +3165,8 @@
                 },
                 {
                     "link": "https://www.youtube.com/watch?v=nwO2D1yUnT8",
-                    "linkTitle": "Sasagawa Nagare Yuhi Kaikan. Live nonstop since at least Aug 2025."
+                    "text": "Sasagawa Nagare Yuhi Kaikan",
+                    "linkTitle": "Live nonstop since at least Aug 2025."
                 }
             ],
             "lat": 38.375,
