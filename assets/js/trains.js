@@ -30,10 +30,10 @@
         // the Ginza Line takes its power from a third rail: no pantograph at all
         { id: 'ginza', name: 'Tokyo Metro Ginza Line 1000', body: '#ff9500', bands: [[16, 1, '#c96a00']], panto: [] },
         { id: 'enoden', name: 'Enoshima Electric Railway', cars: 2, body: '#f2ecd0', bands: [[13, 7, '#2e7d4f']], panto: [0], pantoType: 'diamond' },
-        { id: 'n700', name: 'Tōkaidō Shinkansen N700', cars: 4, nose: true, speed: 2.6, body: '#f7f7f7', bands: [[14, 2, '#1d4fa0'], [17, 1, '#1d4fa0']], panto: [1] },
+        { id: 'n700', name: 'Tōkaidō Shinkansen N700', cars: 4, nose: true, speed: 1.8, body: '#f7f7f7', bands: [[14, 2, '#1d4fa0'], [17, 1, '#1d4fa0']], panto: [1] },
         // the last night train in Japan, only after dark
-        { id: 'sunrise', name: 'Sunrise Izumo / Seto 285', weight: 0, cars: 4, speed: 0.7, lit: true, body: '#e8dcc4', bands: [[13, 1, '#c9a24a'], [14, 6, '#8b2a2a']], light: '#fff6c0', panto: [1] },
-        { id: 'doctor-yellow', name: 'Doctor Yellow', weight: 0, cars: 4, nose: true, speed: 4, body: '#ffd800', bands: [[14, 2, '#1d4fa0']], panto: [1] }
+        { id: 'sunrise', name: 'Sunrise Izumo / Seto 285', weight: 0, cars: 4, speed: 0.85, lit: true, body: '#e8dcc4', bands: [[13, 1, '#c9a24a'], [14, 6, '#8b2a2a']], light: '#fff6c0', panto: [1] },
+        { id: 'doctor-yellow', name: 'Doctor Yellow', weight: 0, cars: 4, nose: true, speed: 2.6, body: '#ffd800', bands: [[14, 2, '#1d4fa0']], panto: [1] }
     ];
 
     function livery(id) {
@@ -151,12 +151,30 @@
 
     /* ---------- helpers ---------- */
     var props = [];
-    var SPEED = 115; // px per second
+    var SPEED = 115; // px per second, the same for every train unless its livery says otherwise
+    var runId = 0; // bumped to abort the current run (tab hidden)
+    var ABORT = {};
+    var timer;
+
+    function guard(id) {
+        if (id !== runId) throw ABORT;
+    }
 
     function wait(ms) {
+        var id = runId;
         return new Promise(function (resolve) {
             setTimeout(resolve, ms);
+        }).then(function () {
+            guard(id);
         });
+    }
+
+    // setTimeout that does nothing once the run is over
+    function later(fn, ms) {
+        var id = runId;
+        setTimeout(function () {
+            if (id === runId) fn();
+        }, ms);
     }
 
     function vw() {
@@ -188,8 +206,10 @@
     }
 
     function animate(el, frames, ms, easing) {
+        var id = runId;
         var anim = el.animate(frames, { duration: Math.max(ms, 1), easing: easing || 'linear', fill: 'forwards' });
         return anim.finished.then(function () {
+            guard(id);
             el.style.transform = frames[frames.length - 1].transform || el.style.transform;
             if (frames[frames.length - 1].opacity !== undefined) el.style.opacity = frames[frames.length - 1].opacity;
             anim.cancel();
@@ -231,6 +251,11 @@
         bubble.className = 'train-say' + (cls ? ' ' + cls : '');
         bubble.setAttribute('aria-hidden', 'true');
         bubble.textContent = text;
+        var stacked = 0;
+        Array.prototype.forEach.call(el.children, function (child) {
+            if (child.classList.contains('train-say')) stacked++;
+        });
+        if (stacked) bubble.style.bottom = 'calc(100% + ' + (10 + stacked * 32) + 'px)';
         el.appendChild(bubble);
         setTimeout(function () {
             if (bubble.parentNode) bubble.parentNode.removeChild(bubble);
@@ -368,7 +393,7 @@
                 place(train, -w);
                 place(other, W);
                 var meet = (W + w) / (train.speed + other.speed);
-                setTimeout(function () {
+                later(function () {
                     say(train, 'ﾌｧﾝ♪', 1200);
                     say(other, 'ﾌｧﾝ♪', 1200);
                 }, meet * 1000 - 300);
@@ -386,7 +411,7 @@
                 place(train, -w);
                 place(other, W);
                 var ms = (Math.max(mid, W - mid) / SPEED) * 1000;
-                setTimeout(function () {
+                later(function () {
                     say(train, '!?', 900);
                     say(other, '!?', 900);
                 }, ms - 1100);
@@ -456,7 +481,7 @@
                     place(el, -w);
                 });
                 var mid = Math.round(W / 2 - w / 2);
-                return drive(train, mid - 140, { boost: 2.5 })
+                return drive(train, mid - 140, { boost: 2 })
                     .then(function () {
                         rails.classList.add('on');
                         ghosts.forEach(function (g, i) {
@@ -475,7 +500,7 @@
                     })
                     .then(function () {
                         return Promise.all(all.map(function (el) {
-                            return drive(el, W + 40, { boost: 3, easing: 'ease-in' });
+                            return drive(el, W + 40, { boost: 2.5, easing: 'ease-in' });
                         }));
                     });
             }
@@ -488,7 +513,7 @@
             run: function (w) {
                 var W = vw();
                 place(train, -w);
-                setTimeout(function () {
+                later(function () {
                     prop('train-lucky', '✨ ドクターイエロー！ ✨<small>見ると幸せになれる — lucky you!</small>', Math.round(W / 2));
                 }, ((W / 2 + w) / train.speed) * 1000 - 400);
                 return drive(train, W).then(function () {
@@ -618,10 +643,10 @@
                 spray.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i>';
                 train.appendChild(spray);
                 place(train, -w);
-                return drive(train, Math.round(W / 2 - w / 2), { boost: 0.8 })
+                return drive(train, Math.round(W / 2 - w / 2), {})
                     .then(function () {
                         say(train, 'ザザザザ…', 1600);
-                        return drive(train, W, { boost: 0.8 });
+                        return drive(train, W, {});
                     });
             }
         },
@@ -637,7 +662,7 @@
                 var W = vw();
                 place(train, -w);
                 [800, 4000, 7200].forEach(function (ms) {
-                    setTimeout(function () {
+                    later(function () {
                         say(train, 'Zzz…', 2200);
                     }, ms);
                 });
@@ -719,10 +744,14 @@
         train.livery = forcedLivery || livery(scenario.livery) || pickLivery();
         var w = dress(train, train.livery, scenario.dress);
         train.setAttribute('data-scenario', name);
+        var id = ++runId;
         scenario
             .run(w)
-            .catch(function () {})
+            .catch(function (e) {
+                if (e !== ABORT && window.console) console.warn('pixel train:', e);
+            })
             .then(function () {
+                if (id !== runId) return;
                 cleanup();
                 // the next one comes 12-24 seconds after this one has left
                 schedule(forced ? 3000 : 12000 + Math.random() * 12000);
@@ -730,9 +759,37 @@
     }
 
     function schedule(ms) {
-        setTimeout(run, ms);
+        clearTimeout(timer);
+        timer = setTimeout(run, ms);
     }
 
+    // Only take over when the matching stylesheet is there (a cached old site.css has no props).
+    var probe = document.createElement('div');
+    probe.className = 'train-prop';
+    document.body.appendChild(probe);
+    var styled = window.getComputedStyle(probe).position === 'fixed';
+    document.body.removeChild(probe);
+    if (!styled) return;
+
+    // Timers and animations drift apart in a background tab: drop the run, start fresh on return.
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            runId++;
+            clearTimeout(timer);
+            [train].concat(props).forEach(function (el) {
+                if (el.getAnimations) {
+                    el.getAnimations({ subtree: true }).forEach(function (anim) {
+                        anim.cancel();
+                    });
+                }
+            });
+            cleanup();
+        } else {
+            schedule(3000);
+        }
+    });
+
+    train.style.animation = 'none';
     document.documentElement.classList.add('train-js');
     place(train, -2000);
     schedule(4000);

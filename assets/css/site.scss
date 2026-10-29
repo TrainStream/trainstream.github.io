@@ -781,9 +781,10 @@ textarea {
 .train-say {
     position: absolute;
     left: 50%;
-    bottom: calc(100% + 4px);
-    padding: 1px 6px;
-    font: 0.85rem var(--font-pixel);
+    bottom: calc(100% + 10px);
+    z-index: 8;
+    padding: 3px 8px;
+    font: 1rem/1.2 var(--font-pixel);
     color: #1b1f3b;
     white-space: nowrap;
     background: #fff;
@@ -792,6 +793,21 @@ textarea {
     transform: translateX(-50%);
     pointer-events: none;
     animation: say-pop 0.25s steps(3);
+
+    // the little tail pointing down at whoever is talking
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 8px;
+        height: 8px;
+        margin: -3px 0 0 -4px;
+        background: inherit;
+        border-right: 2px solid #1b1f3b;
+        border-bottom: 2px solid #1b1f3b;
+        transform: rotate(45deg);
+    }
 
     &.say-red {
         color: #fff;
@@ -807,7 +823,7 @@ textarea {
 
 /* 踏切 */
 .crossing {
-    z-index: 6;
+    z-index: 4;
     margin-left: -20px;
 
     .lamp {
