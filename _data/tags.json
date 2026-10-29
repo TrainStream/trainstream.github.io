@@ -132,12 +132,6 @@
         "color": "#1565c0"
     },
     {
-        "name": "Tram",
-        "slug": "tram",
-        "code": "TM",
-        "color": "#00838f"
-    },
-    {
         "name": "Other",
         "slug": "other",
         "code": "OT",
