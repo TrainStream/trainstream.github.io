@@ -328,7 +328,9 @@
     }
 
     function linkKindBadge(link) {
-        return link.kind === 'home' ? el('span', { className: 'link-kind', title: 'Home page / camera portal', text: '🏠 公式 Home' }) : null;
+        return link.kind === 'home'
+            ? el('span', { className: 'link-kind', title: 'Home page / camera portal', text: '🏠 公式 Home' })
+            : el('span', { className: 'link-kind link-kind--stream', title: 'Live stream / camera', text: '📺 配信 Stream' });
     }
 
     function copyText(text) {
