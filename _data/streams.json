@@ -48,7 +48,7 @@
         {
             "name": "湯野上温泉駅 Yunokami-Onsen Station",
             "isAlive": true,
-            "tags": "trainstation, bridge, scenery, other",
+            "tags": "trainstation, bridge, scenery, other, localline, onsen, snow",
             "region": "Fukushima",
             "lat": 37.2933,
             "lng": 139.9161,
@@ -102,7 +102,7 @@
         {
             "name": "別所温泉駅 Bessho-Onsen Station/Ueda Cable Vision Cameras",
             "isAlive": true,
-            "tags": "trainstation, shrine, bridge, scenery, shop, other",
+            "tags": "trainstation, shrine, bridge, scenery, shop, other, localline, onsen",
             "region": "Nagano",
             "lat": 36.3563,
             "lng": 138.1597,
@@ -204,7 +204,7 @@
         {
             "name": "北海道ｏｎ天気ライブカメラ HTB's Weather Live Cameras in Hokkaido",
             "isAlive": false,
-            "tags": "traffic, city, bridge",
+            "tags": "traffic, city, bridge, snow",
             "region": "Hokkaido",
             "lat": 43.0618,
             "lng": 141.3545,
@@ -226,7 +226,7 @@
         {
             "name": "長崎港 Nagasaki Harbor | 佐世保港 Sasebo Port | 本社屋上 HQ Rooftop | 長崎空港 Nagasaki Airport",
             "isAlive": true,
-            "tags": "traffic, city, airport, seaport, sound",
+            "tags": "traffic, city, airport, seaport, sound, multicam",
             "region": "Nagasaki",
             "lat": 32.7503,
             "lng": 129.8779,
@@ -263,7 +263,7 @@
         {
             "name": "JR帯広駅ライブカメラ JR Obihiro Station, Hokkaido (and 3 others)",
             "isAlive": true,
-            "tags": "trainstation, traffic, bridge, airport",
+            "tags": "trainstation, traffic, bridge, airport, snow, river",
             "region": "Hokkaido",
             "lat": 42.9177,
             "lng": 143.2047,
@@ -303,7 +303,7 @@
         {
             "name": "【中書島】京阪電車を生ライブ【淀】 Keihan Raliway, Kyoto",
             "isAlive": true,
-            "tags": "trainlines, sound",
+            "tags": "trainlines, sound, river",
             "region": "Kyoto",
             "lat": 34.92,
             "lng": 135.73,
@@ -325,7 +325,7 @@
         {
             "name": "部屋の窓から(大岡川＆ランドマーク方面＋京急 Keikyu Line & Ooka River, Yokohama",
             "isAlive": false,
-            "tags": "trainlines, traffic, city, bridge",
+            "tags": "trainlines, traffic, city, bridge, river",
             "region": "Kanagawa",
             "lat": 35.4437,
             "lng": 139.623,
@@ -378,7 +378,7 @@
         {
             "name": "新大阪ライブカメラ Sin-Osaka Station",
             "isAlive": true,
-            "tags": "trainlines, city, traffic, sound",
+            "tags": "trainlines, city, traffic, sound, shinkansen",
             "region": "Osaka",
             "lat": 34.7335,
             "lng": 135.5002,
@@ -400,7 +400,7 @@
         {
             "name": "北陸新幹線　金沢駅ライブカメラ　Kanazawa Station, Ishikawa | 金沢港ライブカメラ Kanazawa Port",
             "isAlive": true,
-            "tags": "trainlines, city, traffic, bridge, seaport, shore",
+            "tags": "trainlines, city, traffic, bridge, seaport, shore, shinkansen",
             "region": "Ishikawa",
             "lat": 36.5781,
             "lng": 136.648,
@@ -446,7 +446,7 @@
         {
             "name": "Kabukicho, Tokyo",
             "isAlive": false,
-            "tags": "street",
+            "tags": "street, nightview",
             "region": "Tokyo",
             "lat": 35.695,
             "lng": 139.703,
@@ -477,7 +477,7 @@
         {
             "name": "Amarube Railway in Kami-Cho (Mikata, Hyogo)",
             "isAlive": false,
-            "tags": "trainlines, bridge, scenery, shore",
+            "tags": "trainlines, bridge, scenery, shore, localline",
             "region": "Hyogo",
             "lat": 35.6303,
             "lng": 134.6288,
@@ -601,7 +601,7 @@
                     "text": "Osaka skyline scenery, recommended viewing during sunrise and sunset."
                 }
             ],
-            "tags": "city, scenery, traffic",
+            "tags": "city, scenery, traffic, nightview",
             "region": "Osaka",
             "lat": 34.6937,
             "lng": 135.5023,
@@ -676,7 +676,7 @@
                     "text": "https://www.youtube.com/channel/UClAtpDytL1hmOUeiJaNrHlQ"
                 }
             ],
-            "tags": "other",
+            "tags": "other, onsen",
             "region": "Ehime",
             "lat": 33.852,
             "lng": 132.786,
@@ -734,7 +734,7 @@
                     "text": "https://www.youtube.com/channel/UCNoxPx5sKmEu5TiH3w5KI8A"
                 }
             ],
-            "tags": "trainlines, sound",
+            "tags": "trainlines, sound, snow",
             "region": "Hokkaido",
             "name": "Hakodate Main Line"
         },
@@ -835,7 +835,7 @@
                     "text": "https://www.youtube.com/channel/UCynXCHprmOfyGzGSnqgp6Wg"
                 }
             ],
-            "tags": "scenery, shore, city, sound",
+            "tags": "scenery, shore, city, sound, mountain",
             "region": "Kagoshima",
             "lat": 31.5966,
             "lng": 130.5571,
@@ -896,7 +896,7 @@
                     "text": "https://www.youtube.com/channel/UC1kDVgEX2DsE295Bkum_K9Q"
                 }
             ],
-            "tags": "trainlines, city, sound",
+            "tags": "trainlines, city, sound, nightview",
             "region": "Tokyo",
             "lat": 35.6896,
             "lng": 139.7006,
@@ -919,7 +919,7 @@
                     "text": "https://www.youtube.com/channel/UCQ2mmGKtrBp6rL8tSMJCCwA"
                 }
             ],
-            "tags": "street, city",
+            "tags": "street, city, nightview",
             "region": "Osaka",
             "lat": 34.6687,
             "lng": 135.5013,
@@ -1059,7 +1059,7 @@
                     "text": "https://www.youtube.com/@maotv_official/streams"
                 }
             ],
-            "tags": "scenery, other",
+            "tags": "scenery, other, mountain",
             "region": "Shizuoka / Yamanashi",
             "lat": 35.3606,
             "lng": 138.7274,
@@ -1088,7 +1088,7 @@
                     "text": "https://www.youtube.com/channel/UCuTAXTexrhetbOe3zgskJBQ"
                 }
             ],
-            "tags": "trainstation, trainlines, airport, traffic",
+            "tags": "trainstation, trainlines, airport, traffic, shinkansen, multicam",
             "region": "Tokyo",
             "lat": 35.6812,
             "lng": 139.7671,
@@ -1156,7 +1156,7 @@
                     "text": "https://www.youtube.com/@kabukicho-1"
                 }
             ],
-            "tags": "street",
+            "tags": "street, nightview",
             "region": "Tokyo",
             "lat": 35.6945,
             "lng": 139.7035,
@@ -1179,7 +1179,7 @@
                     "text": "https://www.youtube.com/@info-shinjuku/featured"
                 }
             ],
-            "tags": "trainlines, street, traffic, city, sound",
+            "tags": "trainlines, street, traffic, city, sound, nightview",
             "region": "Tokyo",
             "lat": 35.6909,
             "lng": 139.7003,
@@ -1237,7 +1237,7 @@
                     "text": "https://www.youtube.com/@FBC"
                 }
             ],
-            "tags": "trainlines, street, traffic, city, shore",
+            "tags": "trainlines, street, traffic, city, shore, multicam",
             "region": "Fukui",
             "lat": 36.0641,
             "lng": 136.2196,
@@ -1278,7 +1278,7 @@
                     "text": "https://www.youtube.com/@LIVE-hr9eo/featured"
                 }
             ],
-            "tags": "trainstation, street, city, airport, scenery",
+            "tags": "trainstation, street, city, airport, scenery, multicam",
             "region": "Various",
             "name": "朝日新聞LIVE - Asahi Shimbun LIVE - Various Views From Across Japan"
         },
@@ -1363,7 +1363,7 @@
                     "text": "https://www.youtube.com/@nakajosta/streams"
                 }
             ],
-            "tags": "trainstation, trainlines",
+            "tags": "trainstation, trainlines, localline, snow",
             "region": "Niigata",
             "lat": 38.059,
             "lng": 139.408,
@@ -1386,7 +1386,7 @@
                     "text": "https://www.youtube.com/@cvn%E9%A3%AF%E7%94%B0%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0"
                 }
             ],
-            "tags": "trainstation",
+            "tags": "trainstation, localline",
             "region": "Nagano",
             "lat": 35.5196,
             "lng": 137.8217,
@@ -1409,7 +1409,7 @@
                     "text": "https://www.youtube.com/@%E4%B8%8A%E9%87%8E%E5%AD%A6%E5%9C%92%E3%83%9B%E3%83%BC%E3%83%AB%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%AB%8B/streams"
                 }
             ],
-            "tags": "trainstation, traffic, city",
+            "tags": "trainstation, traffic, city, tram",
             "region": "Hiroshima",
             "lat": 34.404,
             "lng": 132.461,
@@ -1432,7 +1432,7 @@
                     "text": "https://www.youtube.com/@mukaitaki/streams"
                 }
             ],
-            "tags": "scenery",
+            "tags": "scenery, onsen, snow",
             "region": "Fukushima",
             "lat": 37.48,
             "lng": 139.963,
@@ -1455,7 +1455,7 @@
                     "text": "https://www.youtube.com/@uminekoshouten/streams"
                 }
             ],
-            "tags": "shop, traffic",
+            "tags": "shop, traffic, animals",
             "name": "ウミネコ商店 - Umineko Shouten cafe"
         },
         {
@@ -1510,7 +1510,7 @@
                     "text": "https://www.youtube.com/@fl5vf9kr5b/streams"
                 }
             ],
-            "tags": "trainlines, city, scenery",
+            "tags": "trainlines, city, scenery, multicam",
             "region": "Various",
             "name": "共同通信LiveCamera - Kyodo News Live Camera"
         },
@@ -1537,7 +1537,7 @@
                     "text": "https://www.youtube.com/@Anamizu_Town/streams"
                 }
             ],
-            "tags": "trainstation, trainlines, scenery, shore",
+            "tags": "trainstation, trainlines, scenery, shore, localline",
             "region": "Ishikawa",
             "lat": 37.231,
             "lng": 136.91,
