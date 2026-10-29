@@ -2566,6 +2566,63 @@ html.map-expanded {
     }
 }
 
+/* ⤢ / ⛶: the wall fills the window, every screen sized to fit; under the pixel trains (z-index 4 and up) */
+.tv-stage-bar {
+    display: none;
+}
+
+.tv-stage.is-expanded {
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    background: #222;
+
+    .tv-stage-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 8px;
+        padding: 6px 8px 0;
+    }
+
+    .tv-stage-title {
+        margin-right: auto;
+        font-family: var(--font-pixel);
+        color: var(--led-orange);
+    }
+
+    .tv-wall {
+        flex: 1;
+        min-height: 0;
+        grid-auto-rows: minmax(0, 1fr);
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .tv-cell {
+        min-height: 0;
+    }
+
+    .embed {
+        flex: 1;
+        min-height: 0;
+        aspect-ratio: auto;
+    }
+}
+
+html.tv-expanded {
+    overflow: hidden;
+}
+
+/* the header menu (z-index 30) would sit on top of an expanded wall or map */
+html.tv-expanded .menu,
+html.map-expanded .menu {
+    display: none;
+}
+
 /* Submit tool */
 .form-grid {
     display: grid;
