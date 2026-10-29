@@ -1978,27 +1978,26 @@ html.map-expanded {
     }
 }
 
-/* small, next to the + / − zoom buttons */
+/* just an icon, under Leaflet's + / − buttons (34px wide at 10px, 10px) */
 .map-hint {
     position: absolute;
-    left: 54px;
-    top: 12px;
+    left: 10px;
+    top: 82px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 2px 8px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #fff;
-    white-space: nowrap;
-    background: rgba(27, 31, 59, 0.6);
-    border-radius: 999px;
-    pointer-events: none;
+    justify-content: center;
+    width: 34px;
+    height: 30px;
+    font-size: 1rem;
+    line-height: 1;
+    background: rgba(27, 31, 59, 0.75);
+    border-radius: 4px;
     transition: opacity 0.6s;
 
     &.is-gone {
         opacity: 0;
+        pointer-events: none;
     }
 }
 

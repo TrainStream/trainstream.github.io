@@ -687,12 +687,12 @@
         });
         map.addControl(new Control());
     }
-    /* a pill on the map that says how to zoom; fades away once someone has zoomed */
+    /* a mouse (or pinch) icon under the + / − buttons, saying you can zoom; fades away once someone has zoomed */
     function addZoomHint() {
         var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
-        var hint = el('div', { className: 'map-hint', 'aria-hidden': 'true' }, [
+        var label = touch ? 'Pinch to zoom' : 'Scroll to zoom';
+        var hint = el('div', { className: 'map-hint', title: label, role: 'img', 'aria-label': label }, [
             el('span', { className: 'map-hint-icon', text: touch ? '🤏' : '🖱️' }),
-            touch ? 'Pinch to zoom · drag to move' : 'Scroll to zoom · drag to move',
         ]);
         map.getContainer().appendChild(hint);
         map.once('zoomstart', function () {
