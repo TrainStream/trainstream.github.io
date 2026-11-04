@@ -44,7 +44,7 @@ There are three ways, and all of them write the same JSON format (`JSON.stringif
    - On publish, third-party pictures are copied into `pictures/submissions/` so they can't rot.
 2. **Maintainers** (people with write access):
    - On `/submit/`, open **Maintainers & publishers** and sign in with a fine-grained personal access token. The page explains how to create one; it needs Contents + Issues read/write on this repo only.
-   - Then you can **publish instantly** (and upload pictures straight from your computer: they are shrunk to 1280px, saved as JPEG in `pictures/submissions/`, and committed together with the stream), work the **review queue** (load a suggestion into the form, edit it, approve and publish, or reject it), and **edit / mark dead / delete** any stream.
+   - Then you can **publish instantly** (and upload pictures straight from your computer: they are shrunk to 1280px, saved as JPEG in `pictures/submissions/`, and committed together with the stream), work the **review queue** (load a suggestion into the form, edit it, approve and publish, or reject it: rejecting deletes the issue for good if you are a repository admin, otherwise it is closed), and **edit / mark dead / delete** any stream.
 3. **The original editor** by altbdoor still works exactly as before.
 
 Anyone can also press "✏️ Suggest an edit" on a camera's detail panel. That opens the form pre-filled with the stream; the result is an issue that replaces the stream once it is approved.
@@ -54,6 +54,12 @@ Anyone can also press "✏️ Suggest an edit" on a camera's detail panel. That 
 Every suggestion is an issue opened from the submitter's own GitHub account, and every published commit names them ("suggested by …"). To review someone's history before trusting them, search the issues for `is:issue author:USERNAME label:submission` (add `label:published` to see only what went live).
 
 Add GitHub usernames to [`.github/publishers.yml`](.github/publishers.yml). Their suggestions skip the review: the Action validates them and commits them for them, usually live within a minute or two. They don't need any access to the repository. Delete the line to take the right away.
+
+### Moderators (approve or reject without repo access)
+
+Add GitHub usernames to [`.github/moderators.yml`](.github/moderators.yml). On `/submit/` they sign in with any GitHub token (even one with no permissions; it only proves who they are) and get the review queue with **✅ Approve** (the Action publishes it) and **🗑 Reject & delete** (the issue is deleted). Everyone with write access ("contributors") gets the same buttons. The Cloudflare Worker in [`worker/`](worker/README.md) does the work with its own token, and only on open `submission` issues. Moderators can't publish directly or edit the stream list, and their own suggestions still wait for review.
+
+Deleting needs the Worker's `GITHUB_TOKEN` to belong to a repository **admin**. If GitHub refuses, the issue's text is wiped and it is closed and locked instead. Approving needs that token's owner to have write access (or be in `publishers.yml`), because the Action checks who added the `approved` label.
 
 ## One-time GitHub settings
 
