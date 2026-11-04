@@ -135,7 +135,7 @@ function ghHeaders(env) {
 function tokenShape(token) {
     const t = String(token || '');
     const kind = /^github_pat_/.test(t.trim()) ? 'fine-grained (github_pat_)' : /^gh[pousr]_/.test(t.trim()) ? 'classic (' + t.trim().slice(0, 4) + ')' : 'unknown prefix';
-    return `token shape: length ${t.length}, ${kind}, ends in …${t.trim().slice(-4)}, quotes: ${/["'`]/.test(t)}, spaces/newlines: ${/\s/.test(t)}`;
+    return `token shape: length ${t.length}, ${kind}, quotes: ${/["'`]/.test(t)}, spaces/newlines: ${/\s/.test(t)}`;
 }
 
 function maxPending(env) {
