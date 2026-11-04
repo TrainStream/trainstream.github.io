@@ -74,6 +74,9 @@
         var height = el('input', { type: 'number', min: '1', 'data-k': 'height' });
         src.value = img.src || '';
         title.value = img.title || img.alt || '';
+        var sizeHelp = 'Only used by the classic (old) view: the size it draws the picture at, 200px tall, same shape. Filled in automatically.';
+        width.title = sizeHelp;
+        height.title = sizeHelp;
         width.value = img.width || '';
         height.value = img.height || '';
         var status = el('span', { className: 'hint' });
@@ -90,8 +93,8 @@
         var row = el('div', { className: 'row-item' }, [
             field('Picture link *', src),
             field('Caption', title),
-            field('Old-view width', width),
-            field('Old-view height', height),
+            field('Width', width),
+            field('Height', height),
             el('button', { type: 'button', className: 'btn btn--small row-remove', 'aria-label': 'Remove picture', text: '✕', onclick: function () { row.remove(); update(); } }),
             upload,
             status,

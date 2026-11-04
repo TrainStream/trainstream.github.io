@@ -2912,6 +2912,14 @@ fieldset.field {
     grid-column: 1 / -1;
 }
 
+/* the ✕ is a square as tall as the inputs next to it */
+.row-item > .row-remove {
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+}
+
 .row-item--link {
     grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.2fr) 120px auto;
 }
