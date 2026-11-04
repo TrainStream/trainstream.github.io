@@ -131,6 +131,13 @@ function ghHeaders(env) {
     };
 }
 
+// Describes the token without revealing it, to debug "401 Bad credentials".
+function tokenShape(token) {
+    const t = String(token || '');
+    const kind = /^github_pat_/.test(t.trim()) ? 'fine-grained (github_pat_)' : /^gh[pousr]_/.test(t.trim()) ? 'classic (' + t.trim().slice(0, 4) + ')' : 'unknown prefix';
+    return `token shape: length ${t.length}, ${kind}, quotes: ${/["'`]/.test(t)}, spaces/newlines: ${/\s/.test(t)}`;
+}
+
 function maxPending(env) {
     const n = parseInt(env.MAX_PENDING_ANON, 10);
     return Number.isFinite(n) && n > 0 ? n : 10;
@@ -143,7 +150,7 @@ async function pendingCount(env) {
             headers: ghHeaders(env),
         });
         if (!response.ok) {
-            console.error('GitHub count', response.status);
+            console.error('GitHub count', response.status, (await response.text()).slice(0, 300), response.status === 401 ? tokenShape(env.GITHUB_TOKEN) : '');
             return null;
         }
         const issues = await response.json();
