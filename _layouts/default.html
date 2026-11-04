@@ -32,6 +32,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" />
+        <!-- Only the 📮 glyph of Noto Color Emoji (about 1.5 KB), so the post box looks the same on every system. Used through the .emoji class. -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&text=%F0%9F%93%AE&display=swap" />
         <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}" />
     </head>
     <body class="{{ page.body_class }}">
@@ -76,7 +78,7 @@
                     <a class="ticket-btn" href="/watching/"><span class="icon" aria-hidden="true">🖥️</span><span class="ja">再生ソフト</span><span class="en">Video players</span></a>
                     <a class="ticket-btn" href="/recording/"><span class="icon" aria-hidden="true">⏺️</span><span class="ja">録画</span><span class="en">Recording</span></a>
                     <a class="ticket-btn" href="/streams/insecam"><span class="icon" aria-hidden="true">🐟</span><span class="ja">インセカム</span><span class="en">Insecam picks</span></a>
-                    <a class="ticket-btn ticket-btn--pink" href="/submit/" data-pending="{{ site.ts_repo }}"><span class="icon" aria-hidden="true">📮</span><span class="ja">投稿</span><span class="en">Submit a stream</span></a>
+                    <a class="ticket-btn ticket-btn--pink" href="/submit/" data-pending="{{ site.ts_repo }}"><span class="icon emoji" aria-hidden="true">📮</span><span class="ja">投稿</span><span class="en">Submit a stream</span></a>
                     <a class="ticket-btn" href="/about/"><span class="icon" aria-hidden="true">ℹ️</span><span class="ja">サイト案内</span><span class="en">About &amp; credits</span></a>
                     <a class="ticket-btn" href="{{ page.classic_url | default: '/classic/' }}" data-set-style="classic"><span class="icon" aria-hidden="true">🕰️</span><span class="ja">旧デザイン</span><span class="en">Classic view</span></a>
                     <button class="ticket-btn" type="button" id="theme-toggle"><span class="icon" aria-hidden="true">🌙</span><span class="ja">夜行列車</span><span class="en">Night mode</span></button>
@@ -91,7 +93,7 @@
                         <span>運転中 {{ live_count }} cameras in service ／ 運休 {{ dead_count }} suspended</span>
                         <span>電車が参ります。白線の内側までお下がりください。 A train is arriving, please stand behind the white line</span>
                         <span>R.I.P. Aizu-Wakamatsu</span>
-                        <span>新しいカメラを見つけた？ Found a new cam? Submit it! 📮</span>
+                        <span>新しいカメラを見つけた？ Found a new cam? Submit it! <span class="emoji">📮</span></span>
                     </p>
                 </div>
             </div>

@@ -130,6 +130,12 @@ textarea {
     color: inherit;
 }
 
+/* Emoji drawn with Google's Noto Color Emoji (loaded only for the characters that use it), so they look the same everywhere. */
+.emoji {
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-weight: 400;
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px;
