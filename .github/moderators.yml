@@ -1,0 +1,19 @@
+# Moderators.
+#
+# GitHub usernames listed here can review suggestions on
+# https://trainstream.github.io/submit/ (tab "Maintainers, moderators & publishers"):
+#   ✅ Approve  -> the suggestion is published by the usual Action
+#   🗑 Reject   -> the suggestion is deleted from the issues
+# They need NO access to this repository: they sign in on /submit/ with any GitHub
+# token (it only proves who they are) and the Cloudflare Worker in worker/ does
+# the work. Everyone with write access ("contributors") can do the same.
+#
+# Moderators cannot publish directly or edit the stream list, and their own
+# suggestions still wait for review (use publishers.yml for that).
+#
+# Only people with write access can edit this file. Remove a line to take the
+# right away again (it takes effect within about a minute).
+#
+# Add one username per line, like:
+#   - some-github-user
+moderators:

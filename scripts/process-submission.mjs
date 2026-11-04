@@ -27,6 +27,7 @@ const ROOT = new URL('../', import.meta.url);
 const STREAMS_PATH = new URL('_data/streams.json', ROOT);
 const TAGS_PATH = new URL('_data/tags.json', ROOT);
 const PUBLISHERS_PATH = new URL('.github/publishers.yml', ROOT);
+const MODERATORS_PATH = new URL('.github/moderators.yml', ROOT);
 const CONFIG_PATH = new URL('_config.yml', ROOT);
 const MARK = '<!-- trainstream-bot -->';
 // Keep in sync with worker/src/index.js.
@@ -74,16 +75,19 @@ function today() {
     return new Date().toISOString().slice(0, 10);
 }
 
-function readPublishers() {
-    if (!existsSync(PUBLISHERS_PATH)) return [];
-    return readFileSync(PUBLISHERS_PATH, 'utf8')
+function readUserList(path) {
+    if (!existsSync(path)) return [];
+    return readFileSync(path, 'utf8')
         .split('\n')
         .map((line) => /^\s*-\s*@?([A-Za-z0-9-]+)\s*(#.*)?$/.exec(line))
         .filter(Boolean)
         .map((m) => m[1].toLowerCase());
 }
 
-const publishers = readPublishers();
+const publishers = readUserList(PUBLISHERS_PATH);
+// Moderators may approve (and, through the Worker, reject) suggestions, but their own
+// suggestions are not published automatically.
+const moderators = readUserList(MODERATORS_PATH);
 
 // The on/off switch for anonymous suggestions: `anonymous_submissions` in _config.yml.
 function anonymousAllowed() {
@@ -247,11 +251,11 @@ async function main() {
 
     let approver = null;
     if (event.action === 'labeled') {
-        if (await isTrusted(event.sender.login)) {
+        if (moderators.includes(event.sender.login.toLowerCase()) || (await isTrusted(event.sender.login))) {
             approver = event.sender.login;
         } else {
             await removeLabel('approved');
-            await botComment(`⚠️ @${event.sender.login} only maintainers and listed publishers can approve submissions.`);
+            await botComment(`⚠️ @${event.sender.login} only contributors, moderators and listed publishers can approve submissions.`);
             return;
         }
     }

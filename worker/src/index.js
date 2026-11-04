@@ -14,6 +14,14 @@
  * GET /status tells the submit page whether anonymous sending is open, so it can
  * show a "queue is full" notice before anyone starts filling in the form.
  *
+ * Moderation (works even when anonymous sending is switched off):
+ *   GET  /role      -> who is signed in on the submit page and what they may do
+ *   POST /moderate  -> { issue, action: "approve" | "reject" }
+ * The caller sends their own GitHub token (Authorization: Bearer ...) only to prove
+ * who they are; it is never stored or logged. Contributors (write access) and people
+ * listed in .github/moderators.yml may approve or reject suggestions. The Worker then
+ * acts with its own token, and only on open issues labeled "submission".
+ *
  * The issue carries ANON_MARK. scripts/process-submission.mjs treats every issue
  * with that marker as untrusted, whoever's token opened it, so anonymous
  * suggestions always wait for a maintainer to add the "approved" label.
@@ -34,7 +42,7 @@ function corsHeaders(env, origin) {
     const allowed = allowedOrigins(env);
     const headers = {
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
         'Access-Control-Max-Age': '86400',
         Vary: 'Origin',
     };
@@ -196,6 +204,136 @@ function hasBlockedWord(env, entry) {
     return words.some((w) => tokens.has(w) || ((w.length >= 5 || /[^\x00-\x7f]/.test(w)) && collapsed.includes(w)));
 }
 
+/* ---------- moderation ---------- */
+
+function rawUrl(env, path) {
+    return `https://raw.githubusercontent.com/${env.GITHUB_REPO}/${env.GITHUB_BRANCH || 'master'}/${path}`;
+}
+
+// Usernames in .github/moderators.yml (same format as publishers.yml), read live.
+async function moderators(env) {
+    try {
+        const response = await fetch(rawUrl(env, '.github/moderators.yml'), { cf: { cacheTtl: 60, cacheEverything: true } });
+        if (!response.ok) return [];
+        return (await response.text())
+            .split('\n')
+            .map((line) => /^\s*-\s*@?([A-Za-z0-9-]+)\s*(#.*)?$/.exec(line))
+            .filter(Boolean)
+            .map((m) => m[1].toLowerCase());
+    } catch {
+        return [];
+    }
+}
+
+// Who owns the caller's token, and what they may do. null = not allowed / not signed in.
+async function callerRole(request, env) {
+    const auth = request.headers.get('Authorization') || '';
+    const token = /^Bearer\s+(\S{20,300})$/.exec(auth);
+    if (!token) return null;
+    const me = await fetch('https://api.github.com/user', {
+        headers: { Authorization: `Bearer ${token[1]}`, Accept: 'application/vnd.github+json', 'User-Agent': 'trainstream-moderation' },
+    });
+    if (!me.ok) return null;
+    const login = String((await me.json()).login || '');
+    if (!login) return null;
+    // Contributor = write access or more, checked with the Worker's own token.
+    const perm = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/collaborators/${encodeURIComponent(login)}/permission`, { headers: ghHeaders(env) });
+    if (perm.ok) {
+        const p = await perm.json();
+        if (['admin', 'maintain', 'write'].includes(p.permission) || ['admin', 'maintain', 'write'].includes(p.role_name)) return { login, role: 'contributor' };
+    }
+    if ((await moderators(env)).includes(login.toLowerCase())) return { login, role: 'moderator' };
+    return { login, role: null };
+}
+
+async function gh(env, method, path, body) {
+    const response = await fetch(`https://api.github.com${path}`, {
+        method,
+        headers: { ...ghHeaders(env), 'Content-Type': 'application/json' },
+        body: body === undefined ? undefined : JSON.stringify(body),
+    });
+    const text = await response.text();
+    let data = null;
+    try {
+        data = text ? JSON.parse(text) : null;
+    } catch {}
+    if (!response.ok) {
+        const error = new Error(`${method} ${path} -> ${response.status} ${text.slice(0, 200)}`);
+        error.status = response.status;
+        throw error;
+    }
+    return data;
+}
+
+// Delete for good if GitHub allows it with the Worker's token (needs an admin's token);
+// otherwise wipe the visitor's text, close and lock, so nothing they wrote stays visible.
+async function removeIssue(env, issue) {
+    try {
+        const res = await gh(env, 'POST', '/graphql', {
+            query: 'mutation($id: ID!) { deleteIssue(input: { issueId: $id }) { clientMutationId } }',
+            variables: { id: issue.node_id },
+        });
+        if (res && res.errors && res.errors.length) throw new Error(res.errors.map((e) => e.message).join('; '));
+        return { deleted: true };
+    } catch (error) {
+        console.error('deleteIssue', error.message);
+        const path = `/repos/${env.GITHUB_REPO}/issues/${issue.number}`;
+        await gh(env, 'PATCH', path, { title: '[Removed]', body: 'Removed by a moderator.', state: 'closed', state_reason: 'not_planned' });
+        try {
+            await gh(env, 'PUT', `${path}/lock`, {});
+        } catch {}
+        return { deleted: false, reason: String(error.message).slice(0, 300) };
+    }
+}
+
+async function handleRole(request, env, origin) {
+    if (!allowedOrigins(env).includes(origin)) return reply(env, origin, 403, { error: 'Not allowed from here.' });
+    const who = await callerRole(request, env);
+    if (!who) return reply(env, origin, 401, { error: 'Could not check that GitHub token.' });
+    return reply(env, origin, 200, who);
+}
+
+async function handleModerate(request, env, origin) {
+    if (!allowedOrigins(env).includes(origin)) return reply(env, origin, 403, { error: 'Not allowed from here.' });
+    const who = await callerRole(request, env);
+    if (!who) return reply(env, origin, 401, { error: 'Could not check that GitHub token. Sign in again.' });
+    if (!who.role) return reply(env, origin, 403, { error: `@${who.login} is not a contributor or listed in .github/moderators.yml.` });
+
+    let payload;
+    try {
+        payload = JSON.parse((await request.text()).slice(0, 2000));
+    } catch {
+        return reply(env, origin, 400, { error: 'Not valid JSON.' });
+    }
+    const number = Number(payload && payload.issue);
+    const action = payload && payload.action;
+    if (!Number.isInteger(number) || number < 1 || !['approve', 'reject'].includes(action)) return reply(env, origin, 400, { error: 'Bad request.' });
+
+    let issue;
+    try {
+        issue = await gh(env, 'GET', `/repos/${env.GITHUB_REPO}/issues/${number}`);
+    } catch (error) {
+        return reply(env, origin, error.status === 404 ? 404 : 502, { error: `Could not load #${number}.` });
+    }
+    const labels = (issue.labels || []).map((l) => l.name);
+    // Moderators only ever touch open suggestions, never other issues.
+    if (issue.pull_request || issue.state !== 'open' || !labels.includes('submission')) {
+        return reply(env, origin, 409, { error: `#${number} is not an open suggestion.` });
+    }
+
+    const path = `/repos/${env.GITHUB_REPO}/issues/${number}`;
+    if (action === 'approve') {
+        await gh(env, 'POST', `${path}/comments`, { body: `✅ Approved by @${who.login} (${who.role}) with the review queue.` });
+        // The "approved" label starts the usual Action, which publishes it.
+        await gh(env, 'POST', `${path}/labels`, { labels: ['approved'] });
+        console.log('approve', number, who.login);
+        return reply(env, origin, 200, { ok: true, approved: true });
+    }
+    const result = await removeIssue(env, issue);
+    console.log('reject', number, who.login, result.deleted ? 'deleted' : 'wiped');
+    return reply(env, origin, 200, { ok: true, ...result });
+}
+
 async function status(env) {
     if (!(await switchedOn(env))) return { open: false, off: true };
     const pending = await pendingCount(env);
@@ -298,6 +436,14 @@ export default {
             } catch (error) {
                 console.error(error);
                 return reply(env, origin, 500, { error: 'Something went wrong. Please try again later.' });
+            }
+        }
+        if ((pathname === '/role' && request.method === 'GET') || (pathname === '/moderate' && request.method === 'POST')) {
+            try {
+                return await (pathname === '/role' ? handleRole : handleModerate)(request, env, origin);
+            } catch (error) {
+                console.error(error.message);
+                return reply(env, origin, 502, { error: 'Something went wrong talking to GitHub. Please try again.' });
             }
         }
         if (pathname === '/status' && request.method === 'GET') {
