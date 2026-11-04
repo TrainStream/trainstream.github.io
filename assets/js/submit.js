@@ -209,6 +209,11 @@
             update();
         };
         image.onerror = function () {
+            /* The picture proxy can be blocked by a host (imgur sometimes rate-limits it): try the link itself. */
+            if (image.src !== url && /^https?:\/\//i.test(url)) {
+                image.src = url;
+                return;
+            }
             status.textContent = '⚠️ Could not load this picture. Is it a direct image link?';
         };
         image.src = probe;
@@ -271,6 +276,7 @@
             description: $('f-description').value,
             submittedBy: $('f-credit').value,
             cameras: $('f-cameras').value,
+            thumbFit: form.querySelector('input[name="thumb-fit"]:checked').value,
             addedAt: ctx.editOf ? ctx.editAddedAt : today(),
             images: readRows(imagesBox),
             extras: readRows(linksBox),
@@ -292,6 +298,7 @@
         $('f-description').value = entry.description || '';
         $('f-credit').value = entry.submittedBy || '';
         $('f-cameras').value = entry.cameras || '';
+        form.querySelector('input[name="thumb-fit"][value="' + (entry.thumbFit === 'fit' ? 'fit' : '') + '"]').checked = true;
         imagesBox.textContent = '';
         linksBox.textContent = '';
         (entry.images && entry.images.length ? entry.images : [{}]).forEach(addImageRow);

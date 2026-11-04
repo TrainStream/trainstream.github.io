@@ -46,3 +46,10 @@ counter_name: visits
 # Cameras added on or before this date never get the NEW! badge (used to clear
 # a big batch import). Later additions get it for 30 days as usual.
 new_badge_after: "2026-10-29"
+
+# Emoji drawn with Google's Noto Color Emoji so they look the same on every
+# system. Only these characters are downloaded (a few KB). When you use a new
+# emoji on the site, add it here; anything missing just uses the system's own
+# emoji. Plain symbols used as text (▶ ◀ ★ ☆ ✕ ☰ →) are left out on purpose:
+# Noto would turn them into coloured emoji.
+emoji_font_chars: "ℹ⏳⏸⏺☀⚠✅✏✨❌🌙🎉🎋🎫🎰🎲🏠🐟👋👏👷💡📁📋📍📥📭📮📷📹📺🔄🔍🔑🔗🔧🕯🕰🕶🖥🖱🗑🗾🙇🙏🚀🚃🚉🚌🚧🛠🤏🧹️"

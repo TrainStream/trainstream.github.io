@@ -76,6 +76,11 @@
                     "description": "Optional number of camera views the stream or site has (not the number of pictures). Used for the camera badge and the 'Most cameras' sort.",
                     "type": "integer",
                     "minimum": 1
+                },
+                "thumbFit": {
+                    "description": "Optional. \"fit\" shows the whole first picture in the camera list (with dark bars) instead of filling and cropping its box.",
+                    "type": "string",
+                    "enum": ["fit"]
                 }
             }
         },

@@ -32,8 +32,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" />
-        <!-- Only the 📮 glyph of Noto Color Emoji (about 1.5 KB), so the post box looks the same on every system. Used through the .emoji class. -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&text=%F0%9F%93%AE&display=swap" />
+        <!-- Noto Color Emoji, only the emoji listed in _config.yml (emoji_font_chars), so emoji look the same on every system. -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&text={{ site.emoji_font_chars | url_encode }}&display=swap" />
         <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}" />
     </head>
     <body class="{{ page.body_class }}">

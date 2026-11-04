@@ -86,6 +86,7 @@
         if (str(input.submittedBy)) entry.submittedBy = str(input.submittedBy);
         var cameras = toNumber(input.cameras);
         if (cameras !== undefined) entry.cameras = isNaN(cameras) ? cameras : Math.floor(cameras);
+        if (input.thumbFit === 'fit') entry.thumbFit = 'fit';
         entry.images = (input.images || [])
             .map(function (img) {
                 img = img || {};
@@ -225,6 +226,7 @@
                 }
             });
             if (s.cameras !== undefined && !(Number.isInteger(s.cameras) && s.cameras >= 1)) errors.push(where + ': cameras must be a whole number of 1 or more.');
+            if (s.thumbFit !== undefined && s.thumbFit !== 'fit') errors.push(where + ': thumbFit can only be "fit".');
             ['lat', 'lng'].forEach(function (key) {
                 if (s[key] !== undefined && typeof s[key] !== 'number') errors.push(where + ': ' + key + ' must be a number.');
             });
