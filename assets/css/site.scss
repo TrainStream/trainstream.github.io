@@ -1612,6 +1612,11 @@ textarea {
     .card[data-fit='fit'] & img {
         object-fit: contain;
     }
+
+    /* "Stretch": the whole picture, squeezed to the box's shape */
+    .card[data-fit='stretch'] & img {
+        object-fit: fill;
+    }
 }
 
 .cams-chip {
