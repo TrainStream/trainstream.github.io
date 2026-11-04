@@ -29,6 +29,55 @@
         });
     }
 
+    /* ---------- pending submissions counter on the "Submit" buttons ---------- */
+    /* Open issues labelled "submission" (one public GitHub API call, remembered for 10 minutes). Nothing is shown at 0 or on errors. */
+    var pendingLinks = document.querySelectorAll('[data-pending]');
+    if (pendingLinks.length) {
+        var repo = pendingLinks[0].getAttribute('data-pending');
+        var showPending = function (count) {
+            if (!(count > 0)) return;
+            var label = count + (count === 1 ? ' suggestion' : ' suggestions') + ' waiting for review';
+            pendingLinks.forEach(function (link) {
+                if (link.querySelector('.pending-count')) return;
+                var badge = document.createElement('span');
+                badge.className = 'pending-count';
+                badge.title = label;
+                badge.innerHTML = '<span class="ja" aria-hidden="true">審査待</span>';
+                badge.appendChild(document.createTextNode(count > 99 ? '99+' : String(count)));
+                var hidden = document.createElement('span');
+                hidden.className = 'visually-hidden';
+                hidden.textContent = ' (' + label + ')';
+                badge.appendChild(hidden);
+                link.appendChild(badge);
+            });
+        };
+        var cached = null;
+        try {
+            cached = JSON.parse(sessionStorage.getItem('ts.pending') || 'null');
+        } catch (e) {}
+        if (cached && cached.repo === repo && Date.now() - cached.at < 10 * 60 * 1000) {
+            showPending(cached.count);
+        } else if (window.fetch && repo) {
+            fetch('https://api.github.com/repos/' + repo + '/issues?labels=submission&state=open&per_page=100', {
+                headers: { Accept: 'application/vnd.github+json' },
+            })
+                .then(function (response) {
+                    if (!response.ok) throw new Error(response.status);
+                    return response.json();
+                })
+                .then(function (issues) {
+                    var count = issues.filter(function (issue) {
+                        return !issue.pull_request;
+                    }).length;
+                    try {
+                        sessionStorage.setItem('ts.pending', JSON.stringify({ repo: repo, count: count, at: Date.now() }));
+                    } catch (e) {}
+                    showPending(count);
+                })
+                .catch(function () {});
+        }
+    }
+
     /* ---------- classic view preference ---------- */
     document.querySelectorAll('[data-set-style="classic"]').forEach(function (link) {
         link.addEventListener('click', function () {

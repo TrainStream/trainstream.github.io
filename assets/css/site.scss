@@ -469,6 +469,7 @@ textarea {
 }
 
 .ticket-btn {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -511,6 +512,36 @@ textarea {
 
     &--pink {
         background: linear-gradient(180deg, #ffd6e7, #ff9cc6);
+    }
+
+    /* on the ticket machine the counter sits on the button's corner, like a lamp */
+    .pending-count {
+        position: absolute;
+        top: -8px;
+        right: -6px;
+    }
+}
+
+/* How many suggestions wait for review: a little red LED plate, like a platform "waiting" indicator. */
+.pending-count {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-left: 6px;
+    padding: 1px 6px;
+    font: 700 0.8rem/1.3 var(--font-pixel);
+    color: #ff5a5a;
+    text-shadow: 0 0 4px rgba(255, 70, 70, 0.7);
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 4px;
+    white-space: nowrap;
+    vertical-align: 1px;
+
+    .ja {
+        font-size: 0.65rem;
+        color: #ffa31a;
+        text-shadow: 0 0 4px rgba(255, 163, 26, 0.6);
     }
 }
 
