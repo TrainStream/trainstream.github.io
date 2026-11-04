@@ -78,9 +78,9 @@
                     "minimum": 1
                 },
                 "thumbFit": {
-                    "description": "Optional. \"fit\" shows the whole first picture in the camera list (with dark bars) instead of filling and cropping its box.",
+                    "description": "Optional. How the first picture sits in its camera-list box. Default: fills the box and crops the edges. \"fit\": the whole picture with dark bars. \"stretch\": the whole picture squeezed or stretched to the box.",
                     "type": "string",
-                    "enum": ["fit"]
+                    "enum": ["fit", "stretch"]
                 }
             }
         },

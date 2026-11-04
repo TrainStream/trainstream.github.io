@@ -193,7 +193,7 @@
         model.cameras = cams > 0 ? cams : 0;
         model.camCount = model.cameras;
         /* "fit": show the whole list picture instead of filling (and cropping) its box */
-        model.thumbFit = raw.thumbFit === 'fit';
+        model.thumbFit = raw.thumbFit === 'fit' || raw.thumbFit === 'stretch' ? raw.thumbFit : '';
         model.search = [
             model.name,
             model.region,
@@ -337,7 +337,7 @@
                 'data-id': model.id,
                 'data-status': model.status,
                 'data-geo': model.geo ? '1' : '0',
-                'data-fit': model.thumbFit ? 'fit' : null,
+                'data-fit': model.thumbFit || null,
             },
             [
                 el('header', { className: 'card-strip' }, [

@@ -330,7 +330,7 @@
         $('f-description').value = entry.description || '';
         $('f-credit').value = entry.submittedBy || '';
         $('f-cameras').value = entry.cameras || '';
-        form.querySelector('input[name="thumb-fit"][value="' + (entry.thumbFit === 'fit' ? 'fit' : '') + '"]').checked = true;
+        form.querySelector('input[name="thumb-fit"][value="' + (entry.thumbFit === 'fit' || entry.thumbFit === 'stretch' ? entry.thumbFit : '') + '"]').checked = true;
         imagesBox.textContent = '';
         linksBox.textContent = '';
         (entry.images && entry.images.length ? entry.images : [{}]).forEach(addImageRow);
