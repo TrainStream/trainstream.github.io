@@ -887,17 +887,19 @@ textarea {
 .train-boom {
     z-index: 7;
     bottom: 10px;
-    width: 120px;
-    height: 80px;
+    width: 168px;
+    height: 104px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffd400;
-    clip-path: polygon(50% 0, 60% 28%, 92% 8%, 74% 42%, 100% 55%, 70% 64%, 84% 100%, 52% 74%, 22% 100%, 30% 66%, 0 60%, 26% 44%, 8% 10%, 40% 28%);
+    /* A fat-bellied star: the solid middle is wide enough for the text. */
+    clip-path: polygon(50% 0, 62% 22%, 90% 6%, 80% 34%, 100% 52%, 78% 66%, 86% 100%, 56% 80%, 24% 100%, 24% 70%, 0 58%, 20% 38%, 8% 6%, 38% 22%);
     animation: boom 2.6s steps(4) forwards;
 
     span {
-        font: 1rem var(--font-pixel);
+        font: 0.85rem/1 var(--font-pixel);
+        white-space: nowrap;
         color: #1b1f3b;
         text-shadow: 1px 1px 0 #fff;
     }

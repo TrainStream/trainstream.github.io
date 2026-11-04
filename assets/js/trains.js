@@ -424,7 +424,7 @@
                 return Promise.all([drive(train, mid - w, { ms: ms }), drive(other, mid, { ms: ms })])
                     .then(function () {
                         var boom = prop('train-boom', '<span>ドカーン!!</span>', mid);
-                        boom.style.marginLeft = '-60px';
+                        boom.style.marginLeft = '-84px';
                         train.style.transformOrigin = 'left bottom';
                         other.style.transformOrigin = 'right bottom';
                         return Promise.all([
