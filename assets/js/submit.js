@@ -10,6 +10,9 @@
     var config = TS.readJson('ts-config') || {};
     var REPO = config.repo;
     var STREAMS_PATH = '_data/streams.json';
+    var ANON_MARK = '<!-- trainstream-anonymous -->'; // keep in sync with worker/src/index.js
+    var ANON_URL = config.anonEndpoint || '';
+    var TURNSTILE_KEY = config.turnstileSitekey || '';
     var allTags = (TS.readJson('ts-tags') || []).filter(function (t) {
         return t.slug !== 'all';
     });
@@ -421,6 +424,139 @@
         );
     });
 
+    /* ---------- public: send anonymously through the Cloudflare Worker ---------- */
+    var anon = { widget: null, token: '', busy: false };
+
+    // Anonymous sending pauses while too many anonymous suggestions wait for review.
+    // Say so at the top of the page, before anyone starts filling in the form.
+    function hideAnonymous() {
+        $('anon-btn').hidden = true;
+        $('anon-box').hidden = true;
+    }
+    function showQueueFull(max) {
+        hideAnonymous();
+        var banner = $('anon-full');
+        banner.textContent =
+            '📭 Anonymous sending is paused for now: ' + (max || 'too many') + ' anonymous suggestions are already waiting for a maintainer to review them. ' +
+            'Please come back later, or send your suggestion with a free GitHub account (📮 Send suggestion via GitHub).';
+        banner.hidden = false;
+    }
+    function checkAnonStatus() {
+        fetch(ANON_URL.replace(/\/submit\/?$/, '/status'))
+            .then(function (response) {
+                return response.ok ? response.json() : null;
+            })
+            .then(function (data) {
+                if (!data) return;
+                if (data.off) hideAnonymous();
+                else if (data.full) showQueueFull(data.max);
+            })
+            .catch(function () {});
+    }
+
+    function setupAnonymous() {
+        if (!ANON_URL || !TURNSTILE_KEY) return;
+        $('anon-box').hidden = false;
+        $('anon-btn').hidden = false;
+        $('anon-hosts').textContent = R.ANON_IMAGE_HOSTS.join(', ');
+        checkAnonStatus();
+        window.onTSTurnstileLoad = function () {
+            anon.widget = window.turnstile.render('#anon-turnstile', {
+                sitekey: TURNSTILE_KEY,
+                action: 'submit-stream',
+                callback: function (token) {
+                    anon.token = token;
+                },
+                'expired-callback': function () {
+                    anon.token = '';
+                },
+                'error-callback': function () {
+                    anon.token = '';
+                },
+            });
+        };
+        var script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTSTurnstileLoad';
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    }
+
+    function resetTurnstile() {
+        anon.token = '';
+        if (anon.widget !== null && window.turnstile) window.turnstile.reset(anon.widget);
+    }
+
+    function showResult(kind, nodes) {
+        result.textContent = '';
+        result.appendChild(el('p', { className: 'notice notice--' + kind }, nodes));
+    }
+
+    $('anon-btn').addEventListener('click', function () {
+        if (anon.busy) return;
+        var entry = checkOrShow();
+        if (!entry) return;
+        var hostErrors = R.validateEntry(entry, { imageHosts: R.ANON_IMAGE_HOSTS }).filter(function (e) {
+            return /anonymous suggestions can only use pictures/.test(e);
+        });
+        if (hostErrors.length) {
+            showResult('warn', hostErrors);
+            return;
+        }
+        if (!anon.token) {
+            showResult('warn', ['Please tick the "I am human" check above the buttons first.']);
+            $('anon-box').scrollIntoView({ block: 'center', behavior: 'smooth' });
+            return;
+        }
+        var payload = Object.assign({}, entry);
+        if (ctx.editOf) payload.editOf = ctx.editOf;
+        anon.busy = true;
+        $('anon-btn').disabled = true;
+        showResult('ok', ['⏳ Sending…']);
+        fetch(ANON_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ entry: payload, turnstileToken: anon.token }),
+        })
+            .then(function (response) {
+                return response.json().then(
+                    function (data) {
+                        return { ok: response.ok, data: data };
+                    },
+                    function () {
+                        return { ok: false, data: { error: 'Unexpected answer from the server (' + response.status + ').' } };
+                    }
+                );
+            })
+            .then(function (res) {
+                if (!res.ok) {
+                    if (res.data.off) hideAnonymous();
+                    if (res.data.full) showQueueFull();
+                    var lines = [res.data.error || 'Could not send it.'];
+                    (res.data.errors || []).forEach(function (e) {
+                        lines.push(el('br'), '• ' + e);
+                    });
+                    showResult('warn', lines);
+                    return;
+                }
+                store('ts.draft', null);
+                showResult('ok', [
+                    'Sent! It is suggestion ',
+                    el('a', { href: res.data.url, target: '_blank', rel: 'noopener', text: '#' + res.data.number }),
+                    '. A bot checks it within a minute, then a maintainer reviews it. ありがとう！',
+                ]);
+            })
+            .catch(function () {
+                showResult('warn', ['Could not reach the server. Check your connection and try again, or press "📋 Copy JSON" and send it another way.']);
+            })
+            .then(function () {
+                anon.busy = false;
+                $('anon-btn').disabled = false;
+                resetTurnstile();
+            });
+    });
+    setupAnonymous();
+
     $('copy-json').addEventListener('click', function () {
         TS.copyText(submissionJson(readEntry()));
     });
@@ -712,8 +848,8 @@
                     queue.appendChild(
                         el('li', null, [
                             el('span', { className: 'name' }, [
-                                el('a', { href: issue.html_url, target: '_blank', rel: 'noopener', text: '#' + issue.number + ' ' + issue.title }),
-                                ' by ' + issue.user.login,
+                                el('a', { href: issue.html_url, target: '_blank', rel: 'noopener', text: '#' + issue.number + ' ' + queueTitle(issue) }),
+                                ' by ' + issueAuthor(issue),
                                 labels.indexOf('needs-fix') >= 0 ? el('span', { className: 'status-pill is-dead', text: 'needs fix' }) : null,
                             ]),
                             el('button', { type: 'button', className: 'btn btn--small btn--green', text: '📥 Review', onclick: function () { reviewIssue(issue); } }),
@@ -728,6 +864,19 @@
             });
     }
 
+    // Anonymous issues have a neutral title; in the (signed-in) queue, show the suggested name.
+    function queueTitle(issue) {
+        if (issueAuthor(issue) !== 'anonymous') return issue.title;
+        var parsed = R.extractSubmission(issue.body);
+        var name = parsed.data && typeof parsed.data.name === 'string' ? parsed.data.name.slice(0, 200) : '';
+        return name ? issue.title + ': ' + name : issue.title;
+    }
+
+    // Suggestions sent through the anonymous Worker are opened with its token; show them as anonymous.
+    function issueAuthor(issue) {
+        return String(issue.body || '').indexOf(ANON_MARK) >= 0 ? 'anonymous' : issue.user.login;
+    }
+
     function reviewIssue(issue) {
         var parsed = R.extractSubmission(issue.body);
         if (parsed.error) {
@@ -735,7 +884,7 @@
             return;
         }
         ctx.fromIssue = issue.number;
-        ctx.fromIssueAuthor = issue.user.login;
+        ctx.fromIssueAuthor = issueAuthor(issue);
         var data = parsed.data;
         var editOf = String(data.editOf || '');
         var existing = editOf ? findSiteStream(editOf) : null;

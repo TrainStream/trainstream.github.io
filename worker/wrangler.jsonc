@@ -1,0 +1,32 @@
+// Cloudflare Worker for anonymous stream submissions. See worker/README.md.
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "trainstream-submit",
+    "main": "src/index.js",
+    "compatibility_date": "2026-11-04",
+    "workers_dev": true,
+    "observability": { "enabled": true },
+    "vars": {
+        "GITHUB_REPO": "TrainStream/trainstream.github.io",
+        "GITHUB_BRANCH": "master",
+        // Where the submit page is served from. Requests from anywhere else are refused.
+        "ALLOWED_ORIGINS": "https://trainstream.github.io",
+        // Hostnames Turnstile must report back. Never include localhost here.
+        "TURNSTILE_HOSTNAMES": "trainstream.github.io",
+        // Anonymous sending pauses while this many anonymous suggestions wait for review.
+        "MAX_PENDING_ANON": "10"
+    },
+    // Secrets (set with `npx wrangler secret put NAME`, never committed):
+    //   GITHUB_TOKEN      fine-grained token, this repo only, Issues: Read and write
+    //   TURNSTILE_SECRET  the Turnstile widget's secret key
+    //   BLOCKED_WORDS     optional word list (comma or newline separated), kept secret on purpose
+    "ratelimits": [
+        {
+            "name": "SUBMIT_LIMITER",
+            // Any integer unique in your Cloudflare account.
+            "namespace_id": "2018",
+            // 3 suggestions per IP per minute (approximate, per Cloudflare location).
+            "simple": { "limit": 3, "period": 60 }
+        }
+    ]
+}
