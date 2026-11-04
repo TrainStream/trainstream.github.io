@@ -83,7 +83,7 @@
         width.value = img.width || '';
         height.value = img.height || '';
         var status = el('span', { className: 'hint' });
-        var file = el('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp,image/gif' });
+        var file = el('input', { type: 'file', accept: 'image/*' });
         var upload = el('div', { className: 'row-upload' }, [
             el('button', { type: 'button', className: 'btn btn--small', text: '📁 Upload from your computer', onclick: function () { file.click(); } }),
             el('span', { className: 'hint', text: 'Saved into the site when you publish.' }),
@@ -166,7 +166,9 @@
         };
         image.onerror = function () {
             URL.revokeObjectURL(objectUrl);
-            status.textContent = '⚠️ Could not read this picture.';
+            status.textContent = /\.(heic|heif)$/i.test(blob.name || '') || /heic|heif/i.test(blob.type)
+                ? '⚠️ This browser cannot open HEIC (iPhone) pictures. Save it as JPEG first, or take a screenshot of it.'
+                : '⚠️ Could not read this picture.';
         };
         image.src = objectUrl;
     }
@@ -188,35 +190,63 @@
         return { width: Math.round((200 * w) / h), height: 200 };
     }
 
+    /* Loads one picture: through the picture proxy first, then the link itself
+       (some hosts, like imgur, sometimes block the proxy). Calls done(image) or fail(). */
+    function probeImage(url, done, fail) {
+        var tries = [TS.imgUrl(url), url].filter(function (u, i, all) {
+            return u && all.indexOf(u) === i;
+        });
+        (function next() {
+            if (!tries.length) return fail();
+            var image = new Image();
+            image.referrerPolicy = 'no-referrer';
+            image.onload = function () {
+                /* a missing YouTube thumbnail still "loads" as a 120×90 grey placeholder */
+                if (/(^|\/\/)i\.ytimg\.com\//.test(url) && image.naturalWidth === 120 && image.naturalHeight === 90) return fail();
+                done(image);
+            };
+            image.onerror = next;
+            image.src = tries.shift();
+        })();
+    }
+
     function detectSize(src, width, height, status) {
-        var url = src.value.trim();
-        if (!url) {
+        var typed = src.value.trim();
+        if (!typed) {
             status.textContent = '';
             return;
         }
-        var probe = TS.imgUrl(url);
-        if (!probe) {
+        if (isLocalImage(typed)) return;
+        if (!/^https?:\/\//i.test(typed) && !/^\/(?!\/)/.test(typed)) {
             status.textContent = '⚠️ Use a full https:// link';
             return;
         }
+        var link = R.imageLink(typed);
+        var candidates = link.candidates.slice();
         status.textContent = '⏳ checking picture…';
-        var image = new Image();
-        image.onload = function () {
-            var shown = classicSize(image.naturalWidth, image.naturalHeight);
-            width.value = shown.width;
-            height.value = shown.height;
-            status.textContent = '✅ ' + image.naturalWidth + '×' + image.naturalHeight + ' picture, shown at ' + shown.width + '×' + shown.height + ' in the old view';
-            update();
-        };
-        image.onerror = function () {
-            /* The picture proxy can be blocked by a host (imgur sometimes rate-limits it): try the link itself. */
-            if (image.src !== url && /^https?:\/\//i.test(url)) {
-                image.src = url;
+        (function next() {
+            if (!candidates.length) {
+                status.textContent = '⚠️ ' + (link.warn || 'Could not load this picture. Is it a direct image link? If it is a page, ' + 'open it, right-click (or long-press) the picture and choose "Copy image address".');
                 return;
             }
-            status.textContent = '⚠️ Could not load this picture. Is it a direct image link?';
-        };
-        image.src = probe;
+            var url = candidates.shift();
+            probeImage(
+                url,
+                function (image) {
+                    if (src.value.trim() !== typed) return; /* the link was changed meanwhile */
+                    if (url !== typed) src.value = url;
+                    var shown = classicSize(image.naturalWidth, image.naturalHeight);
+                    width.value = shown.width;
+                    height.value = shown.height;
+                    status.textContent =
+                        '✅ ' + image.naturalWidth + '×' + image.naturalHeight + ' picture, shown at ' + shown.width + '×' + shown.height + ' in the old view.' +
+                        (url !== typed && link.note ? ' ' + link.note : '') +
+                        (link.warn ? ' ⚠️ ' + link.warn : '');
+                    update();
+                },
+                next
+            );
+        })();
     }
 
     function addLinkRow(extra) {

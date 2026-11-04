@@ -40,6 +40,7 @@
             var original = decodeURIComponent(m[1]);
             if (!/^https?:\/\//i.test(original)) return;
             img.dataset.direct = '1';
+            img.referrerPolicy = 'no-referrer'; /* some hosts refuse pictures shown on other sites */
             img.src = original;
         },
         true
