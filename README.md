@@ -22,6 +22,7 @@ Plain Jekyll on GitHub Pages: no build step, no plugins, no npm.
 | `scripts/` | Node scripts the Actions run (not published). |
 | `.github/workflows/live.yml`, `scripts/check-live.mjs`, `assets/js/youtube-channel.js` | **Live check** for the TV wall: every 15 minutes, reads each YouTube channel's `/streams` page and lists its live videos in `live.json` on the `live-data` branch. The TV wall loads it from raw.githubusercontent.com, so channels with several live streams show each one. Run it by hand from the Actions tab ("Live check" → Run workflow). |
 | `.github/` | Issue form, workflows, and the trusted publishers list. |
+| `worker/` | Optional Cloudflare Worker for **anonymous submissions** (no GitHub account). Not published by Jekyll. Setup: [`worker/README.md`](worker/README.md). |
 
 ### Stream fields
 
@@ -38,6 +39,7 @@ There are three ways, and all of them write the same JSON format (`JSON.stringif
 1. **Anyone:** <https://trainstream.github.io/submit/>
    - Fill in the form; it shows a live preview.
    - "Send suggestion via GitHub" opens a pre-filled issue. A free GitHub account is needed.
+   - Or, once it is set up, "🕶️ Send anonymously" sends it **without any account** through a free Cloudflare Worker ([`worker/README.md`](worker/README.md) has the setup). Anonymous suggestions always wait for review. **Off switch:** `anonymous_submissions: false` in `_config.yml`.
    - A bot checks it and comments. A maintainer then publishes it, either by adding the **`approved`** label to the issue or with the review queue below.
    - On publish, third-party pictures are copied into `pictures/submissions/` so they can't rot.
 2. **Maintainers** (people with write access):

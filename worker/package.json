@@ -1,0 +1,12 @@
+{
+    "name": "trainstream-submit",
+    "private": true,
+    "description": "Cloudflare Worker for anonymous TrainStream submissions. See README.md.",
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy"
+    },
+    "devDependencies": {
+        "wrangler": "^4.40.0"
+    }
+}

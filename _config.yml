@@ -13,9 +13,24 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - worker
 
 # The GitHub repository the submit tool and GitHub Actions talk to.
 ts_repo: TrainStream/trainstream.github.io
+
+# ON/OFF SWITCH for anonymous suggestions (no GitHub account needed).
+#   true  = anyone can send suggestions anonymously (they always wait for review)
+#   false = only suggestions from logged-in GitHub users are accepted again.
+# Takes effect within about a minute of pushing, even before the site rebuilds:
+# the Worker refuses new anonymous suggestions and the Action closes any that
+# still arrive. Maintainers can still approve ones already in the queue.
+anonymous_submissions: true
+
+# The free Cloudflare Worker in worker/ that receives anonymous suggestions.
+# See worker/README.md for the one-time setup. Both must be filled in for the
+# "Send anonymously" button to show.
+anon_submit_url: ""      # e.g. https://trainstream-submit.YOUR-SUBDOMAIN.workers.dev/submit
+turnstile_sitekey: ""    # the Turnstile widget's *site* key (public; the secret key goes in the Worker)
 
 # The day the first page went up.
 ts_since: 2018-05-03
