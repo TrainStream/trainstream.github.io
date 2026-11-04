@@ -21,6 +21,12 @@
                 text-decoration: none;
             }
             .classic-switch:hover { background: #ffff99; }
+            /* Phones: wide pictures stretch the page, and a fixed button on the right
+               then sits off screen. Shrink pictures to fit and put the button in the flow. */
+            @media (max-width: 800px) {
+                .classic-switch { position: static; display: inline-block; margin: 8px; }
+                img { max-width: 100%; height: auto; }
+            }
         </style>
     </head>
     <body>

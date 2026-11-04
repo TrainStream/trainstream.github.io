@@ -12,7 +12,7 @@ scripts:
     <h1 class="panel-title">投稿 <small>Submit a stream</small></h1>
     <p>Found a camera that belongs here? Fill in the form and check the live preview. When you send it, a GitHub issue opens with everything filled in (you need a free GitHub account). A maintainer reviews it, fixes anything if needed, and publishes it. Your name can go on the ticket as thanks.</p>
     <ol>
-        <li><strong>Pictures:</strong> take screenshots of the stream, upload them to an image host (<a href="https://imgur.com/upload">imgur</a>, <a href="https://catbox.moe/">catbox</a>…) and paste the <em>direct image links</em>. When it is published, the pictures are copied into the site so they never break.</li>
+        <li><strong>Pictures:</strong> take screenshots of the stream, upload them to an image host (<a href="https://imgur.com/upload">imgur</a>, <a href="https://catbox.moe/">catbox</a>…) and paste the <em>direct image links</em>. When it is published, the pictures are copied into the site so they never break. Signed-in maintainers can also upload pictures straight from their computer.</li>
         <li><strong>Text:</strong> write the name and description yourself. Put Japanese and English in the name if you can, e.g. <code>湯野上温泉駅 Yunokami-Onsen Station</code>.</li>
         <li><strong>Links:</strong> for YouTube, link the channel's <code>/streams</code> page. Video links change when a stream restarts.</li>
     </ol>
@@ -87,7 +87,7 @@ scripts:
 
         <div class="field">
             <span class="field-label">Pictures <span class="req">*</span></span>
-            <span class="hint">Direct links to screenshots (ending in .jpg / .png / .webp). Size is detected automatically. One picture per camera if the stream has several.</span>
+            <span class="hint">Direct links to screenshots (ending in .jpg / .png / .webp). Size is detected automatically. One picture per camera if the stream has several. Signed in as a maintainer? You can upload a file from your computer instead; it is shrunk to 1280px and saved into the site when you publish.</span>
             <div class="row-editor" id="f-images"></div>
             <button class="btn btn--small" type="button" id="add-image">＋ Add picture</button>
         </div>
