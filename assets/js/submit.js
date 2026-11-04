@@ -890,7 +890,7 @@
                                 labels.indexOf('needs-fix') >= 0 ? el('span', { className: 'status-pill is-dead', text: 'needs fix' }) : null,
                             ]),
                             el('button', { type: 'button', className: 'btn btn--small btn--green', text: '📥 Review', onclick: function () { reviewIssue(issue); } }),
-                            el('button', { type: 'button', className: 'btn btn--small', text: '🗑 Reject', onclick: function () { rejectIssue(issue); } }),
+                            el('button', { type: 'button', className: 'btn btn--small', text: '🗑 Reject & delete', onclick: function () { rejectIssue(issue); } }),
                         ])
                     );
                 });
@@ -932,12 +932,25 @@
         form.scrollIntoView({ behavior: 'smooth' });
     }
 
+    // Rejected suggestions are deleted for good, so nothing a troll wrote stays on GitHub.
+    // GitHub only lets repository admins delete issues; anyone else closes it instead.
     function rejectIssue(issue) {
-        var reason = prompt('Why is #' + issue.number + ' rejected? (posted as a comment)', 'Thanks, but this one does not fit the list.');
-        if (reason === null) return;
-        gh('POST', '/repos/' + REPO + '/issues/' + issue.number + '/comments', { body: '🙇 ' + reason + '\n\n_(Rejected by @' + ctx.admin.login + ' with the submit tool.)_' })
-            .then(function () {
-                return gh('PATCH', '/repos/' + REPO + '/issues/' + issue.number, { state: 'closed', state_reason: 'not_planned' });
+        if (!confirm('Reject #' + issue.number + ' and delete it permanently?\n\nThe issue and its comments are removed from GitHub. This cannot be undone.')) return;
+        gh('POST', '/graphql', {
+            query: 'mutation($id: ID!) { deleteIssue(input: { issueId: $id }) { clientMutationId } }',
+            variables: { id: issue.node_id },
+        })
+            .then(function (res) {
+                if (res && res.errors && res.errors.length) throw new Error(res.errors[0].message);
+            })
+            .catch(function (error) {
+                console.warn('delete failed', error);
+                return gh('PATCH', '/repos/' + REPO + '/issues/' + issue.number, { state: 'closed', state_reason: 'not_planned' }).then(function () {
+                    alert(
+                        '#' + issue.number + ' could not be deleted (only repository admins can delete issues), so it was closed instead.\n\nGitHub said: ' +
+                            String(error.message).slice(0, 200)
+                    );
+                });
             })
             .then(loadQueue)
             .catch(function (error) {
