@@ -10,6 +10,7 @@ scripts:
 
 <section class="panel">
     <h1 class="panel-title">投稿 <small>Submit a stream</small></h1>
+    <p id="anon-full" class="notice notice--warn" role="status" hidden></p>
     <p>Found a camera that belongs here? Fill in the form and check the live preview. When you send it, a GitHub issue opens with everything filled in (you need a free GitHub account){% if site.anonymous_submissions == true and site.anon_submit_url != "" and site.turnstile_sitekey != "" %}, or you can send it anonymously without any account{% endif %}. A maintainer reviews it, fixes anything if needed, and publishes it. Your name can go on the ticket as thanks.</p>
     <ol>
         <li><strong>Pictures:</strong> take screenshots of the stream, upload them to an image host (<a href="https://imgur.com/upload">imgur</a>, <a href="https://catbox.moe/">catbox</a>…) and paste the <em>direct image links</em>. When it is published, the pictures are copied into the site so they never break. Signed-in maintainers can also upload pictures straight from their computer.</li>
@@ -140,7 +141,7 @@ scripts:
 
         <div class="field" id="anon-box" hidden>
             <span class="field-label">No GitHub account?</span>
-            <span class="hint">Send it anonymously: nothing about you is stored, and it goes into the same review queue. Use "Credit me as" if you still want thanks on the ticket.</span>
+            <span class="hint">Send it anonymously: nothing about you is stored, and it goes into the same review queue. Use "Credit me as" if you still want thanks on the ticket. Anonymous pictures must be hosted on <span id="anon-hosts"></span>.</span>
             <div id="anon-turnstile"></div>
         </div>
 

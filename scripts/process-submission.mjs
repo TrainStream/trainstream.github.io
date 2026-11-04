@@ -4,7 +4,10 @@
 // - Submissions from trusted people (repo collaborators with write access, or
 //   anyone listed in .github/publishers.yml) are published right away.
 // - Anonymous submissions (opened by the Cloudflare Worker in worker/, marked
-//   with ANON_MARK) are never trusted, whoever's token opened the issue.
+//   with ANON_MARK) are never trusted, whoever's token opened the issue. They get
+//   the "anonymous" label, the conversation is locked to collaborators, their
+//   pictures must come from rules.ANON_IMAGE_HOSTS, and the bot folds their text
+//   away so nothing a visitor wrote is shown at a glance.
 // - Everyone else's submission waits until a trusted person adds the
 //   "approved" label (or publishes it from the /submit/ review queue).
 // - Publishing mirrors the third-party pictures into /pictures/submissions/,
@@ -33,6 +36,7 @@ const LABELS = {
     approved: { color: 'ff5fa2', description: 'Maintainer approved: publish this submission' },
     'needs-fix': { color: 'e60012', description: 'The submission has problems to fix' },
     published: { color: '1e5aa8', description: 'This submission is live on the site' },
+    anonymous: { color: '6e7781', description: 'Sent with the anonymous form (no GitHub account); unreviewed' },
 };
 const IMAGE_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif', 'image/webp': 'webp' };
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
@@ -206,6 +210,20 @@ async function publish(entry, editOf, suggestedBy) {
     return { sha, replaced, mirrorNotes };
 }
 
+// Text from anonymous visitors is folded away, so trolling is never shown at a glance.
+function fold(text, anonymous, label) {
+    return anonymous ? `<details><summary>${label}</summary>\n\n${text}\n\n</details>` : text;
+}
+
+async function lockConversation() {
+    if (issue.locked) return;
+    try {
+        await api('PUT', `/repos/${repo}/issues/${issue.number}/lock`, {});
+    } catch (error) {
+        console.warn(`lock: ${error.message}`);
+    }
+}
+
 function summary(entry) {
     const lines = [
         `**${entry.name}** — ${entry.isAlive ? '運転中 live' : '運休 dead'}`,
@@ -248,6 +266,12 @@ async function main() {
         return;
     }
 
+    const anonymous = (issue.body || '').includes(ANON_MARK);
+    if (anonymous) {
+        if (!labels.includes('anonymous')) await addLabels(['anonymous']);
+        await lockConversation();
+    }
+
     const parsed = rules.extractSubmission(issue.body);
     if (parsed.error) {
         await addLabels(['needs-fix']);
@@ -256,7 +280,6 @@ async function main() {
     }
 
     // The anonymous Worker may use a maintainer's token, so the marker decides, not the author.
-    const anonymous = (issue.body || '').includes(ANON_MARK);
     const author = issue.user.login;
     const authorTrusted = !anonymous && (await isTrusted(author));
     const trusted = authorTrusted || !!approver;
@@ -264,12 +287,17 @@ async function main() {
     const knownTags = JSON.parse(readFileSync(TAGS_PATH, 'utf8')).map((t) => t.slug);
     const entry = rules.cleanEntry({ ...parsed.data, addedAt: parsed.data.addedAt || (editOf ? '' : today()) });
 
-    const errors = rules.validateEntry(entry, { knownTags, allowRelative: trusted });
+    const errors = rules.validateEntry(entry, {
+        knownTags,
+        allowRelative: trusted,
+        // Until a maintainer approves it, an anonymous suggestion only links pictures from known hosts.
+        imageHosts: anonymous && !approver ? rules.ANON_IMAGE_HOSTS : null,
+    });
     if (errors.length) {
         await addLabels(['needs-fix']);
         await removeLabel('approved');
         await botComment(
-            `❌ This submission needs a few fixes before it can be published:\n\n${errors.map((e) => `- ${e}`).join('\n')}\n\n` +
+            `❌ This submission needs a few fixes before it can be published:\n\n${fold(errors.map((e) => `- ${e}`).join('\n'), anonymous, 'Show the problems')}\n\n` +
                 'Edit the issue (… menu → Edit) and change the JSON, or make a new suggestion at https://trainstream.github.io/submit/ . I will check again automatically.'
         );
         return;
@@ -278,7 +306,7 @@ async function main() {
 
     if (!trusted) {
         await botComment(
-            `✅ Thanks! The submission looks valid and is waiting for a maintainer to review it.\n\n${summary(entry)}\n\n` +
+            `✅ Thanks! The submission looks valid and is waiting for a maintainer to review it.\n\n${fold(summary(entry), anonymous, 'Show the summary (unreviewed)')}\n\n` +
                 '_Maintainers: edit the JSON in this issue if needed, then add the `approved` label to publish it, or use the review queue at https://trainstream.github.io/submit/ ._'
         );
         return;

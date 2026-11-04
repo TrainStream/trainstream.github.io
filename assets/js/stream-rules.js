@@ -18,6 +18,24 @@
         extras: 20,
     };
 
+    // Picture hosts allowed for anonymous suggestions (opts.imageHosts). Keeps reviewers
+    // from opening links to random sites that could log who looks at them.
+    var ANON_IMAGE_HOSTS = [
+        'i.imgur.com',
+        'files.catbox.moe',
+        'i.ibb.co',
+        'i.postimg.cc',
+        'i.redd.it',
+        'pbs.twimg.com',
+        'i.ytimg.com',
+        'upload.wikimedia.org',
+    ];
+
+    function urlHost(value) {
+        var m = /^https?:\/\/([^\/?#:@\s]+)(?::\d+)?(?:[\/?#]|$)/i.exec(String(value || ''));
+        return m ? m[1].toLowerCase() : '';
+    }
+
     function str(value) {
         return value === undefined || value === null ? '' : String(value).trim();
     }
@@ -109,6 +127,7 @@
     /*
      * opts.knownTags: array of tag slugs (optional)
      * opts.allowRelative: allow "/pictures/..." images and "/..." links (maintainers)
+     * opts.imageHosts: only allow pictures from these hostnames (anonymous suggestions)
      */
     function validateEntry(entry, opts) {
         opts = opts || {};
@@ -137,6 +156,12 @@
                 isSafeUrl(img.src, opts.allowRelative),
                 n + ': must be a full https:// link to an image' + (opts.allowRelative ? ' or a /pictures/... path' : '') + '.'
             );
+            if (opts.imageHosts && isHttpUrl(img.src)) {
+                check(
+                    opts.imageHosts.indexOf(urlHost(img.src)) >= 0,
+                    n + ': anonymous suggestions can only use pictures from ' + opts.imageHosts.join(', ') + '.'
+                );
+            }
             check(!img.title || img.title.length <= LIMITS.text, n + ': caption is too long.');
         });
 
@@ -269,6 +294,8 @@
 
     return {
         LIMITS: LIMITS,
+        ANON_IMAGE_HOSTS: ANON_IMAGE_HOSTS,
+        urlHost: urlHost,
         isSafeUrl: isSafeUrl,
         splitTags: splitTags,
         cleanEntry: cleanEntry,
