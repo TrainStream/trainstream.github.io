@@ -26,7 +26,7 @@ Plain Jekyll on GitHub Pages: no build step, no plugins, no npm.
 
 ### Stream fields
 
-Required, the same as always: `name`, `isAlive`, `tags` (comma separated slugs), `images[]` (`src`, `title` or `alt`, `width`, `height`) and `extras[]` (`link`, `text`, `linkTitle`).
+Required, the same as always: `name`, `isAlive`, `tags` (comma separated slugs), `images[]` (`src`, `title` or `alt`, `width`, `height`) (`width`/`height` are only the size the classic view draws the picture at: 200px tall, same shape, e.g. 356×200 for 16:9 or 267×200 for 4:3; the submit tool fills them in) and `extras[]` (`link`, `text`, `linkTitle`).
 
 Optional, new: `region`, `lat`/`lng` (map pin), `description`, `addedAt` (`YYYY-MM-DD`, gives a NEW! badge for 30 days and an entry in the update log), `submittedBy` (credit) and `id` (stable permalink if the name changes).
 
