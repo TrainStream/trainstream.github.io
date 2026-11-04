@@ -44,8 +44,12 @@
         return null;
     }
 
+    /* Pictures picked from the computer on the submit page, shown before they are uploaded: path → data: URL. */
+    var localImages = {};
+
     function imgUrl(src, height) {
         var value = String(src || '').trim();
+        if (localImages[value]) return localImages[value];
         var full = null;
         if (/^\/(?!\/)/.test(value)) full = SITE + value;
         else if (/^https?:\/\//i.test(value)) full = value;
@@ -393,6 +397,7 @@
         slugify: slugify,
         safeUrl: safeUrl,
         imgUrl: imgUrl,
+        localImages: localImages,
         youtube: youtube,
         embedUrl: embedUrl,
         rawStreamUrl: rawStreamUrl,

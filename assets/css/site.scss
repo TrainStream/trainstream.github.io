@@ -1692,7 +1692,7 @@ textarea {
 
     .card {
         display: grid;
-        grid-template-columns: 160px 1fr;
+        grid-template-columns: 200px 1fr;
         grid-template-areas: 'thumb body';
         background-image: none;
         background-color: var(--paper);
@@ -1702,11 +1702,13 @@ textarea {
         display: none;
     }
 
+    /* The picture fills the whole height of the row, so there is no blank column under it. */
     .card-thumb {
         grid-area: thumb;
-        align-self: start;
-        aspect-ratio: 16 / 10;
-        border-radius: 4px 0 0 0;
+        align-self: stretch;
+        aspect-ratio: auto;
+        min-height: 100px;
+        border-radius: 4px 0 0 4px;
     }
 
     .dead-stamp {
@@ -1747,15 +1749,42 @@ textarea {
     }
 }
 
+/* Phones: picture and title side by side on top, then tags, links and buttons use the full width. */
 @media (max-width: 720px) {
     .stream-list.view-list {
         .card {
-            grid-template-columns: 96px 1fr;
+            grid-template-columns: 116px minmax(0, 1fr);
+            grid-template-areas:
+                'thumb title'
+                'tags tags'
+                'links links'
+                'actions actions';
+            gap: 8px 10px;
+            padding-bottom: 10px;
+        }
+
+        .card-thumb {
+            align-self: start;
+            aspect-ratio: 16 / 10;
+            min-height: 0;
+            border-radius: 4px 0 4px 0;
+            border-right: 2px dashed var(--edge);
+            border-bottom: 2px dashed var(--edge);
         }
 
         .card-body {
-            grid-template-columns: 1fr;
-            grid-template-areas: 'title' 'tags' 'links' 'actions';
+            display: contents;
+        }
+
+        .card-heading {
+            align-self: center;
+            padding: 6px 10px 0 0;
+        }
+
+        .tag-list,
+        .card-links,
+        .card-actions {
+            margin: 0 10px;
         }
     }
 }
@@ -2111,6 +2140,8 @@ html.map-expanded {
 
 .dialog-body {
     display: grid;
+    /* minmax(0, …) so the scrolling thumbnail strip can't widen the panel past the screen */
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
     padding: 16px;
 }
@@ -2865,13 +2896,48 @@ fieldset.field {
 }
 
 @media (max-width: 720px) {
+    .row-item:not(.row-item--link) > .field:nth-child(2) {
+        grid-column: 1 / -1;
+    }
+
     .row-item,
     .row-item--link {
+        position: relative;
         grid-template-columns: 1fr 1fr;
 
         > .field:first-child {
             grid-column: 1 / -1;
         }
+
+        /* A small ✕ in the corner, not a half-width bar of its own. */
+        > .row-remove {
+            position: absolute;
+            top: 4px;
+            right: 6px;
+            min-width: 0;
+            width: 32px;
+            height: 28px;
+            padding: 0;
+        }
+    }
+}
+
+.row-upload {
+    grid-column: 1 / -1;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+
+    .can-upload & {
+        display: flex;
+    }
+
+    input[type='file'] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
     }
 }
 

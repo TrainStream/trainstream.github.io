@@ -77,12 +77,23 @@
         width.value = img.width || '';
         height.value = img.height || '';
         var status = el('span', { className: 'hint' });
+        var file = el('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp,image/gif' });
+        var upload = el('div', { className: 'row-upload' }, [
+            el('button', { type: 'button', className: 'btn btn--small', text: '📁 Upload from your computer', onclick: function () { file.click(); } }),
+            el('span', { className: 'hint', text: 'Saved into the site when you publish.' }),
+            file,
+        ]);
+        file.addEventListener('change', function () {
+            if (file.files && file.files[0]) pickLocalPicture(file.files[0], src, width, height, status);
+            file.value = '';
+        });
         var row = el('div', { className: 'row-item' }, [
             field('Picture link *', src),
             field('Caption', title),
             field('Width', width),
             field('Height', height),
-            el('button', { type: 'button', className: 'btn btn--small', 'aria-label': 'Remove picture', text: '✕', onclick: function () { row.remove(); update(); } }),
+            el('button', { type: 'button', className: 'btn btn--small row-remove', 'aria-label': 'Remove picture', text: '✕', onclick: function () { row.remove(); update(); } }),
+            upload,
             status,
         ]);
         var timer;
@@ -95,6 +106,72 @@
         imagesBox.appendChild(row);
         if (src.value && !width.value) detectSize(src, width, height, status);
         return row;
+    }
+
+    /* ---------- pictures from the computer (signed-in maintainers) ---------- */
+    var UPLOAD_DIR = '/pictures/submissions/';
+    var MAX_SIDE = 1280;
+    var localImages = TS.localImages;
+
+    function saveLocalImages() {
+        try {
+            sessionStorage.setItem('ts.uploads', JSON.stringify(localImages));
+        } catch (e) {} /* too big for storage: they just won't survive a reload */
+    }
+    try {
+        Object.assign(localImages, JSON.parse(sessionStorage.getItem('ts.uploads') || '{}'));
+    } catch (e) {}
+
+    function isLocalImage(src) {
+        return Object.prototype.hasOwnProperty.call(localImages, String(src || '').trim());
+    }
+
+    /* Shrinks the picture to at most 1280px and saves it as JPEG, then keeps it in memory until publishing. */
+    function pickLocalPicture(blob, src, width, height, status) {
+        if (!/^image\//.test(blob.type)) {
+            status.textContent = '⚠️ That file is not a picture.';
+            return;
+        }
+        status.textContent = '⏳ reading picture…';
+        var objectUrl = URL.createObjectURL(blob);
+        var image = new Image();
+        image.onload = function () {
+            var scale = Math.min(1, MAX_SIDE / Math.max(image.naturalWidth, image.naturalHeight));
+            var w = Math.max(1, Math.round(image.naturalWidth * scale));
+            var h = Math.max(1, Math.round(image.naturalHeight * scale));
+            var canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            var g = canvas.getContext('2d');
+            g.fillStyle = '#fff';
+            g.fillRect(0, 0, w, h);
+            g.drawImage(image, 0, 0, w, h);
+            URL.revokeObjectURL(objectUrl);
+            var dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+            var path = UPLOAD_DIR + 'upload-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6) + '.jpg';
+            localImages[path] = dataUrl;
+            saveLocalImages();
+            src.value = path;
+            width.value = w;
+            height.value = h;
+            status.textContent = '✅ ' + w + '×' + h + ', ' + Math.round((dataUrl.length * 0.75) / 1024) + ' KB. It is uploaded when you press 🚀 Publish.';
+            update();
+        };
+        image.onerror = function () {
+            URL.revokeObjectURL(objectUrl);
+            status.textContent = '⚠️ Could not read this picture.';
+        };
+        image.src = objectUrl;
+    }
+
+    function pendingUploads(entry) {
+        return (entry.images || [])
+            .filter(function (img) {
+                return isLocalImage(img.src);
+            })
+            .map(function (img) {
+                return { path: img.src.replace(/^\//, ''), base64: localImages[img.src].split(',')[1] };
+            });
     }
 
     function detectSize(src, width, height, status) {
@@ -140,7 +217,7 @@
             field('Text', text),
             field('Note', note),
             field('Type', kind),
-            el('button', { type: 'button', className: 'btn btn--small', 'aria-label': 'Remove link', text: '✕', onclick: function () { row.remove(); update(); } }),
+            el('button', { type: 'button', className: 'btn btn--small row-remove', 'aria-label': 'Remove link', text: '✕', onclick: function () { row.remove(); update(); } }),
         ]);
         linksBox.appendChild(row);
         return row;
@@ -239,6 +316,10 @@
         setEditing('', '', '');
         fillForm({});
         result.textContent = '';
+        Object.keys(localImages).forEach(function (key) {
+            delete localImages[key];
+        });
+        saveLocalImages();
         store('ts.draft', null);
         history.replaceState(null, '', location.pathname);
     }
@@ -296,6 +377,11 @@
         event.preventDefault();
         var entry = checkOrShow();
         if (!entry) return;
+        if (pendingUploads(entry).length) {
+            result.textContent = '';
+            result.appendChild(el('p', { className: 'notice notice--warn', text: 'Pictures from your computer can only go up with "🚀 Publish now". Use that button, or paste image links instead.' }));
+            return;
+        }
         var json = submissionJson(entry);
         var title = (ctx.editOf ? '[Stream edit] ' : '[Stream] ') + entry.name;
         var url =
@@ -400,8 +486,8 @@
         return btoa(binary);
     }
 
-    function fetchStreams() {
-        return gh('GET', '/repos/' + REPO + '/contents/' + STREAMS_PATH + '?ref=' + encodeURIComponent(ctx.admin.branch)).then(function (data) {
+    function fetchStreams(ref) {
+        return gh('GET', '/repos/' + REPO + '/contents/' + STREAMS_PATH + '?ref=' + encodeURIComponent(ref || ctx.admin.branch)).then(function (data) {
             return { sha: data.sha, file: JSON.parse(b64decode(data.content)) };
         });
     }
@@ -420,6 +506,49 @@
             })
             .catch(function (error) {
                 if ((error.status === 409 || error.status === 422) && !retried) return commitStreams(change, message, true);
+                throw error;
+            });
+    }
+
+    /* Same as commitStreams, but also adds files (uploaded pictures) in the same single commit,
+       using the Git data API: blobs → tree → commit → move the branch. */
+    function commitStreamsWithFiles(change, message, files, retried) {
+        var git = '/repos/' + REPO + '/git';
+        var branch = encodeURIComponent(ctx.admin.branch);
+        var parentSha;
+        return gh('GET', git + '/ref/heads/' + branch)
+            .then(function (ref) {
+                parentSha = ref.object.sha;
+                return Promise.all([gh('GET', git + '/commits/' + parentSha), fetchStreams(parentSha)]);
+            })
+            .then(function (res) {
+                var baseTree = res[0].tree.sha;
+                var next = change(res[1].file);
+                var blobs = files.map(function (f) {
+                    return gh('POST', git + '/blobs', { content: f.base64, encoding: 'base64' }).then(function (blob) {
+                        return { path: f.path, mode: '100644', type: 'blob', sha: blob.sha };
+                    });
+                });
+                blobs.push(
+                    gh('POST', git + '/blobs', { content: R.serializeFile(next), encoding: 'utf-8' }).then(function (blob) {
+                        return { path: STREAMS_PATH, mode: '100644', type: 'blob', sha: blob.sha };
+                    })
+                );
+                return Promise.all(blobs).then(function (tree) {
+                    return gh('POST', git + '/trees', { base_tree: baseTree, tree: tree });
+                });
+            })
+            .then(function (tree) {
+                return gh('POST', git + '/commits', { message: message, tree: tree.sha, parents: [parentSha] });
+            })
+            .then(function (commit) {
+                return gh('PATCH', git + '/refs/heads/' + branch, { sha: commit.sha, force: false }).then(function () {
+                    return { commit: { sha: commit.sha, html_url: commit.html_url } };
+                });
+            })
+            .catch(function (error) {
+                /* 422: someone else moved the branch meanwhile; build the commit again on top. */
+                if ((error.status === 409 || error.status === 422) && !retried) return commitStreamsWithFiles(change, message, files, true);
                 throw error;
             });
     }
@@ -448,6 +577,7 @@
                 $('signout-btn').hidden = false;
                 $('signin-btn').hidden = true;
                 $('token').value = '';
+                form.classList.toggle('can-upload', ctx.admin.canPush);
                 if (ctx.admin.canPush) {
                     showStatus('ok', '✅ Signed in as ' + user.login + '. You can publish directly, review suggestions and edit streams.');
                     $('admin-actions').hidden = false;
@@ -479,6 +609,7 @@
     $('signout-btn').addEventListener('click', function () {
         forgetToken();
         ctx.admin = null;
+        form.classList.remove('can-upload');
         $('signout-btn').hidden = true;
         $('signin-btn').hidden = false;
         $('admin-actions').hidden = true;
@@ -503,12 +634,19 @@
         button.disabled = true;
         result.textContent = '⏳ Publishing…';
         var message = (editOf ? 'Update stream: ' : 'Add stream: ') + entry.name + (issue ? ' (#' + issue + ', suggested by ' + ctx.fromIssueAuthor + ')' : '') + ' via submit tool';
-        commitStreams(function (file) {
+        var change = function (file) {
             var res = R.upsert(file, entry, editOf);
             if (editOf && !res.replaced) throw new Error('The stream being edited no longer exists. Reload and try again.');
             return res.file;
-        }, message)
+        };
+        var uploads = pendingUploads(entry);
+        if (uploads.length) result.textContent = '⏳ Uploading ' + uploads.length + ' picture' + (uploads.length > 1 ? 's' : '') + ' and publishing…';
+        (uploads.length ? commitStreamsWithFiles(change, message, uploads) : commitStreams(change, message))
             .then(function (response) {
+                uploads.forEach(function (f) {
+                    delete localImages['/' + f.path];
+                });
+                saveLocalImages();
                 var done = Promise.resolve();
                 if (issue) {
                     done = gh('POST', '/repos/' + REPO + '/issues/' + issue + '/comments', {

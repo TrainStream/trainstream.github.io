@@ -42,7 +42,7 @@ There are three ways, and all of them write the same JSON format (`JSON.stringif
    - On publish, third-party pictures are copied into `pictures/submissions/` so they can't rot.
 2. **Maintainers** (people with write access):
    - On `/submit/`, open **Maintainers & publishers** and sign in with a fine-grained personal access token. The page explains how to create one; it needs Contents + Issues read/write on this repo only.
-   - Then you can **publish instantly**, work the **review queue** (load a suggestion into the form, edit it, approve and publish, or reject it), and **edit / mark dead / delete** any stream.
+   - Then you can **publish instantly** (and upload pictures straight from your computer: they are shrunk to 1280px, saved as JPEG in `pictures/submissions/`, and committed together with the stream), work the **review queue** (load a suggestion into the form, edit it, approve and publish, or reject it), and **edit / mark dead / delete** any stream.
 3. **The original editor** by altbdoor still works exactly as before.
 
 Anyone can also press "✏️ Suggest an edit" on a camera's detail panel. That opens the form pre-filled with the stream; the result is an issue that replaces the stream once it is approved.
