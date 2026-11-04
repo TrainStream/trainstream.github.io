@@ -318,7 +318,7 @@
                 })
             );
         }
-        $('send-btn').textContent = ctx.editOf ? '📮 Suggest this edit via GitHub' : '📮 Send suggestion via GitHub';
+        $('send-btn').querySelector('.label').textContent = ctx.editOf ? 'Suggest this edit via GitHub' : 'Send suggestion via GitHub';
         $('publish-btn').textContent = ctx.editOf ? '🚀 Save changes now' : ctx.fromIssue ? '🚀 Approve & publish now' : '🚀 Publish now';
     }
 
