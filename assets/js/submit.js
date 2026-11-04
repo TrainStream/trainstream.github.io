@@ -90,8 +90,8 @@
         var row = el('div', { className: 'row-item' }, [
             field('Picture link *', src),
             field('Caption', title),
-            field('Width', width),
-            field('Height', height),
+            field('Old-view width', width),
+            field('Old-view height', height),
             el('button', { type: 'button', className: 'btn btn--small row-remove', 'aria-label': 'Remove picture', text: '✕', onclick: function () { row.remove(); update(); } }),
             upload,
             status,
@@ -152,8 +152,9 @@
             localImages[path] = dataUrl;
             saveLocalImages();
             src.value = path;
-            width.value = w;
-            height.value = h;
+            var shown = classicSize(w, h);
+            width.value = shown.width;
+            height.value = shown.height;
             status.textContent = '✅ ' + w + '×' + h + ', ' + Math.round((dataUrl.length * 0.75) / 1024) + ' KB. It is uploaded when you press 🚀 Publish.';
             update();
         };
@@ -174,6 +175,13 @@
             });
     }
 
+    /* Width/height are only the size the classic (old) view draws the picture at: 200px tall, same shape.
+       16:9 → 356×200, 4:3 → 267×200. The new design sizes pictures itself. */
+    function classicSize(w, h) {
+        if (!(w > 0 && h > 0)) return { width: 356, height: 200 };
+        return { width: Math.round((200 * w) / h), height: 200 };
+    }
+
     function detectSize(src, width, height, status) {
         var url = src.value.trim();
         if (!url) {
@@ -188,9 +196,10 @@
         status.textContent = '⏳ checking picture…';
         var image = new Image();
         image.onload = function () {
-            width.value = image.naturalWidth;
-            height.value = image.naturalHeight;
-            status.textContent = '✅ ' + image.naturalWidth + '×' + image.naturalHeight;
+            var shown = classicSize(image.naturalWidth, image.naturalHeight);
+            width.value = shown.width;
+            height.value = shown.height;
+            status.textContent = '✅ ' + image.naturalWidth + '×' + image.naturalHeight + ' picture, shown at ' + shown.width + '×' + shown.height + ' in the old view';
             update();
         };
         image.onerror = function () {
