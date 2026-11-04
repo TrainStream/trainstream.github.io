@@ -29,8 +29,8 @@ anonymous_submissions: true
 # The free Cloudflare Worker in worker/ that receives anonymous suggestions.
 # See worker/README.md for the one-time setup. Both must be filled in for the
 # "Send anonymously" button to show.
-anon_submit_url: ""      # e.g. https://trainstream-submit.YOUR-SUBDOMAIN.workers.dev/submit
-turnstile_sitekey: ""    # the Turnstile widget's *site* key (public; the secret key goes in the Worker)
+anon_submit_url: "https://trainstream-submit.trainstream.workers.dev/submit"      # e.g. https://trainstream-submit.YOUR-SUBDOMAIN.workers.dev/submit
+turnstile_sitekey: "0x4AAAAAAFzTeARHr0A4o6BR"    # the Turnstile widget's *site* key (public; the secret key goes in the Worker)
 
 # The day the first page went up.
 ts_since: 2018-05-03
