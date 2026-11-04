@@ -63,7 +63,6 @@
                 var badge = document.createElement('span');
                 badge.className = 'pending-count';
                 badge.title = label;
-                badge.innerHTML = '<span class="ja" aria-hidden="true">審査待</span>';
                 badge.appendChild(document.createTextNode(count > 99 ? '99+' : String(count)));
                 var hidden = document.createElement('span');
                 hidden.className = 'visually-hidden';
