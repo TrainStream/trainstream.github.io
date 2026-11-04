@@ -59,8 +59,10 @@
     --shadow: 4px 4px 0 var(--line);
     --shadow-sm: 2px 2px 0 var(--line);
     --radius: 6px;
-    --font-pixel: 'DotGothic16', 'MS Gothic', 'Osaka-Mono', monospace;
-    --font-body: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', 'Meiryo', system-ui, sans-serif;
+    /* 'Noto Color Emoji' right after the web text font: letters and digits always come from the
+       text font, only emoji fall through to Noto (see emoji_font_chars in _config.yml). */
+    --font-pixel: 'DotGothic16', 'Noto Color Emoji', 'MS Gothic', 'Osaka-Mono', monospace;
+    --font-body: 'M PLUS Rounded 1c', 'Noto Color Emoji', 'Hiragino Maru Gothic ProN', 'Meiryo', system-ui, sans-serif;
 
     color-scheme: light;
 }
@@ -130,7 +132,7 @@ textarea {
     color: inherit;
 }
 
-/* Emoji drawn with Google's Noto Color Emoji (loaded only for the characters that use it), so they look the same everywhere. */
+/* Forces Noto Color Emoji even where the text font has its own black-and-white version of a symbol. */
 .emoji {
     font-family: 'Noto Color Emoji', sans-serif;
     font-weight: 400;
@@ -1604,6 +1606,11 @@ textarea {
 
     .card[data-status='dead'] & img {
         filter: grayscale(0.85) contrast(0.9);
+    }
+
+    /* the stream's "List picture: Fit" setting: the whole picture, with dark bars */
+    .card[data-fit='fit'] & img {
+        object-fit: contain;
     }
 }
 

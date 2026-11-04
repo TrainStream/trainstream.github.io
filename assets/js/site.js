@@ -29,6 +29,22 @@
         });
     }
 
+    /* ---------- pictures: if the images.weserv.nl proxy fails (e.g. imgur rate-limits it), load the original ---------- */
+    document.addEventListener(
+        'error',
+        function (event) {
+            var img = event.target;
+            if (!img || img.tagName !== 'IMG' || img.dataset.direct) return;
+            var m = /^(?:https?:)?\/\/images\.weserv\.nl\/\?(?:.*&)?url=([^&]+)/.exec(img.getAttribute('src') || '');
+            if (!m) return;
+            var original = decodeURIComponent(m[1]);
+            if (!/^https?:\/\//i.test(original)) return;
+            img.dataset.direct = '1';
+            img.src = original;
+        },
+        true
+    );
+
     /* ---------- pop-up notes (e.g. "Notes for passengers"): close on a click outside or Escape ---------- */
     var popNotes = Array.prototype.filter.call(document.querySelectorAll('details.notes'), function (d) {
         return d.querySelector('.notes-close');

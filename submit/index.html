@@ -93,6 +93,15 @@ scripts:
             <button class="btn btn--small" type="button" id="add-image">＋ Add picture</button>
         </div>
 
+        <fieldset class="field">
+            <legend class="field-label">List picture</legend>
+            <div class="toolbar-row">
+                <label><input type="radio" name="thumb-fit" value="" checked /> Fill (crop to the box)</label>
+                <label><input type="radio" name="thumb-fit" value="fit" /> Fit (whole picture)</label>
+            </div>
+            <span class="hint">How the first picture sits in the camera list. Fill covers the box and may cut off the edges; Fit shows all of it with dark bars. It makes the most difference in the Timetable view on PC, where the box is taller.</span>
+        </fieldset>
+
         <div class="field">
             <span class="field-label">Links <span class="req">*</span></span>
             <span class="hint">At least one link. "Text" replaces the URL on screen; "Note" is shown under it. "Type" 🏠 Home page marks a site's main or portal page (like shimogo-livecamera.jp) instead of a stream. A row with only text (no URL) becomes a note, good for raw rtmp:// addresses.</span>
