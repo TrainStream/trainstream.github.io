@@ -29,6 +29,27 @@
         });
     }
 
+    /* ---------- pop-up notes (e.g. "Notes for passengers"): close on a click outside or Escape ---------- */
+    var popNotes = Array.prototype.filter.call(document.querySelectorAll('details.notes'), function (d) {
+        return d.querySelector('.notes-close');
+    });
+    if (popNotes.length) {
+        document.addEventListener('click', function (event) {
+            popNotes.forEach(function (d) {
+                if (d.open && !d.contains(event.target)) d.open = false;
+            });
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.key !== 'Escape') return;
+            popNotes.forEach(function (d) {
+                if (d.open) {
+                    d.open = false;
+                    d.querySelector('summary').focus();
+                }
+            });
+        });
+    }
+
     /* ---------- pending submissions counter on the "Submit" buttons ---------- */
     /* Open issues labelled "submission" (one public GitHub API call, remembered for 10 minutes). Nothing is shown at 0 or on errors. */
     var pendingLinks = document.querySelectorAll('[data-pending]');
