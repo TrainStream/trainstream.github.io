@@ -55,6 +55,12 @@ Every suggestion is an issue opened from the submitter's own GitHub account, and
 
 Add GitHub usernames to [`.github/publishers.yml`](.github/publishers.yml). Their suggestions skip the review: the Action validates them and commits them for them, usually live within a minute or two. They don't need any access to the repository. Delete the line to take the right away.
 
+### Moderators (approve or reject without repo access)
+
+Add GitHub usernames to [`.github/moderators.yml`](.github/moderators.yml). On `/submit/` they sign in with any GitHub token (even one with no permissions; it only proves who they are) and get the review queue with **✅ Approve** (the Action publishes it) and **🗑 Reject & delete** (the issue is deleted). Everyone with write access ("contributors") gets the same buttons. The Cloudflare Worker in [`worker/`](worker/README.md) does the work with its own token, and only on open `submission` issues. Moderators can't publish directly or edit the stream list, and their own suggestions still wait for review.
+
+Deleting needs the Worker's `GITHUB_TOKEN` to belong to a repository **admin**. If GitHub refuses, the issue's text is wiped and it is closed and locked instead. Approving needs that token's owner to have write access (or be in `publishers.yml`), because the Action checks who added the `approved` label.
+
 ## One-time GitHub settings
 
 - **Issues** must be enabled (Settings → General → Features).

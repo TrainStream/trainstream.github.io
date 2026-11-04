@@ -22,12 +22,12 @@ scripts:
     </p>
     <div class="tabs" role="group" aria-label="Mode">
         <button class="btn" type="button" data-tab="suggest" aria-pressed="true"><span class="emoji" aria-hidden="true">📮</span> Suggest a stream</button>
-        <button class="btn" type="button" data-tab="admin" aria-pressed="false">🔑 Maintainers &amp; publishers</button>
+        <button class="btn" type="button" data-tab="admin" aria-pressed="false">🔑 Maintainers, moderators &amp; publishers</button>
     </div>
 </section>
 
 <section class="panel" id="admin-panel" hidden>
-    <h2 class="panel-title">係員専用 <small>Maintainers &amp; publishers</small></h2>
+    <h2 class="panel-title">係員専用 <small>Maintainers, moderators &amp; publishers</small></h2>
     <div id="signin">
         <p>Sign in with a GitHub <strong>personal access token</strong> to publish directly, review suggestions, and edit or retire streams. The token stays in this browser and is only sent to GitHub.</p>
         <details class="notes">
@@ -38,6 +38,7 @@ scripts:
                 <li>Permissions → Repository: <strong>Contents: Read and write</strong> and <strong>Issues: Read and write</strong>.</li>
                 <li>Generate, copy, and paste it below.</li>
             </ol>
+            <p><strong>Moderator?</strong> (listed in <code>.github/moderators.yml</code>) Any token works, even one with no permissions at all (Repository access: <em>Public repositories</em>). It only proves who you are, and you can then approve or reject suggestions in the review queue.</p>
             <p><strong>Trusted publisher without repo access?</strong> You don't need a token. Just use "Suggest a stream": if your GitHub username is listed in <code>.github/publishers.yml</code>, your suggestions are published automatically within a minute or two.</p>
         </details>
         <div class="form-grid">
@@ -58,9 +59,11 @@ scripts:
         <h3 class="panel-title">審査待ち <small>Review queue</small></h3>
         <ul class="admin-list" id="queue"></ul>
 
-        <h3 class="panel-title">在籍一覧 <small>All streams</small></h3>
-        <label class="search"><span class="visually-hidden">Filter streams</span><input type="search" id="manage-filter" placeholder="🔍 Filter by name…" /></label>
-        <ul class="admin-list" id="manage"></ul>
+        <div id="manage-section">
+            <h3 class="panel-title">在籍一覧 <small>All streams</small></h3>
+            <label class="search"><span class="visually-hidden">Filter streams</span><input type="search" id="manage-filter" placeholder="🔍 Filter by name…" /></label>
+            <ul class="admin-list" id="manage"></ul>
+        </div>
     </div>
 </section>
 

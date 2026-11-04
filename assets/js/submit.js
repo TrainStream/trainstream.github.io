@@ -13,6 +13,8 @@
     var ANON_MARK = '<!-- trainstream-anonymous -->'; // keep in sync with worker/src/index.js
     var ANON_URL = config.anonEndpoint || '';
     var TURNSTILE_KEY = config.turnstileSitekey || '';
+    // The Cloudflare Worker also handles moderation (approve / reject for contributors and moderators).
+    var WORKER = String(config.workerUrl || '').replace(/\/submit\/?$/, '');
     var allTags = (TS.readJson('ts-tags') || []).filter(function (t) {
         return t.slug !== 'all';
     });
@@ -751,7 +753,7 @@
     function signIn(token) {
         ctx.admin = { token: token };
         showStatus('warn', '⏳ Checking your token…');
-        return Promise.all([gh('GET', '/user'), gh('GET', '/repos/' + REPO)])
+        return Promise.all([gh('GET', '/user'), gh('GET', '/repos/' + REPO), workerRole(token)])
             .then(function (res) {
                 var user = res[0];
                 var repo = res[1];
@@ -759,6 +761,9 @@
                 ctx.admin.login = user.login;
                 ctx.admin.branch = repo.default_branch;
                 ctx.admin.canPush = !!(perms.push || perms.maintain || perms.admin);
+                // Contributors and moderators approve / reject through the Worker.
+                ctx.admin.canModerate = !!WORKER && !!(res[2] && res[2].role);
+                $('manage-section').hidden = !ctx.admin.canPush;
                 $('signout-btn').hidden = false;
                 $('signin-btn').hidden = true;
                 $('token').value = '';
@@ -770,6 +775,10 @@
                     setEditing(ctx.editOf, $('f-name').value, ctx.editAddedAt);
                     loadQueue();
                     loadManage();
+                } else if (ctx.admin.canModerate) {
+                    showStatus('ok', '✅ Signed in as ' + user.login + ' (moderator). You can approve or reject suggestions in the review queue below.');
+                    $('admin-tools').hidden = false;
+                    loadQueue();
                 } else {
                     showStatus('warn', [
                         '👋 Signed in as ' + user.login + ', but this token cannot write to ' + REPO + '. ',
@@ -782,6 +791,43 @@
                 ctx.admin = null;
                 forgetToken();
                 showStatus('error', '❌ Sign-in failed: ' + error.message);
+            });
+    }
+
+    // Asks the Worker what this token's owner may do. Resolves to null if there is no Worker or it can't tell.
+    function workerRole(token) {
+        if (!WORKER) return Promise.resolve(null);
+        return fetch(WORKER + '/role', { headers: { Authorization: 'Bearer ' + token }, cache: 'no-store' })
+            .then(function (response) {
+                return response.ok ? response.json() : null;
+            })
+            .catch(function () {
+                return null;
+            });
+    }
+
+    function moderate(issue, action) {
+        return fetch(WORKER + '/moderate', {
+            method: 'POST',
+            headers: { Authorization: 'Bearer ' + ctx.admin.token, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ issue: issue.number, action: action }),
+        }).then(function (response) {
+            return response.json().then(function (data) {
+                if (!response.ok) throw new Error(data.error || 'Error ' + response.status);
+                return data;
+            });
+        });
+    }
+
+    function approveIssue(issue) {
+        if (!confirm('Approve #' + issue.number + '? It will be published as it is, within a minute or two.')) return;
+        moderate(issue, 'approve')
+            .then(function () {
+                alert('#' + issue.number + ' approved. The bot publishes it shortly.');
+            })
+            .then(loadQueue)
+            .catch(function (error) {
+                alert(error.message);
             });
     }
 
@@ -889,7 +935,8 @@
                                 ' by ' + issueAuthor(issue),
                                 labels.indexOf('needs-fix') >= 0 ? el('span', { className: 'status-pill is-dead', text: 'needs fix' }) : null,
                             ]),
-                            el('button', { type: 'button', className: 'btn btn--small btn--green', text: '📥 Review', onclick: function () { reviewIssue(issue); } }),
+                            el('button', { type: 'button', className: 'btn btn--small', text: '📥 Review', onclick: function () { reviewIssue(issue); } }),
+                            ctx.admin.canModerate ? el('button', { type: 'button', className: 'btn btn--small btn--green', text: '✅ Approve', onclick: function () { approveIssue(issue); } }) : null,
                             el('button', { type: 'button', className: 'btn btn--small', text: '🗑 Reject & delete', onclick: function () { rejectIssue(issue); } }),
                         ])
                     );
@@ -936,6 +983,17 @@
     // GitHub only lets repository admins delete issues; anyone else closes it instead.
     function rejectIssue(issue) {
         if (!confirm('Reject #' + issue.number + ' and delete it permanently?\n\nThe issue and its comments are removed from GitHub. This cannot be undone.')) return;
+        if (ctx.admin.canModerate) {
+            moderate(issue, 'reject')
+                .then(function (res) {
+                    if (!res.deleted) alert('#' + issue.number + ' could not be deleted, so its text was removed and it was closed and locked instead.');
+                })
+                .then(loadQueue)
+                .catch(function (error) {
+                    alert(error.message);
+                });
+            return;
+        }
         gh('POST', '/graphql', {
             query: 'mutation($id: ID!) { deleteIssue(input: { issueId: $id }) { clientMutationId } }',
             variables: { id: issue.node_id },
