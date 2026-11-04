@@ -3,6 +3,8 @@
 // - Every submission is validated and gets one bot comment with the result.
 // - Submissions from trusted people (repo collaborators with write access, or
 //   anyone listed in .github/publishers.yml) are published right away.
+// - Anonymous submissions (opened by the Cloudflare Worker in worker/, marked
+//   with ANON_MARK) are never trusted, whoever's token opened the issue.
 // - Everyone else's submission waits until a trusted person adds the
 //   "approved" label (or publishes it from the /submit/ review queue).
 // - Publishing mirrors the third-party pictures into /pictures/submissions/,
@@ -22,7 +24,10 @@ const ROOT = new URL('../', import.meta.url);
 const STREAMS_PATH = new URL('_data/streams.json', ROOT);
 const TAGS_PATH = new URL('_data/tags.json', ROOT);
 const PUBLISHERS_PATH = new URL('.github/publishers.yml', ROOT);
+const CONFIG_PATH = new URL('_config.yml', ROOT);
 const MARK = '<!-- trainstream-bot -->';
+// Keep in sync with worker/src/index.js.
+const ANON_MARK = '<!-- trainstream-anonymous -->';
 const LABELS = {
     submission: { color: '00913a', description: 'A suggested stream for the camera list' },
     approved: { color: 'ff5fa2', description: 'Maintainer approved: publish this submission' },
@@ -75,6 +80,12 @@ function readPublishers() {
 }
 
 const publishers = readPublishers();
+
+// The on/off switch for anonymous suggestions: `anonymous_submissions` in _config.yml.
+function anonymousAllowed() {
+    if (!existsSync(CONFIG_PATH)) return false;
+    return /^anonymous_submissions:[ \t]*true[ \t]*(#.*)?$/m.test(readFileSync(CONFIG_PATH, 'utf8'));
+}
 
 async function isTrusted(login) {
     if (!login) return false;
@@ -142,7 +153,7 @@ async function mirrorImage(url, baseName) {
     return { path: `pictures/submissions/${baseName}.${ext}`, buffer };
 }
 
-async function publish(entry, editOf) {
+async function publish(entry, editOf, suggestedBy) {
     const slug = rules.slugify(entry.name).replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'stream';
     const stamp = Date.now();
     const mirrorNotes = [];
@@ -176,7 +187,7 @@ async function publish(entry, editOf) {
             writeFileSync(new URL(file.path, ROOT), file.buffer);
             git('add', file.path);
         }
-        git('commit', '-m', `${replaced ? 'Update' : 'Add'} stream: ${entry.name} (#${issue.number}, suggested by ${issue.user.login})`);
+        git('commit', '-m', `${replaced ? 'Update' : 'Add'} stream: ${entry.name} (#${issue.number}, suggested by ${suggestedBy})`);
         try {
             git('push', 'origin', `HEAD:${branch}`);
             break;
@@ -226,6 +237,17 @@ async function main() {
         }
     }
 
+    // Switched off: refuse anonymous suggestions, unless a maintainer approves one already in the queue.
+    if ((issue.body || '').includes(ANON_MARK) && !approver && !anonymousAllowed()) {
+        await botComment(
+            '🚫 Anonymous suggestions are switched off at the moment, so this one was closed. ' +
+                'Please send it again with "Send suggestion via GitHub" at https://trainstream.github.io/submit/ (a free GitHub account is needed).\n\n' +
+                '_Maintainers: you can still publish it by reopening it and adding the `approved` label._'
+        );
+        await api('PATCH', `/repos/${repo}/issues/${issue.number}`, { state: 'closed', state_reason: 'not_planned' });
+        return;
+    }
+
     const parsed = rules.extractSubmission(issue.body);
     if (parsed.error) {
         await addLabels(['needs-fix']);
@@ -233,8 +255,10 @@ async function main() {
         return;
     }
 
+    // The anonymous Worker may use a maintainer's token, so the marker decides, not the author.
+    const anonymous = (issue.body || '').includes(ANON_MARK);
     const author = issue.user.login;
-    const authorTrusted = await isTrusted(author);
+    const authorTrusted = !anonymous && (await isTrusted(author));
     const trusted = authorTrusted || !!approver;
     const editOf = String(parsed.data.editOf || '').trim();
     const knownTags = JSON.parse(readFileSync(TAGS_PATH, 'utf8')).map((t) => t.slug);
@@ -260,7 +284,7 @@ async function main() {
         return;
     }
 
-    const result = await publish(entry, editOf);
+    const result = await publish(entry, editOf, anonymous ? 'anonymous' : author);
     const by = approver ? `approved by @${approver}` : `published by @${author}`;
     await botComment(
         `🎉 ${result.replaced ? 'Updated' : 'Published'}! (${by}) Commit ${result.sha.slice(0, 7)}.\n\n${summary(entry)}\n\n` +
