@@ -29,11 +29,135 @@
         'pbs.twimg.com',
         'i.ytimg.com',
         'upload.wikimedia.org',
+        'commons.wikimedia.org',
+        'i.gyazo.com',
+        'drive.google.com',
+        'www.dropbox.com',
+        'raw.githubusercontent.com',
     ];
 
     function urlHost(value) {
         var m = /^https?:\/\/([^\/?#:@\s]+)(?::\d+)?(?:[\/?#]|$)/i.exec(String(value || ''));
         return m ? m[1].toLowerCase() : '';
+    }
+
+    /*
+     * Picture links people paste are often a page or a share link, not the picture itself.
+     * imageLink(url) → { candidates: [direct links to try, best first], note: 'what was changed', warn: 'why it can't work' }
+     * The first candidate is what gets saved; the submit tool tries them in order and keeps the first that loads.
+     */
+    var PAGE_HOSTS = {
+        'ibb.co': 'ImgBB',
+        'postimg.cc': 'Postimages',
+        'postimages.org': 'Postimages',
+        'prnt.sc': 'Lightshot',
+        'prntscr.com': 'Lightshot',
+        'www.flickr.com': 'Flickr',
+        'flickr.com': 'Flickr',
+        'www.instagram.com': 'Instagram',
+        'instagram.com': 'Instagram',
+        'www.pinterest.com': 'Pinterest',
+        'x.com': 'X',
+        'twitter.com': 'X',
+        'www.reddit.com': 'Reddit',
+        'reddit.com': 'Reddit',
+        'photos.google.com': 'Google Photos',
+        'photos.app.goo.gl': 'Google Photos',
+        'www.facebook.com': 'Facebook',
+    };
+    var COPY_HINT = 'open it, right-click (or long-press) the picture and choose "Copy image address", then paste that.';
+
+    function imageLink(value) {
+        var raw = str(value);
+        var out = { candidates: [raw], note: '', warn: '' };
+        if (!/^https?:\/\//i.test(raw)) return out;
+        var u;
+        try {
+            u = new URL(raw);
+        } catch (e) {
+            return out;
+        }
+        var host = u.hostname.toLowerCase();
+        var path = u.pathname;
+        var m;
+        function use(list, note) {
+            out.candidates = list;
+            out.note = note || '';
+            return out;
+        }
+
+        // Google / Bing image search results: the picture's own address is in the link
+        var inner = (/(^|\.)google\.[a-z.]+$/.test(host) && path === '/imgres' && u.searchParams.get('imgurl')) ||
+            (/(^|\.)bing\.com$/.test(host) && u.searchParams.get('mediaurl'));
+        if (inner && /^https?:\/\//i.test(inner)) {
+            var again = imageLink(inner);
+            again.note = again.note || 'Took the picture link out of the search result.';
+            return again;
+        }
+
+        if (host === 'imgur.com' || host === 'www.imgur.com' || host === 'm.imgur.com') {
+            if (/^\/(a|gallery|t)\//.test(path)) {
+                out.warn = 'This is an imgur album, not a single picture: ' + COPY_HINT;
+                return out;
+            }
+            if ((m = /^\/([A-Za-z0-9]{5,10})(?:\.\w+)?$/.exec(path))) return use(['https://i.imgur.com/' + m[1] + '.jpeg'], 'Changed the imgur page link to the picture link.');
+        }
+        if (host === 'i.imgur.com' && (m = /^\/([A-Za-z0-9]{5,10})(\.(gifv|mp4|webm))?$/.exec(path))) {
+            return use(['https://i.imgur.com/' + m[1] + '.jpeg'], 'Changed to the imgur picture link.');
+        }
+
+        // a YouTube video or live stream: use its thumbnail (a snapshot of the stream)
+        var yt = /(?:^|\.)youtube\.com$/.test(host) || host === 'youtu.be'
+            ? /(?:[?&]v=|\/live\/|\/embed\/|\/shorts\/|youtu\.be\/)([\w-]{11})/.exec(raw)
+            : null;
+        if (yt) {
+            return use(
+                ['maxresdefault', 'sddefault', 'hqdefault'].map(function (n) {
+                    return 'https://i.ytimg.com/vi/' + yt[1] + '/' + n + '.jpg';
+                }),
+                "Using the YouTube video's thumbnail. A real screenshot is better if you have one."
+            );
+        }
+
+        if ((host === 'commons.wikimedia.org' || /\.wikipedia\.org$/.test(host)) && (m = /(?:^\/wiki\/|#\/media\/)(?:File|Datei|Fichier|ファイル):(.+)$/.exec(path + u.hash))) {
+            return use(['https://commons.wikimedia.org/wiki/Special:FilePath/' + m[1]], 'Changed the Wikimedia page link to the file link.');
+        }
+
+        if ((host === 'gyazo.com' || host === 'www.gyazo.com') && (m = /^\/([0-9a-f]{32})$/.exec(path))) {
+            return use(['png', 'jpg', 'gif'].map(function (ext) {
+                return 'https://i.gyazo.com/' + m[1] + '.' + ext;
+            }), 'Changed the Gyazo page link to the picture link.');
+        }
+
+        if (host === 'drive.google.com' && (m = /\/file\/d\/([\w-]{20,})/.exec(path) || (/^\/(open|uc)$/.test(path) && /^([\w-]{20,})$/.exec(u.searchParams.get('id') || '')))) {
+            return use(['https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1920'], 'Changed the Google Drive link to the picture. The file must be shared with "Anyone with the link".');
+        }
+
+        if ((host === 'www.dropbox.com' || host === 'dropbox.com') && /^\/(s|scl|sh)\//.test(path) && u.searchParams.get('raw') !== '1') {
+            u.searchParams.delete('dl');
+            u.searchParams.set('raw', '1');
+            return use([u.toString()], 'Changed the Dropbox share link to the picture itself.');
+        }
+
+        if (host === 'github.com' && (m = /^\/([^/]+)\/([^/]+)\/blob\/(.+)$/.exec(path))) {
+            return use(['https://raw.githubusercontent.com/' + m[1] + '/' + m[2] + '/' + m[3]], 'Changed the GitHub page link to the raw file.');
+        }
+
+        if (host === 'pbs.twimg.com' && u.searchParams.get('name') && u.searchParams.get('name') !== 'large') {
+            u.searchParams.set('name', 'large');
+            return use([u.toString()], 'Asked X for the large version of the picture.');
+        }
+
+        if (/(^|\.)discordapp\.(com|net)$/.test(host) || host === 'cdn.discordapp.com') {
+            out.warn = 'Discord picture links stop working after about a day. Upload it to imgur or catbox instead.';
+        } else if (PAGE_HOSTS[host]) {
+            out.warn = 'This looks like a page on ' + PAGE_HOSTS[host] + ', not the picture itself: ' + COPY_HINT;
+        } else if (/\.(heic|heif)$/i.test(path)) {
+            out.warn = 'HEIC pictures (iPhone) do not show in most browsers. Share or save it as JPEG first.';
+        } else if (/\.(mp4|webm|mov)$/i.test(path)) {
+            out.warn = 'That is a video. Take a screenshot of it instead.';
+        }
+        return out;
     }
 
     function str(value) {
@@ -90,7 +214,7 @@
         entry.images = (input.images || [])
             .map(function (img) {
                 img = img || {};
-                var out = { src: str(img.src) };
+                var out = { src: imageLink(img.src).candidates[0] };
                 var title = str(img.title || img.alt);
                 if (title) out.title = title;
                 var width = Math.round(toNumber(img.width) || 0);
@@ -297,6 +421,7 @@
     return {
         LIMITS: LIMITS,
         ANON_IMAGE_HOSTS: ANON_IMAGE_HOSTS,
+        imageLink: imageLink,
         urlHost: urlHost,
         isSafeUrl: isSafeUrl,
         splitTags: splitTags,

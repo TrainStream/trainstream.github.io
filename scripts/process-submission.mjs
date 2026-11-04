@@ -38,7 +38,7 @@ const LABELS = {
     published: { color: '1e5aa8', description: 'This submission is live on the site' },
     anonymous: { color: '6e7781', description: 'Sent with the anonymous form (no GitHub account); unreviewed' },
 };
-const IMAGE_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif', 'image/webp': 'webp' };
+const IMAGE_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif', 'image/webp': 'webp', 'image/avif': 'avif' };
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 
 const token = process.env.GITHUB_TOKEN;
@@ -137,6 +137,7 @@ function looksLikeImage(buffer, ext) {
     if (ext === 'jpg') return hex.startsWith('ffd8ff');
     if (ext === 'png') return hex.startsWith('89504e47');
     if (ext === 'gif') return hex.startsWith('47494638');
+    if (ext === 'avif') return buffer.subarray(4, 12).toString() === 'ftypavif' || buffer.subarray(4, 12).toString() === 'ftypavis';
     if (ext === 'webp') return hex.startsWith('52494646') && buffer.subarray(8, 12).toString() === 'WEBP';
     return false;
 }
