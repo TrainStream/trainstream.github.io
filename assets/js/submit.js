@@ -423,10 +423,40 @@
 
     /* ---------- public: send anonymously through the Cloudflare Worker ---------- */
     var anon = { widget: null, token: '', busy: false };
+
+    // Anonymous sending pauses while too many anonymous suggestions wait for review.
+    // Say so at the top of the page, before anyone starts filling in the form.
+    function hideAnonymous() {
+        $('anon-btn').hidden = true;
+        $('anon-box').hidden = true;
+    }
+    function showQueueFull(max) {
+        hideAnonymous();
+        var banner = $('anon-full');
+        banner.textContent =
+            '📭 Anonymous sending is paused for now: ' + (max || 'too many') + ' anonymous suggestions are already waiting for a maintainer to review them. ' +
+            'Please come back later, or send your suggestion with a free GitHub account (📮 Send suggestion via GitHub).';
+        banner.hidden = false;
+    }
+    function checkAnonStatus() {
+        fetch(ANON_URL.replace(/\/submit\/?$/, '/status'))
+            .then(function (response) {
+                return response.ok ? response.json() : null;
+            })
+            .then(function (data) {
+                if (!data) return;
+                if (data.off) hideAnonymous();
+                else if (data.full) showQueueFull(data.max);
+            })
+            .catch(function () {});
+    }
+
     function setupAnonymous() {
         if (!ANON_URL || !TURNSTILE_KEY) return;
         $('anon-box').hidden = false;
         $('anon-btn').hidden = false;
+        $('anon-hosts').textContent = R.ANON_IMAGE_HOSTS.join(', ');
+        checkAnonStatus();
         window.onTSTurnstileLoad = function () {
             anon.widget = window.turnstile.render('#anon-turnstile', {
                 sitekey: TURNSTILE_KEY,
@@ -463,6 +493,13 @@
         if (anon.busy) return;
         var entry = checkOrShow();
         if (!entry) return;
+        var hostErrors = R.validateEntry(entry, { imageHosts: R.ANON_IMAGE_HOSTS }).filter(function (e) {
+            return /anonymous suggestions can only use pictures/.test(e);
+        });
+        if (hostErrors.length) {
+            showResult('warn', hostErrors);
+            return;
+        }
         if (!anon.token) {
             showResult('warn', ['Please tick the "I am human" check above the buttons first.']);
             $('anon-box').scrollIntoView({ block: 'center', behavior: 'smooth' });
@@ -490,10 +527,8 @@
             })
             .then(function (res) {
                 if (!res.ok) {
-                    if (res.data.off) {
-                        $('anon-btn').hidden = true;
-                        $('anon-box').hidden = true;
-                    }
+                    if (res.data.off) hideAnonymous();
+                    if (res.data.full) showQueueFull();
                     var lines = [res.data.error || 'Could not send it.'];
                     (res.data.errors || []).forEach(function (e) {
                         lines.push(el('br'), '• ' + e);
@@ -810,7 +845,7 @@
                     queue.appendChild(
                         el('li', null, [
                             el('span', { className: 'name' }, [
-                                el('a', { href: issue.html_url, target: '_blank', rel: 'noopener', text: '#' + issue.number + ' ' + issue.title }),
+                                el('a', { href: issue.html_url, target: '_blank', rel: 'noopener', text: '#' + issue.number + ' ' + queueTitle(issue) }),
                                 ' by ' + issueAuthor(issue),
                                 labels.indexOf('needs-fix') >= 0 ? el('span', { className: 'status-pill is-dead', text: 'needs fix' }) : null,
                             ]),
@@ -824,6 +859,14 @@
                 queue.textContent = '';
                 queue.appendChild(el('li', { text: '❌ ' + error.message }));
             });
+    }
+
+    // Anonymous issues have a neutral title; in the (signed-in) queue, show the suggested name.
+    function queueTitle(issue) {
+        if (issueAuthor(issue) !== 'anonymous') return issue.title;
+        var parsed = R.extractSubmission(issue.body);
+        var name = parsed.data && typeof parsed.data.name === 'string' ? parsed.data.name.slice(0, 200) : '';
+        return name ? issue.title + ': ' + name : issue.title;
     }
 
     // Suggestions sent through the anonymous Worker are opened with its token; show them as anonymous.
